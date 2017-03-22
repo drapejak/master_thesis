@@ -1,0 +1,24 @@
+\chapter{Návod k programu LAM od Igora Bodláka }
+	
+	Program LAM navazuje na letité výzkumy v oblasti zkoumání tvaru broušených šperků. V Centru strojového vnímání na Elektrotechnické fakultě v Praze před lety vznikl program LADOK. Ten umožňuje vytvořit matematický model kamene a simulovat průlet světelného svazku kamenem. 
+	
+	LAM vznikl pro porovnání výsledků ze simulace s reálným experimentem. Nám se podařilo postavit a zkalibrovat měřicí soustavu pro experimenty s broušenými kameny a tuto soustavu zkalibrovat. 
+	
+	Použití LAMu je omezené. Předešlé výzkumy zkoumaly pouze jeden z nejjednodušších tvarů kamene známého jako čtverec. 
+	
+	První částí programu je nalezení korespondujících bodů z experimentu ke svazkům ze simulačního programu. Myšlenkou celé věci bylo nasvícení kamene pouze na část kamene. V ideálním případě se jednalo o jedinou facetu. Tímto postupem se značně zmenšil počet bodů pro korespondenci. Laser, který svítil do kamene byl pohyblivý a bylo potřeba nasnímat řadu snímků s různými pozicemi laseru. Laser tedy dopadal na různé facety kamene a z něj vycházely příslušné svazky. S posunutím laseru vznikaly jednotlivé snímky. Z těchto snímků potom bylo možné určit korespondující body s modelem. 
+	
+	Druhou částí byla optimalizace tvaru kamene. Broušené plochy(facety) kamene byly brány za ideální rovné plochy a optimalizovala se poloha facet. Poloha facety byla vázána pevným bodem, okolo kterého se mohla natáčet. Vzdálenost tohoto bodu zůstávala konstantní. Facetě byl tedy ubrán jeden stupeň volnosti. 
+	
+	Pro optimalizaci byla zvolena kriteriální funkce. Výstupem této funkce byla vzdálenost bodu na stínítku od bodu, který by měl vzniknout na stínítku podle matematického modelu. 
+	
+	My jsme se snažili tento program upravit, aby se dal použít i pro námi zkoumaný kámen tvaru šatonové růže. Přitom jsme změnili některé výpočty nebo přístupy změnily a o mnohé možnosti rozšířili. 
+	
+	Pokusím se tedy popsat úpravy LAMu a zároveň k němu napsat manuál, neboli návod, jak postupovat při optimalizaci kamene jiného tvaru, než byl používán v experimentech. Tím mám na mysli VIVA12.
+	
+\section{Provedené změny}
+
+\section{Manuál k LAMu}
+
+
+ \clearpage

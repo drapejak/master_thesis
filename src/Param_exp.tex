@@ -1,0 +1,89 @@
+\section*{Experimenty - závislost parametrů laserových svazků}
+
+Cílem experimentů je získat jednotlivé funkce charakterizující závislosti parametrů detekovaných svazků $\kappa_i$ na referenčních parametrech $\psi_i$ určených matematickým modelem kamene. K parametrům budeme přistupovat jednotlivě, např. pro referenční zářivý tok se pokusíme nalézt co nejpřesnější aproximaci funkce, která by splňovala $\kappa_i = h_i\left(\psi_i\right)$.
+
+Pro experimenty jsme použili korespondující svazky, které jsou výsledkem ruční optimalizace náklonu plošek kamene. Význam těchto korespondencí označujeme výrazem "\textit{ground truth}" podobně jako v oblasti strojového učení, kde slouží jako přesná data v trénovací množině pro určení statistických modelů. Použití výrazu "\textit{ground truth}" je ovšem v našem případě sporné, neboť určení množiny korespondencí závisí na osobě, která tato úlohu provádí. To, co v našem případě označujeme jako "\textit{ground truth}", je množina, o které se domníváme, že by měla obsahovat správné korespondence svazků, ale v našem případě nemůžeme s naprostou jistotou tvrdit, že tomu tak je. 
+
+Ruční optimalizaci jsme provedli na broušených kamenech s označením VIVA12. Popis rozměrů a barev kamenů je v tabulce \ref{tab:viva12desc}. 
+
+Broušený kámen ozářen laserovým svazkem o vlnové délce \SI{670}{\nano\metre}. Při průchodu světelného svazku kamenem se část záření absorbuje a přemění se na teplo. Absorpce záření je závislá na materiálu, ze kterého je materiál vyroben. To znamená, že bychom měli získat rozdílné funkce $\kappa_i = h_i_j\left(\psi_i\right)$ pro $j$ materiálů pro parametry laserových svazků, které závisí na velikosti zářivého toku. 
+
+Předpokládáme, že kameny se stejným odstínem jsou vyrobeny ze stejně kvalitního materiálu a absorpce ve je v celém kameni konstantní, neboli kámen je perfektně čistý. Za těchto předpokladů můžeme spojit korespondence z více kamenů se stejným odstínem a získat věrohodnější odhad.    
+
+\begin{table}[htps]
+\centering
+	\begin{tabular}{c|C{2cm}|C{2.2cm}|C{2cm}|C{2.3cm}|C{2cm}}
+	Označení & Barva 	& Průměr spodku [\SI{}{\milli\metre}] 	& Výška [\SI{}{\milli\metre}]  & Průměr tabulky [\SI{}{\milli\metre}] & Počet snímků\\ \hline \hline
+	viva\_11 & Hyacint	&	$2.90$			& $1.24$    &	$1.10$			&	3\\ \hline
+	viva\_12 & Violet	&	$2.82$			& $1.16$	&	$1.15$			&	3\\ \hline
+	viva\_13 & Citrine  &	$2.86$			& $1.14$	&	$1.20$			&	3\\ \hline
+	viva\_14 & Hyacint	&	$2.90$			& $1.24$	&	$1.10$			&	3\\ \hline
+	viva\_15 & Hyacint	&	$2.90$			& $1.28$	&	$1.10$			&	3\\ \hline
+	viva\_16 & Hyacint	&	$2.88$			& $1.28$	&	$1.00$			&	4\\ \hline
+	viva\_17 & Crystal	&	$2.88$			& $1.26$	&	$1.10$			&	3\\ \hline
+%	viva\_18 & Crystal	&	$2.88$			& $1.26$	&	$1.15$			&	3\\ \hline
+%	viva\_21 & Light Amethyst	& $2.82$    & $1.10$	&   $1.10$      	&	3\\ \hline
+	viva\_22 & Crystal	&	$4.80$			& $1.90$	&	$1.86$			&	3\\ \hline
+%	viva\_23 & Crystal	&	$4.78$			& $1.80$	&	$2.10$			&	3\\ \hline
+%	viva\_24 & Crystal	&	$3.96$			& $1.60$	&	$1.60$			&	4\\ \hline
+%	viva\_25 & Crystal	&	$4.00$			& $1.66$	&	$1.50$			&	3\\ \hline
+%	viva\_26 & Amethyst	&	$2.00$			& $1.00$	&	$0.80$			&	3\\ \hline
+	viva\_27 & Crystal	&	$2.00$			& $0.94$	&	$0.80$			&	3\\ 
+	\end{tabular}
+	\caption{Popis rozměrů a barvy snímaných kamenů typu VIVA12 použitých při experimentech.}
+	\label{tab:viva12desc}
+\end{table}
+
+\section*{Zářivý tok}
+Pokusíme se nalézt funkci $h_{flux}$, která by popisovala závislost referenčního zářivého toku svazků $\psi_{flux}$ na zářivého toku detekovaných svazků $\kappa_{flux}$, tak že $\psi_{flux} = h_{flux}\left( \kappa_{flux} \right))$. 
+
+Nejprve si vykreslíme do grafu bodově příspěvky od jednotlivých korespondujících svazků ( obr. \ref{fig:fluxAll}) pro broušené kameny odstínu Hyacint. Tento graf však ukazuje, že funkci $h_{flux}$, kterou bychom mohli dostatečně charakterizovat závislost $\psi_{flux} = h_{flux}\left( \kappa_{flux} \right))$ nelze v těchto datech určit. Důvodů může být hned několik. 
+
+Zaprvé víme, že v modelu kamene nejsou postihnuty všechny skutečnosti, které ovlivňují velikost zářivého toku stop. Můžeme zmínit například to, že v modelu není zahrnuta čistota materiálu, která nemusí a prakticky ani není v celém materiálu konstantní. Také nedokonalé leštění fasety ovlivňuje rozptylové parametry světelného svazku. Navíc malá změna náklonu fasety může vést k rapidnímu nárůstu plochy, která je zasažena daným svazkem a tím i zářivého toku, což si ukážeme v kapitole \ref{cap: fluxChange}. To je pouze část z dlouhého výčtu vlastností, které v konečném důsledku vyústí v chybu údaje na y-ové ose grafu 
+$\psi_{flux} = h_{flux}\left( \kappa_{flux} \right))$.
+
+Zadruhé musíme počítat s nejistotou určení zářivého toku detekovaných svazků vznikající při extrakci parametrů svazků z obrazu. Mezi zásadní problémy patří šum, překrývání stop, difuzní odrazivost svazků či odhad pozadí snímku.  
+
+
+Ve grafu jsou patrné shluky bodů, které přesto, že mají referenční zářivý tok podobné velikosti se velikost detekovaného zářivého toku znatelně liší. Při detailnějším pohledu zjistíme, že se jedná o stopy třídy (XXX a XXX) s jedním respektive třemi optickými jevy (refrakce a reflexe) s fasetou (hity). To nás směřuje k myšlence rozdělit svazky podle počtu hitů. 
+
+V naší množině korespondencí se objevují svazky s maximální počtem $11$-ti hitů. Svazky s počtem hitů $2$, $4$, $10$ a $11$ se v množině korespondencí prakticky nevyskytují. Svazky s $1$ resp. $3$ hity nám neposkytují příliš informace a výsledný graf vypadá spíše jako množina náhodných hodnot spadajících do vytočené oblasti.   
+
+
+
+
+
+\section*{Velikost}
+
+\section*{Intenzita}
+
+\section*{Ocásky - velikost}
+
+\section*{Ocásky - směr}
+
+\section*{Elipsovitost?}
+
+\section*{Azimut}
+
+\section*{Elevace}
+
+
+
+
+
+
+
+
+\subsection{Hladový algoritmus versus Maďarský algoritmus}
+
+
+\subsection{Korespondence hlavních (nejlépe určitelných) párů}
+
+
+
+\subsection{Párování podle ocásků}
+
+\subsection{Párování podle pozice a zářivého toku }
+
+
+

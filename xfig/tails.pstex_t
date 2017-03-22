@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\includegraphics{xfig/tails_pspdftex.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2857,2557)(2116,-2933)
+\put(3557,-1457){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{.56,0,0}Beam}%
+}}}}
+\put(4310,-807){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,.56,0}Tails}%
+}}}}
+\put(2400,-2120){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,.56,0}Tails}%
+}}}}
+\end{picture}%
