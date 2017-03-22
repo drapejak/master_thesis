@@ -1,0 +1,86 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'tailex07.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{542.25bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.49377593)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{figures/tailex07.pdf}}%
+    \put(0.51728907,0.0095675){\makebox(0,0)[b]{\smash{$\phi \left[ rad \right]$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{figures/tailex07.pdf}}%
+    \put(0.13746141,0.03486985){\makebox(0,0)[b]{\smash{$0$}}}%
+    \put(0.27710401,0.03486985){\makebox(0,0)[b]{\smash{$\frac{\pi}{4}$}}}%
+    \put(0.41674647,0.03486985){\makebox(0,0)[b]{\smash{$\frac{\pi}{2}$}}}%
+    \put(0.55638893,0.03486985){\makebox(0,0)[b]{\smash{$3\frac{\pi}{4}$}}}%
+    \put(0.69603154,0.03486985){\makebox(0,0)[b]{\smash{$\pi$}}}%
+    \put(0.835674,0.03486985){\makebox(0,0)[b]{\smash{$5\frac{\pi}{4}$}}}%
+    \put(0.07092185,0.25656985){\rotatebox{90}{\makebox(0,0)[b]{\smash{$\sum{I}$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{figures/tailex07.pdf}}%
+    \put(0.12263721,0.0507397){\makebox(0,0)[rb]{\smash{300}}}%
+    \put(0.12263721,0.10070512){\makebox(0,0)[rb]{\smash{400}}}%
+    \put(0.12263721,0.15067054){\makebox(0,0)[rb]{\smash{500}}}%
+    \put(0.12263721,0.20063596){\makebox(0,0)[rb]{\smash{600}}}%
+    \put(0.12263721,0.25060138){\makebox(0,0)[rb]{\smash{700}}}%
+    \put(0.12263721,0.30056681){\makebox(0,0)[rb]{\smash{800}}}%
+    \put(0.12263721,0.35053223){\makebox(0,0)[rb]{\smash{900}}}%
+    \put(0.12263721,0.40049765){\makebox(0,0)[rb]{\smash{1000}}}%
+    \put(0.12263721,0.45046307){\makebox(0,0)[rb]{\smash{1100}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{figures/tailex07.pdf}}%
+    \put(0.17283748,0.32081826){\makebox(0,0)[lb]{\smash{2371}}}%
+    \put(0.3180657,0.43714537){\makebox(0,0)[lb]{\smash{4116}}}%
+    \put(0.5061177,0.13331342){\makebox(0,0)[lb]{\smash{32}}}%
+    \put(0.73140761,0.40516971){\makebox(0,0)[lb]{\smash{3962}}}%
+    \put(0.82636445,0.27020263){\makebox(0,0)[lb]{\smash{1424}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{figures/tailex07.pdf}}%
+    \put(0.83012407,0.41944952){\makebox(0,0)[lb]{\smash{$I_{\phi}$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{figures/tailex07.pdf}}%
+    \put(0.83012407,0.39901231){\makebox(0,0)[lb]{\smash{$I_{filt}$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{figures/tailex07.pdf}}%
+    \put(0.83012407,0.3785751){\makebox(0,0)[lb]{\smash{$I_{base}$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{figures/tailex07.pdf}}%
+  \end{picture}%
+\endgroup%
