@@ -1,0 +1,66 @@
+\chapter{Úvod}
+
+Drahé kameny jsou lidstvem od pradávna vyhledávány.
+Jsou znakem krásy, bohatství a moci. Z počátku se kameny leštily do oblých tvarů a stávaly se součástí šperků.
+S vývojem civilizace se začaly drahé kameny brousit, aby se zvýraznil lom světla a lesk minerálu. Broušením vznikaly rovinné fasety. Kombinací faset s definovanou velikostí a sklonem se vyvinuly standardní tvary jako brilliant, trilliant, rosette,baguette apod. Drahé a velmi cenné suroviny jako diamant se brousí pouze ručně. Méně významné kameny jsou převážně opracovávány automatickými stroji.  
+
+Cenu broušených kamenů určují čtyři základní parametry. Mezi ně patří čistota, barva, hmotnost a kvalita brusu. 
+
+Čistota určuje množství příměsí v materiálu kamene. Při tvorbě krystalu mohou dále vzniknout praskliny či vzduchové bubliny. 
+
+Broušené kameny dělíme do široké řady odstínů. Barva kamene závisí jeho chemickém složení. Důležitá je v tomto ohledu jednotnost barev.
+
+Hmotnost souvisí s velikostí kamene. U diamantů se hmotnost určuje v karátech  a je natolik důležitá, že se v některých případech volí kompromis mezi kvalitou brusu.
+
+Brus je důležitá mechanická úprava kamene. Ideálně opracovaný kámen má dokonalý soulad mezi brilancí, ohněm a jiskřením. Mezi parametry hodnotící kvalitu brusu patří kvalita povrchového opracování faset. Fasety se brousí rovinnými brusnými kotouči. Broušením mohou vzniknout rýhy, škrábance, prohlubně, abraze na hranách (zbroušení přechodu mezi fasetami), povrchová oxidace a nové fasety. Kámen je třeba brousit s vysokou přesností. Každá odchylka velikosti a úhlu fasety od ideálního tvaru zhorší optické vlastnosti kamene. Orientace faset je proto důležitým parametrem pro zhodnocení kvality brusu.
+
+Jedním z nástrojů ke zkoumání optických vlastností broušeného kamene je nasvícení jeho povrchu světelným svazkem. Na fasetách broušeného kamene dochází ve zjednodušeném případě k odrazu a lomu světelného svazku. Z toho důvodu se dopadající svazek roztříští na řadu světelných svazků různých tvarů. Svazky jsou definovány směrem šíření, zářivým tokem a elektromagnetickými parametry. 
+
+Barva, čistota a kvalita brusu mají za následek změnu geometrie svazků. Ta je jednoznačným popisem broušeného kamene. Hodnocením vystupujících svazků můžeme určit parametry kamene. 
+
+Tato práce navazuje na dlouhodobý výzkum v Centru strojového vnímání na katedře kybernetiky Elektrotechnické fakulty ČVUT. 
+
+
+První práce, která se zabývá průchodem nerozbíhajícího se svazku konvexním tělesem je software LADOK \cite{Pohl2002} od Petra Pohla.  
+
+Práce využívá software LADOK \cite{Pohl2002} od Petra Pohla. Simulační program LADOK zavádí pro broušený kámen geometrický model ve formě konvexního mnohostěnu s rovnými ploškami, fasetami. Na povrch kamene dopadá svazek nerozbíhajících se paprsků světla z definovaného směru. LADOK řeší odrazy, lomy a dělení svazků na povrchu kamene. Svazky po opuštění kamene mají definovaný směr, zářivý tok, plochu a tvar. Tento software rozšířil Igor Bodlák \cite{bodlakLADOK} o výpočet elekromagnetické vlastnosti svazků. Matematický model kamene obohatil Martin Straka \cite{strakaLADOK}. Přechody mezi fasetami modeloval jako posloupnost většího počtu menších faset s nenulovým poloměrem křivosti. 
+
+LADOK je matematickým řešením experimentu na obr. \ref{fig:basicMeasure}. Zdrojem světla je laser. Laserový svazek dopadá na broušený kámen, kde se roztříští na mnoho menších svazků. Ty jsou po opuštění kamene zachyceny na stínítku. Stínítko snímáme kamerou a získáváme obraz svazků na stínítku.  
+
+
+\begin{figure}[h!]
+\begin{center}
+\scalebox{0.5}{ \input{xfig/stinitko.pstex_t}}
+\end{center}
+\caption{Nákres principu experimentu. Laser produkuje svazek světla, který dopadá na celou plochu kamene. V kameni se svazek roztříští na mnoho svazků. Svazky vystupující z kamene v horní polorovině dopadnou na stínítko. Stínítko snímá kamera. Převzato z \cite{Drapela}.}
+\label{fig:basicMeasure}
+\end{figure}
+
+
+Experimentální soustavu máme sestavenou a zkalibrovanou \cite{Drapela}. Známe transformaci mezi obrazem svazku na stínítku a směrem, ve kterém opouští kámen. 
+
+O možnost porovnání dat reálného experimentu s výsledky počítačové simulace se postaral Igor Bodlák \cite{Bodlak2005}. Navrhl optimalizaci kritéria hodnotící rozdíl vzdálenosti stop z experimentu a odrazů stop simulace na stínítku. Optimalizovaly se parametry faset kamene a kámen se tak deformoval, aby se dosáhlo co nejlepší shody v zadaném kritériu. Software pro řešení inverzní úlohy nazval zkratkou LAM. 
+
+LAM byl použitelný pouze pro broušený kámen čtvercového tvaru. Z důvodu složitosti přiřazení stop z experimentu k obrazům simulovaných svazků při osvětlení celého kamene zaměřil vstupní laserový svazek pouze do určitých míst kamene. Tím vzniklo redukované množství svazků a korespondence se simulovanými svazky se výrazně zjednodušila. Nevýhodou tohoto přístupu jsou rozměry kamene, které musí být několikanásobně větší než průměr laserového svazku. Metoda je prakticky nepoužitelná pro kameny o rozměrech v jednotkách milimetru. 
+
+	V této práci osvítíme laserovým svazkem celý kámen. Zaměříme se na kameny šatonové růže s plochým spodkem a 12-ti bočními fasetami. Tyto kameny se ve zkratce nazývají \textit{viva12}. Rozměry kamenů budou v řádech milimetrů. 
+	
+	K robustní detekci obrazu svazků použijeme MSER detektor \cite{Matas}. Z výsledku detekce určíme parametry stop. Sestavíme program, pomocí kterého bude možno manuálně párovat obrazy svazků broušeného kamene se simulovanými stopami.
+ Optimalizací z LAMu získáme náklony faset. Parametry svazků prozkoumáme pomocí určených experimentů. Navrhneme algoritmus pro \textit{vivu12}, který určí automaticky orientaci faset kamene. Výstupem programu budou odchylky úhlů faset kamene od jejich ideální pozice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
