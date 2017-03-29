@@ -1,11 +1,19 @@
-\section*{Detekce světelných stop v obraze}
-Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserový svazků, vystupujících z kamene umístěného v naší experimentální soustavě, na stínítko. Zároveň je třeba určit parametry stop, které je možné porovnat s parametry svazků matematického modelu kamene v LADOKu. 
+\chapter{Detekce světelných stop v obraze}
+Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserový svazků na stínítko. Zároveň je třeba určit parametry stop, které se budou porovnávat s parametry svazků matematického modelu kamene v LADOKu. 
 
-Pří zkoumání obrazu, lze intenzity pixelu rozložit na dvě základní složky. Mezi ně patří velikost pozadí a příspěvek od odpadajícího laserového svazku. Ve zjednodušeném případě lze říci, že po odečtení pozadí získáme oblasti, kde se nachází laserové stopy. Při detekci laserových stop však narážíme na řadu problémů.
+Intenzitu pixelu $I$ můžeme vyjádřit jako 
+\begin{equation}
+	I = I_{beam}+I_{back}+I_{edge}+I_{\varepsilon}\,,
+	\label{eq:intensitu_sum}
+\end{equation}
+ kde $I_beam$ reprezentuje příspěvek světelného svazku, $I_{back}$ intenzitu pozadí, $I_{edge}$ intenzitu světelných ocásků a $I_{\varepsilon}$ Poissonův šum. Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit.    
+ 
+Jednoduchým postupem pro určení intenzity pozadí by bylo prahování obrazu nad konstantní úrovní. V našem obraze však typicky konstantní není (reference ka kap...). 
 
-Prvním problémem je určení samotného pozadí. Jednoduchou myšlenkou by bylo prahování obrazu nad konstantní úrovní. V našem obraze však pozadí typicky konstantní není. Po dopadu laserového svazku na drsné stínítko se nezanedbatelná část záření difuzně odrazí. Odrazivé vlastnosti materiálu závisí na úhlu odpadajícího světla a lze je matematicky popsat pomocí abstrakce zvané BRDF (Bidirectional reflectance distribution function). BRDF se navíc může v různých částech stínítka lišit z důvodu rozdílné koncentrace příměsí v materiálu. Odrazivost materiálu zapříčiní nárůst intenzity světla nejen v místě dopadu světelného svazku, ale i v jeho okolí. Nejznatelnější nárůst intenzity záření pozorujeme v blízkém okolí stopy. Z toho důvodu je třeba počítat s dynamicky měnící se hodnotou pozadí, která závisí především na zářivém toku, hustotě a úhlu dopadajících svazků. Rozdílné pozadí se může také vytvořit odrazem zdrojového svazku od jiných předmětů, než broušeného kamene. Hlavním příspěvkem je v tomto případě odraz od podstavce, na který pokládáme broušený kámen.
+Po odečtení pozadí získáme obrazy laserových svazků.  
+Odečtením pozadí získáme intenzitu jednotlivých elementů světelné stopy, 
 
-Další nepříjemnost nastává při překrývání laserových stop. Odfiltrováním pozadí získáme oblasti, kde se nachází světelné stopy. Pokud dochází k překrytí dvou či více stop nevystačíme pouze s jednoúrovňovým prahováním \cite{Drapela}, ale oblasti je třeba rozčlenit pomocí víceúrovňového prahování. V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}). Zároveň předpokládáme, že se laserové stopy nepřekrývají příliš často abychom byli schopni určit pozadí.   
+Světelné stopy se mohou překrývat. S Pokud dochází k překrytí dvou či více stop nevystačíme pouze s jednoúrovňovým prahováním \cite{Drapela}, ale oblasti je třeba rozčlenit pomocí víceúrovňového prahování. V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
 
 \begin{figure}[htbp]
     \centering
@@ -42,18 +50,18 @@ Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícen�
         \label{Detekce}
 \end{figure}
 
-\section*{Předchozí práce}
+\section{Předchozí práce}
 
 V předchozí práci \cite{Drapela} se využívalo odfiltrování pozadí obrazu a následné jednoúrovňové prahování podle intenzity. Tento přístup však nedetekoval stopy s menší intenzitou než nastavený práh a laserové stopy umístěné blízko u sebe spojil do jedné. 
 
-Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. Snímek se prahoval více než jedním prahem, přičemž z oblastí nad prahem se sestavila stromová struktura a světelné stop se určily jako listy stromu s dostatečnou významností. Tento přístup je však pro svou výpočetní náročnost nepoužitelný pro snímky s rozlišením \textit{2050x2050}, které máme k dispozici. 
+Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. Snímek se prahoval více než jedním prahem, přičemž z oblastí nad prahem se sestavila stromová struktura a světelné stop se určily jako listy stromu s dostatečnou významností. Tento přístup je však pro svou výpočetní náročnost nepoužitelný pro snímky s rozlišením 2050$\times$2050, které máme k dispozici. 
 
 Naše úloha detekce je velmi podobná detekci hvězd a galaxií v astronomických snímcích. V oblasti astronomie se hojně používá program s názvem Source Extractor \cite{SEXarticle}. Tento program má za sebou dlouholetý vývoj, je optimalizován z hlediska rychlosti a odzkoušený širokou veřejností. Tento software lze po naladění parametrů použít i pro náš případ. Nevýhodou však je, že nelze spustit operačním systémem Windows, který využíváme a neposkytuje informace o  všech oblastech, které náleží jednotlivým stopám, což je důležité pro určení parametrů laserového svazku.  
 
 Po testu různých detektorů jsme se rozhodli pro detekci laserových stop v obraze využít relativně nový přístup uveden J.Matasem et al. \cite{Matas} v roce 2002 - MSER detektor. 
 
 \newpage
-\section*{MSER (maximal stable extremal region) detektor}
+\section{MSER (maximal stable extremal region) detektor}
 
 MSER detektor hledá v obraze maximálně stabilní extrémní oblasti. Původně byl využit pro robustní nalezení korespondencí mezi dvěma snímky stejného objetu pořízených z různého místa a v současné době se používá v mnoha oblastech počítačového vidění.  
 
