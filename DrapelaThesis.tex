@@ -24,9 +24,17 @@
 \DeclareSIUnit\px{px}
 \DeclareMathOperator*{\argmax}{arg\,max}
 
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+\vspace*{20 pt}%
+{\setlength{\parindent}{0pt} \raggedright \normalfont
+\bfseries\Huge\thechapter.\ #1
+\par\nobreak\vspace{20 pt}}}
+\makeatother
+
 %\fontfamily{phs}
 %\selectfont
-\usepackage[backend=bibtex,style=numeric]{biblatex}
+\usepackage[backend=bibtex,style=numeric,sortcites]{biblatex}
 \usepackage{filecontents}  % create "citations.bib" on-the-fly
 \begin{filecontents*}{thesis.bib}
 @inproceedings{Matas,
@@ -42,6 +50,27 @@
     title = {A comparison of affine region detectors},
     journal = {International Journal of Computer Vision},
     year = {2005}
+}
+@thesis{Pohl2002,
+  author       = {Petr Pohl},
+  title        = {Simulace průletu paprsků transparentním objektem},
+  type         = {phdthesis},
+  institution  = {Czech Technical university in Prague},
+  date         = 2002,
+  location     = {Czech Republic},
+  supervisor   = {Ing. Vladimír Smutný, Ph.D.},
+}
+@Book{bodlakLADOK,
+  author =       {Bodlák, Igor},
+  title =        {Rozšíření toolboxu LADOK, Semester project},
+  publisher =    {Czech Technical University in Prague},
+  year =         {2004},
+}
+@Book{strakaLADOK,
+  author =       {Straka, Matěj},
+  title =        {Tails of beam simulation in LADOK, Semester project},
+  publisher =    {Czech Technical University in Prague},
+  year =         {2013},
 }
 @thesis{Bodlak2005,
   author       = {Igor Bodlák},
@@ -84,7 +113,8 @@
     url = {http://terapix.iap.fr/IMG/pdf/sextractor.pdf}
 }
 \end{filecontents*}
-\addbibresource{thesis.bib}
+\bibliography{thesis}
+%\addbibresource{thesis.bib}
 
 
 
@@ -131,13 +161,17 @@
 %\newpage
 \pagestyle{plain}     % zapne obyčejné číslování
 \setcounter{page}{1}  % nastaví čítač stránek znovu od jedné  
+\input{src/Introduction}
+\input{src/Physical_model}
 \input{src/Detection}
+\input{src/Param_experinents}
+\input{src/ShiftOfRays}
 
 %\begin{figure}[htbp]
 %    \resizebox{\linewidth}{!}{ \input{figures/tailex07.pdf_tex}} % specify figure name
 %\end{figure}
 	
-	
+%\bibliographystyle{unsrt}	
 \clearpage
 \nocite{*}
 \printbibliography 
