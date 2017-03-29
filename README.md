@@ -1,7 +1,7 @@
-# Documentation about the shift of the stone rays 
+# Automatic Estimation of Cut Stone Facet Orientation 
 
-Works started at the 8 of February in 2016 and ended in the 26 of February in 2016.
+Master theis 
 
-Descibe relation between moving the stone and shifting rays in the space. 
+Drapela Jakub 
 
 
