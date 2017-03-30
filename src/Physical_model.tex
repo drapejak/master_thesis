@@ -1,0 +1,75 @@
+\chapter{Fyzikální model}
+
+\section{Model kamene}
+Broušený kámen je modelován jako konvexní mnohostěn \cite{Pohl2002}. Brusné kotouče považujeme za dokonale rovinné. Uchycení kamene při broušení zjednodušíme na absolutně tuhé bez známek pružnosti či ohybu. Fasety potom můžeme modelovat jako rovné plochy. Orientace a umístění fasety získáme z výkresu nebo předchozího měření. 
+
+Přechody mezi fasetami jsou v ideálním případě ostré hrany. Z důvodu abraze hran v procesu výroby kamene jsou hrany obroušeny do oblého tvaru. K přiblížení modelu reálnému obroušení hran aproximujeme hranu množstvím rovinných faset se vzájemnou polohou odpovídající poloměru křivosti hrany.  
+  
+
+\section{Model svazku}
+Svazek světla v LADOKU reprezentuje nerozbíhající se konvexní hranol. Vlivem odrazu a lomu se konvexní tvar zachová. Fasety jsou také konvexní, proto se konvexita zachová i při štěpení svazku. Po opuštění kamene jsou svazky definovány zářivým tokem, plochou a směrem, které lze vyjádřit pomocí azimutu a elevace. Stokesovy koeficienty definují elektromagnetické vlastnosti svazku. 
+
+Zaznamenána je celá cesta svazku. V každém bodě trasy máme k dispozici posloupnost směrů a tvarů svazku vyjádřeném pomocí polygonu. 
+
+Model nepostihuje situace, při kterých nastává rozbíhavost světla. Pokud jsou v materiálu přítomné nečistoty, praskliny, vzduchové bubliny apod. světelný svazek se díky nečistotám rozptýlí. Část zářivého toku svazku může být pohlcena a přeměněna na teplo. Přítomnost hran v kameni způsobí ohyb světla (difrakci). Rozptyl světelných svazků vzniká vlivem nedokonalého vyleštění faset a to jak při lomu tak při odrazu. 
+
+Vlivem oxidace při leštění mohou vzniknout místa s jiným indexem lomu než je index lomu materiálu. Podobný případ nastane pokud má kámen nejednotný odstín. 
+
+
+
+\section{Model stínítka}
+\label{sec:stinitko}
+Po dopadu laserového svazku na stínítko se záření difuzně odrazí. Odrazivé vlastnosti materiálu závisí na úhlu odpadajícího světla a lze je matematicky popsat pomocí modelu zvaného BRDF (Bidirectional reflectance distribution function). Odražené světlo zvýší intenzitu světla nejen v místě dopadu světelného svazku, ale i v jeho okolí.
+
+Odražené světlo zároveň putuje do kamene a od něj zpět na stínítko. 
+
+%%tohle bych zařadil na později
+%Laserové stopy chceme detekovat v černobílém HDR snímku půlkulového stínítka, na které dopadá část laserových svazků vystupujících z nasvíceného kamene. Snímek ze zatížen radiálním zkreslením, které je způsobeno vlastností optické soustavy objektivu. Radiální zkreslení bylo určeno v předchozí bakalářské práci \cite{Drapela}. Snímek lze pomocí transformace z \cite{Drapela} zkreslení zbavit. Z \cite{Drapela} navíc známe transformaci mezi pozicí bodu v nezkresleného snímku a odpovídajícím parametrům azimutu a elevace.
+
+
+
+V ideálním případě lze ve snímaném obraze pozorovat pouze dopady světelných svazků, které vznikly kombinací odrazů a lomů zdrojového svazku od faset broušeného kamene. U reálného kamene ovšem v obraze pozorujeme tenké slábnoucí přímky vycházející ze stopy světelného svazku (ocásky). Tyto ocásky vznikají díky lomu/odrazu světelného svazku od neostrých hran broušeného kamene. Hrany modelujeme v LADOKu jako posloupnost tenkých plošek s nenulovým poloměrem křivosti.
+	
+\begin{itemize}
+	\item Při \textbf{odrazu} světelného svazku od hrany vzniknou v modelovém případě rovnoměrně rozmístěné svazky ležící ve stejné rovině jako svazky, které vznikly odrazem od faset propojených touto hranou.  	
+
+	\item V případě \textbf{lomu} světelného svazku přes hranu kamene je koncentrace lomených svazků největší u svazku lomeného přes sousední fasetu kamene.  
+\end{itemize}	  
+
+\begin{figure}[h!]
+\begin{center}
+\scalebox{.9}{ \input{xfig/tails.pstex_t}}
+\end{center}
+\caption{Příklad snímaného obrazu s vyznačením obrazů svazků a ocásků.}
+\label{fig:tail_ex1}
+\end{figure}
+
+ Intenzita je přitom ovlivněna množstvím faktorů, jako je např. zářivý tok svazku, délka hrany, dopadající úhel, čistota hrany atd. Všechny faktory, které ovlivňují intenzitu ocásku prozatím nejsme schopni v programu LADOK zahrnout do matematického modelu, proto pro prování svazků bude užitečná především informace o směru ocásku. 
+ 
+ 
+
+\section{Model obrazu}
+
+Obraz snímaný kamerou je zatížen radiálním zkreslením. Zkreslení snadno odstraníme pomocí kalibrace kamery\cite{Drapela}. 
+
+
+\section{Model Kamery}
+\label{sec:poisson}
+ Použitý CCD snímač má $2050^2$ pixelů. Každému pixelu odpovídá jeden samostatný snímač, který funguje na principu počítání přicházejících fotonů po dobu expozice. Počet přicházejících fotonů v daném časovém intervalu se řídí Poissonovým rozdělením. Pravděpodobnost, že napočítáme $n$ fotonů je 
+ 
+ \begin{equation}
+    P(\mathrm{X} = n)=\frac{\lambda ^{n}\,\mathrm{e}^{-\lambda}}{n!}\,,
+ \end{equation}
+ kde $\lambda$ je střední hodnota a $\mathrm{X}$ náhodná veličina.
+
+
+
+
+
+
+
+
+
+
+
+

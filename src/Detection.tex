@@ -1,41 +1,56 @@
 \chapter{Detekce světelných stop v obraze}
-Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserový svazků na stínítko. Zároveň je třeba určit parametry stop, které se budou porovnávat s parametry svazků matematického modelu kamene v LADOKu. 
+Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserových svazků na stínítko. Zároveň je třeba určit parametry stop, které se budou porovnávat s parametry svazků matematického modelu kamene. 
 
 Intenzitu pixelu $I$ můžeme vyjádřit jako 
 \begin{equation}
 	I = I_{beam}+I_{back}+I_{edge}+I_{\varepsilon}\,,
 	\label{eq:intensitu_sum}
 \end{equation}
- kde $I_beam$ reprezentuje příspěvek světelného svazku, $I_{back}$ intenzitu pozadí, $I_{edge}$ intenzitu světelných ocásků a $I_{\varepsilon}$ Poissonův šum. Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit.    
+ kde $I_beam$ reprezentuje příspěvek světelného svazku, $I_{back}$ intenzitu pozadí, $I_{edge}$ intenzitu světelných ocásků a $I_{\varepsilon}$ Poissonův šum (kapitola \ref{sec:poisson}). Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit. Po odečtení pozadí získáme obrazy laserových svazků.   
  
-Jednoduchým postupem pro určení intenzity pozadí by bylo prahování obrazu nad konstantní úrovní. V našem obraze však typicky konstantní není (reference ka kap...). 
+Jednoduchým postupem pro určení intenzity pozadí by bylo prahování obrazu nad konstantní úrovní. V našem obraze však typicky konstantní není (kapitola \ref{sec:stinitko}). 
 
-Po odečtení pozadí získáme obrazy laserových svazků.  
-Odečtením pozadí získáme intenzitu jednotlivých elementů světelné stopy, 
+Rozdílné pozadí se může také vytvořit odrazem zdrojového svazku od jiných předmětů, než broušeného kamene. Hlavním příspěvkem je v tomto případě odraz od podstavce, na který pokládáme broušený kámen (obr. \ref{fig: podstavec}).
 
-Světelné stopy se mohou překrývat. S Pokud dochází k překrytí dvou či více stop nevystačíme pouze s jednoúrovňovým prahováním \cite{Drapela}, ale oblasti je třeba rozčlenit pomocí víceúrovňového prahování. V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
+\begin{figure}[htps]
+\centering
+\includegraphics[width = 0.7\textwidth]{podstavec.eps}
+\caption{Jasové úrovně ve vybraném řádku obrazu. Řádek protíná obraz podstavce. V případě červené charakteristiky dopadá na podstavec laserový svazek, rozptyluje se dopadá na stínítko. Modrou charakteristiku pozorujeme, pokud je laser vypnutý.}
+\label{fig: podstavec}
+\end{figure}
+
+Světelné stopy se mohou překrývat. Pro odlišení příspěvků jednotlivých svazků je třeba obraz prahovat v několika úrovních jasu.
+
+V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
 
 \begin{figure}[htbp]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
-        \centering\includegraphics[width=.6\textwidth]{pf_near.pdf}
+        \centering\includegraphics[width=.5\textwidth]{pf_near.pdf}
     \end{minipage}
     \begin{minipage}[c]{0.48\textwidth}
-        \centering\includegraphics[width=.6\textwidth]{pf_near2.pdf}
+        \centering\includegraphics[width=.5\textwidth]{pf_near2.pdf}
     \end{minipage}
     \\
-        \caption[Slynutí dvou různých svazků.]{Ilustrace slynutí dvou různých svazků. V pravém i levém snímku se nachází typově stejné laserové svazky. Na levém obrázku dopadly na stínítko příliš blízko sebe. V tomto případě detekujeme pouze jednu stopu.}
+        \caption[Slynutí dvou různých svazků.]{Ilustrace slynutí dvou různých svazků. V pravém i levém snímku se nachází typově stejné laserové svazky. Na levém obrázku dopadly na stínítko příliš blízko sebe. V tomto případě nejsme schopni rozlišit příspěvek obou svazků a detekujeme pouze jednu stopu.}
         \label{Splynuti}
 \end{figure}
 
 Detekci zároveň komplikuje všudepřítomný šum a obraz je třeba filtrovat. Filtrováním snížíme šum v odraze, ale zároveň zmenšíme kontrast mezi stopami. 
 
-Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícenásobným odrazem postupně ztrácí zářivý tok. Po dopadu na stínítko mohou splynout se šumem a jejich detekce je prakticky nemožná. Mezi stopami s nízkým jasem se zároveň často objevují artefakty vzniklé nežádoucími optickými efekty např. interferencí, proto detekce bude často selhávat, pokud chceme rozpoznat i nepatrné stopy v obraze.
+Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícenásobným odrazem postupně ztrácí zářivý tok. Po dopadu na stínítko mohou být nerozlišitelné od šumu a jejich detekce je prakticky nemožná. Pro stopy s nízkým jasem bude detekce často selhávat
 
 
 
-%%tohle bych zařadil na později
-%Laserové stopy chceme detekovat v černobílém HDR snímku půlkulového stínítka, na které dopadá část laserových svazků vystupujících z nasvíceného kamene. Snímek ze zatížen radiálním zkreslením, které je způsobeno vlastností optické soustavy objektivu. Radiální zkreslení bylo určeno v předchozí bakalářské práci \cite{Drapela}. Snímek lze pomocí transformace z \cite{Drapela} zkreslení zbavit. Z \cite{Drapela} navíc známe transformaci mezi pozicí bodu v nezkresleného snímku a odpovídajícím parametrům azimutu a elevace.
+\section{Předchozí práce}
+
+V předchozí práci \cite{Drapela} jsme neměli možnost detekovat stopy s nízkým jasem. Překrývající se svazky bylo nemožné oddělit.  
+
+Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. Snímek se prahoval více než jedním prahem, přičemž z oblastí nad prahem se sestavila stromová struktura a světelné stop se určily jako listy stromu s dostatečnou významností. Tento přístup je však pro svou výpočetní náročnost nepoužitelný pro snímky s rozlišením 2050$\times$2050, které máme k dispozici. 
+
+Naše úloha detekce je velmi podobná detekci hvězd a galaxií v astronomických snímcích. V oblasti astronomie se hojně používá program s názvem Source Extractor \cite{SEXarticle}. Tento program má za sebou dlouholetý vývoj, je optimalizován z hlediska rychlosti a odzkoušený širokou veřejností. Tento software lze po naladění parametrů použít i pro náš případ. Nevýhodou však je, že nelze spustit v operačním systému Windows, který využíváme.  
+
+Po testu různých detektorů jsme se rozhodli pro detekci laserových stop v obraze využít relativně nový přístup uveden J.Matasem et al. \cite{Matas} v roce 2002 - MSER detektor. 
 
 \begin{figure}[htbp]
     \centering
@@ -46,21 +61,11 @@ Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícen�
         \centering\includegraphics[width=.7\textwidth]{pf_deff2.pdf}
     \end{minipage}
     \\
-        \caption[Problémové detekce.]{Problémové detekce. Nalevo jsou laserové stopy blízko u sebe. Stopy je nutné od sebe oddělit. Na levém snímku jsou znázorněny markantní rozdíly mezi velikostí a intenzitou stop. Je nutné použít víceúrovňový detektor. }
+        \caption[Problémové detekce.]{Problémové detekce. Nalevo jsou laserové stopy blízko u sebe. Stopy je nutné od sebe oddělit. Na levém snímku jsou znázorněny výrazné rozdíly mezi velikostí a intenzitou stop. Je nutné použít víceúrovňový detektor. }
         \label{Detekce}
 \end{figure}
 
-\section{Předchozí práce}
 
-V předchozí práci \cite{Drapela} se využívalo odfiltrování pozadí obrazu a následné jednoúrovňové prahování podle intenzity. Tento přístup však nedetekoval stopy s menší intenzitou než nastavený práh a laserové stopy umístěné blízko u sebe spojil do jedné. 
-
-Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. Snímek se prahoval více než jedním prahem, přičemž z oblastí nad prahem se sestavila stromová struktura a světelné stop se určily jako listy stromu s dostatečnou významností. Tento přístup je však pro svou výpočetní náročnost nepoužitelný pro snímky s rozlišením 2050$\times$2050, které máme k dispozici. 
-
-Naše úloha detekce je velmi podobná detekci hvězd a galaxií v astronomických snímcích. V oblasti astronomie se hojně používá program s názvem Source Extractor \cite{SEXarticle}. Tento program má za sebou dlouholetý vývoj, je optimalizován z hlediska rychlosti a odzkoušený širokou veřejností. Tento software lze po naladění parametrů použít i pro náš případ. Nevýhodou však je, že nelze spustit operačním systémem Windows, který využíváme a neposkytuje informace o  všech oblastech, které náleží jednotlivým stopám, což je důležité pro určení parametrů laserového svazku.  
-
-Po testu různých detektorů jsme se rozhodli pro detekci laserových stop v obraze využít relativně nový přístup uveden J.Matasem et al. \cite{Matas} v roce 2002 - MSER detektor. 
-
-\newpage
 \section{MSER (maximal stable extremal region) detektor}
 
 MSER detektor hledá v obraze maximálně stabilní extrémní oblasti. Původně byl využit pro robustní nalezení korespondencí mezi dvěma snímky stejného objetu pořízených z různého místa a v současné době se používá v mnoha oblastech počítačového vidění.  
@@ -69,35 +74,22 @@ Princip spočívá v několikaúrovňovému prahování obrazu podle intenzity a
 
 Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a vůči změně měřítka, což umožňuje současnou detekci malých a velkých oblastí s různou intenzitou. Podle studie \cite{Comparison}, která porovnává MSER detektor s ostatními typy detektorů významných oblastí, dosáhl MSER detektor skvělých výsledků v detekci oblastí s vysokou hustotu a variabilní změnou velikosti. MSER detektor se tedy zdá být vhodným kandidátem pro detekci laserových stop v obraze.
 
-\section*{Implementace}
+\section{Implementace}
 
-\subsection*{Filtrace}
-   Nejprve se pokusíme z obrazu odstranit šum, který lze považovat za bílý. Šum odstraníme konvolucí s maskou, která se skládá z prvků odpovídajících Gaussově funkci. Přitom však dochází k rozmazání snímku, což může působit problémy při detekci stop. Proto pro filtraci šumu volíme kompromis, který zachová dostatečný kontrast mezi stopami a zároveň částečně odstraní šum. Pro všechny následující operace používáme místo původního snímku filtrovaný.    
+\subsection{Filtrace}
+   Nejprve se pokusíme minimalizovat Poissonův šum v obraze. Šum redukujme konvolucí s maskou, která se skládá z prvků odpovídajících Gaussově funkci. Volíme velikost masky \SI{3}{\px} a rozptyl $\sigma = 0.7$.
 
-\subsection*{Detekce} 
+\subsection{Detekce} 
    %výstup MSER detektoru 
-   Dalším krokem je detekce MSER oblastí ve filtrovaném snímku. MSER detektor je již implementován v prostředí MATLAB ve funkci \textit{detectMSERFeatures}, což zaručuje optimalizaci z hlediska rychlosti detekce. Pro aplikaci této funkce na snímek se světelnými stopami je třeba nastavit základní parametry detektoru. Mezi ně patří frekvence prahování snímku, maximální a minimální velikost MSER oblasti a dostatečná stabilita oblasti. 
-
-\subsection*{Odstranění nežádoucích detekcí}
-
-Výstupem detektoru je soubor MSER oblastí. U výrazné světelné stopy dostaneme data ve formě pyramidy MSER oblastí podle jednotlivých úrovní intenzity. MSER detektor však najde nejen oblasti s výrazně vyšší intenzitou, ale i oblasti s nižší intenzitou než okolí. Ty je třeba vyřadit, protože nereprezentují světelnou stopu, kterou hledáme. 
-
-K odstranění nežádoucích detekcí použijeme následující postup. Nejdříve pro větší vyhlazení obrazu snímek rozmažeme konvolucí s Gaussovým filtrem. Následně určíme vrcholy všech MSER oblastí, což bude pixel s největší hodnotou intenzity v dané oblasti. V malém okolí vrcholů oblastí určíme průměr rozmazaného snímku. Pro efektivitu výpočtu využijeme integrální obrázek.
-
-Spočítáme kritérium, které určuje, zda je hodnota vrcholu v rozmazaném obrázku menší než součet průměru okolí vrcholu v rozmazaném obrázku a násobku střední hodnoty intenzity nerozmazaného snímku. Ideově: 
-
-$ HodnotaVrcholu(gauss) < \left( PrumerOkoliVrcholu(gauss) + K\times StredniHodnota(Snimek)\right)\,.$ Oblasti s vrcholy, které splňují dané kritérium odstraníme.
-
-%\begin{itemize}
-%	\item \textbf{1. Rozmazání snímku Gaussovým filtrem} - Rozmazání provedeme konvolucí snímku s poměrně velkým Gaussovým filtrem (např. 31 pixelů).
-%	
-%	\item \textbf{2. V okolí vrcholů najdeme průměr rozmazaného snímku} -  K tomu využíváme součet pomocí integrálního obrázku průměrujeme počtem pixelů.
-%	
-%	\item \textbf{3. Výpočet kritéria a odstranění vrcholu} - Kritérium pro odstranění je následující: pokud je hodnota vrcholu v rozmazaném obrázku vetší než součet průměru okolí vrcholu z rozmazaném obrázku a násobku střední hodnoty intenzity snímku. 
-%	
-%	Ideově: $ HodnotaVrcholu(gauss) < PrumerOkoliVrcholu(gauss) + K\times StredniHodnota(Snimek)$ . V našem případě je velikost konstanty  $ K = 0.035$.
-
-%\end{itemize}
+   Dalším krokem je detekce MSER oblastí ve filtrovaném snímku. MSER detektor je již implementován v prostředí MATLAB ve funkci \textit{detectMSERFeatures}. Pro aplikaci této funkce na snímek se světelnými stopami je třeba nastavit základní parametry detektoru. Mezi ně patří frekvence prahování snímku, maximální a minimální velikost MSER oblasti a dostatečná stabilita oblasti. 
+   
+   \begin{itemize}
+   \item \textbf{Frekvecne prahování snímku.} - Určuje velikost kroku mezi úrovněmi prahovací intenzity. Prahování se používá pro nalezení extremálních oblastí, na kterých se testuje stabilita.
+   
+   \item \textbf{Maximální a minimální velikost MSER oblasti.} 
+   
+   \item \textbf{Dostatečná stabilita oblasti.} - Velkost stabilní oblasti se po změně úrovně prahu intenzity příliš nemění. 
+   \end{itemize}
 
 \subsection*{Určení pozadí snímku}
 	Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli extrahovat příspěvky intenzit od dopadajících laserových svazků. Určení velikosti pozadí snímku v našem případě komplikují oblasti v obraze, které nezachycují stínítko. Patří mezi ně podstavec na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu koule a vysoká změna intenzity komplikuje určení pozadí obrazu. Skok v intenzitě zmenšíme tak, že posuneme intenzitu pixelů v těchto oblastech na práh, který se odvíjí od střední hodnoty intenzity snímku. 
@@ -109,7 +101,22 @@ $ HodnotaVrcholu(gauss) < \left( PrumerOkoliVrcholu(gauss) + K\times StredniHodn
      \caption[Filtrace pozadí.]{Filtrace pozadí v HDR snímku znázorněná v řádku obrazu protínajícím obraz podstavce na kámen, který komplikuje odhad pozadí.}
         \label{fig:pozadi}
 \end{figure}
-	       
+	      
+\subsection{Odstranění nežádoucích detekcí}
+
+Výstupem detektoru je soubor MSER oblastí. U výrazné světelné stopy dostaneme data ve formě pyramidy MSER oblastí podle jednotlivých úrovní intenzity. 
+
+MSER detektor však najde nejen oblasti s výrazně vyšší intenzitou, ale i oblasti s nižší intenzitou než okolí. Ty je třeba vyřadit, protože nereprezentují světelnou stopu, kterou hledáme. 
+
+K odstranění nežádoucích detekcí použijeme následující postup. 
+\begin{enumerate}
+\item Od snímku odečteme pozadí.
+
+\item V upraveném snímku sečteme pro každou MSER oblast příspěvky jasů. 
+
+\item Pokud je součet menší než nastavený práh, oblast odstraníme.  
+\end{enumerate}
+ 	      
 
 \subsection*{Určení vlastností laserových svazků}
 Popis svazku může obsahovat tyto parametry: směr šíření svazku určený azimutem a elevací, velikost svazku, zářivý tok, intenzitu a směr světelných ocásků laserové stopy. Nově jsme si ukázali, že můžeme do popisu zahrnout velikost a směr posunu svazku při rotaci kamene. Popis svazku lze obohatit o dominantní orientaci, ke které můžeme přidat eliptický tvar stopy. 
@@ -130,28 +137,14 @@ Vlastnosti laserových svazků určíme z filtrovaného snímku, od kterého ode
 		
 \end{itemize}
 
-\section*{Světelné ocásky}
-	V ideálním případě lze ve snímaném obraze pozorovat pouze dopady světelných svazků, které vznikly kombinací odrazů a lomů zdrojového svazku od faset broušeného kamene. U reálného kamene ovšem v obraze pozorujeme tenké slábnoucí přímky vycházející ze stopy světelného svazku (ocásky). Tyto ocásky vznikají díky lomu/odrazu světelného svazku od neostrých hran broušeného kamene. Hrany modelujeme v LADOKu jako posloupnost tenkých plošek s nenulovým poloměrem křivosti.
 	
-\begin{itemize}
-	\item Při \textbf{odrazu} světelného svazku od hrany vzniknou v modelovém případě rovnoměrně rozmístěné svazky ležící ve stejné rovině jako svazky, které vznikly odrazem od faset propojených touto hranou.  	
-
-	\item V případě \textbf{lomu} světelného svazku přes hranu kamene je koncentrace lomených svazků největší u svazku lomeného přes sousední fasetu kamene.  
-\end{itemize}	  
-
-\begin{figure}[h!]
-\begin{center}
-\scalebox{.9}{ \input{xfig/tails.pstex_t}}
-\end{center}
-\caption{Příklad snímaného obrazu s vyznačením svazků a ocásků.}
-\label{fig:tail_ex1}
-\end{figure}
-
+	
+	
+\section{Detektor ocásků}
 	Se znalostí směru a velikosti ocásků detekovaných svazků dostáváme nové informace, které nohou přispět k jejich správnému párování se svazky z matematického modelu kamene.
-	Ve snímaném obraze nelze rozpoznat všechny vznikající ocásky, ale pouze ty s dostatečně velkou intenzitou. Intenzita je přitom ovlivněna množstvím faktorů, jako je např. zářivý tok svazku, délka hrany, dopadající úhel, čistota hrany atd. Všechny faktory, které ovlivňují intenzitu ocásku prozatím nejsme schopni v programu LADOK zahrnout do matematického modelu, proto pro prování svazků bude užitečná především informace o směru ocásku. 
 	
-	
-\section*{Detektor ocásků}
+	Ve snímaném obraze nelze rozpoznat všechny vznikající ocásky, ale pouze ty s dostatečně velkou intenzitou.
+
 	Princip detektoru ocásků zjednodušeně spočívá v převodu okolí stopy do polárních souřadnic (vzdálenost $\rho$ a úhel $\phi$) a nalezení oblastí úhlů, ve kterých je patrný výrazný vzestup intenzity oproti okolí. Takovéto oblasti jsou typicky důsledkem přítomnosti ocásků o obraze a lze tímto způsobem ocásky detekovat. 
 	
 	 U rozvinutí do polárního grafu si však musíme všimnout překážek, které komplikují detekci ocásků.  
