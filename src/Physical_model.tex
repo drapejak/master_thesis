@@ -5,17 +5,28 @@ Broušený kámen je modelován jako konvexní mnohostěn \cite{Pohl2002}. Brusn
 
 Přechody mezi fasetami jsou v ideálním případě ostré hrany. Z důvodu abraze hran v procesu výroby kamene jsou hrany obroušeny do oblého tvaru. K přiblížení modelu reálnému obroušení hran aproximujeme hranu množstvím rovinných faset se vzájemnou polohou odpovídající poloměru křivosti hrany.  
   
+\begin{figure}[htps]
+\centering
+\includegraphics[width=0.6\linewidth]{edge_ex.pdf}
+\caption{Detail aproximace přechodu mezi fasetami.}
+\label{fig: edge}
+\end{figure}  
 
 \section{Model svazku}
 Svazek světla v LADOKU reprezentuje nerozbíhající se konvexní hranol. Vlivem odrazu a lomu se konvexní tvar zachová. Fasety jsou také konvexní, proto se konvexita zachová i při štěpení svazku. Po opuštění kamene jsou svazky definovány zářivým tokem, plochou a směrem, které lze vyjádřit pomocí azimutu a elevace. Stokesovy koeficienty definují elektromagnetické vlastnosti svazku. 
 
 Zaznamenána je celá cesta svazku. V každém bodě trasy máme k dispozici posloupnost směrů a tvarů svazku vyjádřeném pomocí polygonu. 
 
-Model nepostihuje situace, při kterých nastává rozbíhavost světla. Pokud jsou v materiálu přítomné nečistoty, praskliny, vzduchové bubliny apod. světelný svazek se díky nečistotám rozptýlí. Část zářivého toku svazku může být pohlcena a přeměněna na teplo. Přítomnost hran v kameni způsobí ohyb světla (difrakci). Rozptyl světelných svazků vzniká vlivem nedokonalého vyleštění faset a to jak při lomu tak při odrazu. 
+Model nepostihuje situace, při kterých nastává rozbíhavost světla.
+\begin{itemize}
+\item Pokud jsou v materiálu přítomné nečistoty, praskliny, vzduchové bubliny apod., světelný svazek se rozptýlí.
+\item  Rozptyl světelných svazků vzniká vlivem nedokonalého vyleštění faset a to jak při lomu tak při odrazu.
+\item Vlivem oxidace při leštění mohou vzniknout místa s jiným indexem lomu než je index lomu materiálu. Podobný případ nastane pokud má kámen nejednotný odstín.
 
-Vlivem oxidace při leštění mohou vzniknout místa s jiným indexem lomu než je index lomu materiálu. Podobný případ nastane pokud má kámen nejednotný odstín. 
+\item Přítomnost hran v kameni způsobí ohyb světla (difrakci).
+\end{itemize}
 
-
+Část zářivého toku svazku může být pohlcena a přeměněna na teplo.
 
 \section{Model stínítka}
 \label{sec:stinitko}
@@ -28,13 +39,7 @@ Odražené světlo zároveň putuje do kamene a od něj zpět na stínítko.
 
 
 
-V ideálním případě lze ve snímaném obraze pozorovat pouze dopady světelných svazků, které vznikly kombinací odrazů a lomů zdrojového svazku od faset broušeného kamene. U reálného kamene ovšem v obraze pozorujeme tenké slábnoucí přímky vycházející ze stopy světelného svazku (ocásky). Tyto ocásky vznikají díky lomu/odrazu světelného svazku od neostrých hran broušeného kamene. Hrany modelujeme v LADOKu jako posloupnost tenkých plošek s nenulovým poloměrem křivosti.
-	
-\begin{itemize}
-	\item Při \textbf{odrazu} světelného svazku od hrany vzniknou v modelovém případě rovnoměrně rozmístěné svazky ležící ve stejné rovině jako svazky, které vznikly odrazem od faset propojených touto hranou.  	
-
-	\item V případě \textbf{lomu} světelného svazku přes hranu kamene je koncentrace lomených svazků největší u svazku lomeného přes sousední fasetu kamene.  
-\end{itemize}	  
+V ideálním případě lze ve snímaném obraze pozorovat pouze dopady světelných svazků, které vznikly kombinací odrazů a lomů zdrojového svazku od faset broušeného kamene. U reálného kamene ovšem v obraze pozorujeme tenké slábnoucí přímky vycházející ze stopy světelného svazku, ocásky. Tyto ocásky vznikají díky lomu/odrazu světelného svazku od neostrých hran broušeného kamene.
 
 \begin{figure}[h!]
 \begin{center}
@@ -44,13 +49,83 @@ V ideálním případě lze ve snímaném obraze pozorovat pouze dopady světeln
 \label{fig:tail_ex1}
 \end{figure}
 
- Intenzita je přitom ovlivněna množstvím faktorů, jako je např. zářivý tok svazku, délka hrany, dopadající úhel, čistota hrany atd. Všechny faktory, které ovlivňují intenzitu ocásku prozatím nejsme schopni v programu LADOK zahrnout do matematického modelu, proto pro prování svazků bude užitečná především informace o směru ocásku. 
+
+Vnik ocásků si ukážeme při lomu světla na oblé hraně kamene. Situaci budeme uvažovat v 2D prostoru, kde platí obecně stejné principy jako ve 3D. Světlo nahradíme paprsky světla se směrem šíření $\vec{v_i}$. 
+
+Zvolíme si dvě fasety, které svírají úhel \SI{45}{\celsius}. Ostrý přechod aproximujeme. Vznikne posloupnost úseček, které propojují fasety. Každé úsečce přiřadíme normálový vektor $\vec{n}$.  
+
+\begin{figure}[htp]
+\centering
+\begin{minipage}[c]{0.48\textwidth}
+\includegraphics[width=\textwidth]{edgeIn.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.48\textwidth}
+\includegraphics[width=\textwidth]{edgeOut.pdf}
+\end{minipage}
+\caption{Dopad světelných paprsků na hranu. Paprsky se lomí vlevo ze vzduchu do skla a vpravo ze skla do vzduchu. Situace pro index lomu vzduchu $n_a = 1$ a index lomu skla $n_g = 1.5$.}
+\label{fig:edgeIn}
+\end{figure}
+Z Fresnelových rovnic víme, že dochází nejen k lomu světla, ale část světla000 se odrazí. Poměr intenzity odraženého a lomeného světla závisí na polarizaci světla a dopadajícím úhlu. V této ukázce uvažujeme nepolarizované světlo. 
+
+Aplikací Snellova zákonu a zákonu odrazu na $\vec{n}$ a $\vec{v_i}$ vypočítáme směr lomu a odrazu světelných paprsků.
+
+Na obr. \ref{fig:edgeIn} dopadají paprsky světla ze vzduchu na sklo i ze skla do vzduchu. V odou případech se odražené i lomené paprsky projeví jako ocásky.
+
+Pokusíme se prozkoumat intenzitu ocásků $I$ v závislosti na vystupujícím úhlu, elevaci $\varepsilon$. 
+Pro jednotlivou elevaci určíme intenzitu relevantně ke vstupující intenzitě jako 
+\begin{equation}
+ I_\varepsilon  = \frac{\rho_{{max}}}{\rho_\varepsilon}\cdot R
+\end{equation}
+pro odražené paprsky a 
+\begin{equation}
+ I_\varepsilon  = \frac{\rho_{\varepsilon_{max}}}{\rho_\varepsilon}\cdot (1-R)
+\end{equation}
+pro lomené paprsky, kde  
+
+	\begin{tabular}{l l}
+	$\rho_{\varepsilon}$ & 	- hustota paprsků pro danou elevaci $\varepsilon\,$,\\
+	$\rho_{{max}}$  	&	- maximální hustota paprsků ve všech elevacích,\\
+	$R_\varepsilon$		&	- odrazivost z Fresnelových rovnic pro $\varepsilon\,$.	 \\
+	
+	\end{tabular}
+
+Závislost $I(\varepsilon)$ je označená jako \textit{Reflection coefficient} resp. \textit{Refraction coefficient} na obrázcích \ref{fig:edgeInGraf} a \ref{fig:edgeOutGraf}.
+
+
+\begin{figure}[htps]
+\centering
+\begin{minipage}[c]{0.48\textwidth}
+\includegraphics[width=\textwidth]{edgeIn_reflection.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.48\textwidth}
+\includegraphics[width=\textwidth]{edgeIn_refraction.pdf}
+\end{minipage}
+\caption{\textit{Reflection coefficient} resp. \textit{Refraction coefficient} v případě když se lomí světlo ze vzduchu do skla (obr. \ref{fig:edgeIn}).}
+\label{fig:edgeInGraf}
+\end{figure}
+
+\begin{figure}[htps]
+\centering
+\begin{minipage}[c]{0.48\textwidth}
+\includegraphics[width=\textwidth]{edgeOut_reflection.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.48\textwidth}
+\includegraphics[width=\textwidth]{edgeOut_refraction.pdf}
+\end{minipage}
+\caption{\textit{Reflection coefficient} resp. \textit{Refraction coefficient} v případě když se lomí světlo ze skla do vzduchu (obr. \ref{fig:edgeIn}).}
+\label{fig:edgeOutGraf}
+\end{figure}
+
+Z grafů \ref{fig:edgeInGraf} a \ref{fig:edgeOutGraf} je patrné, že ocásky budeme pozorovat různě dlouhé a z vysokou variabilitou z hlediska intenzity. 
+	  
+
+ Intenzita a délka ocásku je ovlivněna i dalšími faktory, jako je např. délka hrany, čistota hrany, drsnost povrchu atd. Všechny faktory, které ovlivňují intenzitu ocásku prozatím nejsme schopni v programu LADOK zahrnout do matematického modelu, proto pro prování svazků bude užitečná především informace o směru ocásku. 
  
  
 
 \section{Model obrazu}
 
-Obraz snímaný kamerou je zatížen radiálním zkreslením. Zkreslení snadno odstraníme pomocí kalibrace kamery\cite{Drapela}. 
+Obraz snímaný kamerou je zatížen radiálním zkreslením. Zkreslení odstraníme pomocí kalibrace kamery \cite{Drapela}. 
 
 
 \section{Model Kamery}
