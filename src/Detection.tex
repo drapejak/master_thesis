@@ -1,4 +1,5 @@
 \chapter{Detekce světelných stop v obraze}
+\label{sec:detection}
 Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserových svazků na stínítko. Zároveň je třeba určit parametry stop, které se budou porovnávat s parametry svazků matematického modelu kamene. 
 
 Intenzitu pixelu $I$ můžeme vyjádřit jako 
@@ -36,11 +37,50 @@ V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak
         \label{Splynuti}
 \end{figure}
 
-Detekci zároveň komplikuje všudepřítomný šum a obraz je třeba filtrovat. Filtrováním snížíme šum v odraze, ale zároveň zmenšíme kontrast mezi stopami. 
+Obraz je třeba filtrovat. Filtrováním snížíme šum v odraze, ale zároveň zmenšíme kontrast mezi stopami. 
 
 Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícenásobným odrazem postupně ztrácí zářivý tok. Po dopadu na stínítko mohou být nerozlišitelné od šumu a jejich detekce je prakticky nemožná. Pro stopy s nízkým jasem bude detekce často selhávat
 
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering\includegraphics[width=.75\textwidth,height = 4.5 cm]{pf_punch2.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering\includegraphics[width=.75\textwidth,height = 4.5 cm]{p_deff2.pdf}
+    \end{minipage}
+    \\
+        \caption[Problémové detekce.]{Problémové detekce. Nalevo jsou laserové stopy blízko u sebe. Stopy je nutné od sebe oddělit. Na levém snímku jsou znázorněny výrazné rozdíly mezi velikostí a intenzitou stop. Je nutné použít víceúrovňový detektor. }
+        \label{fig:Detekce}
+\end{figure}
 
+\newcommand\x{4}
+\newcommand\xx{0,155}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[c]{0.163\textwidth}
+        \centering\includegraphics[height = \x cm,width = \textwidth ]{cut_1.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{\xx \textwidth}
+        \centering\includegraphics[height = \x cm,width = \textwidth]{cut_2.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{\xx \textwidth}
+        \centering\includegraphics[height = \x cm,width = \textwidth]{cut_3.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{\xx \textwidth}
+        \centering\includegraphics[height = \x cm,width = \textwidth]{cut_4.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{\xx \textwidth}
+        \centering\includegraphics[height = \x cm,width = \textwidth]{cut_5.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{\xx \textwidth}
+        \centering\includegraphics[height = \x cm,width = \textwidth]{cut_6.pdf}
+    \end{minipage}
+    \\
+        \caption[Jasové řezy.]{Jasové řezy ve totožném sloupci obrazu. Řez protíná pixel s maximální hodnotou jasu ve stopě. Číslování řezů odpovídá indexům stop na obr. \ref{fig:Detekce}.}
+        \label{fig:rezy}
+\end{figure}
 
 \section{Předchozí práce}
 
@@ -52,18 +92,7 @@ Naše úloha detekce je velmi podobná detekci hvězd a galaxií v astronomický
 
 Po testu různých detektorů jsme se rozhodli pro detekci laserových stop v obraze využít relativně nový přístup uveden J.Matasem et al. \cite{Matas} v roce 2002 - MSER detektor. 
 
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}[c]{0.48\textwidth}
-        \centering\includegraphics[width=.7\textwidth]{pf_punch2.pdf}
-    \end{minipage}
-    \begin{minipage}[c]{0.48\textwidth}
-        \centering\includegraphics[width=.7\textwidth]{pf_deff2.pdf}
-    \end{minipage}
-    \\
-        \caption[Problémové detekce.]{Problémové detekce. Nalevo jsou laserové stopy blízko u sebe. Stopy je nutné od sebe oddělit. Na levém snímku jsou znázorněny výrazné rozdíly mezi velikostí a intenzitou stop. Je nutné použít víceúrovňový detektor. }
-        \label{Detekce}
-\end{figure}
+
 
 
 \section{MSER (maximal stable extremal region) detektor}
@@ -77,28 +106,34 @@ Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a v�
 \section{Implementace}
 
 \subsection{Filtrace}
-   Nejprve se pokusíme minimalizovat Poissonův šum v obraze. Šum redukujme konvolucí s maskou, která se skládá z prvků odpovídajících Gaussově funkci. Volíme velikost masky \SI{3}{\px} a rozptyl $\sigma = 0.7$.
+   Nejprve se pokusíme minimalizovat Poissonův šum v obraze. Šum redukujme konvolucí s maskou, která se skládá z prvků odpovídajících Gaussově funkci. Parametry filtru: velikost masky - \SI{3}{\px}, směrodatná odchylka $\sigma = 0.7$.
 
 \subsection{Detekce} 
    %výstup MSER detektoru 
    Dalším krokem je detekce MSER oblastí ve filtrovaném snímku. MSER detektor je již implementován v prostředí MATLAB ve funkci \textit{detectMSERFeatures}. Pro aplikaci této funkce na snímek se světelnými stopami je třeba nastavit základní parametry detektoru. Mezi ně patří frekvence prahování snímku, maximální a minimální velikost MSER oblasti a dostatečná stabilita oblasti. 
    
    \begin{itemize}
-   \item \textbf{Frekvecne prahování snímku.} - Určuje velikost kroku mezi úrovněmi prahovací intenzity. Prahování se používá pro nalezení extremálních oblastí, na kterých se testuje stabilita.
+   \item \textbf{Frekvecne prahování snímku.} - Určuje velikost kroku mezi prahovacími úrovněmi jasu (obr. \ref{fig:gaussIntersection}). Prahování se používá pro nalezení extremálních oblastí, na kterých se testuje stabilita.
    
    \item \textbf{Maximální a minimální velikost MSER oblasti.} 
    
    \item \textbf{Dostatečná stabilita oblasti.} - Velkost stabilní oblasti se po změně úrovně prahu intenzity příliš nemění. 
    \end{itemize}
 
-\subsection*{Určení pozadí snímku}
-	Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli extrahovat příspěvky intenzit od dopadajících laserových svazků. Určení velikosti pozadí snímku v našem případě komplikují oblasti v obraze, které nezachycují stínítko. Patří mezi ně podstavec na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu koule a vysoká změna intenzity komplikuje určení pozadí obrazu. Skok v intenzitě zmenšíme tak, že posuneme intenzitu pixelů v těchto oblastech na práh, který se odvíjí od střední hodnoty intenzity snímku. 
+\subsection{Pozadí snímku}
+	Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli spočítat světelný tok pro jednotlivé dopadající laserové svazky. Určení intensity pozadí v každém pixelu komplikují obraz   podstavce na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu stínítka. Vysoká změna jasu v obraze komplikuje určení pozadí.  
 	
-	Pozadí následně určíme konvolucí s Gaussovým filtrem, o velikosti řádově stovky pixelů, který ignoruje vysoké změny intenzity v obraze. Samotná konvoluce s tímto filtrem by s použitím standardní funkce \textit{conv2} byla příliš časově náročná, proto konvoluci provádíme efektivnějším způsobem, který využívá rozkladu masky filtru na singulární čísla.
+	V obraze nalezneme podstavec a okolí stínítka. Podstavec je specifický nízkou střední hodnotou jasu a jeho obraz je téměř ideální kruh. V seznamu MSER oblastí proto podstavec snadno nalezneme. Okolí stínítka nalezneme prahováním. 
+	
+	Velikost jasu v okolí stínítka nastavíme na hodnotu odvíjející se od střední hodnoty jasu snímku. Jas pixelů v oblasti podstavce nastavíme na střední hodnotu jasu pixelů v blízkém okolí podstavce.  
+	
+	Pozadí následně určíme konvolucí s Gaussovým filtrem. Tento filtr ignoruje vysoké změny jasu v obraze. Parametry filtru: velikost masky - \SI{201}{\px}, směrodatná odchylka $\sigma = 201$.
+	
+	Samotná konvoluce s tímto filtrem by s použitím standardní funkce \textit{conv2} byla příliš časově náročná, proto konvoluci provádíme efektivnějším způsobem, který využívá rozkladu masky filtru na singulární čísla.
 	
 \begin{figure}[htbp]
     \centering\includegraphics[width=.8\textwidth]{image_rust2.eps}
-     \caption[Filtrace pozadí.]{Filtrace pozadí v HDR snímku znázorněná v řádku obrazu protínajícím obraz podstavce na kámen, který komplikuje odhad pozadí.}
+     \caption[Filtrace pozadí.]{Filtrace pozadí v HDR snímku znázorněná v řádku obrazu protínajícím obraz podstavce na kámen.}
         \label{fig:pozadi}
 \end{figure}
 	      
@@ -118,29 +153,77 @@ K odstranění nežádoucích detekcí použijeme následující postup.
 \end{enumerate}
  	      
 
-\subsection*{Určení vlastností laserových svazků}
-Popis svazku může obsahovat tyto parametry: směr šíření svazku určený azimutem a elevací, velikost svazku, zářivý tok, intenzitu a směr světelných ocásků laserové stopy. Nově jsme si ukázali, že můžeme do popisu zahrnout velikost a směr posunu svazku při rotaci kamene. Popis svazku lze obohatit o dominantní orientaci, ke které můžeme přidat eliptický tvar stopy. 
+\section{Určení parametrů svazku}
+\label{sec:beam parameters}
+Základním parametrem svazku je směr šíření popsaný azimutem a elevací. Směr šíření svazku snadno dopočítáme, pokud nalezneme jeho obraz. Pozici světelné stopy v obraze lze určit jako polohu pixelu s maximálním jasem v detekované oblasti. Šum v obraze ale situaci komplikuje. Z obr. \ref{fig:rezy} ale vidíme, že pixel s maximálním jasem nemusí vždy určovat pozici dopadu a navíc nemusí být unikátním maximem.
 
-Vlastnosti laserových svazků určíme z filtrovaného snímku, od kterého odečteme pozadí. Filtrace pozadí je znázorněna na obr. \ref{fig:pozadi}. MSER oblasti jsou roztříděny, podle toho, ke které stopě patří. Oblasti s nízkou prahovou hodnotu mohou náležet více než jedné stopě. Pro stopy   následně určíme následující parametry:
+Laserové svazky se v reálném případě rozptylují. Kvůli různé rozbíhavosti svazků nejsme schopni určit údaje o ploše a intenzitě jejich obrazu. Určujeme pouze velikost zářivého toku svazku, kterou jsme schopni při nízkém rozptylu spolehlivě vypočítat.   
+
+V okolí obrazu svazků jsou patrné ocásky. Detekce ocásků a jejich klasifikace je popsána v samostatné kapitole \ref{sec:tails}.
+
+Rozbíhavost svazků nemusí být ve všech směrech stejná. Na stínítku tak svazky tvoří stopy různých tvarů. Tvar stopy definujeme pomocí 3 parametrů.
+
+\subsection{Základní parametry}
+
+Máme detekované MSER oblasti. Nalezneme průniky oblastí a sestavíme stromovou strukturu. Kořenem stromu bude oblast s největší plochou a postupně se budou přidávat oblasti menší. Princip je patrný z 2D pohledu na prahovací úrovně MSER detektoru v obr. \ref{fig:gaussIntersection}, kde vidíme i princip tvorby stromu. Výsledkem bude řada stromů s různým počtem listů. Počet všech listů určuje počet detekovaných stop v obraze.
+
+\begin{figure}[htbp]
+    \centering
+	\begin{minipage}[c]{0.78 \textwidth}
+    \includegraphics[width=\textwidth]{gaussIntersection.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{0.16 \textwidth}
+    \includegraphics[width=\textwidth]{treeGauss.pdf}
+    \end{minipage}
+    
+    
+     \caption[]{Ilustrace překrytí stop v 2D řezu. Výsledná charakteristika je součtem dvou gaussových funkcí. Červeně jsou zakresleny prahovací úrovně MSER detektoru. Vlevo vidíme stromovou strukturu MSER oblastí a-f. Kořenem stromu je vrstva \textbf{e}. Vrstva \textbf{d} je jediný vnitřní uzel stromu. Listy představují vrstvy \textbf{c} a \textbf{a}. Důležité jsou podstromy \textbf{e}$\rightarrow$\textbf{d}, \textbf{c}, \textbf{b}$\rightarrow$\textbf{a}.}
+        \label{fig:gaussIntersection}
+\end{figure}
+
+Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počítáme parametry svazků.
 
 \begin{itemize}
-	\item \textbf{Azimut a elevace} - Pozici světelné stopy v obraze lze určit jako polohu pixelu s maximální intenzitou v detekované oblasti. Šum v obraze ale situaci komplikuje a lepší odhad získáme, pokud určíme pozici stopy jako těžiště vrchní vrstvy pyramidy MSER oblastí příslušné stopy. Přesněji střed eliptické aproximace vrchní vrstvy. 
+	\item \textbf{Azimut a elevace} - Pozici dopadu světelné stopy určíme jako střed eliptické aproximace oblasti odpovídající listu stromu. Transformací z \cite{Drapela} získáme azimut a elevaci.
 	
-	Snímek ze zatížen radiálním zkreslením, které je způsobeno vlastností optické soustavy objektivu. Radiální zkreslení bylo určeno v předchozí bakalářské práci \cite{Drapela}, odkud navíc známe transformaci mezi pozicí bodu v nezkresleného snímku a odpovídajícím parametrům azimutu a elevace.
+	\item \textbf{Zářivý tok} - 
+	Od filtrovaného snímku odečteme pozadí (obr. \ref{fig:pozadi}) a získáme snímek, ze kterého budeme odečítat intenzitu pixelů. Algoritmus výpočtu zářivého toku je následující:
+	\begin{enumerate}
+	\item $t_0$ = původní strom; $i = 0$; $q = 0$; $n_0$ = počet listů v $t_0$;
 	
-	\item \textbf{Velikost} - Pro všechny MSER oblasti určíme počet světelných stop, které se v dané oblasti nachází. Předpokládá se, že každé stopě náleží alespoň jedna MSER oblast, která obsahuje pouze tento samostatný svazek. Může ovšem nastat situace, že první vrstva pyramidy MSER oblastí, která obsahuje danou stopu, náleží také intenzivnější stopě. Méně intenzivní stopa je poté vyřazena a celá oblast přenechána významnější stopě. 
+	\item Ve stromu $t_i$ nalezneme podstromy $\tau_1,\dots,\tau_n$ maximální velikosti bez vnitřních uzlů stromu $t_i$ a obsahující jeden list stromu $t_i$.  
 	
- 	Určíme nejrozsáhlejší oblasti, které obsahují minimální počet stop a dále již počítáme pouze s nimi. U těch oblastí, které obsahují pouze jednu stopu určíme velikost a přiřadíme ji k daném svazku. Velikosti zbylých oblasti postupně dělíme podle poměru velikostí svazků před rozdělením, dokud takto nerozdělíme všechny oblasti.   
-	\item \textbf{Zářivý tok} - Zářivý tok určíme obdobným postupem jako při výpočtu velikosti světelné stopy. Zářivý tok je zde součtem intenzit v dané oblasti po odečtení pozadí.   
-	\item \textbf{Intenzita} - Intenzitu určíme výpočtem jako poměr zářivého toku a velikosti světelného svazku.
-	\item \textbf{Orientace a eliptický tvar} -  Pro každou MSER oblast je určena elipsa, která uzavírá danou oblast. U této elipsy lze určit její orientaci. Stopa může obsahovat více MSER oblastí. Orientace stopy je určena jako medián orientací elips všech MSER oblastí a hlavní poloosy eliptického tvaru stopy jsou určeny podle MSER oblasti, která je prostřední vrstvou všech oblastí. Orientace a eliptický tvar mohou být zároveň úzce spjaty s orientací světelných ocásků.		
+	\item Nalezneme křeny $\xi_1,\dots,\xi_n$ podstromů $\tau_1,\dots,\tau_n$. Kořeny odpovídají oblastem s množinou pixelů $\mathbb{M}_{q+1},\dots,\mathbb{M}_{q+n}$.
+	
+	\item Pokud $i = 0$ vypočítáme zářivý tok 
+	
+	\begin{equation}
+	\phi_{e_j} = \frac{\sum_{k\in\mathbb{M}_j} I_k}{N_j}\,,\hspace{2cm} j\in\lbrace1,\dots,n_0\rbrace
+	\end{equation}
+	kde $I_k$ je jas pixelu $k$ ve snímku a $N_j$ je počet pixelů v množině $\mathbb{M}_j$. Index $j$ odpovídá indexu stopy ve stromu $t_0$.\\
+	
+	Pokud $i > 0$ nalezneme množiny $\mathbb{P}_1,\dots,\mathbb{P}_n$. $\mathbb{P}_l$ je množina indexů listů, které jsou v $t_0$ potomkem uzlu $\xi_l$, kde $l\in {1,\dots,n}$. Zářivý tok stop upravíme.  
+	 \begin{equation}
+	\phi_{e_j} = \frac{\phi_{e_j}}{\sum_{q\in \mathbb{P}_l}\phi_{e_q}}\frac{\sum_{\lbrace k\in\mathbb{M}_{q+l}\cap\lbrace \mathbb{M}_1^c \cup \mathbb{M}_2^c \cup \dots \cup \mathbb{M}_q^c \rbrace\hspace{1.5mm}|\hspace{1.5mm} \lbrace1,2,\dots,q\rbrace = \mathbb{P}_l \rbrace} I_k}{N_{q+l}} + \phi_{e_j}\,.\hspace{0.5cm} j\in \mathbb{P}_l
+	\end{equation}
+	
+	\item $i = i+1$; $q = q+n$;
+	\item Pokud $n \neq 1$ odstraníme podstromy $\tau_1,\dots,\tau_n$ z grafu $t_{i-1}$, získáme strom  $t_i$ a opakujeme od kroku $2$. 
+	
+\end{enumerate}	
+	\item \textbf{Tvar} -  Pro každou MSER oblast je určena elipsa, která uzavírá danou oblast. U této elipsy lze určit orientaci a velikost hlavních poloos. 
+	
+	Každé stopě odpovídá jeden list stromu. Nalezneme cestu $\mathcal{C}$, která je cestou od kořene k listu. 	
+	
+	Orientace je určena jako medián orientací elips všech MSER oblastí v cestě $\mathcal{C}$. Velikosti hlavních poloos jsou určeny podle MSER oblasti, která je uprostřed cesty $\mathcal{C}$.		
 		
 \end{itemize}
 
 	
 	
 	
-\section{Detektor ocásků}
+\subsection{Detektor ocásků}
+\label{sec:tails}
 	Se znalostí směru a velikosti ocásků detekovaných svazků dostáváme nové informace, které nohou přispět k jejich správnému párování se svazky z matematického modelu kamene.
 	
 	Ve snímaném obraze nelze rozpoznat všechny vznikající ocásky, ale pouze ty s dostatečně velkou intenzitou.

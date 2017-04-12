@@ -114,5 +114,10 @@ text(p2(1),p2(2)+0.02,p2(3)-0.05,'$\mathbf{h_{RF}}$','FontSize',textSize,'Interp
 
 export_fig (['C:\Users\kubin\Desktop\GitFolder\doc_thesis\figures\' 'vivi12Facets2.pdf'])
 
+%%
+
+
+
+
 
 
