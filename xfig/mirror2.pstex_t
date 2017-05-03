@@ -1,0 +1,113 @@
+\begin{picture}(0,0)%
+\includegraphics{xfig/mirror2_pspdftex.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(9156,6795)(1936,-7666)
+\put(2766,-5030){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma$}%
+}}}}
+\put(2701,-5380){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\alpha$}%
+}}}}
+\put(3340,-5400){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_2 = \gamma+2\,\alpha$}%
+}}}}
+\put(3530,-4962){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_2$}%
+}}}}
+\put(3950,-4962){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_2$}%
+}}}}
+\put(2950,-4100){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_1$}%
+}}}}
+\put(2850,-3650){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_1 = \gamma+\alpha$}%
+}}}}
+
+\put(4150,-3650){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_3 = \gamma+3\,\alpha$}%
+}}}}
+
+\put(4303,-4090){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_3$}%
+}}}}
+\put(3313,-4100){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_1$}%
+}}}}
+\put(4776,-4100){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_3$}%
+}}}}
+
+\put(5000,-5400){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_4 = \gamma+4\,\alpha$}%
+}}}}
+\put(5140,-4947){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_4$}%
+}}}}
+\put(5694,-4947){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_4$}%
+}}}}
+
+\put(6100,-3650){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_5 = \gamma+5\,\alpha$}%
+}}}}
+\put(6190,-4175){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_5$}%
+}}}}
+\put(6780,-4175){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_5$}%
+}}}}
+
+\put(7300,-5400){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_6 = \gamma+6\,\alpha$}%
+}}}}
+\put(7350,-4940){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_6$}%
+}}}}
+\put(8060,-4940){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_6$}%
+}}}}
+
+\put(8700,-3650){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_7 = \gamma+7\,\alpha$}%
+}}}}
+\put(8710,-4197){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_7$}%
+}}}}
+\put(9474,-4197){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\gamma_7$}%
+}}}}
+\put(2500,-1820){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\beta$}%
+}}}}
+\put(2860,-1820){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\beta$}%
+}}}}
+\put(3250,-7330){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\delta_1$}%
+}}}}
+\put(4750,-7330){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\delta_2$}%
+}}}}
+\put(6887,-7330){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\delta_3$}%
+}}}}
+\put(9655,-7330){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\delta_4$}%
+}}}}
+\put(4048,-1820){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\varepsilon_1$}%
+}}}}
+\put(5780,-1820){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\varepsilon_2$}%
+}}}}
+\put(8165,-1820){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\varepsilon_3$}%
+}}}}
+\put(2209,-1078){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}0}%
+}}}}
+\put(3535,-7590){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}2}%
+}}}}
+\put(5300,-7590){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}4}%
+}}}}
+\put(7700,-7590){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}6}%
+}}}}
+\put(10700,-7590){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}8}%
+}}}}
+\put(9990,-4605){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}9}%
+}}}}
+\put(10162,-1078){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}7}%
+}}}}
+\put(7357,-1078){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}5}%
+}}}}
+\put(5182,-1078){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}3}%
+}}}}
+\put(3566,-1078){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,0,0}1}%
+}}}}
+\put(2100,-2700){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\mathbf{\eta_1}$}%
+}}}}
+\put(2100,-4500){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\mathbf{\eta_2}$}%
+}}}}
+\put(2100,-6700){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\mathbf{\eta_3}$}%
+}}}}
+\put(10150,-3350){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rho_1$}%
+}}}}
+\put(10150,-5730){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rho_2$}%
+}}}}
+\end{picture}%

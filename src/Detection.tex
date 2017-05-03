@@ -20,6 +20,10 @@ Rozdílné pozadí se může také vytvořit odrazem zdrojového svazku od jiný
 \label{fig: podstavec}
 \end{figure}
 
+Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli spočítat světelný tok pro jednotlivé dopadající laserové svazky. Určení intensity pozadí v každém pixelu komplikují obraz podstavce na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu stínítka. Vysoká změna jasu v obraze komplikuje určení pozadí.  
+
+V okolí stínítka můžeme detekovat falešné svazky, které je třeba odstranit. 
+
 Světelné stopy se mohou překrývat. Pro odlišení příspěvků jednotlivých svazků je třeba obraz prahovat v několika úrovních jasu.
 
 V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
@@ -119,11 +123,68 @@ Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a v�
    
    \item \textbf{Dostatečná stabilita oblasti.} - Velkost stabilní oblasti se po změně úrovně prahu intenzity příliš nemění. 
    \end{itemize}
+   
+\subsection{Okolí stínítka}
+\label{sec:okoliStinitka}
+	Okraj obrazu stínítka má tvar kružnice. Kružnici popisuje funkce
+	
+	\begin{equation}
+	\left(x-x_0\right)^2 + \left(y-y_0\right)^2 = r^2\,,
+	\label{eq:kruznice}
+	\end{equation}
+	kde $\left[x,y\right]$ je bod na kružnici, $\left[x_0,y_0\right]$ střed kružnice a $r$ poloměr. Je zřejmé, že k určení parametrů kružnice potřebujeme nalézt minimálně 3 body ležící na kružnici. 
+
+	Úpravou rovnice \ref{eq:kruznice} dostaneme
+
+	\begin{equation}
+	x^2 -2\,x\,x_0 + x_0^2 + y^2 -2\,y\,y_0 + y_0^2 = r^2\,,
+	\end{equation}
+	\begin{equation}
+	\begin{bmatrix}
+    -2x &-2y &1 
+	\end{bmatrix} \cdot 
+	\begin{bmatrix}
+    x_0 & y_0 & -r^2+x_0^2+y_0^2
+	\end{bmatrix}^T = -\left(x^2+y^2\right)\,.
+	\end{equation}
+
+
+Polohu v obraze určujeme podle počtu pixelů v horizontálním (sloupec) a vertikálním (řádek) směru.
+  
+Body na kružnici nalezeme pomocí sečen. Sečny sestrojíme ve dvou řádcích snímku a nalezneme sloupce, ve kterých protínáme kružnici.  
+
+Sestrojením sečny získáme jasový řez v celé šířce snímku. Fotonový šum jasu vyfiltrujeme konvolucí s Gaussovým filtrem. Velikost filtru volíme \SI{21}{\px} a směrodatnou odchylku $\sigma = 20$. 
+
+Vyfiltrovaný jas oddělíme prahem. Práh určuje střední hodnota jasu v daném řezu. Nalezneme sloupce, kde je jas vyšší než prahové hodnota. Sloupec s minimálním resp. maximálním počtem pixelů určuje bod na kružnici.  
+
+Každá sečna protíná kružnici ve dvou bodech, proto dostaneme celkem čtyři body na kružnici. Parametry kružnice určíme metodou nejmenších čtverců. 
+
+Okolí stínítka poté definuje funkce 
+
+\begin{equation}
+	\left(x-x_0\right)^2 + \left(y-y_0\right)^2 > r^2\,.
+	\label{eq:kruzniceOkoli}
+	\end{equation}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering\includegraphics[width=\textwidth]{circleFit.pdf}
+    \end{minipage}
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering\includegraphics[width=\textwidth,height = 0.5\textwidth]{brigCutA.eps}\\
+        
+        \centering\includegraphics[width=\textwidth,height = 0.5\textwidth]{brigCutB.eps}
+    \end{minipage}
+    \\
+        \caption[Detekce okolí stínítka.]{Jasové řezy \textit{A} a \textit{B}. Detekujeme body na kružnici $p_1$, $p_2$, $p_3$ a $p_4$. Metodou nejmenších čtverců odhadneme parametry kružnice $x_0$, $y_0$ a $R$.}
+        \label{fig:CircleFit}
+\end{figure}
+	
+
 
 \subsection{Pozadí snímku}
-	Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli spočítat světelný tok pro jednotlivé dopadající laserové svazky. Určení intensity pozadí v každém pixelu komplikují obraz   podstavce na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu stínítka. Vysoká změna jasu v obraze komplikuje určení pozadí.  
-	
-	V obraze nalezneme podstavec a okolí stínítka. Podstavec je specifický nízkou střední hodnotou jasu a jeho obraz je téměř ideální kruh. V seznamu MSER oblastí proto podstavec snadno nalezneme. Okolí stínítka nalezneme prahováním. 
+	V obraze nalezneme podstavec a okolí stínítka. Podstavec je specifický nízkou střední hodnotou jasu a jeho obraz je téměř ideální kruh. V seznamu MSER oblastí proto podstavec snadno nalezneme. Okolí stínítka již známe (kap. \ref{sec:okoliStinitka}).
 	
 	Velikost jasu v okolí stínítka nastavíme na hodnotu odvíjející se od střední hodnoty jasu snímku. Jas pixelů v oblasti podstavce nastavíme na střední hodnotu jasu pixelů v blízkém okolí podstavce.  
 	
@@ -144,12 +205,13 @@ Výstupem detektoru je soubor MSER oblastí. U výrazné světelné stopy dostan
 MSER detektor však najde nejen oblasti s výrazně vyšší intenzitou, ale i oblasti s nižší intenzitou než okolí. Ty je třeba vyřadit, protože nereprezentují světelnou stopu, kterou hledáme. 
 
 K odstranění nežádoucích detekcí použijeme následující postup. 
+
 \begin{enumerate}
-\item Od snímku odečteme pozadí.
+\item Od filtrovaného snímku odečteme pozadí.
 
-\item V upraveném snímku sečteme pro každou MSER oblast příspěvky jasů. 
+\item Ve vzniklém snímku vypočítáme střední hodnotu jasu MSER oblastí. 
 
-\item Pokud je součet menší než nastavený práh, oblast odstraníme.  
+\item Pokud je střední hodnota jasu záporná, MSER oblast odstraníme.  
 \end{enumerate}
  	      
 
