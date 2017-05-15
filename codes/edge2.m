@@ -33,8 +33,8 @@ vector = [0 1 0]'; % rovna faseta
 
 
 % volba indexu lomu zmeni pripad lomu na hrane 
-no = 1.0;
-ni = 1.5;
+no = 1.5;
+ni = 1.0;
 fromGlass = ni > no;
 
 if fromGlass
@@ -87,8 +87,8 @@ x = r*sin(angles);
 radiusX = xmax-radius_l +  x;
 radiusY = ymin-r + y;
 
-plot(radiusX,radiusY,'k','Linewidth',1.5)
-
+h = plot(radiusX,radiusY,'m','Linewidth',1.5);
+legsource=[legsource h];
 
 axis off
 set(gcf,'Color','w')
@@ -135,7 +135,7 @@ for w = mask
     rayPoint(:,w) = rayPoint(:,w)/rayPoint(3,w);
 %     plot([rayPoint(1,w),xEdge(w)],[rayPoint(2,w),yEdge(w)],'-b')
     myq =  quiver(rayPoint(1,w),rayPoint(2,w),xEdge(w)-rayPoint(1,w),yEdge(w)-rayPoint(2,w),'b','AutoScale','off');
-    if length(legsource) < 2
+    if length(legsource) < 3
         legsource = [legsource myq];
     end
     else
@@ -146,15 +146,18 @@ mask = mask(maskOk);
 
 rayLine   = zeros(3,length(mask));
 rayPoint = zeros(3,length(mask));
-fio  = zeros(1,length(mask)); 
-fio2 = zeros(1,length(mask)); 
+fio   = zeros(1,length(mask)); % odraz
+fio1  = zeros(1,length(mask)); % lom
+fio2  = zeros(1,length(mask)); 
+fio12 = zeros(1,length(mask)); 
 
 cosAlfa = zeros(1,length(mask)); % uhel odrazu
 cosBeta = zeros(1,length(mask)); % uhel lomu
 for w = mask
     vo = real(ray_reflection(n_f(:,w),vi));
     vectOut = edge_points(:,w) - 20*vo;
-    fio(w) = atan2(vo(1),vo(2));
+    fio(w)  = abs(atan2(vo(1),vo(2))*180/pi);
+    fio1(w) = abs(atan2(-vo(1),-vo(2))*180/pi);
     cosAlfa(w)   =  vo'*n_f(:,w)/(norm(vo)*norm(n_f(:,w)));
     
     rayLine(:,w) = cross(vectOut,edge_points(:,w));
@@ -172,7 +175,7 @@ for w = mask
 %     plot([rayPoint(1,w),xEdge(w)],[rayPoint(2,w),yEdge(w)],'-r')
     myq =  quiver(xEdge(w),yEdge(w),-xEdge(w)+rayPoint(1,w),-yEdge(w)+rayPoint(2,w),'r','AutoScale','off');
     
-    if length(legsource) < 3
+    if length(legsource) < 4
         legsource = [legsource myq];
     end
     
@@ -180,7 +183,8 @@ for w = mask
     cosBeta(w)   =  vo'*-n_f(:,w)/(norm(vo)*norm(-n_f(:,w)));
     
         
-        fio2(w) = atan2(vo(1),vo(2));
+        fio2(w)  = abs(atan2(vo(1),vo(2))*180/pi);
+        fio12(w) = abs(atan2(-vo(1),-vo(2))*180/pi);
 
         vectOut = edge_points(:,w) + 20*vo;
 
@@ -199,24 +203,27 @@ for w = mask
     %     plot([rayPoint(1,w),xEdge(w)],[rayPoint(2,w),yEdge(w)],'-r')
     if abs(cosBeta(w))-1e-10 > 0 % totalni obraz
         myq = quiver(xEdge(w),yEdge(w),-xEdge(w)+rayPoint(1,w),-yEdge(w)+rayPoint(2,w),'g','AutoScale','off');
-        if length(legsource) < 4
+        if length(legsource) < 5
             legsource = [legsource myq];
         end
     end
 end
 
-h = legend(legsource,'edge','input light','reflected','refracted');
-set(h,'Interpreter','latex')
+h = legend(legsource,'fasety','hrana',sprintf('vstupující\npaprsek'),'odraz','lom');
+% set(h,'Interpreter','latex')
 if samples < 50
+    text(5.6,1.2,'1','Interpreter','Latex','FontSize',16)
+        text(14.1,-3,'2','Interpreter','Latex','FontSize',16)
     if fromGlass
     %     text(13,-4,'$n_1 = 1.5$','Interpreter','Latex')
-    text(13,-3.5,'Glass','Interpreter','Latex','FontSize',12)
-        text(13, 0,'Air','Interpreter','Latex','FontSize',12) 
+    text(13,-3.5,'Sklo','Interpreter','Latex','FontSize',12)
+        text(13, 0,'Vzduch','Interpreter','Latex','FontSize',12) 
         
         export_fig([fig_path 'edgeOut.pdf'])
     else
-       text(5.5,0,'Glass','Interpreter','Latex','FontSize',12)
-        text(5.5, 2,'Air','Interpreter','Latex','FontSize',12)
+       text(5.5,0,'Sklo','Interpreter','Latex','FontSize',12)
+        text(5.5, 2,'Vzduch','Interpreter','Latex','FontSize',12)
+        
        set(h,'Position', [0.1500 0.2104 0.1994 0.1546])
        export_fig([fig_path 'edgeIn.pdf']) 
     end
@@ -235,59 +242,74 @@ end
 
 if samples > 100
     figure;
-    plot(fio,abs(S_plocha).*R,'r','Linewidth',1.5)
-    set(gca,'Xlim',[min(fio) max(fio)])
+    if ~fromGlass
+        plot(fio,abs(S_plocha).*R,'r','Linewidth',1.5)
+        set(gca,'Xlim',[min(fio) max(fio)])
+        set(gca,'Xlim',[0 max(fio)])
+    else
+        plot(fio1,abs(S_plocha).*R,'r','Linewidth',1.5)
+        set(gca,'Xlim',[min(fio1) max(fio1)])
+        set(gca,'Xlim',[0 max(fio1)])
+    end
     set(gca,'Ylim',[0 1])
     grid on
-    ylabel('Reflection coefficient', 'Interpreter', 'latex')
-    xlabel('$\varepsilon \left[ rad \right]$', 'Interpreter', 'latex')
-    set(gca,'XTickMode','manual')
+    ylabel('koeficient odrazu', 'Interpreter', 'latex')
+    xlabel('$\beta \left[ ^\circ \right]$', 'Interpreter', 'latex')
+%     set(gca,'XTickMode','manual')
     set(gcf,'Position', [680 702 378 276])
     set(gcf,'Color',[1 1 1])
     if fromGlass
-        set(gca,'XTick', [-pi -7/8*pi -3/4*pi -5/8*pi -pi/2 -3/8*pi -pi/4 ])
+%         set(gca,'XTick', [-pi -7/8*pi -3/4*pi -5/8*pi -pi/2 -3/8*pi -pi/4 ])
 
         set(gca,'TickLabelInterpreter','latex')
-        set(gca,'XTickLabel',{'$-\pi$','$-\frac{7}{8}\pi$','$-\frac{3}{4}\pi$',...
-            '$-\frac{5}{8}\pi$','$-\frac{\pi}{2}$','$-\frac{3}{8}\pi$','$-\frac{\pi}{4}$'})
-        %'edgeIn_reflection'.eps rucne
+%         set(gca,'XTickLabel',{'$-\pi$','$-\frac{7}{8}\pi$','$-\frac{3}{4}\pi$',...
+%             '$-\frac{5}{8}\pi$','$-\frac{\pi}{2}$','$-\frac{3}{8}\pi$','$-\frac{\pi}{4}$'})
+%         %'edgeIn_reflection'.eps rucne
             export_fig([fig_path 'edgeOut_reflection.pdf'])
     else
-        set(gca,'XTick',  0:pi/8:3/4*pi)
-
+%         set(gca,'XTick',  0:pi/8:3/4*pi)
+%         set(gca,'XTick',  0:pi/8:3/4*pi)
         set(gca,'TickLabelInterpreter','latex')
-        set(gca,'XTickLabel',{'$0$','$\frac{\pi}{8}$','$\frac{\pi}{4}$',...
-            '$\frac{3}{8}\pi$','$\frac{\pi}{2}$','$\frac{5}{8}\pi$','$\frac{3}{4}\pi$'}) 
-        %'edgeIn_reflection'.eps rucne
+%         set(gca,'XTickLabel',{'$0$','$\frac{\pi}{8}$','$\frac{\pi}{4}$',...
+%             '$\frac{3}{8}\pi$','$\frac{\pi}{2}$','$\frac{5}{8}\pi$','$\frac{3}{4}\pi$'}) 
+%         %'edgeIn_reflection'.eps rucne
             export_fig([fig_path 'edgeIn_reflection.pdf'])
     end
     
 
     refrMask = T>1e-10;
     figure;
-    plot(fio2(refrMask),abs(S_plocha(refrMask)).*T(refrMask).*hustota(refrMask),'g','Linewidth',1.5)
-    set(gca,'Xlim',[min(fio2(refrMask)) max(fio2(refrMask))])
+    if fromGlass
+        plot(fio2(refrMask),abs(S_plocha(refrMask)).*T(refrMask).*hustota(refrMask),'g','Linewidth',1.5)
+%         set(gca,'Xlim',[min(fio2(refrMask)) max(fio2(refrMask))])
+        set(gca,'Xlim',[0 max(fio2(refrMask))])
+    else
+        plot(fio12(refrMask),abs(S_plocha(refrMask)).*T(refrMask).*hustota(refrMask),'g','Linewidth',1.5)
+%         set(gca,'Xlim',[min(fio12(refrMask)) max(fio12(refrMask))])
+        set(gca,'Xlim',[0 max(fio12(refrMask))])
+    end
     set(gca,'Ylim',[0 1])
     grid on
-    ylabel('Refraction coefficient', 'Interpreter', 'latex')
-    xlabel('$\varepsilon \left[ rad \right]$', 'Interpreter', 'latex')
-    set(gca,'XTickMode','manual')
+    ylabel('koeficient lomu', 'Interpreter', 'latex')
+    xlabel('$\beta \left[ ^\circ \right]$', 'Interpreter', 'latex')
+%     set(gca,'XTickMode','manual')
     set(gcf,'Position', [680 702 378 276])
     set(gcf,'Color',[1 1 1])
     if fromGlass
-        set(gca,'XDir','reverse')
-        set(gca,'XTick', [-pi/4 -3/16*pi -2/16*pi -1/16*pi ])
+%         set(gca,'XDir','reverse')
+%         set(gca,'XTick', [-pi/4 -3/16*pi -2/16*pi -1/16*pi ])
 
         set(gca,'TickLabelInterpreter','latex')
-        set(gca,'XTickLabel',{'$-\frac{\pi}{4}$','$-\frac{3}{16}\pi$','$-\frac{1}{8}\pi$',...
-        '$-\frac{1}{16}\pi$'})
-        %'edgeOut_refraction'.eps rucne
+%         set(gca,'XTickLabel',{'$-\frac{\pi}{4}$','$-\frac{3}{16}\pi$','$-\frac{1}{8}\pi$',...
+%         '$-\frac{1}{16}\pi$'})
+%         %'edgeOut_refraction'.eps rucne
         export_fig([fig_path 'edgeOut_refraction.pdf'])
     else
-        set(gca,'XTick', [-pi -31/32*pi -15/16*pi -29/32*pi])
-
+%         set(gca,'Xlim',[min(fio12(refrMask)) -pi/2])
+%         set(gca,'XTick', [-pi -31/32*pi -15/16*pi -29/32*pi])
+%         set(gca,'XTick', [-19/32*pi -9/16*pi -17/32*pi -1/2*pi])
         set(gca,'TickLabelInterpreter','latex')
-        set(gca,'XTickLabel',{'$-\pi$','$-\frac{31}{32}\pi$','$-\frac{15}{16}\pi$','$-\frac{29}{32}\pi$'}) 
+%         set(gca,'XTickLabel',{'$-\frac{19}{32}\pi$','$-\frac{9}{16}\pi$','$-\frac{17}{32}\pi$','$-\frac{\pi}{2}$'}) 
         %'edgeOut_refraction'.eps rucne
         export_fig([fig_path 'edgeIn_refraction.pdf'])
     

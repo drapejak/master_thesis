@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.15)  3 MAY 2017 10:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.15)  14 MAY 2017 11:39
 entering extended mode
 **DrapelaThesis.tex
 (C:\Users\kubin\Desktop\GitFolder\doc_thesis\DrapelaThesis.tex
@@ -366,6 +366,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+\wrapoverhang=\dimen121
+\WF@size=\dimen122
+\c@WF@wrappedlines=\count105
+\WF@box=\box28
+\WF@everypar=\toks23
+Package: wrapfig 2003/01/31  v 3.6
+)
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\lipsum\lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count106
+)
 (D:\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -399,10 +411,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (D:\Programs\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count105
+\Gread@gobject=\count107
 ))
-\Gin@req@height=\dimen121
-\Gin@req@width=\dimen122
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
 )
 (D:\Programs\MiKTeX\tex\latex\oberdiek\epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -475,7 +487,7 @@ L3 Module: l3bootstrap 2015/02/28 v5542 L3 Bootstrap code
 
 (D:\Programs\MiKTeX\tex\latex\misc\etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count106
+\et@xins=\count108
 )
 L3 Module: l3names 2015/02/24 v5535 L3 Namespace for primitives
 L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
@@ -484,31 +496,31 @@ L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
 L3 Module: l3str 2015/03/01 v5545 L3 Strings
 L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
 L3 Module: l3int 2015/02/21 v5529 L3 Integers
-\c_max_int=\count107
-\l_tmpa_int=\count108
-\l_tmpb_int=\count109
-\g_tmpa_int=\count110
-\g_tmpb_int=\count111
+\c_max_int=\count109
+\l_tmpa_int=\count110
+\l_tmpb_int=\count111
+\g_tmpa_int=\count112
+\g_tmpb_int=\count113
 L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
 L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
-\g__prg_map_int=\count112
+\g__prg_map_int=\count114
 L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
 L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
 L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
 L3 Module: l3msg 2015/02/26 v5537 L3 Messages
 L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
-\l_iow_line_count_int=\count113
-\l__iow_target_count_int=\count114
-\l__iow_current_line_int=\count115
-\l__iow_current_word_int=\count116
-\l__iow_current_indentation_int=\count117
+\l_iow_line_count_int=\count115
+\l__iow_target_count_int=\count116
+\l__iow_current_line_int=\count117
+\l__iow_current_word_int=\count118
+\l__iow_current_indentation_int=\count119
 L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
-\c_zero_dim=\dimen123
-\c_max_dim=\dimen124
-\l_tmpa_dim=\dimen125
-\l_tmpb_dim=\dimen126
-\g_tmpa_dim=\dimen127
-\g_tmpb_dim=\dimen128
+\c_zero_dim=\dimen125
+\c_max_dim=\dimen126
+\l_tmpa_dim=\dimen127
+\l_tmpb_dim=\dimen128
+\g_tmpa_dim=\dimen129
+\g_tmpb_dim=\dimen130
 \c_zero_skip=\skip55
 \c_max_skip=\skip56
 \l_tmpa_skip=\skip57
@@ -522,85 +534,85 @@ L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
-\g__keyval_level_int=\count118
-\l_keys_choice_int=\count119
+\g__keyval_level_int=\count120
+\l_keys_choice_int=\count121
 L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
-\c__fp_leading_shift_int=\count120
-\c__fp_middle_shift_int=\count121
-\c__fp_trailing_shift_int=\count122
-\c__fp_big_leading_shift_int=\count123
-\c__fp_big_middle_shift_int=\count124
-\c__fp_big_trailing_shift_int=\count125
-\c__fp_Bigg_leading_shift_int=\count126
-\c__fp_Bigg_middle_shift_int=\count127
-\c__fp_Bigg_trailing_shift_int=\count128
+\c__fp_leading_shift_int=\count122
+\c__fp_middle_shift_int=\count123
+\c__fp_trailing_shift_int=\count124
+\c__fp_big_leading_shift_int=\count125
+\c__fp_big_middle_shift_int=\count126
+\c__fp_big_trailing_shift_int=\count127
+\c__fp_Bigg_leading_shift_int=\count128
+\c__fp_Bigg_middle_shift_int=\count129
+\c__fp_Bigg_trailing_shift_int=\count130
 L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
-\c_empty_box=\box28
-\l_tmpa_box=\box29
-\l_tmpb_box=\box30
-\g_tmpa_box=\box31
-\g_tmpb_box=\box32
+\c_empty_box=\box29
+\l_tmpa_box=\box30
+\l_tmpb_box=\box31
+\g_tmpa_box=\box32
+\g_tmpb_box=\box33
 L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
-\l__coffin_internal_box=\box33
-\l__coffin_internal_dim=\dimen129
-\l__coffin_offset_x_dim=\dimen130
-\l__coffin_offset_y_dim=\dimen131
-\l__coffin_x_dim=\dimen132
-\l__coffin_y_dim=\dimen133
-\l__coffin_x_prime_dim=\dimen134
-\l__coffin_y_prime_dim=\dimen135
-\c_empty_coffin=\box34
-\l__coffin_aligned_coffin=\box35
-\l__coffin_aligned_internal_coffin=\box36
-\l_tmpa_coffin=\box37
-\l_tmpb_coffin=\box38
-\l__coffin_display_coffin=\box39
-\l__coffin_display_coord_coffin=\box40
-\l__coffin_display_pole_coffin=\box41
-\l__coffin_display_offset_dim=\dimen136
-\l__coffin_display_x_dim=\dimen137
-\l__coffin_display_y_dim=\dimen138
+\l__coffin_internal_box=\box34
+\l__coffin_internal_dim=\dimen131
+\l__coffin_offset_x_dim=\dimen132
+\l__coffin_offset_y_dim=\dimen133
+\l__coffin_x_dim=\dimen134
+\l__coffin_y_dim=\dimen135
+\l__coffin_x_prime_dim=\dimen136
+\l__coffin_y_prime_dim=\dimen137
+\c_empty_coffin=\box35
+\l__coffin_aligned_coffin=\box36
+\l__coffin_aligned_internal_coffin=\box37
+\l_tmpa_coffin=\box38
+\l_tmpb_coffin=\box39
+\l__coffin_display_coffin=\box40
+\l__coffin_display_coord_coffin=\box41
+\l__coffin_display_pole_coffin=\box42
+\l__coffin_display_offset_dim=\dimen138
+\l__coffin_display_x_dim=\dimen139
+\l__coffin_display_y_dim=\dimen140
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
 L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen139
-\l__box_bottom_dim=\dimen140
-\l__box_left_dim=\dimen141
-\l__box_right_dim=\dimen142
-\l__box_top_new_dim=\dimen143
-\l__box_bottom_new_dim=\dimen144
-\l__box_left_new_dim=\dimen145
-\l__box_right_new_dim=\dimen146
-\l__box_internal_box=\box42
-\l__coffin_bounding_shift_dim=\dimen147
-\l__coffin_left_corner_dim=\dimen148
-\l__coffin_right_corner_dim=\dimen149
-\l__coffin_bottom_corner_dim=\dimen150
-\l__coffin_top_corner_dim=\dimen151
-\l__coffin_scaled_total_height_dim=\dimen152
-\l__coffin_scaled_width_dim=\dimen153
+\l__box_top_dim=\dimen141
+\l__box_bottom_dim=\dimen142
+\l__box_left_dim=\dimen143
+\l__box_right_dim=\dimen144
+\l__box_top_new_dim=\dimen145
+\l__box_bottom_new_dim=\dimen146
+\l__box_left_new_dim=\dimen147
+\l__box_right_new_dim=\dimen148
+\l__box_internal_box=\box43
+\l__coffin_bounding_shift_dim=\dimen149
+\l__coffin_left_corner_dim=\dimen150
+\l__coffin_right_corner_dim=\dimen151
+\l__coffin_bottom_corner_dim=\dimen152
+\l__coffin_top_corner_dim=\dimen153
+\l__coffin_scaled_total_height_dim=\dimen154
+\l__coffin_scaled_width_dim=\dimen155
 )
 (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3unicode-data.de
 f
 File: l3unicode-data.def 2015/03/01 v5544 L3 Unicode data
 ) (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3pdfmode.def
 File: l3pdfmode.def 2015/03/01 v5544 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count129
+\l__driver_color_stack_int=\count131
 ))
 (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\xparse\xparse.s
 ty
 Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count130
-\l__xparse_m_args_int=\count131
-\l__xparse_mandatory_args_int=\count132
-\l__xparse_processor_int=\count133
-\l__xparse_v_nesting_int=\count134
+\l__xparse_current_arg_int=\count132
+\l__xparse_m_args_int=\count133
+\l__xparse_mandatory_args_int=\count134
+\l__xparse_processor_int=\count135
+\l__xparse_v_nesting_int=\count136
 )
 Package: siunitx 2015/01/21 v2.6e A comprehensive (SI) units package
  (D:\Programs\MiKTeX\tex\latex\tools\array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen154
-\extrarowheight=\dimen155
-\NC@list=\toks23
+\col@sep=\dimen156
+\extrarowheight=\dimen157
+\NC@list=\toks24
 \extratabsurround=\skip61
 \backup@length=\skip62
 )
@@ -609,47 +621,47 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Package: l3keys2e 2014/11/25 v5471 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
-\l__siunitx_tmp_box=\box43
-\l__siunitx_tmp_dim=\dimen156
-\l__siunitx_tmp_int=\count135
+\l__siunitx_tmp_box=\box44
+\l__siunitx_tmp_dim=\dimen158
+\l__siunitx_tmp_int=\count137
 Variant \prop_get:NVNT already defined; not changing it on line 380
 Variant \prop_get:NVNF already defined; not changing it on line 381
 Variant \prop_get:NVNTF already defined; not changing it on line 382
-\l__siunitx_number_mantissa_length_int=\count136
-\l__siunitx_number_uncert_length_int=\count137
-\l__siunitx_round_int=\count138
-\l__siunitx_process_decimal_int=\count139
-\l__siunitx_process_uncertainty_int=\count140
-\l__siunitx_process_fixed_int=\count141
-\l__siunitx_process_integer_min_int=\count142
-\l__siunitx_process_precision_int=\count143
-\l__siunitx_group_min_int=\count144
-\l__siunitx_angle_marker_box=\box44
-\l__siunitx_angle_unit_box=\box45
-\l__siunitx_angle_marker_dim=\dimen157
-\l__siunitx_angle_unit_dim=\dimen158
-\l__siunitx_unit_int=\count145
-\l__siunitx_unit_denominator_int=\count146
-\l__siunitx_unit_numerator_int=\count147
-\l__siunitx_unit_prefix_int=\count148
-\l__siunitx_unit_prefix_base_int=\count149
-\l__siunitx_unit_prefix_gram_int=\count150
-\l__siunitx_number_product_int=\count151
+\l__siunitx_number_mantissa_length_int=\count138
+\l__siunitx_number_uncert_length_int=\count139
+\l__siunitx_round_int=\count140
+\l__siunitx_process_decimal_int=\count141
+\l__siunitx_process_uncertainty_int=\count142
+\l__siunitx_process_fixed_int=\count143
+\l__siunitx_process_integer_min_int=\count144
+\l__siunitx_process_precision_int=\count145
+\l__siunitx_group_min_int=\count146
+\l__siunitx_angle_marker_box=\box45
+\l__siunitx_angle_unit_box=\box46
+\l__siunitx_angle_marker_dim=\dimen159
+\l__siunitx_angle_unit_dim=\dimen160
+\l__siunitx_unit_int=\count147
+\l__siunitx_unit_denominator_int=\count148
+\l__siunitx_unit_numerator_int=\count149
+\l__siunitx_unit_prefix_int=\count150
+\l__siunitx_unit_prefix_base_int=\count151
+\l__siunitx_unit_prefix_gram_int=\count152
+\l__siunitx_number_product_int=\count153
 \c__siunitx_one_fill_skip=\skip63
 \l__siunitx_table_unit_align_skip=\skip64
-\l__siunitx_table_exponent_dim=\dimen159
-\l__siunitx_table_integer_dim=\dimen160
-\l__siunitx_table_mantissa_dim=\dimen161
-\l__siunitx_table_marker_dim=\dimen162
-\l__siunitx_table_result_dim=\dimen163
-\l__siunitx_table_uncert_dim=\dimen164
-\l__siunitx_table_fill_pre_dim=\dimen165
-\l__siunitx_table_fill_post_dim=\dimen166
-\l__siunitx_table_fill_mid_dim=\dimen167
-\l__siunitx_table_pre_box=\box46
-\l__siunitx_table_post_box=\box47
-\l__siunitx_table_mantissa_box=\box48
-\l__siunitx_table_result_box=\box49
+\l__siunitx_table_exponent_dim=\dimen161
+\l__siunitx_table_integer_dim=\dimen162
+\l__siunitx_table_mantissa_dim=\dimen163
+\l__siunitx_table_marker_dim=\dimen164
+\l__siunitx_table_result_dim=\dimen165
+\l__siunitx_table_uncert_dim=\dimen166
+\l__siunitx_table_fill_pre_dim=\dimen167
+\l__siunitx_table_fill_post_dim=\dimen168
+\l__siunitx_table_fill_mid_dim=\dimen169
+\l__siunitx_table_pre_box=\box47
+\l__siunitx_table_post_box=\box48
+\l__siunitx_table_mantissa_box=\box49
+\l__siunitx_table_result_box=\box50
 \l__siunitx_table_number_align_skip=\skip65
 \l__siunitx_table_text_align_skip=\skip66
 .................................................
@@ -777,289 +789,35 @@ Package: translator 2010/06/12 ver 1.10
 
 (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tra
 nslator-language-mappings.tex)))
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.sty
-Package: biblatex 2014/06/25 v2.9a programmable bibliographies (PK/JW/AB)
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex1.sty
-Package: biblatex1 2014/06/25 v2.9a programmable bibliographies (bibtex) (PK/JW
-/AB)
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
-Package: etoolbox 2015/03/19 v2.1d e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count152
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip67
+\enit@outerparindent=\dimen170
+\enit@toks=\toks25
+\enit@inbox=\box51
+\enitdp@description=\count154
 )
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count153
+(D:\Programs\MiKTeX\tex\latex\base\textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(D:\Programs\MiKTeX\tex\latex\base\ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-\c@tabx@nest=\count154
-\c@listtotal=\count155
-\c@listcount=\count156
-\c@liststart=\count157
-\c@liststop=\count158
-\c@citecount=\count159
-\c@citetotal=\count160
-\c@multicitecount=\count161
-\c@multicitetotal=\count162
-\c@instcount=\count163
-\c@maxnames=\count164
-\c@minnames=\count165
-\c@maxitems=\count166
-\c@minitems=\count167
-\c@citecounter=\count168
-\c@savedcitecounter=\count169
-\c@uniquelist=\count170
-\c@uniquename=\count171
-\c@refsection=\count172
-\c@refsegment=\count173
-\c@maxextrayear=\count174
-\c@maxextraalpha=\count175
-\c@abbrvpenalty=\count176
-\c@highnamepenalty=\count177
-\c@lownamepenalty=\count178
-\c@maxparens=\count179
-\c@parenlevel=\count180
-\blx@tempcnta=\count181
-\blx@tempcntb=\count182
-\blx@tempcntc=\count183
-\blx@maxsection=\count184
-\blx@maxsegment=\count185
-\blx@notetype=\count186
-\blx@parenlevel@text=\count187
-\blx@parenlevel@foot=\count188
-\labelnumberwidth=\skip67
-\labelalphawidth=\skip68
-\shorthandwidth=\skip69
-\biblabelsep=\skip70
-\bibitemsep=\skip71
-\bibnamesep=\skip72
-\bibinitsep=\skip73
-\bibparsep=\skip74
-\bibhang=\skip75
-\blx@auxin=\read2
-\blx@auxout=\write3
-\c@mincomprange=\count189
-\c@maxcomprange=\count190
-\c@mincompwidth=\count191
-\c@labelname=\count192
-\c@savedlabelname=\count193
-\c@author=\count194
-\c@savedauthor=\count195
-\c@shortauthor=\count196
-\c@savedshortauthor=\count197
-\c@editor=\count198
-\c@savededitor=\count199
-\c@editora=\count200
-\c@savededitora=\count201
-Normal \count register pool exhausted, switching to extended pool.
-\c@editorb=\count277
-\c@savededitorb=\count278
-\c@editorc=\count279
-\c@savededitorc=\count280
-\c@shorteditor=\count281
-\c@savedshorteditor=\count282
-\c@bookauthor=\count283
-\c@savedbookauthor=\count284
-\c@translator=\count285
-\c@savedtranslator=\count286
-\c@annotator=\count287
-\c@savedannotator=\count288
-\c@commentator=\count289
-\c@savedcommentator=\count290
-\c@introduction=\count291
-\c@savedintroduction=\count292
-\c@foreword=\count293
-\c@savedforeword=\count294
-\c@afterword=\count295
-\c@savedafterword=\count296
-\c@holder=\count297
-\c@savedholder=\count298
-\c@namea=\count299
-\c@savednamea=\count300
-\c@nameb=\count301
-\c@savednameb=\count302
-\c@namec=\count303
-\c@savednamec=\count304
-\c@institution=\count305
-\c@savedinstitution=\count306
-\c@language=\count307
-\c@savedlanguage=\count308
-\c@location=\count309
-\c@savedlocation=\count310
-\c@organization=\count311
-\c@savedorganization=\count312
-\c@origlocation=\count313
-\c@savedoriglocation=\count314
-\c@origpublisher=\count315
-\c@savedorigpublisher=\count316
-\c@pageref=\count317
-\c@savedpageref=\count318
-\c@publisher=\count319
-\c@savedpublisher=\count320
-\c@lista=\count321
-\c@savedlista=\count322
-\c@listb=\count323
-\c@savedlistb=\count324
-\c@listc=\count325
-\c@savedlistc=\count326
-\c@listd=\count327
-\c@savedlistd=\count328
-\c@liste=\count329
-\c@savedliste=\count330
-\c@listf=\count331
-\c@savedlistf=\count332
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-compat.def
-File: blx-compat.def 2014/06/25 v2.9a biblatex compatibility (PK/JW/AB)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
-File: biblatex.def 
-\c@textcitecount=\count333
-\c@textcitetotal=\count334
-\c@textcitemaxnames=\count335
-\c@biburlnumpenalty=\count336
-\c@biburlucpenalty=\count337
-\c@biburllcpenalty=\count338
-\c@smartand=\count339
-)
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\numeric.bbx
-File: numeric.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\standard.bbx
-File: standard.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count340
-\c@bbx:relatedtotal=\count341
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
- (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\numeric.cbx
-File: numeric.cbx 2014/06/25 v2.9a biblatex citation style (PK/JW/AB)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
- (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.cfg
-File: biblatex.cfg 
-)))
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\filecontents\filecontents.
-sty
-Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
-eX document
-)
-
-LaTeX Warning: Overwriting file `./thesis.bib'.
-
-
-Package biblatex Info: Trying to load language 'czech'...
-Package biblatex Info: ... file 'czech.lbx' found.
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\czech.lbx
-File: czech.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
-)
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count342
-\@quotereset=\count343
-(C:\Users\kubin\Desktop\GitFolder\doc_thesis\DrapelaThesis.aux
-
-LaTeX Warning: Label `Detekce' multiply defined.
-
-)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=452.9679pt
-* \textheight=700.50687pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=11.0pt
-* \footskip=30.0pt
-* \marginparwidth=50.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count344
-\scratchdimen=\dimen168
-\scratchbox=\box50
-\nofMPsegments=\count345
-\nofMParguments=\count346
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count347
-\MPscratchDim=\dimen169
-\MPnumerator=\count348
-\makeMPintoPDFobject=\count349
-\everyMPtoPDFconversion=\toks25
-)
+(D:\Programs\MiKTeX\tex\latex\base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
- (D:\Programs\MiKTeX\tex\latex\base\ts1enc.dfu
+
+(D:\Programs\MiKTeX\tex\latex\base\ts1enc.dfu
 File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1130,6 +888,365 @@ File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+25E6 (decimal 9702)
    defining Unicode char U+25EF (decimal 9711)
    defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.sty
+Package: biblatex 2014/06/25 v2.9a programmable bibliographies (PK/JW/AB)
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex1.sty
+Package: biblatex1 2014/06/25 v2.9a programmable bibliographies (bibtex) (PK/JW
+/AB)
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2015/03/19 v2.1d e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count155
+)
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count156
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(D:\Programs\MiKTeX\tex\latex\base\ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count157
+\c@listtotal=\count158
+\c@listcount=\count159
+\c@liststart=\count160
+\c@liststop=\count161
+\c@citecount=\count162
+\c@citetotal=\count163
+\c@multicitecount=\count164
+\c@multicitetotal=\count165
+\c@instcount=\count166
+\c@maxnames=\count167
+\c@minnames=\count168
+\c@maxitems=\count169
+\c@minitems=\count170
+\c@citecounter=\count171
+\c@savedcitecounter=\count172
+\c@uniquelist=\count173
+\c@uniquename=\count174
+\c@refsection=\count175
+\c@refsegment=\count176
+\c@maxextrayear=\count177
+\c@maxextraalpha=\count178
+\c@abbrvpenalty=\count179
+\c@highnamepenalty=\count180
+\c@lownamepenalty=\count181
+\c@maxparens=\count182
+\c@parenlevel=\count183
+\blx@tempcnta=\count184
+\blx@tempcntb=\count185
+\blx@tempcntc=\count186
+\blx@maxsection=\count187
+\blx@maxsegment=\count188
+\blx@notetype=\count189
+\blx@parenlevel@text=\count190
+\blx@parenlevel@foot=\count191
+\labelnumberwidth=\skip68
+\labelalphawidth=\skip69
+\shorthandwidth=\skip70
+\biblabelsep=\skip71
+\bibitemsep=\skip72
+\bibnamesep=\skip73
+\bibinitsep=\skip74
+\bibparsep=\skip75
+\bibhang=\skip76
+\blx@auxin=\read2
+\blx@auxout=\write3
+\c@mincomprange=\count192
+\c@maxcomprange=\count193
+\c@mincompwidth=\count194
+\c@labelname=\count195
+\c@savedlabelname=\count196
+\c@author=\count197
+\c@savedauthor=\count198
+\c@shortauthor=\count199
+\c@savedshortauthor=\count200
+\c@editor=\count201
+Normal \count register pool exhausted, switching to extended pool.
+\c@savededitor=\count277
+\c@editora=\count278
+\c@savededitora=\count279
+\c@editorb=\count280
+\c@savededitorb=\count281
+\c@editorc=\count282
+\c@savededitorc=\count283
+\c@shorteditor=\count284
+\c@savedshorteditor=\count285
+\c@bookauthor=\count286
+\c@savedbookauthor=\count287
+\c@translator=\count288
+\c@savedtranslator=\count289
+\c@annotator=\count290
+\c@savedannotator=\count291
+\c@commentator=\count292
+\c@savedcommentator=\count293
+\c@introduction=\count294
+\c@savedintroduction=\count295
+\c@foreword=\count296
+\c@savedforeword=\count297
+\c@afterword=\count298
+\c@savedafterword=\count299
+\c@holder=\count300
+\c@savedholder=\count301
+\c@namea=\count302
+\c@savednamea=\count303
+\c@nameb=\count304
+\c@savednameb=\count305
+\c@namec=\count306
+\c@savednamec=\count307
+\c@institution=\count308
+\c@savedinstitution=\count309
+\c@language=\count310
+\c@savedlanguage=\count311
+\c@location=\count312
+\c@savedlocation=\count313
+\c@organization=\count314
+\c@savedorganization=\count315
+\c@origlocation=\count316
+\c@savedoriglocation=\count317
+\c@origpublisher=\count318
+\c@savedorigpublisher=\count319
+\c@pageref=\count320
+\c@savedpageref=\count321
+\c@publisher=\count322
+\c@savedpublisher=\count323
+\c@lista=\count324
+\c@savedlista=\count325
+\c@listb=\count326
+\c@savedlistb=\count327
+\c@listc=\count328
+\c@savedlistc=\count329
+\c@listd=\count330
+\c@savedlistd=\count331
+\c@liste=\count332
+\c@savedliste=\count333
+\c@listf=\count334
+\c@savedlistf=\count335
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-compat.def
+File: blx-compat.def 2014/06/25 v2.9a biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
+File: biblatex.def 
+\c@textcitecount=\count336
+\c@textcitetotal=\count337
+\c@textcitemaxnames=\count338
+\c@biburlnumpenalty=\count339
+\c@biburlucpenalty=\count340
+\c@biburllcpenalty=\count341
+\c@smartand=\count342
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\numeric.bbx
+File: numeric.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\standard.bbx
+File: standard.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count343
+\c@bbx:relatedtotal=\count344
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\numeric.cbx
+File: numeric.cbx 2014/06/25 v2.9a biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.cfg
+File: biblatex.cfg 
+)))
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\filecontents\filecontents.
+sty
+Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
+eX document
+)
+
+LaTeX Warning: Overwriting file `./thesis.bib'.
+
+
+Package biblatex Info: Trying to load language 'czech'...
+Package biblatex Info: ... file 'czech.lbx' found.
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\czech.lbx
+File: czech.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count345
+\@quotereset=\count346
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\DrapelaThesis.aux
+
+LaTeX Warning: Label `Detekce' multiply defined.
+
+
+LaTeX Warning: Label `fig:modelClass3D1' multiply defined.
+
+
+LaTeX Warning: Label `fig:modelClass3D1' multiply defined.
+
+
+LaTeX Warning: Label `fig:modelClass3D1' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
+
+ (D:\Programs\MiKTeX\tex\latex\base\ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 129.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count347
+\scratchdimen=\dimen171
+\scratchbox=\box52
+\nofMPsegments=\count348
+\nofMParguments=\count349
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen172
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
+\everyMPtoPDFconversion=\toks27
 )
 (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\dic
 ts\translator-basic-dictionary\translator-basic-dictionary-English.dict
@@ -1150,35 +1267,123 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'DrapelaThesis.bbl' found.
 (C:\Users\kubin\Desktop\GitFolder\doc_thesis\DrapelaThesis.bbl)
-Package biblatex Info: Reference section=0 on input line 123.
-Package biblatex Info: Reference segment=0 on input line 123.
-\c__siunitx_mathsf_int=\count350
-LaTeX Font Info:    Try loading font information for U+msa on input line 123.
+Package biblatex Info: Reference section=0 on input line 129.
+Package biblatex Info: Reference segment=0 on input line 129.
+\c__siunitx_mathsf_int=\count353
+LaTeX Font Info:    Try loading font information for U+msa on input line 129.
 
 (D:\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 123.
+LaTeX Font Info:    Try loading font information for U+msb on input line 129.
 
 (D:\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 123
+LaTeX Font Info:    Try loading font information for U+esvect on input line 129
 .
 
 (C:\Users\kubin\AppData\Roaming\MiKTeX\2.9\tex\latex\esvect\uesvect.fd
 File: uesvect.fd 
 )
-\c__siunitx_mathtt_int=\count351
+\c__siunitx_mathtt_int=\count354
 
-(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Detection.tex
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Introduction.tex [1
+
+
+{C:/Users/kubin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\xfig/stinitko.pstex_t
+<xfig/stinitko_pspdftex.pdf, id=8, 250.9375pt x 488.82625pt>
+File: xfig/stinitko_pspdftex.pdf Graphic file (type pdf)
+
+<use xfig/stinitko_pspdftex.pdf>
+Package pdftex.def Info: xfig/stinitko_pspdftex.pdf used on input line 2.
+(pdftex.def)             Requested size: 250.93687pt x 488.82504pt.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 14.
+
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2]) (C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Physical_model.tex
+[3 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/stinitko_pspdftex.pdf>]
+[4
+
+] <./figures/edge_ex.pdf, id=22, 444.41031pt x 233.62282pt>
+File: ./figures/edge_ex.pdf Graphic file (type pdf)
+
+<use ./figures/edge_ex.pdf>
+Package pdftex.def Info: ./figures/edge_ex.pdf used on input line 10.
+(pdftex.def)             Requested size: 271.7835pt x 142.8733pt.
+ [5 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/edge_ex.pdf>]
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\xfig/tails.pstex_t
+<xfig/tails_pspdftex.pdf, id=30, 180.675pt x 162.6075pt>
+File: xfig/tails_pspdftex.pdf Graphic file (type pdf)
+
+<use xfig/tails_pspdftex.pdf>
+Package pdftex.def Info: xfig/tails_pspdftex.pdf used on input line 2.
+(pdftex.def)             Requested size: 180.67455pt x 162.6071pt.
+)
+<./figures/edgeIn.pdf, id=31, 326.46968pt x 262.48062pt>
+File: ./figures/edgeIn.pdf Graphic file (type pdf)
+
+<use ./figures/edgeIn.pdf>
+Package pdftex.def Info: ./figures/edgeIn.pdf used on input line 59.
+(pdftex.def)             Requested size: 217.42265pt x 174.80374pt.
+
+<./figures/edgeOut.pdf, id=32, 315.1775pt x 262.48062pt>
+File: ./figures/edgeOut.pdf Graphic file (type pdf)
+
+<use ./figures/edgeOut.pdf>
+Package pdftex.def Info: ./figures/edgeOut.pdf used on input line 62.
+(pdftex.def)             Requested size: 217.42265pt x 181.07176pt.
+ [6 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/tails_pspdftex.pdf> <C:/U
+sers/kubin/Desktop/GitFolder/doc_thesis/figures/edgeIn.pdf> <C:/Users/kubin/Des
+ktop/GitFolder/doc_thesis/figures/edgeOut.pdf>]
+<./figures/edgeIn_reflection.pdf, id=63, 256.157pt x 198.49156pt>
+File: ./figures/edgeIn_reflection.pdf Graphic file (type pdf)
+
+<use ./figures/edgeIn_reflection.pdf>
+Package pdftex.def Info: ./figures/edgeIn_reflection.pdf used on input line 97.
+
+(pdftex.def)             Requested size: 217.42265pt x 168.4763pt.
+
+<./figures/edgeIn_refraction.pdf, id=64, 256.9098pt x 198.49156pt>
+File: ./figures/edgeIn_refraction.pdf Graphic file (type pdf)
+
+<use ./figures/edgeIn_refraction.pdf>
+Package pdftex.def Info: ./figures/edgeIn_refraction.pdf used on input line 100
+.
+(pdftex.def)             Requested size: 217.42265pt x 167.98262pt.
+
+<./figures/edgeOut_reflection.pdf, id=65, 256.9098pt x 198.49156pt>
+File: ./figures/edgeOut_reflection.pdf Graphic file (type pdf)
+
+<use ./figures/edgeOut_reflection.pdf>
+Package pdftex.def Info: ./figures/edgeOut_reflection.pdf used on input line 10
+9.
+(pdftex.def)             Requested size: 217.42265pt x 167.98262pt.
+
+<./figures/edgeOut_refraction.pdf, id=66, 256.157pt x 198.49156pt>
+File: ./figures/edgeOut_refraction.pdf Graphic file (type pdf)
+
+<use ./figures/edgeOut_refraction.pdf>
+Package pdftex.def Info: ./figures/edgeOut_refraction.pdf used on input line 11
+2.
+(pdftex.def)             Requested size: 217.42265pt x 168.4763pt.
+ [7 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/edgeIn_reflection.pdf>
+ <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/edgeIn_refraction.pdf> <C
+:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/edgeOut_reflection.pdf> <C:/
+Users/kubin/Desktop/GitFolder/doc_thesis/figures/edgeOut_refraction.pdf>])
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Detection.tex [8]
 Kapitola 1.
-
-LaTeX Warning: Reference `sec:poisson' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Reference `sec:stinitko' on page 1 undefined on input line 12.
-
 Package epstopdf Info: Source file: <./figures/podstavec.eps>
 (epstopdf)                    date: 2017-03-30 11:59:09
 (epstopdf)                    size: 247846 bytes
@@ -1189,7 +1394,7 @@ Package epstopdf Info: Source file: <./figures/podstavec.eps>
 verted-to.pdf ./figures/podstavec.eps>
 (epstopdf)             \includegraphics on input line 18.
 Package epstopdf Info: Output file is already uptodate.
-<./figures/podstavec-eps-converted-to.pdf, id=1, 421.575pt x 180.675pt>
+<./figures/podstavec-eps-converted-to.pdf, id=157, 421.575pt x 180.675pt>
 File: ./figures/podstavec-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/podstavec-eps-converted-to.pdf>
@@ -1197,96 +1402,88 @@ Package pdftex.def Info: ./figures/podstavec-eps-converted-to.pdf used on input
  line 18.
 (pdftex.def)             Requested size: 317.07614pt x 135.89186pt.
 
-<./figures/pf_near.pdf, id=2, 361.35pt x 289.08pt>
+<./figures/pf_near.pdf, id=158, 361.35pt x 289.08pt>
 File: ./figures/pf_near.pdf Graphic file (type pdf)
- <use ./figures/pf_near.pdf>
+
+<use ./figures/pf_near.pdf>
 Package pdftex.def Info: ./figures/pf_near.pdf used on input line 34.
 (pdftex.def)             Requested size: 108.71132pt x 86.96727pt.
 
-<./figures/pf_near2.pdf, id=3, 361.35pt x 289.08pt>
+<./figures/pf_near2.pdf, id=159, 361.35pt x 289.08pt>
 File: ./figures/pf_near2.pdf Graphic file (type pdf)
 
 <use ./figures/pf_near2.pdf>
 Package pdftex.def Info: ./figures/pf_near2.pdf used on input line 37.
 (pdftex.def)             Requested size: 108.71132pt x 86.96727pt.
 
-<./figures/pf_punch2.pdf, id=4, 361.35pt x 289.08pt>
+<./figures/pf_punch2.pdf, id=160, 361.35pt x 289.08pt>
 File: ./figures/pf_punch2.pdf Graphic file (type pdf)
 
 <use ./figures/pf_punch2.pdf>
 Package pdftex.def Info: ./figures/pf_punch2.pdf used on input line 51.
 (pdftex.def)             Requested size: 163.06915pt x 128.03368pt.
 
-<./figures/p_deff2.pdf, id=5, 329.48094pt x 248.17719pt>
+<./figures/p_deff2.pdf, id=161, 329.48094pt x 248.17719pt>
 File: ./figures/p_deff2.pdf Graphic file (type pdf)
 
 <use ./figures/p_deff2.pdf>
 Package pdftex.def Info: ./figures/p_deff2.pdf used on input line 54.
 (pdftex.def)             Requested size: 163.07094pt x 128.038pt.
 
-<./figures/cut_1.pdf, id=6, 162.87851pt x 240.1271pt>
+<./figures/cut_1.pdf, id=162, 162.87851pt x 240.1271pt>
 File: ./figures/cut_1.pdf Graphic file (type pdf)
 
 <use ./figures/cut_1.pdf>
 Package pdftex.def Info: ./figures/cut_1.pdf used on input line 67.
 (pdftex.def)             Requested size: 73.83147pt x 113.80873pt.
- <./figures/cut_2.pdf, id=7, 159.8773pt x 240.1271pt>
+
+<./figures/cut_2.pdf, id=163, 159.8773pt x 240.1271pt>
 File: ./figures/cut_2.pdf Graphic file (type pdf)
 
 <use ./figures/cut_2.pdf>
 Package pdftex.def Info: ./figures/cut_2.pdf used on input line 70.
 (pdftex.def)             Requested size: 70.20961pt x 113.80873pt.
- <./figures/cut_3.pdf, id=8, 161.3729pt x 240.1271pt>
+
+<./figures/cut_3.pdf, id=164, 161.3729pt x 240.1271pt>
 File: ./figures/cut_3.pdf Graphic file (type pdf)
 
 <use ./figures/cut_3.pdf>
 Package pdftex.def Info: ./figures/cut_3.pdf used on input line 73.
 (pdftex.def)             Requested size: 70.2114pt x 113.80873pt.
 
-<./figures/cut_4.pdf, id=9, 156.11324pt x 240.1271pt>
+<./figures/cut_4.pdf, id=165, 156.11324pt x 240.1271pt>
 File: ./figures/cut_4.pdf Graphic file (type pdf)
 
 <use ./figures/cut_4.pdf>
 Package pdftex.def Info: ./figures/cut_4.pdf used on input line 76.
 (pdftex.def)             Requested size: 70.2098pt x 113.80873pt.
 
-<./figures/cut_5.pdf, id=10, 159.8773pt x 240.1271pt>
+<./figures/cut_5.pdf, id=166, 159.8773pt x 240.1271pt>
 File: ./figures/cut_5.pdf Graphic file (type pdf)
 
 <use ./figures/cut_5.pdf>
 Package pdftex.def Info: ./figures/cut_5.pdf used on input line 79.
 (pdftex.def)             Requested size: 70.20961pt x 113.80873pt.
 
-<./figures/cut_6.pdf, id=11, 159.8773pt x 240.1271pt>
+<./figures/cut_6.pdf, id=167, 159.8773pt x 240.1271pt>
 File: ./figures/cut_6.pdf Graphic file (type pdf)
 
 <use ./figures/cut_6.pdf>
 Package pdftex.def Info: ./figures/cut_6.pdf used on input line 82.
 (pdftex.def)             Requested size: 70.20961pt x 113.80873pt.
- [1
+ [9
 
-
-{C:/Users/kubin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/ku
-bin/Desktop/GitFolder/doc_thesis/figures/podstavec-eps-converted-to.pdf>] [2 <C
-:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/pf_near.pdf> <C:/Users/kubin
-/Desktop/GitFolder/doc_thesis/figures/pf_near2.pdf> <C:/Users/kubin/Desktop/Git
-Folder/doc_thesis/figures/pf_punch2.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_
-thesis/figures/p_deff2.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figure
-s/cut_1.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/cut_2.pdf> <C
-:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/cut_3.pdf> <C:/Users/kubin/D
-esktop/GitFolder/doc_thesis/figures/cut_4.pdf> <C:/Users/kubin/Desktop/GitFolde
-r/doc_thesis/figures/cut_5.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/fi
-gures/cut_6.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 120.
-
-
-(D:\Programs\MiKTeX\tex\latex\base\omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 120.
- [3]
-<./figures/circleFit.pdf, id=110, 262.48062pt x 261.72781pt>
+ <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/podstavec-eps-converted-t
+o.pdf>] [10 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/pf_near.pdf> <
+C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/pf_near2.pdf> <C:/Users/kub
+in/Desktop/GitFolder/doc_thesis/figures/pf_punch2.pdf> <C:/Users/kubin/Desktop/
+GitFolder/doc_thesis/figures/p_deff2.pdf> <C:/Users/kubin/Desktop/GitFolder/doc
+_thesis/figures/cut_1.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures
+/cut_2.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/cut_3.pdf> <C:
+/Users/kubin/Desktop/GitFolder/doc_thesis/figures/cut_4.pdf> <C:/Users/kubin/De
+sktop/GitFolder/doc_thesis/figures/cut_5.pdf> <C:/Users/kubin/Desktop/GitFolder
+/doc_thesis/figures/cut_6.pdf>] [11]
+<./figures/circleFit.pdf, id=255, 262.48062pt x 261.72781pt>
 File: ./figures/circleFit.pdf Graphic file (type pdf)
 
 <use ./figures/circleFit.pdf>
@@ -1303,7 +1500,7 @@ erted-to.pdf ./figures/brigCutA.eps>
 (epstopdf)             \includegraphics on input line 175.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/brigCutA-eps-converted-to.pdf, id=111, 243.91125pt x 134.5025pt>
+<./figures/brigCutA-eps-converted-to.pdf, id=256, 243.91125pt x 134.5025pt>
 File: ./figures/brigCutA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/brigCutA-eps-converted-to.pdf>
@@ -1321,17 +1518,17 @@ erted-to.pdf ./figures/brigCutB.eps>
 (epstopdf)             \includegraphics on input line 177.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/brigCutB-eps-converted-to.pdf, id=112, 243.91125pt x 134.5025pt>
+<./figures/brigCutB-eps-converted-to.pdf, id=257, 243.91125pt x 134.5025pt>
 File: ./figures/brigCutB-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/brigCutB-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/brigCutB-eps-converted-to.pdf used on input 
 line 177.
 (pdftex.def)             Requested size: 217.42644pt x 108.71243pt.
- [4 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/circleFit.pdf> <C:/Use
-rs/kubin/Desktop/GitFolder/doc_thesis/figures/brigCutA-eps-converted-to.pdf> <C
-:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/brigCutB-eps-converted-to.pd
-f>]
+ [12 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/circleFit.pdf> <C:/Us
+ers/kubin/Desktop/GitFolder/doc_thesis/figures/brigCutA-eps-converted-to.pdf> <
+C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/brigCutB-eps-converted-to.p
+df>]
 Package epstopdf Info: Source file: <./figures/image_rust2.eps>
 (epstopdf)                    date: 2017-04-08 17:20:47
 (epstopdf)                    size: 193069 bytes
@@ -1344,16 +1541,16 @@ onverted-to.pdf ./figures/image_rust2.eps>
 (epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/image_rust2-eps-converted-to.pdf, id=147, 385.44pt x 204.765pt>
+<./figures/image_rust2-eps-converted-to.pdf, id=291, 385.44pt x 204.765pt>
 File: ./figures/image_rust2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/image_rust2-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/image_rust2-eps-converted-to.pdf used on inp
 ut line 196.
 (pdftex.def)             Requested size: 362.37569pt x 192.51035pt.
- [5 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/image_rust2-eps-conver
-ted-to.pdf>]
-<./figures/gaussIntersection.pdf, id=156, 342.27875pt x 215.80624pt>
+ [13 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/image_rust2-eps-conve
+rted-to.pdf>]
+<./figures/gaussIntersection.pdf, id=301, 342.27875pt x 215.80624pt>
 File: ./figures/gaussIntersection.pdf Graphic file (type pdf)
 
 <use ./figures/gaussIntersection.pdf>
@@ -1361,38 +1558,39 @@ Package pdftex.def Info: ./figures/gaussIntersection.pdf used on input line 235
 .
 (pdftex.def)             Requested size: 353.31439pt x 222.78014pt.
 
-<./figures/treeGauss.pdf, id=157, 77.28876pt x 228.60406pt>
+<./figures/treeGauss.pdf, id=302, 77.28876pt x 228.60406pt>
 File: ./figures/treeGauss.pdf Graphic file (type pdf)
 
 <use ./figures/treeGauss.pdf>
 Package pdftex.def Info: ./figures/treeGauss.pdf used on input line 238.
 (pdftex.def)             Requested size: 72.47652pt x 214.38902pt.
- [6 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/gaussIntersection.pdf>
- <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/treeGauss.pdf>]
+ [14 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/gaussIntersection.pdf
+> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/treeGauss.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 264--266
 
  []
 
-[7] <figures/tail07.pdf, id=193, 361.35pt x 289.08pt>
+[15] <figures/tail07.pdf, id=335, 361.35pt x 289.08pt>
 File: figures/tail07.pdf Graphic file (type pdf)
- <use figures/tail07.pdf>
+
+<use figures/tail07.pdf>
 Package pdftex.def Info: figures/tail07.pdf used on input line 309.
 (pdftex.def)             Requested size: 181.18439pt x 144.94545pt.
-
-<figures/tail08.pdf, id=194, 361.35pt x 289.08pt>
+ <figures/tail08.pdf, id=336, 361.35pt x 289.08pt>
 File: figures/tail08.pdf Graphic file (type pdf)
- <use figures/tail08.pdf>
+
+<use figures/tail08.pdf>
 Package pdftex.def Info: figures/tail08.pdf used on input line 312.
 (pdftex.def)             Requested size: 181.18439pt x 144.94545pt.
 
-<figures/tailex01.pdf, id=195, 421.575pt x 316.18124pt>
+<figures/tailex01.pdf, id=337, 421.575pt x 316.18124pt>
 File: figures/tailex01.pdf Graphic file (type pdf)
 
 <use figures/tailex01.pdf>
 Package pdftex.def Info: figures/tailex01.pdf used on input line 315.
 (pdftex.def)             Requested size: 181.18439pt x 135.88773pt.
 
-<figures/tailex02.pdf, id=196, 542.025pt x 229.85875pt>
+<figures/tailex02.pdf, id=338, 542.025pt x 229.85875pt>
 File: figures/tailex02.pdf Graphic file (type pdf)
 
 <use figures/tailex02.pdf>
@@ -1404,54 +1602,400 @@ Overfull \hbox (1.73724pt too wide) in paragraph at lines 328--329
 e snímku vy-be-reme ob-last (obr.1.8[]),
  []
 
-<./figures/tailex03.pdf, id=197, 320.19624pt x 235.88126pt>
+[16 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tail07.pdf> <C:/Users/
+kubin/Desktop/GitFolder/doc_thesis/figures/tail08.pdf> <C:/Users/kubin/Desktop/
+GitFolder/doc_thesis/figures/tailex01.pdf> <C:/Users/kubin/Desktop/GitFolder/do
+c_thesis/figures/tailex02.pdf>]
+<./figures/tailex03.pdf, id=366, 320.19624pt x 235.88126pt>
 File: ./figures/tailex03.pdf Graphic file (type pdf)
 
 <use ./figures/tailex03.pdf>
 Package pdftex.def Info: ./figures/tailex03.pdf used on input line 337.
 (pdftex.def)             Requested size: 213.07326pt x 156.96704pt.
 
-<./figures/tailex04.pdf, id=198, 320.19624pt x 186.6975pt>
+<./figures/tailex04.pdf, id=367, 320.19624pt x 186.6975pt>
 File: ./figures/tailex04.pdf Graphic file (type pdf)
 
 <use ./figures/tailex04.pdf>
 Package pdftex.def Info: ./figures/tailex04.pdf used on input line 340.
 (pdftex.def)             Requested size: 213.07326pt x 124.23773pt.
- [8 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tail07.pdf> <C:/Users/
-kubin/Desktop/GitFolder/doc_thesis/figures/tail08.pdf> <C:/Users/kubin/Desktop/
-GitFolder/doc_thesis/figures/tailex01.pdf> <C:/Users/kubin/Desktop/GitFolder/do
-c_thesis/figures/tailex02.pdf>]
-<figures/tailex05.pdf, id=226, 471.7625pt x 261.97874pt>
+
+<figures/tailex05.pdf, id=368, 471.7625pt x 261.97874pt>
 File: figures/tailex05.pdf Graphic file (type pdf)
 
 <use figures/tailex05.pdf>
 Package pdftex.def Info: figures/tailex05.pdf used on input line 362.
 (pdftex.def)             Requested size: 452.9679pt x 251.54471pt.
- <./figures/tail01.pdf, id=227, 361.35pt x 289.08pt>
+ <./figures/tail01.pdf, id=369, 361.35pt x 289.08pt>
 File: ./figures/tail01.pdf Graphic file (type pdf)
 
 <use ./figures/tail01.pdf>
 Package pdftex.def Info: ./figures/tail01.pdf used on input line 386.
 (pdftex.def)             Requested size: 213.07326pt x 170.45866pt.
- <./figures/tail02.pdf, id=228, 361.35pt x 289.08pt>
+ <./figures/tail02.pdf, id=370, 361.35pt x 289.08pt>
 File: ./figures/tail02.pdf Graphic file (type pdf)
 
 <use ./figures/tail02.pdf>
 Package pdftex.def Info: ./figures/tail02.pdf used on input line 389.
 (pdftex.def)             Requested size: 213.07326pt x 170.45866pt.
- [9 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tailex03.pdf> <C:/User
-s/kubin/Desktop/GitFolder/doc_thesis/figures/tailex04.pdf>] [10 <C:/Users/kubin
-/Desktop/GitFolder/doc_thesis/figures/tailex05.pdf> <C:/Users/kubin/Desktop/Git
-Folder/doc_thesis/figures/tail01.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_the
-sis/figures/tail02.pdf>]
+ [17 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tailex03.pdf> <C:/Use
+rs/kubin/Desktop/GitFolder/doc_thesis/figures/tailex04.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 418--419
 []|\T1/cmr/m/n/10.95 Regions with peak where di-f-fe-rence of
  []
 
-) (C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Optimization_intro.tex
-[11]
+[18 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tailex05.pdf> <C:/User
+s/kubin/Desktop/GitFolder/doc_thesis/figures/tail01.pdf> <C:/Users/kubin/Deskto
+p/GitFolder/doc_thesis/figures/tail02.pdf>])
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/GroupOfRays.tex [19]
 Kapitola 2.
-<./figures/diagram.pdf, id=1508, 1306.8825pt x 1578.89874pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--20
+
+ []
+
+<./figures/vivi12Facets1.pdf, id=1651, 263.23344pt x 262.48062pt>
+File: ./figures/vivi12Facets1.pdf Graphic file (type pdf)
+
+<use ./figures/vivi12Facets1.pdf>
+Package pdftex.def Info: ./figures/vivi12Facets1.pdf used on input line 26.
+(pdftex.def)             Requested size: 181.18439pt x 180.67526pt.
+
+<./figures/vivi12Facets2.pdf, id=1652, 353.57094pt x 187.9522pt>
+File: ./figures/vivi12Facets2.pdf Graphic file (type pdf)
+
+<use ./figures/vivi12Facets2.pdf>
+Package pdftex.def Info: ./figures/vivi12Facets2.pdf used on input line 29.
+(pdftex.def)             Requested size: 253.6609pt x 134.84366pt.
+ [20
+
+ <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/vivi12Facets1.pdf> <C:/Us
+ers/kubin/Desktop/GitFolder/doc_thesis/figures/vivi12Facets2.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Float too large for page by 64.16266pt on input line 191.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21] [22] [23] [24] [25] [26]
+<./figures/group9I.pdf, id=1686, 722.7pt x 722.7pt>
+File: ./figures/group9I.pdf Graphic file (type pdf)
+
+<use ./figures/group9I.pdf>
+Package pdftex.def Info: ./figures/group9I.pdf used on input line 406.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group3B.pdf, id=1687, 722.7pt x 722.7pt>
+File: ./figures/group3B.pdf Graphic file (type pdf)
+
+<use ./figures/group3B.pdf>
+Package pdftex.def Info: ./figures/group3B.pdf used on input line 409.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group1A.pdf, id=1688, 722.7pt x 722.7pt>
+File: ./figures/group1A.pdf Graphic file (type pdf)
+
+<use ./figures/group1A.pdf>
+Package pdftex.def Info: ./figures/group1A.pdf used on input line 419.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group1B.pdf, id=1689, 722.7pt x 722.7pt>
+File: ./figures/group1B.pdf Graphic file (type pdf)
+
+<use ./figures/group1B.pdf>
+Package pdftex.def Info: ./figures/group1B.pdf used on input line 422.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group3A.pdf, id=1690, 722.7pt x 722.7pt>
+File: ./figures/group3A.pdf Graphic file (type pdf)
+
+<use ./figures/group3A.pdf>
+Package pdftex.def Info: ./figures/group3A.pdf used on input line 425.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group3C.pdf, id=1691, 722.7pt x 722.7pt>
+File: ./figures/group3C.pdf Graphic file (type pdf)
+
+<use ./figures/group3C.pdf>
+Package pdftex.def Info: ./figures/group3C.pdf used on input line 429.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group5A.pdf, id=1692, 722.7pt x 722.7pt>
+File: ./figures/group5A.pdf Graphic file (type pdf)
+
+<use ./figures/group5A.pdf>
+Package pdftex.def Info: ./figures/group5A.pdf used on input line 432.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group5B.pdf, id=1693, 722.7pt x 722.7pt>
+File: ./figures/group5B.pdf Graphic file (type pdf)
+
+<use ./figures/group5B.pdf>
+Package pdftex.def Info: ./figures/group5B.pdf used on input line 435.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group5C.pdf, id=1694, 722.7pt x 722.7pt>
+File: ./figures/group5C.pdf Graphic file (type pdf)
+
+<use ./figures/group5C.pdf>
+Package pdftex.def Info: ./figures/group5C.pdf used on input line 439.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group5D.pdf, id=1695, 722.7pt x 722.7pt>
+File: ./figures/group5D.pdf Graphic file (type pdf)
+
+<use ./figures/group5D.pdf>
+Package pdftex.def Info: ./figures/group5D.pdf used on input line 442.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group5E.pdf, id=1696, 722.7pt x 722.7pt>
+File: ./figures/group5E.pdf Graphic file (type pdf)
+
+<use ./figures/group5E.pdf>
+Package pdftex.def Info: ./figures/group5E.pdf used on input line 445.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group6A.pdf, id=1697, 722.7pt x 722.7pt>
+File: ./figures/group6A.pdf Graphic file (type pdf)
+
+<use ./figures/group6A.pdf>
+Package pdftex.def Info: ./figures/group6A.pdf used on input line 449.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group6B.pdf, id=1698, 722.7pt x 722.7pt>
+File: ./figures/group6B.pdf Graphic file (type pdf)
+
+<use ./figures/group6B.pdf>
+Package pdftex.def Info: ./figures/group6B.pdf used on input line 452.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group6C.pdf, id=1699, 722.7pt x 722.7pt>
+File: ./figures/group6C.pdf Graphic file (type pdf)
+
+<use ./figures/group6C.pdf>
+Package pdftex.def Info: ./figures/group6C.pdf used on input line 455.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group6D.pdf, id=1700, 722.7pt x 722.7pt>
+File: ./figures/group6D.pdf Graphic file (type pdf)
+
+<use ./figures/group6D.pdf>
+Package pdftex.def Info: ./figures/group6D.pdf used on input line 467.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group6E.pdf, id=1701, 722.7pt x 722.7pt>
+File: ./figures/group6E.pdf Graphic file (type pdf)
+
+<use ./figures/group6E.pdf>
+Package pdftex.def Info: ./figures/group6E.pdf used on input line 470.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group6F.pdf, id=1702, 722.7pt x 722.7pt>
+File: ./figures/group6F.pdf Graphic file (type pdf)
+
+<use ./figures/group6F.pdf>
+Package pdftex.def Info: ./figures/group6F.pdf used on input line 473.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7A.pdf, id=1703, 722.7pt x 722.7pt>
+File: ./figures/group7A.pdf Graphic file (type pdf)
+
+<use ./figures/group7A.pdf>
+Package pdftex.def Info: ./figures/group7A.pdf used on input line 477.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7B.pdf, id=1704, 722.7pt x 722.7pt>
+File: ./figures/group7B.pdf Graphic file (type pdf)
+
+<use ./figures/group7B.pdf>
+Package pdftex.def Info: ./figures/group7B.pdf used on input line 480.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7C.pdf, id=1705, 722.7pt x 722.7pt>
+File: ./figures/group7C.pdf Graphic file (type pdf)
+
+<use ./figures/group7C.pdf>
+Package pdftex.def Info: ./figures/group7C.pdf used on input line 483.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7D.pdf, id=1706, 722.7pt x 722.7pt>
+File: ./figures/group7D.pdf Graphic file (type pdf)
+
+<use ./figures/group7D.pdf>
+Package pdftex.def Info: ./figures/group7D.pdf used on input line 487.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7E.pdf, id=1707, 722.7pt x 722.7pt>
+File: ./figures/group7E.pdf Graphic file (type pdf)
+
+<use ./figures/group7E.pdf>
+Package pdftex.def Info: ./figures/group7E.pdf used on input line 490.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7F.pdf, id=1708, 722.7pt x 722.7pt>
+File: ./figures/group7F.pdf Graphic file (type pdf)
+
+<use ./figures/group7F.pdf>
+Package pdftex.def Info: ./figures/group7F.pdf used on input line 493.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7G.pdf, id=1709, 722.7pt x 722.7pt>
+File: ./figures/group7G.pdf Graphic file (type pdf)
+
+<use ./figures/group7G.pdf>
+Package pdftex.def Info: ./figures/group7G.pdf used on input line 497.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group7H.pdf, id=1710, 722.7pt x 722.7pt>
+File: ./figures/group7H.pdf Graphic file (type pdf)
+
+<use ./figures/group7H.pdf>
+Package pdftex.def Info: ./figures/group7H.pdf used on input line 500.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group8A.pdf, id=1711, 722.7pt x 722.7pt>
+File: ./figures/group8A.pdf Graphic file (type pdf)
+
+<use ./figures/group8A.pdf>
+Package pdftex.def Info: ./figures/group8A.pdf used on input line 503.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group8B.pdf, id=1712, 722.7pt x 722.7pt>
+File: ./figures/group8B.pdf Graphic file (type pdf)
+
+<use ./figures/group8B.pdf>
+Package pdftex.def Info: ./figures/group8B.pdf used on input line 514.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group8C.pdf, id=1713, 722.7pt x 722.7pt>
+File: ./figures/group8C.pdf Graphic file (type pdf)
+
+<use ./figures/group8C.pdf>
+Package pdftex.def Info: ./figures/group8C.pdf used on input line 517.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group8D.pdf, id=1714, 722.7pt x 722.7pt>
+File: ./figures/group8D.pdf Graphic file (type pdf)
+
+<use ./figures/group8D.pdf>
+Package pdftex.def Info: ./figures/group8D.pdf used on input line 520.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9A.pdf, id=1715, 722.7pt x 722.7pt>
+File: ./figures/group9A.pdf Graphic file (type pdf)
+
+<use ./figures/group9A.pdf>
+Package pdftex.def Info: ./figures/group9A.pdf used on input line 524.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9B.pdf, id=1716, 722.7pt x 722.7pt>
+File: ./figures/group9B.pdf Graphic file (type pdf)
+
+<use ./figures/group9B.pdf>
+Package pdftex.def Info: ./figures/group9B.pdf used on input line 527.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9C.pdf, id=1717, 722.7pt x 722.7pt>
+File: ./figures/group9C.pdf Graphic file (type pdf)
+
+<use ./figures/group9C.pdf>
+Package pdftex.def Info: ./figures/group9C.pdf used on input line 530.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9D.pdf, id=1718, 722.7pt x 722.7pt>
+File: ./figures/group9D.pdf Graphic file (type pdf)
+
+<use ./figures/group9D.pdf>
+Package pdftex.def Info: ./figures/group9D.pdf used on input line 534.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9E.pdf, id=1719, 722.7pt x 722.7pt>
+File: ./figures/group9E.pdf Graphic file (type pdf)
+
+<use ./figures/group9E.pdf>
+Package pdftex.def Info: ./figures/group9E.pdf used on input line 537.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9F.pdf, id=1720, 722.7pt x 722.7pt>
+File: ./figures/group9F.pdf Graphic file (type pdf)
+
+<use ./figures/group9F.pdf>
+Package pdftex.def Info: ./figures/group9F.pdf used on input line 540.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9G.pdf, id=1721, 722.7pt x 722.7pt>
+File: ./figures/group9G.pdf Graphic file (type pdf)
+
+<use ./figures/group9G.pdf>
+Package pdftex.def Info: ./figures/group9G.pdf used on input line 544.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+
+<./figures/group9H.pdf, id=1722, 722.7pt x 722.7pt>
+File: ./figures/group9H.pdf Graphic file (type pdf)
+
+<use ./figures/group9H.pdf>
+Package pdftex.def Info: ./figures/group9H.pdf used on input line 547.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+File: ./figures/group9I.pdf Graphic file (type pdf)
+ <use ./figures/group9I.pdf>
+Package pdftex.def Info: ./figures/group9I.pdf used on input line 550.
+(pdftex.def)             Requested size: 147.21318pt x 147.20609pt.
+)
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Optimization_intro.tex
+[27
+
+ <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group9I.pdf> <C:/Users/ku
+bin/Desktop/GitFolder/doc_thesis/figures/group3B.pdf>] [28 <C:/Users/kubin/Desk
+top/GitFolder/doc_thesis/figures/group1A.pdf> <C:/Users/kubin/Desktop/GitFolder
+/doc_thesis/figures/group1B.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/f
+igures/group3A.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group3
+C.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group5A.pdf> <C:/Us
+ers/kubin/Desktop/GitFolder/doc_thesis/figures/group5B.pdf> <C:/Users/kubin/Des
+ktop/GitFolder/doc_thesis/figures/group5C.pdf> <C:/Users/kubin/Desktop/GitFolde
+r/doc_thesis/figures/group5D.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/
+figures/group5E.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group
+6A.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group6B.pdf> <C:/U
+sers/kubin/Desktop/GitFolder/doc_thesis/figures/group6C.pdf>] [29 <C:/Users/kub
+in/Desktop/GitFolder/doc_thesis/figures/group6D.pdf> <C:/Users/kubin/Desktop/Gi
+tFolder/doc_thesis/figures/group6E.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_t
+hesis/figures/group6F.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures
+/group7A.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group7B.pdf>
+ <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group7C.pdf> <C:/Users/ku
+bin/Desktop/GitFolder/doc_thesis/figures/group7D.pdf> <C:/Users/kubin/Desktop/G
+itFolder/doc_thesis/figures/group7E.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_
+thesis/figures/group7F.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figure
+s/group7G.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group7H.pdf
+> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group8A.pdf>]
+[30 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group8B.pdf> <C:/Users
+/kubin/Desktop/GitFolder/doc_thesis/figures/group8C.pdf> <C:/Users/kubin/Deskto
+p/GitFolder/doc_thesis/figures/group8D.pdf> <C:/Users/kubin/Desktop/GitFolder/d
+oc_thesis/figures/group9A.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/fig
+ures/group9B.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group9C.
+pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/group9D.pdf> <C:/User
+s/kubin/Desktop/GitFolder/doc_thesis/figures/group9E.pdf> <C:/Users/kubin/Deskt
+op/GitFolder/doc_thesis/figures/group9F.pdf> <C:/Users/kubin/Desktop/GitFolder/
+doc_thesis/figures/group9G.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/fi
+gures/group9H.pdf>] [31
+
+]
+<./figures/diagram.pdf, id=2183, 1306.8825pt x 1578.89874pt>
 File: ./figures/diagram.pdf Graphic file (type pdf)
 
 <use ./figures/diagram.pdf>
@@ -1461,22 +2005,120 @@ Package pdftex.def Info: ./figures/diagram.pdf used on input line 44.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12
+[32] [33 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/diagram.pdf>]
+Package epstopdf Info: Source file: <./figures/kores_faze_1.eps>
+(epstopdf)                    date: 2017-05-09 10:24:19
+(epstopdf)                    size: 2421033 bytes
+(epstopdf)             Output file: <./figures/kores_faze_1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-09 10:24:38
+(epstopdf)                    size: 40862 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/kores_faze_1-eps-
+converted-to.pdf ./figures/kores_faze_1.eps>
+(epstopdf)             \includegraphics on input line 75.
+Package epstopdf Info: Output file is already uptodate.
 
-] [13 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/diagram.pdf>]
+<./figures/kores_faze_1-eps-converted-to.pdf, id=2193, 421.575pt x 421.575pt>
+File: ./figures/kores_faze_1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/kores_faze_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/kores_faze_1-eps-converted-to.pdf used on in
+put line 75.
+(pdftex.def)             Requested size: 452.9679pt x 452.97844pt.
+Package epstopdf Info: Source file: <./figures/kores_faze_3.eps>
+(epstopdf)                    date: 2017-05-09 11:51:11
+(epstopdf)                    size: 3074679 bytes
+(epstopdf)             Output file: <./figures/kores_faze_3-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-09 13:47:51
+(epstopdf)                    size: 50388 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/kores_faze_3-eps-
+converted-to.pdf ./figures/kores_faze_3.eps>
+(epstopdf)             \includegraphics on input line 82.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/kores_faze_3-eps-converted-to.pdf, id=2194, 489.83pt x 489.83pt>
+File: ./figures/kores_faze_3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/kores_faze_3-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/kores_faze_3-eps-converted-to.pdf used on in
+put line 82.
+(pdftex.def)             Requested size: 452.9679pt x 452.98102pt.
+Package epstopdf Info: Source file: <./figures/kores_faze_4.eps>
+(epstopdf)                    date: 2017-05-09 11:47:44
+(epstopdf)                    size: 3078089 bytes
+(epstopdf)             Output file: <./figures/kores_faze_4-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-09 13:47:53
+(epstopdf)                    size: 50916 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/kores_faze_4-eps-
+converted-to.pdf ./figures/kores_faze_4.eps>
+(epstopdf)             \includegraphics on input line 88.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/kores_faze_4-eps-converted-to.pdf, id=2195, 489.83pt x 489.83pt>
+File: ./figures/kores_faze_4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/kores_faze_4-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/kores_faze_4-eps-converted-to.pdf used on in
+put line 88.
+(pdftex.def)             Requested size: 452.9679pt x 452.98102pt.
+ [34
+
+] [35 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/kores_faze_1-eps-con
+verted-to.pdf>] [36 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/kores_
+faze_3-eps-converted-to.pdf>] [37 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/
+figures/kores_faze_4-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figures/svazek_krit_odraz2.eps>
+(epstopdf)                    date: 2017-05-08 17:07:30
+(epstopdf)                    size: 205275 bytes
+(epstopdf)             Output file: <./figures/svazek_krit_odraz2-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-05-08 18:48:22
+(epstopdf)                    size: 18160 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/svazek_krit_odraz
+2-eps-converted-to.pdf ./figures/svazek_krit_odraz2.eps>
+(epstopdf)             \includegraphics on input line 112.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/svazek_krit_odraz2-eps-converted-to.pdf, id=2218, 279.0425pt x 248.9
+3pt>
+File: ./figures/svazek_krit_odraz2-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./figures/svazek_krit_odraz2-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/svazek_krit_odraz2-eps-converted-to.pdf used
+ on input line 112.
+(pdftex.def)             Requested size: 226.48395pt x 202.05pt.
+Package epstopdf Info: Source file: <./figures/ladok_time.eps>
+(epstopdf)                    date: 2017-05-09 13:43:11
+(epstopdf)                    size: 176672 bytes
+(epstopdf)             Output file: <./figures/ladok_time-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-05-09 13:47:53
+(epstopdf)                    size: 6995 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/ladok_time-eps-co
+nverted-to.pdf ./figures/ladok_time.eps>
+(epstopdf)             \includegraphics on input line 123.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/ladok_time-eps-converted-to.pdf, id=2219, 404.51125pt x 160.6pt>
+File: ./figures/ladok_time-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/ladok_time-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/ladok_time-eps-converted-to.pdf used on inpu
+t line 123.
+(pdftex.def)             Requested size: 317.07614pt x 125.88747pt.
+ [38 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/svazek_krit_odraz2-ep
+s-converted-to.pdf>]
 (C:\Users\kubin\Desktop\GitFolder\doc_thesis\xfig/mirror2.pstex_t
-<xfig/mirror2_pspdftex.pdf, id=1519, 579.16376pt x 430.60875pt>
+<xfig/mirror2_pspdftex.pdf, id=2229, 579.16376pt x 430.60875pt>
 File: xfig/mirror2_pspdftex.pdf Graphic file (type pdf)
 
 <use xfig/mirror2_pspdftex.pdf>
 Package pdftex.def Info: xfig/mirror2_pspdftex.pdf used on input line 2.
 (pdftex.def)             Requested size: 579.16234pt x 430.60768pt.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 14.
-
 LaTeX Font Info:    Calculating math sizes for size <16> on input line 14.
+
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 14.
@@ -1596,50 +2238,49 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 110.
 
 )
-Overfull \hbox (13.10315pt too wide) in paragraph at lines 84--85
+Overfull \hbox (13.10315pt too wide) in paragraph at lines 149--150
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14
-
-] [15 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/mirror2_pspdftex.pdf>] 
-<./figures/wedge_example.pdf, id=1532, 448.00372pt x 410.24266pt>
+[39 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/ladok_time-eps-convert
+ed-to.pdf>] [40 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/mirror2_pspdf
+tex.pdf>] <./figures/wedge_example.pdf, id=2250, 448.00372pt x 410.24266pt>
 File: ./figures/wedge_example.pdf Graphic file (type pdf)
 
 <use ./figures/wedge_example.pdf>
-Package pdftex.def Info: ./figures/wedge_example.pdf used on input line 139.
+Package pdftex.def Info: ./figures/wedge_example.pdf used on input line 204.
 (pdftex.def)             Requested size: 407.66833pt x 373.30888pt.
- [16 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/wedge_example.pdf>] [
-17]
-Overfull \hbox (7.5642pt too wide) in paragraph at lines 219--224
+ [41 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/wedge_example.pdf>] [
+42]
+Overfull \hbox (7.5642pt too wide) in paragraph at lines 285--290
 [][] 
  []
 
-[18]
-Overfull \hbox (383.29855pt too wide) in paragraph at lines 250--254
+[43]
+Overfull \hbox (383.29855pt too wide) in paragraph at lines 316--320
 [][] 
  []
 
-[19] [20]
-Overfull \hbox (32.76007pt too wide) in paragraph at lines 325--331
+[44] [45]
+Overfull \hbox (32.76007pt too wide) in paragraph at lines 391--397
 [][] 
  []
 
-[21]
-Overfull \hbox (32.76007pt too wide) in paragraph at lines 378--384
+[46]
+Overfull \hbox (80.0839pt too wide) in paragraph at lines 445--450
 [][] 
  []
 
-[22]
-Overfull \hbox (77.01021pt too wide) in paragraph at lines 452--458
+[47]
+Overfull \hbox (77.01021pt too wide) in paragraph at lines 521--527
 [][] 
  []
 
 
-Overfull \hbox (1.9611pt too wide) in paragraph at lines 468--469
+Overfull \hbox (1.9611pt too wide) in paragraph at lines 537--538
 $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 M[] \OMS/cmsy/m/n/10.95  N  j  j\OML/
 cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 (R[]) \OMS/cmsy/m/n/10.95   \OML/cmm/m/it/
 10.95 []\OT1/cmr/m/n/10.95 (M[])\OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 < \O
@@ -1651,13 +2292,475 @@ n/10.95 \OML/cmm/m/it/10.95 "[]\OMS/cmsy/m/n/10.95 g$\T1/cmr/m/n/10.95 , kde $
 .95 1\OML/cmm/m/it/10.95 ;  [] ;  m\OMS/cmsy/m/n/10.95 g$\T1/cmr/m/n/10.95 . 
  []
 
-[23] [24]) (C:\Users\kubin\Desktop\GitFolder\doc_thesis\DrapelaThesis.aux)
+[48] [49] [50])
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Param_experinents.tex
+Package epstopdf Info: Source file: <./figures/flux_var_coeff.eps>
+(epstopdf)                    date: 2017-05-07 14:54:21
+(epstopdf)                    size: 188839 bytes
+(epstopdf)             Output file: <./figures/flux_var_coeff-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-05-07 21:20:57
+(epstopdf)                    size: 7248 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/flux_var_coeff-ep
+s-converted-to.pdf ./figures/flux_var_coeff.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/flux_var_coeff-eps-converted-to.pdf, id=2292, 487.8225pt x 243.91125
+pt>
+File: ./figures/flux_var_coeff-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./figures/flux_var_coeff-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/flux_var_coeff-eps-converted-to.pdf used on 
+input line 35.
+(pdftex.def)             Requested size: 452.9679pt x 226.48526pt.
+ [51
+
+]
+Package epstopdf Info: Source file: <./figures/flux_depend2.eps>
+(epstopdf)                    date: 2017-05-07 14:25:27
+(epstopdf)                    size: 772407 bytes
+(epstopdf)             Output file: <./figures/flux_depend2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-07 21:22:19
+(epstopdf)                    size: 47541 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/flux_depend2-eps-
+converted-to.pdf ./figures/flux_depend2.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/flux_depend2-eps-converted-to.pdf, id=2296, 447.6725pt x 315.1775pt>
+File: ./figures/flux_depend2-eps-converted-to.pdf Graphic file (type pdf)
+<use ./figures/flux_depend2-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/flux_depend2-eps-converted-to.pdf used on in
+put line 66.
+(pdftex.def)             Requested size: 362.37569pt x 255.13367pt.
+Package epstopdf Info: Source file: <./figures/flux_depend1.eps>
+(epstopdf)                    date: 2017-05-07 14:25:09
+(epstopdf)                    size: 795575 bytes
+(epstopdf)             Output file: <./figures/flux_depend1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-07 21:22:20
+(epstopdf)                    size: 42826 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/flux_depend1-eps-
+converted-to.pdf ./figures/flux_depend1.eps>
+(epstopdf)             \includegraphics on input line 73.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/flux_depend1-eps-converted-to.pdf, id=2297, 447.6725pt x 315.1775pt>
+File: ./figures/flux_depend1-eps-converted-to.pdf Graphic file (type pdf)
+<use ./figures/flux_depend1-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/flux_depend1-eps-converted-to.pdf used on in
+put line 73.
+(pdftex.def)             Requested size: 362.37569pt x 255.13367pt.
+ [52 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/flux_var_coeff-eps-co
+nverted-to.pdf>] [53 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/flux_
+depend2-eps-converted-to.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figu
+res/flux_depend1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figures/tails_gauss.eps>
+(epstopdf)                    date: 2017-05-09 17:30:47
+(epstopdf)                    size: 289884 bytes
+(epstopdf)             Output file: <./figures/tails_gauss-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-05-10 08:52:08
+(epstopdf)                    size: 28272 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/tails_gauss-eps-c
+onverted-to.pdf ./figures/tails_gauss.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/tails_gauss-eps-converted-to.pdf, id=2349, 463.7325pt x 222.8325pt>
+File: ./figures/tails_gauss-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/tails_gauss-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/tails_gauss-eps-converted-to.pdf used on inp
+ut line 99.
+(pdftex.def)             Requested size: 362.37569pt x 174.13165pt.
+Package epstopdf Info: Source file: <./figures/tails_rho.eps>
+(epstopdf)                    date: 2017-05-10 09:21:23
+(epstopdf)                    size: 258422 bytes
+(epstopdf)             Output file: <./figures/tails_rho-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-05-10 09:37:29
+(epstopdf)                    size: 18048 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/tails_rho-eps-con
+verted-to.pdf ./figures/tails_rho.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/tails_rho-eps-converted-to.pdf, id=2350, 474.77374pt x 213.79875pt>
+File: ./figures/tails_rho-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/tails_rho-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/tails_rho-eps-converted-to.pdf used on input
+ line 116.
+(pdftex.def)             Requested size: 362.37569pt x 163.19012pt.
+)
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/OptimizationGUI.tex
+<icons/open-file-icon.png, id=2351, 256.96pt x 256.96pt>
+File: icons/open-file-icon.png Graphic file (type png)
+
+<use icons/open-file-icon.png>
+Package pdftex.def Info: icons/open-file-icon.png used on input line 10.
+(pdftex.def)             Requested size: 9.95863pt x 9.95512pt.
+ [54 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tails_gauss-eps-conve
+rted-to.pdf>]
+<./figures/controlSaton.pdf, id=2382, 115.43124pt x 397.485pt>
+File: ./figures/controlSaton.pdf Graphic file (type pdf)
+
+<use ./figures/controlSaton.pdf>
+Package pdftex.def Info: ./figures/controlSaton.pdf used on input line 14.
+(pdftex.def)             Requested size: 135.89174pt x 467.9729pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]\T1/cmr/m/n/10.95 Obrázek 2.19: Ovlá-dací
+ []
+
+[55 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tails_rho-eps-converte
+d-to.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/icons/open-file-icon.png
+> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/controlSaton.pdf>]
+<icons/save-icon.png, id=2447, 128.48pt x 128.48pt>
+File: icons/save-icon.png Graphic file (type png)
+ <use icons/save-icon.png>
+Package pdftex.def Info: icons/save-icon.png used on input line 31.
+(pdftex.def)             Requested size: 9.95863pt x 9.95709pt.
+
+<icons/save-as-icon.png, id=2448, 128.48pt x 128.48pt>
+File: icons/save-as-icon.png Graphic file (type png)
+
+<use icons/save-as-icon.png>
+Package pdftex.def Info: icons/save-as-icon.png used on input line 31.
+(pdftex.def)             Requested size: 9.95863pt x 9.95709pt.
+
+<icons/load-icon.png, id=2449, 20.88162pt x 20.88162pt>
+File: icons/load-icon.png Graphic file (type png)
+
+<use icons/load-icon.png>
+Package pdftex.def Info: icons/load-icon.png used on input line 31.
+(pdftex.def)             Requested size: 9.95863pt x 9.9587pt.
+ <icons/clear-icon.png, id=2450, 120.45pt x 120.45pt>
+File: icons/clear-icon.png Graphic file (type png)
+
+<use icons/clear-icon.png>
+Package pdftex.def Info: icons/clear-icon.png used on input line 31.
+(pdftex.def)             Requested size: 9.95863pt x 9.95782pt.
+
+<./figures/radFlux.pdf, id=2451, 517.935pt x 731.73375pt>
+File: ./figures/radFlux.pdf Graphic file (type pdf)
+
+<use ./figures/radFlux.pdf>
+Package pdftex.def Info: ./figures/radFlux.pdf used on input line 38.
+(pdftex.def)             Requested size: 113.81102pt x 160.79211pt.
+
+<./figures/tails.pdf, id=2452, 517.935pt x 731.73375pt>
+File: ./figures/tails.pdf Graphic file (type pdf)
+
+<use ./figures/tails.pdf>
+Package pdftex.def Info: ./figures/tails.pdf used on input line 41.
+(pdftex.def)             Requested size: 113.81102pt x 160.79211pt.
+
+<./figures/polygon.pdf, id=2453, 517.935pt x 731.73375pt>
+File: ./figures/polygon.pdf Graphic file (type pdf)
+
+<use ./figures/polygon.pdf>
+Package pdftex.def Info: ./figures/polygon.pdf used on input line 44.
+(pdftex.def)             Requested size: 113.81102pt x 160.79211pt.
+ [56 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/icons/save-icon.png> <C:/User
+s/kubin/Desktop/GitFolder/doc_thesis/icons/save-as-icon.png> <C:/Users/kubin/De
+sktop/GitFolder/doc_thesis/icons/load-icon.png> <C:/Users/kubin/Desktop/GitFold
+er/doc_thesis/icons/clear-icon.png> <C:/Users/kubin/Desktop/GitFolder/doc_thesi
+s/figures/radFlux.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/tai
+ls.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/polygon.pdf>] <./f
+igures/empty.pdf, id=2476, 361.35pt x 289.08pt>
+File: ./figures/empty.pdf Graphic file (type pdf)
+
+<use ./figures/empty.pdf>
+Package pdftex.def Info: ./figures/empty.pdf used on input line 72.
+(pdftex.def)             Requested size: 113.81102pt x 91.04744pt.
+
+<./figures/choosen.pdf, id=2477, 361.35pt x 289.08pt>
+File: ./figures/choosen.pdf Graphic file (type pdf)
+
+<use ./figures/choosen.pdf>
+Package pdftex.def Info: ./figures/choosen.pdf used on input line 75.
+(pdftex.def)             Requested size: 113.81102pt x 91.04744pt.
+ <./figures/pair.pdf, id=2478, 361.35pt x 289.08pt>
+File: ./figures/pair.pdf Graphic file (type pdf)
+
+<use ./figures/pair.pdf>
+Package pdftex.def Info: ./figures/pair.pdf used on input line 78.
+(pdftex.def)             Requested size: 113.81102pt x 91.04744pt.
+
+<./figures/initialDistance.pdf, id=2479, 368.37625pt x 289.08pt>
+File: ./figures/initialDistance.pdf Graphic file (type pdf)
+
+<use ./figures/initialDistance.pdf>
+Package pdftex.def Info: ./figures/initialDistance.pdf used on input line 86.
+(pdftex.def)             Requested size: 227.62083pt x 216.24043pt.
+
+<./figures/distance24_4.pdf, id=2480, 368.37625pt x 289.08pt>
+File: ./figures/distance24_4.pdf Graphic file (type pdf)
+
+<use ./figures/distance24_4.pdf>
+Package pdftex.def Info: ./figures/distance24_4.pdf used on input line 94.
+(pdftex.def)             Requested size: 227.62083pt x 216.24043pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/ShiftOfRays.tex [57 <C:/User
+s/kubin/Desktop/GitFolder/doc_thesis/figures/empty.pdf> <C:/Users/kubin/Desktop
+/GitFolder/doc_thesis/figures/choosen.pdf> <C:/Users/kubin/Desktop/GitFolder/do
+c_thesis/figures/pair.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures
+/initialDistance.pdf>] [58 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures
+/distance24_4.pdf>]
+Kapitola 3.
+[59
+
+] (C:\Users\kubin\Desktop\GitFolder\doc_thesis\xfig/odraz2.pstex_t
+<xfig/odraz2_pspdftex.pdf, id=2515, 171.64125pt x 136.51pt>
+File: xfig/odraz2_pspdftex.pdf Graphic file (type pdf)
+
+<use xfig/odraz2_pspdftex.pdf>
+Package pdftex.def Info: xfig/odraz2_pspdftex.pdf used on input line 2.
+(pdftex.def)             Requested size: 171.64081pt x 136.50966pt.
+) [60 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/odraz2_pspdftex.pdf>]
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\xfig/odraz.pstex_t
+<xfig/odraz_pspdftex.pdf, id=2522, 185.69376pt x 151.56625pt>
+File: xfig/odraz_pspdftex.pdf Graphic file (type pdf)
+
+<use xfig/odraz_pspdftex.pdf>
+Package pdftex.def Info: xfig/odraz_pspdftex.pdf used on input line 2.
+(pdftex.def)             Requested size: 185.6933pt x 151.56587pt.
+)
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\xfig/index.pstex_t
+<xfig/index_pspdftex.pdf, id=2523, 253.94875pt x 137.51375pt>
+File: xfig/index_pspdftex.pdf Graphic file (type pdf)
+
+<use xfig/index_pspdftex.pdf>
+Package pdftex.def Info: xfig/index_pspdftex.pdf used on input line 2.
+(pdftex.def)             Requested size: 253.94812pt x 137.51341pt.
+) [61 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/odraz_pspdftex.pdf> <C:
+/Users/kubin/Desktop/GitFolder/doc_thesis/xfig/index_pspdftex.pdf>]
+Package epstopdf Info: Source file: <figures/derivace.eps>
+(epstopdf)                    date: 2016-02-12 15:53:39
+(epstopdf)                    size: 274249 bytes
+(epstopdf)             Output file: <figures/derivace-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-02-15 10:29:15
+(epstopdf)                    size: 22118 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/derivace-eps-conver
+ted-to.pdf figures/derivace.eps>
+(epstopdf)             \includegraphics on input line 92.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/derivace-eps-converted-to.pdf, id=2532, 421.575pt x 296.10625pt>
+File: figures/derivace-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/derivace-eps-converted-to.pdf>
+Package pdftex.def Info: figures/derivace-eps-converted-to.pdf used on input li
+ne 92.
+(pdftex.def)             Requested size: 227.62204pt x 159.88142pt.
+ [62 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/derivace-eps-converte
+d-to.pdf>]
+Package epstopdf Info: Source file: <figures/viva12_bigflux.eps>
+(epstopdf)                    date: 2016-02-12 16:03:26
+(epstopdf)                    size: 763197 bytes
+(epstopdf)             Output file: <figures/viva12_bigflux-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2016-02-15 10:29:17
+(epstopdf)                    size: 78393 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/viva12_bigflux-eps-
+converted-to.pdf figures/viva12_bigflux.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/viva12_bigflux-eps-converted-to.pdf, id=2554, 375.4025pt x 316.18124pt
+>
+File: figures/viva12_bigflux-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/viva12_bigflux-eps-converted-to.pdf>
+Package pdftex.def Info: figures/viva12_bigflux-eps-converted-to.pdf used on in
+put line 111.
+(pdftex.def)             Requested size: 284.52756pt x 239.65857pt.
+ [63 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/viva12_bigflux-eps-co
+nverted-to.pdf>]
+Package epstopdf Info: Source file: <figures/relative.eps>
+(epstopdf)                    date: 2016-05-06 12:06:22
+(epstopdf)                    size: 23516 bytes
+(epstopdf)             Output file: <figures/relative-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-06 12:07:00
+(epstopdf)                    size: 4174 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/relative-eps-conver
+ted-to.pdf figures/relative.eps>
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/relative-eps-converted-to.pdf, id=2560, 407.5225pt x 291.0875pt>
+File: figures/relative-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/relative-eps-converted-to.pdf>
+Package pdftex.def Info: figures/relative-eps-converted-to.pdf used on input li
+ne 128.
+(pdftex.def)             Requested size: 179.25449pt x 128.0374pt.
+Package epstopdf Info: Source file: <figures/relative_index1.eps>
+(epstopdf)                    date: 2016-05-06 12:11:41
+(epstopdf)                    size: 22481 bytes
+(epstopdf)             Output file: <figures/relative_index1-eps-converted-to.p
+df>
+(epstopdf)                    date: 2016-05-06 12:11:52
+(epstopdf)                    size: 4147 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/relative_index1-eps
+-converted-to.pdf figures/relative_index1.eps>
+(epstopdf)             \includegraphics on input line 131.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/relative_index1-eps-converted-to.pdf, id=2561, 401.5pt x 282.05376pt>
+File: figures/relative_index1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/relative_index1-eps-converted-to.pdf>
+Package pdftex.def Info: figures/relative_index1-eps-converted-to.pdf used on i
+nput line 131.
+(pdftex.def)             Requested size: 182.26006pt x 128.0374pt.
+Package epstopdf Info: Source file: <figures/kruhovy_histogram.eps>
+(epstopdf)                    date: 2016-02-13 09:25:06
+(epstopdf)                    size: 40016 bytes
+(epstopdf)             Output file: <figures/kruhovy_histogram-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2016-02-15 10:29:18
+(epstopdf)                    size: 8658 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/kruhovy_histogram-e
+ps-converted-to.pdf figures/kruhovy_histogram.eps>
+(epstopdf)             \includegraphics on input line 146.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/kruhovy_histogram-eps-converted-to.pdf, id=2562, 304.13625pt x 316.181
+24pt>
+File: figures/kruhovy_histogram-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/kruhovy_histogram-eps-converted-to.pdf>
+Package pdftex.def Info: figures/kruhovy_histogram-eps-converted-to.pdf used on
+ input line 146.
+(pdftex.def)             Requested size: 199.16928pt x 207.06404pt.
+ [64 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/relative-eps-converte
+d-to.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/relative_index1-
+eps-converted-to.pdf> <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/kruh
+ovy_histogram-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/odraz.eps>
+(epstopdf)                    date: 2016-02-13 09:03:04
+(epstopdf)                    size: 155688 bytes
+(epstopdf)             Output file: <figures/odraz-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-02-15 10:29:19
+(epstopdf)                    size: 39630 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/odraz-eps-converted
+-to.pdf figures/odraz.eps>
+(epstopdf)             \includegraphics on input line 157.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/odraz-eps-converted-to.pdf, id=2577, 311.1625pt x 300.12125pt>
+File: figures/odraz-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/odraz-eps-converted-to.pdf>
+Package pdftex.def Info: figures/odraz-eps-converted-to.pdf used on input line 
+157.
+(pdftex.def)             Requested size: 199.16928pt x 192.10442pt.
+ [65 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/odraz-eps-converted-t
+o.pdf>]
+Package epstopdf Info: Source file: <figures/saton_smer.eps>
+(epstopdf)                    date: 2016-02-13 09:35:52
+(epstopdf)                    size: 37413 bytes
+(epstopdf)             Output file: <figures/saton_smer-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-02-15 11:38:29
+(epstopdf)                    size: 8276 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/saton_smer-eps-conv
+erted-to.pdf figures/saton_smer.eps>
+(epstopdf)             \includegraphics on input line 169.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/saton_smer-eps-converted-to.pdf, id=2587, 316.18124pt x 316.18124pt>
+File: figures/saton_smer-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/saton_smer-eps-converted-to.pdf>
+Package pdftex.def Info: figures/saton_smer-eps-converted-to.pdf used on input 
+line 169.
+(pdftex.def)             Requested size: 199.16928pt x 199.17111pt.
+)
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Separability.tex [66 <C:/Users
+/kubin/Desktop/GitFolder/doc_thesis/figures/saton_smer-eps-converted-to.pdf>]
+Kapitola 4.
+[67
+
+] [68]
+Package epstopdf Info: Source file: <./figures/oddelitelnost.eps>
+(epstopdf)                    date: 2017-05-11 16:57:31
+(epstopdf)                    size: 211544 bytes
+(epstopdf)             Output file: <./figures/oddelitelnost-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-05-11 21:01:17
+(epstopdf)                    size: 8660 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/oddelitelnost-eps
+-converted-to.pdf ./figures/oddelitelnost.eps>
+(epstopdf)             \includegraphics on input line 265.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/oddelitelnost-eps-converted-to.pdf, id=2601, 678.535pt x 300.12125pt
+>
+File: ./figures/oddelitelnost-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./figures/oddelitelnost-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/oddelitelnost-eps-converted-to.pdf used on i
+nput line 265.
+(pdftex.def)             Requested size: 452.9679pt x 200.34747pt.
+ [69 <C:/Users/kubin/Desktop/GitFolder/doc_thesis/figures/oddelitelnost-eps-con
+verted-to.pdf>] [70]
+[71]
+Package epstopdf Info: Source file: <./figures/epsilon1.eps>
+(epstopdf)                    date: 2017-05-12 23:21:11
+(epstopdf)                    size: 335756 bytes
+(epstopdf)             Output file: <./figures/epsilon1-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-05-12 23:27:22
+(epstopdf)                    size: 24490 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/epsilon1-eps-conv
+erted-to.pdf ./figures/epsilon1.eps>
+(epstopdf)             \includegraphics on input line 329.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/epsilon1-eps-converted-to.pdf, id=2620, 407.5225pt x 210.7875pt>
+File: ./figures/epsilon1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/epsilon1-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/epsilon1-eps-converted-to.pdf used on input 
+line 329.
+(pdftex.def)             Requested size: 452.9679pt x 234.30496pt.
+Package epstopdf Info: Source file: <./figures/epsilon2.eps>
+(epstopdf)                    date: 2017-05-12 23:23:15
+(epstopdf)                    size: 334160 bytes
+(epstopdf)             Output file: <./figures/epsilon2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-05-12 23:27:22
+(epstopdf)                    size: 24266 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figures/epsilon2-eps-conv
+erted-to.pdf ./figures/epsilon2.eps>
+(epstopdf)             \includegraphics on input line 336.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/epsilon2-eps-converted-to.pdf, id=2621, 407.5225pt x 210.7875pt>
+File: ./figures/epsilon2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/epsilon2-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/epsilon2-eps-converted-to.pdf used on input 
+line 336.
+(pdftex.def)             Requested size: 452.9679pt x 234.30496pt.
+)
+(C:\Users\kubin\Desktop\GitFolder\doc_thesis\src/Results.tex [72 <C:/Users/kubi
+n/Desktop/GitFolder/doc_thesis/figures/epsilon1-eps-converted-to.pdf>] [73 <C:/
+Users/kubin/Desktop/GitFolder/doc_thesis/figures/epsilon2-eps-converted-to.pdf>
+]
+Kapitola 5.
+
+Overfull \hbox (7.61041pt too wide) in paragraph at lines 8--29
+ [][] 
+ []
+
+[74
+
+]) (C:\Users\kubin\Desktop\GitFolder\doc_thesis\DrapelaThesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1665,37 +2768,45 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'DrapelaThesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17613 strings out of 493921
- 340319 string characters out of 3150891
- 457659 words of memory out of 3000000
- 20639 multiletter control sequences out of 15000+200000
- 35194 words of font info for 120 fonts, out of 3000000 for 9000
+ 19093 strings out of 493921
+ 369580 string characters out of 3150891
+ 680529 words of memory out of 3000000
+ 21971 multiletter control sequences out of 15000+200000
+ 40113 words of font info for 130 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,17n,43p,10407b,1354s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,17n,48p,10407b,1357s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbx1728.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecti1095.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\kubin\AppData\Local\MiKTeX
+ecrm1200.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbi1095.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbi2488.pk> <C:\Users\kubin\AppData\Local\MiKTeX
 \2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\kubin\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\kubin\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk><D:/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-<D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTe
-X/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kubin/AppData/Roamin
-g/MiKTeX/2.9/fonts/type1/public/esvect/vect10.pfb>
-Output written on DrapelaThesis.pdf (24 pages, 3063580 bytes).
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\kubin\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk> <C:\Us
+ers\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.
+pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecti1095.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm1728.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\kubin\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\kubin\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk><D:/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr6.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D
+:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb><C:/Users/kubin/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/esvec
+t/vect10.pfb>
+Output written on DrapelaThesis.pdf (74 pages, 10312315 bytes).
 PDF statistics:
- 1969 PDF objects out of 2073 (max. 8388607)
+ 3212 PDF objects out of 3580 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 571 words of extra memory for PDF output out of 10000 (max. 10000000)
 

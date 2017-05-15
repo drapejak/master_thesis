@@ -1,0 +1,375 @@
+\usepackage[left=3.0cm,right=2.4cm,top=3cm,bottom=4cm]{geometry}
+
+	\usepackage{amssymb,amsmath}
+	
+%%Packages definition
+	\usepackage{ifthen}
+	
+	%% language package
+	\ifthenelse{ \equal{\Language}{EN} }{
+  		\usepackage[english]{babel}
+	}{
+  		\usepackage[czech]{babel}
+	}
+    
+	\usepackage{lipsum}		%% lorem ipsum ... 
+	\usepackage{fancyhdr}	%% header and footer
+	\usepackage[dvips]{graphicx}   %% graphics
+	\usepackage{booktabs}   %% tables
+	\usepackage[cmyk,table]{xcolor} %% colors
+	\usepackage{tikz}		%% diagrams
+
+	\usepackage[font=small,labelfont=bf]{caption}	%% figures
+	\usepackage{subcaption}	%% subfigures
+
+	\usepackage{url}		%% web links
+	\usepackage{epstopdf}	%% we all know this one
+	\usepackage{rotating}
+	\usepackage[crop=pdfcrop]{pstool}
+    \usepackage[backend=bibtex,style=numeric]{biblatex}
+	\usepackage{psfrag}
+	\usepackage{epsf} 
+	\usepackage{multirow}	
+	\usepackage{wrapfig}
+	\usepackage[titletoc]{appendix}
+	\usepackage{siunitx}
+	
+	
+	\usepackage[absolute]{textpos}	%% for the page with scanned assignment
+	
+	%% PROSTOR PRO IMPORT UZIVATELSKYCH BALICKU %%%%%%%%%%%%%
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{graphicx}
+
+\usepackage{indentfirst}
+\usepackage{esvect}
+%\setlength{\parindent}{4em} 
+
+
+\usepackage{enumitem}
+\usepackage{textcomp} % to use \textperthousand                                            
+
+
+% pridano kvuli tabulkam 
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\DeclareSIUnit\px{px}
+\DeclareSIUnit\permille{\text{\textperthousand}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+%\makeatletter
+%\renewcommand{\@makechapterhead}[1]{%
+%\vspace*{20 pt}%
+%{\setlength{\parindent}{0pt} \raggedright \normalfont
+%\bfseries\Huge\thechapter.\ #1
+%\par\nobreak\vspace{20 pt}}}
+%\makeatother
+
+%\setcounter{secnumdepth}{3}
+%\fontfamily{phs}
+%%\selectfont
+%\usepackage[backend=bibtex,style=numeric,sortcites]{biblatex}
+
+
+%%Colors definition
+	\definecolor{cvutcolor}{cmyk}{1, 0.43, 0, 0} % CVUT blue
+	%\definecolor{cvutcolor}{cmyk}{0, 0.78, 0.78, 0.31} %crimson
+	%\definecolor{cvutcolor}{cmyk}{0.31, 0, 1, 0.27} %green
+	%\definecolor{cvutcolor}{cmyk}{0, 0.35, 1, 0.11} %gold
+	\definecolor{svetlemodra}{cmyk}{0.2, 0.08, 0, 0.1} % CVUT light blue
+	\definecolor{svetleseda}{cmyk}{0, 0, 0, 0.13} % CVUT light gray
+
+%%Okraje stranky
+	\usepackage{lastpage} %% last page reference
+	
+%%Measurement definition - for the blue ruler on the first pages
+	\newlength{\titlewidth}
+	\setlength{\titlewidth}{\textwidth}
+	\addtolength{\titlewidth}{-1.7cm}
+	\newlength{\heightofhw}
+
+%% LANGUAGE SWITCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{ \equal{\Language}{EN} }{	
+	\AtBeginDocument{\renewcommand{\partname}{\sffamily Part}}
+	
+	\newcommand{\MySchoolName}{\Large \textsc{Czech\\ Technical\\ University\\ in Prague}}
+	\newcommand{\MySupervisorLabel}{Thesis supervisor:}
+	\ifthenelse{ \equal{\Thesis}{B} }{
+		\newcommand{\MyThesisType}{Bachelor's thesis}
+	}{}\ifthenelse{ \equal{\Thesis}{M} }{
+		\newcommand{\MyThesisType}{Master's thesis}
+	}{}\ifthenelse{ \equal{\Thesis}{D} }{
+		\newcommand{\MyThesisType}{Ph.D thesis}
+	}{}
+}{
+	\AtBeginDocument{\renewcommand{\partname}{\sffamily Kapitola}}
+	\AtBeginDocument{\renewcommand{\refname}{Literatura}}
+	
+	\newcommand{\MySchoolName}{\large \textsc{České\\ vysoké\\ učení\\ technické\\ v Praze}}
+	\newcommand{\MySupervisorLabel}{Vedoucí práce:}
+	\ifthenelse{ \equal{\Thesis}{B} }{
+		\newcommand{\MyThesisType}{Bakalářská práce}
+	}{}\ifthenelse{ \equal{\Thesis}{M} }{
+		\newcommand{\MyThesisType}{Diplomová práce}
+	}{}\ifthenelse{ \equal{\Thesis}{D} }{
+		\newcommand{\MyThesisType}{Dizertační práce}
+	}{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\TitlePage}{
+	\thispagestyle{empty}
+	\parbox{0.7cm}{\color{cvutcolor}\rule{0.35cm}{\textheight}}	%% blue rule
+	{\parbox[0][\textheight][t]{\titlewidth}{ 
+		\vspace{10pt}  		
+		\sffamily 
+		\includegraphics[height=3.1cm]{lev.png}	%% lev cvut
+  		\put(10,40){\parbox{8cm}{\MySchoolName}}\\[12pt]
+
+		\textbf{\large 
+			\color{cvutcolor} {\Faculty} \\[6pt]
+			\color{black} {\Department}
+		}\\[3.1cm]	
+		\textbf{\large \MyThesisType}\\[-1em]	
+		\begin{flushleft}
+			%\begin{Huge}
+			\fontsize{32pt}{2.5em}
+			\selectfont \color{cvutcolor} \textbf{\Title}
+			%\end{Huge}
+			\\[1em]	
+		\end{flushleft}
+		\Large \color{black} \textbf{\Author}\\
+		\vfill{}
+		\textbf{\large \Date} \\
+		\textbf{\large \MySupervisorLabel} \Supervisor
+	}}
+	\newpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGESTYLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%definition of pagestyle - normal text - blue header text, blue line pagenumber 
+\fancypagestyle{pagestyle_text}{
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyfoot[RO]{
+		\textbf{\thepage$/$\pageref*{LastPage}}
+		}
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyfoot[RE,LO]{}
+	\fancyfoot[LE]{
+		\textbf{\thepage$/$\pageref*{LastPage}}
+		}
+	
+	\fancyhead[RO]{\color{cvutcolor} \slshape \leftmark}
+	\fancyhead[RE]{}
+	\fancyhead[LE]{\color{cvutcolor} \slshape \leftmark}
+	\fancyhead[LO]{}
+	
+}
+
+%%definition of pagestyle with part heading - no header text, blue line pagenumber
+\fancypagestyle{pagestyle_chapter}{
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyfoot[RO]{
+		\textbf{\thepage$/$\pageref*{LastPage}}
+		}
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyfoot[RE,LO]{}
+	\fancyfoot[LE]{
+		\textbf{\thepage$/$\pageref*{LastPage}}
+		}
+}
+
+%%definition of pagestyle with vertical blue ruler on the left side
+\fancypagestyle{pagestyle_blue_rule}{
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyhead[L]{
+		\hspace{-1cm}
+		\begin{tikzpicture}
+		\color{cvutcolor} \draw [line width=0.35cm] (0,-1) -- (0,-1.06\textheight);
+		\end{tikzpicture}
+		\vspace{-1.06\textheight}
+	}
+	\fancyfoot[C]{\thepage \qquad \qquad \qquad}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER OPTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%definition of hyperlinks in the text
+%\usepackage[
+%	bookmarks=true,
+%	hypertexnames=false,
+%	breaklinks=true,
+%	colorlinks=false,
+%	urlcolor=blue,
+%	linktoc=section,
+%	linkbordercolor={1 0.8 0},
+%	citebordercolor={0.36 0.54 0.76}%cyan%{0 0.68 0.84}%{0 0.36 0.72}%{0 1 0}
+%]{hyperref}
+\definecolor{lgray}{gray}{.9}
+  \definecolor{dgreen}{rgb}{0,0.4,0}
+  \definecolor{dblue}{rgb}{0,0,0.5}
+  \definecolor{dred}{rgb}{0.4,0,0}  
+\usepackage[pdftex]{hyperref}
+ 	\hypersetup{colorlinks,pdfhighlight=/O,citecolor=dgreen,
+     filecolor=dblue,urlcolor=dblue,linkcolor=dblue,pagecolor=dblue,
+     breaklinks=true,pdfpagemode=UseNone,plainpages=false,
+     backref=true,pagebackref=true,breaklinks=true,
+     pdfauthor={},
+     pdfsubject={thesis},
+     pdftitle={},
+     pdfkeywords={}}
+
+%% PDF properties
+%\hypersetup{  
+%	pdfauthor={\Author},
+%	pdftitle={\Title},
+%%	pdfsubject={\Subject},
+%%	pdfkeywords={\Keywords}
+%}
+
+%redefinition of part(sffamily vertical blue rule)
+\makeatletter
+\renewcommand \thepart {\sffamily\@arabic\c@part}
+\let\stdpart\part
+\renewcommand*\part{%
+  \@ifstar{\starpart}{\@dblarg\nostarpart}}
+\newcommand*\starpart[1]{
+	\thispagestyle{pagestyle_chapter}
+	\settoheight{\heightofhw}{\parbox{\titlewidth}{\Huge{{Part X\\ \sffamily #1}}}}
+	\parbox{0.7cm}{\color{cvutcolor}\rule{0.35cm}{2.3\heightofhw}}
+	{\parbox{\titlewidth}{
+		\stdpart*{{\sffamily #1}}
+	}}\\[1cm]
+}
+\def\nostarpart[#1]#2{
+	\thispagestyle{pagestyle_chapter}
+	\settoheight{\heightofhw}{\parbox{\titlewidth}{\Huge{{Part X\\ \textbf{\sffamily #2}}}}}
+	\parbox{0.7cm}{\color{cvutcolor}\rule{0.35cm}{2.5\heightofhw}}
+	\parbox{\titlewidth}{
+  		\stdpart[{#1}]{{\sffamily #2}}
+  	}\\[1cm]
+  	\sectionmark{#2}
+}
+\makeatother
+%
+%%redefinition of section(sffamily)
+%\makeatletter
+%\renewcommand \thesection {\sffamily\@arabic\c@section}
+%\let\stdsection\section
+%\renewcommand*\section{%
+%  \@ifstar{\starsection}{\@dblarg\nostarsection}}
+%\newcommand*\starsection[1]{
+%	 \stdsection*{{\sffamily #1}}
+%}
+%\def\nostarsection[#1]#2{
+%	\settoheight{\heightofhw}{\parbox{\titlewidth}{\Large{\textbf{X \sffamily #2}}}}
+%	\parbox{0.7cm}{\vspace{7pt} \color{cvutcolor}\rule{0.35cm}{1.9\heightofhw}}
+%	\parbox{\titlewidth}{\stdsection[{#1}]{{ \sffamily #2}}}\\[1em]
+%	\sectionmark{#2}
+%}
+%%\makeatother
+%
+%%redefinition of subsection(sffamily)
+%\makeatletter
+%\let\stdsubsection\subsection
+%\renewcommand*\subsection{%
+%  \@ifstar{\starsubsection}{\@dblarg\nostarsubsection}}
+%\newcommand*\starsubsection[1]{
+%	\stdsubsection*{{\sffamily #1}}
+%}
+%\def\nostarsubsection[#1]#2{
+%	\settoheight{\heightofhw}{\parbox{\titlewidth}{\large{\textbf{X \sffamily #2}}}}
+%	\parbox{0.7cm}{\vspace{8pt} \color{cvutcolor}\rule{0.35cm}{1.9\heightofhw}}
+%	\parbox{\titlewidth}{\stdsubsection[{#1}]{{\sffamily #2}}}\\[1em]
+%}
+%
+%%redefinition of subsubsection(sffamily)
+%\makeatletter
+%\let\stdsubsubsection\subsubsection
+%\renewcommand*\subsubsection{%
+%  \@ifstar{\starsubsubsection}{\@dblarg\nostarsubsubsection}}
+%\newcommand*\starsubsubsection[1]{
+%	\stdsubsubsection*{{\sffamily #1}}
+%}
+%\def\nostarsubsubsection[#1]#2{
+%	\settoheight{\heightofhw}{\parbox{\titlewidth}{\textbf{X \sffamily #2}}}
+%	\parbox{0.7cm}{\vspace{8pt} \color{cvutcolor}\rule{0.35cm}{1.7\heightofhw}}
+%	\parbox{\titlewidth}{\stdsubsubsection[{#1}]{{\sffamily #2}}}\\[1em]
+%}
+
+%definition of numbering - numbers are going in order Part.Section.Subsection.Subsubsection...
+\makeatletter
+\@addtoreset{section}{part} %reseting section counter with every chapter
+
+\renewcommand\thepart{\sffamily\arabic{part}}
+\renewcommand\thesection{\thepart.\sffamily\arabic{section}}
+\renewcommand\thesubsection{\thesection.\sffamily\arabic{subsection}}
+\makeatother
+
+%formating of the table of content
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{2.2em}{2em}}		%tab of sections
+\renewcommand*\l@subsection{\@dottedtocline{2}{4.2em}{2.7em}}	%tab of subsections 4.2 = 2.2 + 2 from the previous line
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{6.9em}{3.6em}}%tab of subsubsections 6.9 = 4.2 + 2.7 from the previous line
+\makeatother
+
+
+%redefinition for vertical blue rule befor sections and subsections .. NEVER ever try to modify this part of code :D
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries\sffamily}}
+\newcommand{\vertrule}{\hspace{0.62cm}{\color{cvutcolor}\rule{0.35cm}{0.8em}}\hspace{0.5cm}}
+\def\@sect#1#2#3#4#5#6[#7]#8{%
+  \ifnum #2>\c@secnumdepth
+    \let\@svsec\@empty
+  \else
+    \refstepcounter{#1}%
+    \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+  \fi
+  \@tempskipa #5\relax
+  \ifdim \@tempskipa>\z@
+    \begingroup
+      #6{%
+        \@hangfrom{\vertrule \hskip #3\relax\@svsec}%
+          \interlinepenalty \@M #8\@@par}%
+    \endgroup
+    \csname #1mark\endcsname{#7}%
+    \addcontentsline{toc}{#1}{%
+      \ifnum #2>\c@secnumdepth \else
+        \protect\numberline{\csname the#1\endcsname}%
+      \fi
+      #7}%
+  \else
+    \def\@svsechd{%
+      #6{\hskip #3\relax
+      \@svsec #8}%
+      \csname #1mark\endcsname{#7}%
+      \addcontentsline{toc}{#1}{%
+        \ifnum #2>\c@secnumdepth \else
+          \protect\numberline{\csname the#1\endcsname}%
+        \fi
+        #7}}%
+  \fi
+  \@xsect{#5}}
+\makeatother

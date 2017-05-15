@@ -1,4 +1,4 @@
-\chapter{Úvod}
+\part{Úvod a motivace}
 
 Drahé kameny jsou lidstvem od pradávna vyhledávány.
 Jsou znakem krásy, bohatství a moci. Z počátku se kameny leštily do oblých tvarů a stávaly se součástí šperků.
@@ -6,7 +6,7 @@ S vývojem civilizace se začaly drahé kameny brousit, aby se zvýraznil lom sv
 
 Cenu broušených kamenů určují čtyři základní parametry. Mezi ně patří čistota, barva, hmotnost a kvalita brusu. 
 
-Čistota určuje množství příměsí v materiálu kamene. Při tvorbě krystalu mohou dále vzniknout praskliny či vzduchové bubliny.
+Čistotu určuje množství příměsí v materiálu kamene a praskliny či vzduchové bubliny, které mohou vzniknout při tvorbě krystalu.
 
 Broušené kameny dělíme do široké řady odstínů. Barva kamene závisí jeho chemickém složení. Důležitá je jednotnost barvy celého kamene.
 
@@ -16,7 +16,7 @@ Brus je důležitá mechanická úprava kamene. Ideálně opracovaný kámen má
 
 Jedním z nástrojů ke zkoumání optických vlastností broušeného kamene je nasvícení jeho povrchu světelným svazkem. Na fasetách broušeného kamene dochází ve zjednodušeném případě k odrazu a lomu světelného svazku. Z toho důvodu se dopadající svazek roztříští na řadu světelných svazků různých tvarů. Svazky jsou definovány směrem šíření, plochou, zářivým tokem a elektromagnetickými parametry. 
 
-Barva, čistota a kvalita brusu mají za následek změnu geometrie svazků. Ta je jednoznačným popisem broušeného kamene. Zhodnocením vystupujících svazků můžeme určit kvalitu kamene.\\ 
+Barva, čistota a kvalita brusu se promítnou na geometrii svazků. Ta je jednoznačným popisem broušeného kamene. Zhodnocením vystupujících svazků můžeme určit kvalitu kamene.\\ 
 
 Tato práce navazuje na dlouhodobý výzkum v Centru strojového vnímání na katedře kybernetiky Elektrotechnické fakulty ČVUT. 
 
@@ -27,7 +27,7 @@ LADOK je matematickým řešením experimentu na obr. \ref{fig:basicMeasure}. V 
 
 \begin{figure}[h!]
 \begin{center}
-\scalebox{0.5}{ \input{xfig/stinitko.pstex_t}}
+\scalebox{0.4}{ \input{xfig/stinitko.pstex_t}}
 \end{center}
 \caption{Nákres principu experimentu. Laser produkuje svazek světla, který dopadá na celou plochu kamene. V kameni se svazek roztříští na mnoho svazků. Svazky vystupující z kamene v horní polorovině dopadnou na stínítko. Stínítko snímá kamera. Převzato z \cite{Drapela}.}
 \label{fig:basicMeasure}
@@ -38,7 +38,7 @@ Experimentální soustavu máme sestavenou a zkalibrovanou \cite{Drapela}. Znám
 
 O možnost porovnání dat reálného experimentu s výsledky počítačové simulace se postaral Igor Bodlák \cite{Bodlak2005}. Navrhl optimalizaci kritéria hodnotící rozdíl vzdálenosti stop z experimentu a odrazů stop simulace na stínítku. Optimalizovaly se parametry faset kamene a kámen se tak deformoval, aby se dosáhlo co nejlepší shody v zadaném kritériu. Software pro řešení inverzní úlohy nazval zkratkou LAM. 
 
-LAM byl použitelný pouze pro broušený kámen čtvercového tvaru. Z důvodu složitosti přiřazení stop z experimentu k obrazům simulovaných svazků při osvětlení celého kamene zaměřil vstupní laserový svazek pouze do určitých míst kamene. Tím vzniklo redukované množství svazků a korespondence se simulovanými svazky se výrazně zjednodušila. Nevýhodou tohoto přístupu jsou rozměry kamene, které musí být několikanásobně větší než průměr laserového svazku. Metoda je prakticky nepoužitelná pro kameny o rozměrech v jednotkách milimetru. 
+LAM byl použitelný pouze pro broušený kámen čtvercového tvaru. Z důvodu složitosti přiřazení stop z experimentu k obrazům simulovaných svazků při osvětlení celého kamene se v LAMu zaměřil  vstupní laserový svazek pouze do určitých míst kamene. Tím vzniklo redukované množství svazků a korespondence se simulovanými svazky se výrazně zjednodušila. Nevýhodou tohoto přístupu jsou rozměry kamene, které musí být několikanásobně větší než průměr laserového svazku. Metoda je prakticky nepoužitelná pro kameny o rozměrech v jednotkách milimetru. 
 
 	V této práci osvítíme laserovým svazkem celý kámen. Zaměříme se na kameny šatonové růže s plochým spodkem a 12-ti bočními fasetami. Tyto kameny se ve zkratce nazývají \textit{viva12}. Rozměry kamenů budou v řádech milimetrů. 
 	

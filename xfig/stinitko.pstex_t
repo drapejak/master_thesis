@@ -10,16 +10,16 @@
   \selectfont}%
 \fi\endgroup%
 \begin{picture}(3966,7716)(2240,-8194)
-\put(4636,-7711){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}camera}%
+\put(4636,-7711){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}kamera}%
 }}}}
-\put(4636,-5416){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}stone}%
+\put(4636,-5416){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}kámen}%
 }}}}
 %  0 
-\put(4906,-3616){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}shade}%
+\put(4906,-3616){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}stínítko}%
 }}}}
-\put(4321,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}beam}%
+\put(4321,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}svazek}%
 }}}}
-\put(4321,-2491){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}laser}%
+\put(4321,-2491){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}laserový}%
 }}}}
 \put(4636,-1006){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}laser}%
 }}}}

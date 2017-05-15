@@ -1,21 +1,9 @@
-\chapter{Nový příznak svazků}
+\part{Nový pozorovatelný příznak svazků}
 
-Jedním z nástrojem ke zkoumání vlastností broušeného kamene je nasvícení jeho povrchu světelným svazkem. Na fasetách broušeného kamene dochází ve zjednodušeném případě k odrazu a lomu světelného svazku. Z toho důvodu se dopadající světelný svazek roztříští na řadu světelných svazků, které z kamene vystupují v různých směrech, s rozdílným zářivým tokem a dalšími typickými vlastnostmi, jako je například polarizace. 
-Vystupující světelné svazky lze zachytit na stínítku. Obrazec vzniklý na stínítku jednoznačně charakterizuje broušený kámen. 
+Cílem experimentu je objevit další parametr světelného svazku, jenž by v kombinaci s ostatními parametry pomohl rozpoznat měřené svazky. 
 
-Pro tento experiment nasvícení kamene již vznikla řada programů obsahující více či méně věrohodný matematický model. Máme tedy možnost průlet světelného svazku kamenem simulovat. 
+Pokusíme se nalézt směr či velikost posunu světelných svazků při rotaci kamene nebo při naklonění zdroje dopadajícího světelného svazku. 
 
-V našem případě využíváme program LADOK, který vznikl v Centru strojového vnímání na katedře Kybernetiky ČVUT v Praze. Simulační program LADOK dostatečně přesně určuje matematický model experimentu.
-
-Cestou, jak určit tvar a další typické vlastností kamene, je rozpoznat vystupující paprsky a nalézt takový matematický model, jehož výstup by odpovídal reálné situaci (obrazci na stínítku). 
-
-Problém však tkví v rozpoznání světelných svazků. V tomto případě jde o to ke každému svazku, viditelném na stínítku, přiřadit správnou posloupnost faset kamene, přes které se světelný svazek lomil nebo odrážel. Parametry svazku, které nám pomáhají rozpoznat jeho cestu jsou směr (azimut, elevace), zářivý tok, intenzita, plocha, velikost a směr světelných šmouh, dále nazývaných ocásky, vznikajících při průchodu světelného svazku přes hranu kamene. 
-
-Cílem experimentu je pokusit se nalézt další parametr světelného svazku, jenž by v kombinaci s ostatními parametry pomohl svazek správně rozpoznat. 
-
-Pokusíme se naleznout směr či velikost posunu světelných svazků při rotaci kamene nebo při naklonění zdroje dopadajícího světelného svazku. 
-
-\newpage
 \section{Popis problému}
 
 Rotace kamene kolem osy způsobí změnu vlastností vystupujících světelných svazků (směru, zářivého toku, intenzity, vlastnosti ocásků atd.). Za určitých okolností může světelný svazek zcela vymizet. Tato situace nastává například při lomu světelného svazku z kamene do okolí. Když vlivem rotace překročíme kritický úhel, nedochází k vylomení světelného svazku, ale k totálnímu odrazu na fasetě. Světelný svazek také postupně zmizí při posunu světelného svazku mimo fasetu, a to jak při odrazu, tak při lomu. Ze stejných důvodů, proč mohou světelné svazky vymizet, mohou naopak vzniknout svazky nové.
@@ -37,7 +25,7 @@ Jiná situace nastává při rotaci zrcadla kolem osy o úhel $\alpha$ v záporn
 
 Důsledkem toho dostaneme identické výsledky experimentu při rotaci kamene, jako při natočení světelného zdroje o dvojnásobný úhel v opačném směru. Dále budeme tedy uvažovat pouze rotaci kamene. 
 
-\newpage
+
 \begin{figure}[h!]
 \begin{center}
 \scalebox{1}{ \input{xfig/odraz.pstex_t}}
@@ -94,7 +82,7 @@ Velikost změny posunu světelného svazku tedy může být teoreticky libovoln�
 \caption{Závislost změny lomeného úhlu na velikosti dopadajícím úhlu. Pro kritický úhel roste k nekonečnu. Graf funkce popsané vzorcem \ref{eq:zmena velikosti posunu}.}
 \label{fig:derivace uhlu}
 \end{figure}
-\newpage
+
 
 
 \section{Modelování pohybu světelných svazků v programu LADOKU}
@@ -115,7 +103,6 @@ Z praktického hlediska nás potom mohou pouze svazky, jejichž stopy lze na st�
 \label{fig:relativni pohyb graf}
 \end{figure}
 
-\newpage
 Pro lepší představu o změně natočení jednotlivých svazků nám může být užitečný kruhový histogram znázorňující směr jejich pohybu (obr. \ref{fig:relativni pohyb graf}). Na něm vidíme, že větší část se pohybuje ve směru rotace kamene. Podstatná většina svazků se posouvá ve směru rotace kamene, což ovšem není příliš nápomocné při jejich identifikaci.
 
 Existují však svazky, které jsou svým pohybem charakteristické a lze je tedy oddělit od ostatních. Kritériem pro rozpoznání svazků nemusí být pouze směr pohybu, ale jak vidíme na obr. \ref{fig:relativni pohyb graf} i velikost. V neposlední řadě přichází v úvahu i změna zářivého toku svazků, změna velikosti ocásků a další. 
@@ -174,4 +161,4 @@ Téměř konstantní směrovost rotace svazků u kamene VIVA12 zmenšuje význam
 \end{figure}
 
   
-%\clearpage
+\clearpage

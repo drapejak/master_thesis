@@ -1,4 +1,4 @@
-%% 19/4/2017 odraz sv?tla v klínu
+%% 19/4/2017 odraz svetla v klínu
 meanThres = -1;  % ocekavame, ze pixely, ktere jsou mensi, nez meanThres*mean(im) jsou mimo kouli
 backgroundParam = 201;  % velikost filtru a zaroven velikost sigma pro odhad pozadi
 

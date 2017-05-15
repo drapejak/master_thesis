@@ -1,4 +1,5 @@
-\chapter{Parametry kamene \textit{viva12}}
+\part{Parametry kamene \textit{viva12}}
+\label{sec: parametryVIVA12}
 
 Šatonová růže má 14 rovinných faset. Fasety označujeme zkratkami \textbf{TOP}, \textbf{BOT} a \textbf{UF1-UF12}, kde
 
@@ -38,23 +39,18 @@ Typ svazku definujeme podle pořadí dopadových faset. Při opakovaném použit
  
   První cifra udává počet dopadových faset. Zde se pohybujeme od 1 do 9. Svazky s větším počtem dopadových faset než 9 nejsme schopni na stínítku rozpoznat a definovat je nemá smysl. 
   
-  Na pozici druhé cifry se objevují znaky abecedy \textit{A-Z}. Svazky s jednotným počtem odrazů se začínají značit od písmene \textit{A} a to tak, že \textit{A} patří třídě svazků, která má největší zářivý tok. Zářivý tok třídy svazků postupně klesá s abecedním pořadím. Svazky, které nemají dostatečný zářivý tok a nelze je spařit na stínítku neuvádíme. 
+ Na pozici druhé cifry se objevují znaky abecedy \textit{A-Z}. Svazky s jednotným počtem odrazů se začínají značit od písmene \textit{A}. Svazky, které nemají dostatečný zářivý tok a nelze je spařit na stínítku neuvádíme. 
   
-  Svazky popisujeme pro situaci, kdy směrový vektor zdrojového svazku je přibližně kolmý k rovině spodku. Pokud bychom kámen orientovali jinak, řada tříd by přestala existovat a zároveň by se objevily i nové nepopsané třídy. 
+  Svazky popisujeme pro situaci, kdy směrový vektor zdrojového svazku je přibližně kolmý k rovině spodku. Pokud bychom kámen orientovali jinak, řada svazků by přestala existovat a zároveň by se objevily i nové nepopsané třídy svazků. 
   
   Rozdělení svazků do tříd je zapsáno v tabulkách \ref{table:TableClasses1}, \ref{table:TableClasses2}, \ref{table:TableClasses3}, \ref{table:TableClasses4}, \ref{table:TableClasses5} a \ref{table:TableClasses6}.
   
   
- 
- 
-  
-
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
+Třída &  \multicolumn{9}{l}{Dopadové fasety} \vline  & Počet\\
 \hline \hline
 \textbf{1A} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
 \hline \hline
@@ -65,6 +61,10 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & TOP & TOP & TOP & TOP & TOP & TOP & TOP & TOP & $\dots$ & \\
 \hline \hline
 \textbf{3B} & \multicolumn{9}{l}{TOP-BOT-TOP} \vline  & 1\\
+\hline \hline
+\textbf{3C}  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
+ & TOP & TOP & TOP & TOP & TOP & TOP & TOP & TOP & $\dots$ & \\
+ & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
 \hline \hline
 \textbf{5A} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -91,6 +91,20 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & TOP & TOP & TOP & TOP & TOP & TOP & TOP & TOP & $\dots$ & \\
 \hline \hline
 \textbf{5E} & \multicolumn{9}{l}{TOP-BOT-TOP-BOT-TOP} \vline  & 1\\
+\hline 
+\end{tabular}
+\caption{Dopadové fasety svazků tříd 1A-5E.}
+\label{table:TableClasses1}
+\end{table}
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Třída &  \multicolumn{9}{l}{Dopadové fasety} \vline  & Počet\\
 \hline \hline
 \textbf{6A} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -112,20 +126,6 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & UF3 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF7 & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & $\dots$ & \\
-\hline 
-\end{tabular}
-\caption{Paths of rays with count of rays in class. Classes 1A-6C.}
-\label{table:TableClasses1}
-\end{table}
-
-
-
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \hline \hline
 \textbf{6D} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -155,6 +155,17 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF6 & UF7 & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF7 & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & $\dots$ & \\
+\hline 
+\end{tabular}
+\caption{Dopadové fasety svazků tříd 6A-7A.}
+\label{table:TableClasses2}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Třída &  \multicolumn{9}{l}{Dopadové fasety} \vline  & Počet\\
 \hline \hline
 \textbf{7B} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -179,17 +190,6 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & UF3 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF7 & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & $\dots$ & \\
-\hline 
-\end{tabular}
-\caption{Paths of rays with count of rays in class. Classes 6D-7D.}
-\label{table:TableClasses2}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \hline \hline
 \textbf{7E} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -216,6 +216,18 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF7 & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & $\dots$ & \\
 \hline \hline
 \textbf{7H} & \multicolumn{9}{l}{TOP-BOT-TOP-BOT-TOP-BOT-TOP} \vline  & 1\\
+\hline 
+\end{tabular}
+\caption{Dopadové fasety svazků tříd 7B-7H.}
+\label{table:TableClasses3}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Třída &  \multicolumn{9}{l}{Dopadové fasety} \vline  & Počet\\
 \hline \hline
 \textbf{8A} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -243,18 +255,6 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & UF2 & UF3 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & \\
-\hline 
-\end{tabular}
-\caption{Paths of rays with count of rays in class. Classes 7E-8C.}
-\label{table:TableClasses3}
-\end{table}
-
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \hline \hline
 \textbf{8D} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -274,6 +274,17 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF12 & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF6 & UF7 & UF8 & UF9 & UF10 & UF11 & UF12 & UF1 & $\dots$ & \\
+\hline 
+\end{tabular}
+\caption{Dopadové fasety svazků tříd 8A-9A.}
+\label{table:TableClasses4}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Třída &  \multicolumn{9}{l}{Dopadové fasety} \vline  & Počet\\
 \hline \hline
 \textbf{9B} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -304,17 +315,6 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF12 & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF12 & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & $\dots$ & \\
-\hline 
-\end{tabular}
-\caption{Paths of rays with count of rays in class. Classes 8D-9D.}
-\label{table:TableClasses4}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \hline \hline
 \textbf{9E} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -335,6 +335,19 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & UF9 & $\dots$ & \\
+\hline  
+\end{tabular}
+\caption{Dopadové fasety svazků tříd 9B-9F.}
+\label{table:TableClasses5}
+\end{table}
+
+\clearpage
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Třída &  \multicolumn{9}{l}{Dopadové fasety} \vline  & Počet\\
 \hline \hline
 \textbf{9G} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
@@ -365,20 +378,7 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & \\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF12 & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & $\dots$ & \\
-\hline 
-\end{tabular}
-\caption{Paths of rays with count of rays in class. Classes 9E-9I.}
-\label{table:TableClasses5}
-\end{table}
-
-\clearpage
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
-\hline \hline
+\hline\hline
 \textbf{9J} & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & 12\\
  & BOT & BOT & BOT & BOT & BOT & BOT & BOT & BOT & $\dots$ & \\
  & UF12 & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & $\dots$ & \\
@@ -390,19 +390,9 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
  & UF1 & UF2 & UF3 & UF4 & UF5 & UF6 & UF7 & UF8 & $\dots$ & \\
 \hline 
 \end{tabular}
-\caption{Paths of rays with count of rays in class 9J.}
+\caption{Dopadové fasety svazků tříd 9G-9J.}
 \label{table:TableClasses6}
 \end{table}
-
-
-\begin{figure}[htps]
-\centering
-\begin{minipage}[c]{0.325\textwidth}
-\includegraphics[width=\textwidth]{group9I.pdf}
-\end{minipage}
-\caption{3D view of ray example in classes 9J.}
-\label{fig:modelClass3D1}
-\end{figure}
 
 
 \begin{figure}[htps]
@@ -418,7 +408,7 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \end{minipage}\\
 
 \begin{minipage}[c]{0.325\textwidth}
-\includegraphics[width=\textwidth]{group3B.pdf}
+\includegraphics[width=\textwidth]{group3C.pdf}
 \end{minipage}
 \begin{minipage}[c]{0.325\textwidth}
 \includegraphics[width=\textwidth]{group5A.pdf}
@@ -447,8 +437,8 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \includegraphics[width=\textwidth]{group6C.pdf}
 \end{minipage}
 
-\caption{3D view of ray example in classes 1A, 1B, 3A, 3B, 5A, 5B, 5C, 5D, 5E, 6A and 6B.}
-\label{fig:modelClass3D1}
+\caption{Příklad 3D pohledu na svazek tříd 1A, 1B, 3A, 3B, 5A, 5B, 5C, 5D, 5E, 6A a 6B. Značeno zleva doprava a shora dolů.}
+\label{fig:modelClass3D2}
 \end{figure}
 
 
@@ -495,8 +485,8 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \includegraphics[width=\textwidth]{group8A.pdf}
 \end{minipage}
 
-\caption{3D view of ray example in classes 6D, 6E, 6F, 7A, 7B, 7C, 7D, 7E, 7F, 7G, 7H, 8A.}
-\label{fig:modelClass3D1}
+\caption{Příklad 3D pohledu na svazek tříd 6D, 6E, 6F, 7A, 7B, 7C, 7D, 7E, 7F, 7G, 7H a 8A. Značeno zleva doprava a shora dolů.}
+\label{fig:modelClass3D3}
 \end{figure}
 
 
@@ -542,11 +532,23 @@ Class &  \multicolumn{9}{l}{Ray path} \vline  & Count\\
 \includegraphics[width=\textwidth]{group9I.pdf}
 \end{minipage}
 
-\caption{3D view of ray example in classes 8B, 8C, 8D, 9A, 9B, 9C, 9D, 9E, 9F, 9G, 9H, 9I.}
+\caption{Příklad 3D pohledu na svazek tříd 8B, 8C, 8D, 9A, 9B, 9C, 9D, 9E, 9F, 9G, 9H a 9I.}
+\label{fig:modelClass3D4}
+\end{figure}
+
+\begin{figure}[htps]
+\centering
+\begin{minipage}[c]{0.325\textwidth}
+\includegraphics[width=\textwidth]{group3B.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.325\textwidth}
+\includegraphics[width=\textwidth]{group9J.pdf}
+\end{minipage}
+\caption{Příklad 3D pohledu na svazek třídy 3C vlevo a třídy 9J vpravo.}
 \label{fig:modelClass3D1}
 \end{figure}
 
-
+\clearpage
 
 
 

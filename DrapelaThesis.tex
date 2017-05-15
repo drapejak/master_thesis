@@ -4,6 +4,8 @@
 \usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{lipsum}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -15,6 +17,9 @@
 \usepackage{fancyhdr}
 \usepackage{siunitx}
 \graphicspath{{./figures/}}
+\usepackage{enumitem}
+\usepackage{textcomp} % to use \textperthousand                                            
+
 
 % pridano kvuli tabulkam 
 \usepackage{array}
@@ -23,6 +28,7 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \DeclareSIUnit\px{px}
+\DeclareSIUnit\permille{\text{\textperthousand}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \makeatletter
@@ -121,6 +127,7 @@
 
 
 \begin{document}
+\shorthandoff{-}
 %\pagestyle{empty}
 %
 %%%nastaveni pisma  
@@ -163,13 +170,17 @@
 %\newpage
 \pagestyle{plain}     % zapne obyčejné číslování
 \setcounter{page}{1}  % nastaví čítač stránek znovu od jedné  
-%\input{src/Introduction}
-%\input{src/Physical_model}
+\input{src/Introduction}
+\input{src/Physical_model}
 \input{src/Detection}
-%\input{src/GroupOfRays}
+\input{src/GroupOfRays}
 \input{src/Optimization_intro}
-%\input{src/Param_experinents}
-%\input{src/ShiftOfRays}
+\input{src/Param_experinents}
+\input{src/OptimizationGUI}
+
+\input{src/ShiftOfRays}
+\input{src/Separability}
+\input{src/Results}
 
 
 %\begin{figure}[htbp]

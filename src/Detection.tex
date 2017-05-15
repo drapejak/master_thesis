@@ -1,13 +1,13 @@
-\chapter{Detekce světelných stop v obraze}
+\part{Detekce světelných stop v obraze}
 \label{sec:detection}
 Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserových svazků na stínítko. Zároveň je třeba určit parametry stop, které se budou porovnávat s parametry svazků matematického modelu kamene. 
 
 Intenzitu pixelu $I$ můžeme vyjádřit jako 
 \begin{equation}
-	I = I_{beam}+I_{back}+I_{edge}+I_{\varepsilon}\,,
+	I = I_{s}+I_{p}+I_{o}+I_{\varepsilon}\,,
 	\label{eq:intensitu_sum}
 \end{equation}
- kde $I_beam$ reprezentuje příspěvek světelného svazku, $I_{back}$ intenzitu pozadí, $I_{edge}$ intenzitu světelných ocásků a $I_{\varepsilon}$ Poissonův šum (kapitola \ref{sec:poisson}). Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit. Po odečtení pozadí získáme obrazy laserových svazků.   
+ kde $I_{s}$ reprezentuje příspěvek světelného svazku, $I_{p}$ intenzitu pozadí, $I_{o}$ intenzitu světelných ocásků a $I_{\varepsilon}$ Poissonův šum (kapitola \ref{sec:poisson}). Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit. %Po odečtení pozadí získáme obrazy laserových svazků.   
  
 Jednoduchým postupem pro určení intenzity pozadí by bylo prahování obrazu nad konstantní úrovní. V našem obraze však typicky konstantní není (kapitola \ref{sec:stinitko}). 
 
@@ -16,17 +16,17 @@ Rozdílné pozadí se může také vytvořit odrazem zdrojového svazku od jiný
 \begin{figure}[htps]
 \centering
 \includegraphics[width = 0.7\textwidth]{podstavec.eps}
-\caption{Jasové úrovně ve vybraném řádku obrazu. Řádek protíná obraz podstavce. V případě červené charakteristiky dopadá na podstavec laserový svazek, rozptyluje se dopadá na stínítko. Modrou charakteristiku pozorujeme, pokud je laser vypnutý.}
+\caption{Jasové úrovně ve vybraném řádku obrazu. Řádek protíná obraz podstavce. V případě červené charakteristiky dopadá na podstavec laserový svazek, rozptyluje se a dopadá na stínítko. Modrou charakteristiku pozorujeme, pokud je laser vypnutý.}
 \label{fig: podstavec}
 \end{figure}
 
-Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli spočítat světelný tok pro jednotlivé dopadající laserové svazky. Určení intensity pozadí v každém pixelu komplikují obraz podstavce na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu stínítka. Vysoká změna jasu v obraze komplikuje určení pozadí.  
+Hodnotu pozadí potřebujeme znát, abychom ze snímku mohli vypočítat světelný tok pro jednotlivé dopadající laserové svazky. Určení intensity pozadí v každém pixelu komplikuje obraz podstavce na kámen a okolí stínítka. Zde je intenzita světla podstatně nižší, než na povrchu stínítka. Vysoká změna jasu v obraze komplikuje určení pozadí.  
 
 V okolí stínítka můžeme detekovat falešné svazky, které je třeba odstranit. 
 
 Světelné stopy se mohou překrývat. Pro odlišení příspěvků jednotlivých svazků je třeba obraz prahovat v několika úrovních jasu.
 
-V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
+V místě, kde je vysoká koncentrace svazků mohou svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
 
 \begin{figure}[htbp]
     \centering
@@ -43,7 +43,7 @@ V místě, kde je vysoká koncentrace svazků mohou dokonce svazky dopadnout tak
 
 Obraz je třeba filtrovat. Filtrováním snížíme šum v odraze, ale zároveň zmenšíme kontrast mezi stopami. 
 
-Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícenásobným odrazem postupně ztrácí zářivý tok. Po dopadu na stínítko mohou být nerozlišitelné od šumu a jejich detekce je prakticky nemožná. Pro stopy s nízkým jasem bude detekce často selhávat
+Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícenásobným odrazem postupně ztrácí zářivý tok. Po dopadu na stínítko mohou být nerozlišitelné od šumu a jejich detekce je prakticky nemožná. Pro stopy s nízkým jasem bude detekce často selhávat.
 
 \begin{figure}[htbp]
     \centering
@@ -86,11 +86,13 @@ Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícen�
         \label{fig:rezy}
 \end{figure}
 
+\newpage
+
 \section{Předchozí práce}
 
 V předchozí práci \cite{Drapela} jsme neměli možnost detekovat stopy s nízkým jasem. Překrývající se svazky bylo nemožné oddělit.  
 
-Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. Snímek se prahoval více než jedním prahem, přičemž z oblastí nad prahem se sestavila stromová struktura a světelné stop se určily jako listy stromu s dostatečnou významností. Tento přístup je však pro svou výpočetní náročnost nepoužitelný pro snímky s rozlišením 2050$\times$2050, které máme k dispozici. 
+Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. Snímek se prahoval více než jedním prahem. Z oblastí nad prahem se sestavila stromová struktura. Světelné stopy se určily jako listy stromu s dostatečnou významností. Tento přístup je však pro svou výpočetní náročnost nepoužitelný pro snímky s rozlišením 2050$\times$2050, které máme k dispozici. 
 
 Naše úloha detekce je velmi podobná detekci hvězd a galaxií v astronomických snímcích. V oblasti astronomie se hojně používá program s názvem Source Extractor \cite{SEXarticle}. Tento program má za sebou dlouholetý vývoj, je optimalizován z hlediska rychlosti a odzkoušený širokou veřejností. Tento software lze po naladění parametrů použít i pro náš případ. Nevýhodou však je, že nelze spustit v operačním systému Windows, který využíváme.  
 
@@ -110,7 +112,7 @@ Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a v�
 \section{Implementace}
 
 \subsection{Filtrace}
-   Nejprve se pokusíme minimalizovat Poissonův šum v obraze. Šum redukujme konvolucí s maskou, která se skládá z prvků odpovídajících Gaussově funkci. Parametry filtru: velikost masky - \SI{3}{\px}, směrodatná odchylka $\sigma = 0.7$.
+   Nejprve se pokusíme minimalizovat Poissonův šum v obraze. Šum redukujeme konvolucí s maskou, která se skládá z prvků odpovídajících Gaussově funkci. Parametry filtru: velikost masky - \SI{3}{\px}, směrodatná odchylka $\sigma = $ \SI{0.7}{\px}.
 
 \subsection{Detekce} 
    %výstup MSER detektoru 
@@ -119,9 +121,7 @@ Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a v�
    \begin{itemize}
    \item \textbf{Frekvecne prahování snímku.} - Určuje velikost kroku mezi prahovacími úrovněmi jasu (obr. \ref{fig:gaussIntersection}). Prahování se používá pro nalezení extremálních oblastí, na kterých se testuje stabilita.
    
-   \item \textbf{Maximální a minimální velikost MSER oblasti.} 
-   
-   \item \textbf{Dostatečná stabilita oblasti.} - Velkost stabilní oblasti se po změně úrovně prahu intenzity příliš nemění. 
+   \item \textbf{Dostatečná stabilita oblasti.} - Velkost stabilní oblasti se při změně úrovně prahu intenzity příliš nemění. 
    \end{itemize}
    
 \subsection{Okolí stínítka}
@@ -149,23 +149,9 @@ Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a v�
 	\end{equation}
 
 
-Polohu v obraze určujeme podle počtu pixelů v horizontálním (sloupec) a vertikálním (řádek) směru.
+%Polohu v obraze určujeme podle počtu pixelů v horizontálním (sloupec) a vertikálním (řádek) směru.
   
-Body na kružnici nalezeme pomocí sečen. Sečny sestrojíme ve dvou řádcích snímku a nalezneme sloupce, ve kterých protínáme kružnici.  
-
-Sestrojením sečny získáme jasový řez v celé šířce snímku. Fotonový šum jasu vyfiltrujeme konvolucí s Gaussovým filtrem. Velikost filtru volíme \SI{21}{\px} a směrodatnou odchylku $\sigma = 20$. 
-
-Vyfiltrovaný jas oddělíme prahem. Práh určuje střední hodnota jasu v daném řezu. Nalezneme sloupce, kde je jas vyšší než prahové hodnota. Sloupec s minimálním resp. maximálním počtem pixelů určuje bod na kružnici.  
-
-Každá sečna protíná kružnici ve dvou bodech, proto dostaneme celkem čtyři body na kružnici. Parametry kružnice určíme metodou nejmenších čtverců. 
-
-Okolí stínítka poté definuje funkce 
-
-\begin{equation}
-	\left(x-x_0\right)^2 + \left(y-y_0\right)^2 > r^2\,.
-	\label{eq:kruzniceOkoli}
-	\end{equation}
-
+Body na kružnici nalezeme pomocí sečen. Sečny sestrojíme ve dvou řádcích snímku. %a nalezneme sloupce, ve kterých protínáme kružnici.  
 \begin{figure}[htbp]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
@@ -180,7 +166,21 @@ Okolí stínítka poté definuje funkce
         \caption[Detekce okolí stínítka.]{Jasové řezy \textit{A} a \textit{B}. Detekujeme body na kružnici $p_1$, $p_2$, $p_3$ a $p_4$. Metodou nejmenších čtverců odhadneme parametry kružnice $x_0$, $y_0$ a $R$.}
         \label{fig:CircleFit}
 \end{figure}
-	
+
+Sestrojením sečny získáme jasový řez v celé šířce snímku. Fotonový šum jasu vyfiltrujeme konvolucí s Gaussovým filtrem. Velikost filtru volíme \SI{21}{\px} a směrodatnou odchylku $\sigma = $ \SI{20}{\px}. 
+
+Vyfiltrovaný jas oddělíme prahem. Práh určuje střední hodnota jasu v daném řezu. Nalezneme sloupce, kde je jas vyšší než prahové hodnota. Sloupec s minimálním resp. maximálním počtem pixelů určuje bod na kružnici.  
+
+Každá sečna protíná kružnici ve dvou bodech, proto dostaneme celkem čtyři body na kružnici. Parametry kružnice určíme metodou nejmenších čtverců. 
+
+Okolí stínítka poté definuje funkce 
+
+\begin{equation}
+	\left(x-x_0\right)^2 + \left(y-y_0\right)^2 > r^2\,.
+	\label{eq:kruzniceOkoli}
+	\end{equation}
+
+
 
 
 \subsection{Pozadí snímku}
@@ -188,7 +188,7 @@ Okolí stínítka poté definuje funkce
 	
 	Velikost jasu v okolí stínítka nastavíme na hodnotu odvíjející se od střední hodnoty jasu snímku. Jas pixelů v oblasti podstavce nastavíme na střední hodnotu jasu pixelů v blízkém okolí podstavce.  
 	
-	Pozadí následně určíme konvolucí s Gaussovým filtrem. Tento filtr ignoruje vysoké změny jasu v obraze. Parametry filtru: velikost masky - \SI{201}{\px}, směrodatná odchylka $\sigma = 201$.
+	Pozadí následně určíme konvolucí s Gaussovým filtrem. Tento filtr ignoruje vysoké změny jasu v obraze. Parametry filtru: velikost masky - \SI{201}{\px}, směrodatná odchylka $\sigma = $ \SI{201}{\px}.
 	
 	Samotná konvoluce s tímto filtrem by s použitím standardní funkce \textit{conv2} byla příliš časově náročná, proto konvoluci provádíme efektivnějším způsobem, který využívá rozkladu masky filtru na singulární čísla.
 	
@@ -219,7 +219,7 @@ K odstranění nežádoucích detekcí použijeme následující postup.
 \label{sec:beam parameters}
 Základním parametrem svazku je směr šíření popsaný azimutem a elevací. Směr šíření svazku snadno dopočítáme, pokud nalezneme jeho obraz. Pozici světelné stopy v obraze lze určit jako polohu pixelu s maximálním jasem v detekované oblasti. Šum v obraze ale situaci komplikuje. Z obr. \ref{fig:rezy} ale vidíme, že pixel s maximálním jasem nemusí vždy určovat pozici dopadu a navíc nemusí být unikátním maximem.
 
-Laserové svazky se v reálném případě rozptylují. Kvůli různé rozbíhavosti svazků nejsme schopni určit údaje o ploše a intenzitě jejich obrazu. Určujeme pouze velikost zářivého toku svazku, kterou jsme schopni při nízkém rozptylu spolehlivě vypočítat.   
+Velikost obrazu měřeného svazku závisí především na jeho rozbíhavosti. Svazek od opuštění kamene do dopadu na stínítko vlivem rozbíhavosti několikanásobně zvýší svoji plochu, a proto nejsme schopni určit plochu svazku. Ze stejného důvodu nemůžeme u měřeného svazku odečítat intenzitu. Za předpokladu, že rozbíhavost svazků není příliš velká se zachová zářivý tok svazku a ten můžeme po odečtení pozadí vypočítat. %Je zřejmé, že část zářivého toku svazku se ztratí v pozadí snímku.   
 
 V okolí obrazu svazků jsou patrné ocásky. Detekce ocásků a jejich klasifikace je popsána v samostatné kapitole \ref{sec:tails}.
 
@@ -260,13 +260,14 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	\item Pokud $i = 0$ vypočítáme zářivý tok 
 	
 	\begin{equation}
-	\phi_{e_j} = \frac{\sum_{k\in\mathbb{M}_j} I_k}{N_j}\,,\hspace{2cm} j\in\lbrace1,\dots,n_0\rbrace
+	\underset{{k = 1}}{\sum}
+	\phi_{e_j} = \frac{\underset{k\in\mathbb{M}_j}{\sum}I_k}{N_j}\,,\hspace{2cm} j\in\lbrace1,\dots,n_0\rbrace
 	\end{equation}
 	kde $I_k$ je jas pixelu $k$ ve snímku a $N_j$ je počet pixelů v množině $\mathbb{M}_j$. Index $j$ odpovídá indexu stopy ve stromu $t_0$.\\
 	
 	Pokud $i > 0$ nalezneme množiny $\mathbb{P}_1,\dots,\mathbb{P}_n$. $\mathbb{P}_l$ je množina indexů listů, které jsou v $t_0$ potomkem uzlu $\xi_l$, kde $l\in {1,\dots,n}$. Zářivý tok stop upravíme.  
 	 \begin{equation}
-	\phi_{e_j} = \frac{\phi_{e_j}}{\sum_{q\in \mathbb{P}_l}\phi_{e_q}}\frac{\sum_{\lbrace k\in\mathbb{M}_{q+l}\cap\lbrace \mathbb{M}_1^c \cup \mathbb{M}_2^c \cup \dots \cup \mathbb{M}_q^c \rbrace\hspace{1.5mm}|\hspace{1.5mm} \lbrace1,2,\dots,q\rbrace = \mathbb{P}_l \rbrace} I_k}{N_{q+l}} + \phi_{e_j}\,.\hspace{0.5cm} j\in \mathbb{P}_l
+	\phi_{e_j} = \frac{\phi_{e_j}}{\underset{q\in \mathbb{P}_l}{\sum}\phi_{e_q}}\frac{\underset{{\lbrace k\in\mathbb{M}_{q+l}\cap\lbrace \mathbb{M}_1^c \cup \mathbb{M}_2^c \cup \dots \cup \mathbb{M}_q^c \rbrace\hspace{1.5mm}|\hspace{1.5mm} \lbrace1,2,\dots,q\rbrace = \mathbb{P}_l \rbrace}}{\sum} I_k}{N_{q+l}} + \phi_{e_j}\,.\hspace{0.5cm} j\in \mathbb{P}_l
 	\end{equation}
 	
 	\item $i = i+1$; $q = q+n$;
@@ -281,29 +282,29 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 		
 \end{itemize}
 
+\newpage
 	
-	
-	
-\subsection{Detektor ocásků}
+\section{Detektor ocásků}
 \label{sec:tails}
 	Se znalostí směru a velikosti ocásků detekovaných svazků dostáváme nové informace, které nohou přispět k jejich správnému párování se svazky z matematického modelu kamene.
 	
 	Ve snímaném obraze nelze rozpoznat všechny vznikající ocásky, ale pouze ty s dostatečně velkou intenzitou.
 
-	Princip detektoru ocásků zjednodušeně spočívá v převodu okolí stopy do polárních souřadnic (vzdálenost $\rho$ a úhel $\phi$) a nalezení oblastí úhlů, ve kterých je patrný výrazný vzestup intenzity oproti okolí. Takovéto oblasti jsou typicky důsledkem přítomnosti ocásků o obraze a lze tímto způsobem ocásky detekovat. 
+	Princip detektoru ocásků zjednodušeně spočívá v převodu okolí stopy do polárních souřadnic (vzdálenost $\rho$ a směrový úhel $\phi$) a nalezení směru, kde je patrný výrazný vzestup intenzity jasu oproti okolí. Zvýšená intenzita jasu je typicky důsledkem přítomnosti ocásku v obraze. 
 	
-	 U rozvinutí do polárního grafu si však musíme všimnout překážek, které komplikují detekci ocásků.  
+	Abychom mohli rozvinout okolí stopy do polárního grafu, musíme si být vědomi překážek komplikující detekci ocásků.
+	  
 	 \begin{itemize}	 	
 	 	\item V blízkém okolí jedné stopy se může nacházet další stopa. V polárním grafu se tato blízká stopa jeví jako ocásek a dochází k falešné detekci.	
-	 	\item Stopy a ocásky jsou v obraze různě velké. Je třeba efektivně určovat vzdálenost $\rho$ do které budeme převádět okolí stopy do polárního grafu. Pokud zvolíme malé $\rho$ nepokryjeme oblast, kde se vyskytují ocásky a velké $\rho$ zvýší časovou náročnost výpočtu.   	
+	 	\item Stopy a ocásky jsou v obraze různě velké. Je třeba efektivně určovat vzdálenost $\rho$ do které budeme převádět okolí stopy do polárního grafu. Pokud zvolíme malé $\rho$, nepokryjeme oblast, kde se vyskytují ocásky. Příliš velké $\rho$ zvýší časovou náročnost výpočtu.   	
 	\end{itemize}
 	
 	Elegantní řešení přináší použití MSER detektoru, pomocí něhož získáme vymezení oblasti a tím i vzdálenosti $\rho$, kde se stopa i s ocásky nachází. Se znalostí oblastí náležící jednotlivým stopám jsme schopni od sebe stopy částečně oddělit a redukovat množství falešných detekcí. Na druhou stranu sousední stopa muže ležet na pozici ocásku a odstraněním sousední stopy odstraníme současně i ocásek, který prozatím nejsme schopni v případě překrytí oddělit. Vzhledem k rozmanitosti stop, co do velikosti, intenzity, množství a tvaru ocásků apod. není jednoduché stopu matematicky modelovat. Pokud by se podařilo vytvořit dostatečně přesný kompaktní model stopy, je možné uvažovat o situaci, kdy budeme schopni od sebe separovat překrývající se stopy a ocásky. 
 	
- Pro znázornění postupu a mezivýsledků jsme si vybrali laserovou stopu (obr.\ref{fig:mark_tail}), která v obraze nekoliduje s další výraznou stopu. Zvolená stopa vznikla dopadem laserového svazku typu ...!!doplnit(až budou popsány všechny třídy svazků)!!.... V obraze jsou patrné čtyři ocásky různě intenzity. 
+ Pro znázornění postupu a mezivýsledků jsme si vybrali laserovou stopu (obr.\ref{fig:mark_tail}), která v obraze nekoliduje s další výraznou stopu. Zvolená stopa vznikla dopadem laserového svazku třídy \textbf{6A}. V obraze jsou patrné čtyři ocásky různě intenzity. 
 	
 
-	\begin{figure}[htp]
+	\begin{figure}[htps]
 	\centering
 	\begin{minipage}[c]{0.4\textwidth}
 	\includegraphics[width=\textwidth]{figures/tail07.pdf}
@@ -318,20 +319,21 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	\includegraphics[width=\textwidth]{figures/tailex02.pdf}
 	\end{minipage}
 	
-	\caption[Detektor ocásků - laserová stopa.]{Zvolená laserová stopa k ilustraci algoritmu detektoru ocásků. Stopa vznikla dopadem svazku typu $\dots \dots$ na stínítko. V měřicí soustavě byl přitom umístěn kámen typu \textit{VIVA $12$} s odstínem \textit{Crystal} a průměrem \SI{4.8}{\milli\meter}. Snímek vpravo nahoře znázorňuje výřez stopy ze snímaného obrazu. Můžeme zde pozorovat čtyři ocásky s různými vlastnostmi. Vlevo nahoře je výsledek detekce popsané níže. Obrázek vpravo dole ukazuje MSER oblast a poslední obrázek znázorňuje 3D pohled na zkoumanou stopu.}
+	\caption[Detektor ocásků - laserová stopa.]{Zvolená laserová stopa k ilustraci algoritmu detektoru ocásků. Stopa vznikla dopadem svazku třídy \textbf{6A} na stínítko.  Snímek vpravo nahoře znázorňuje výřez stopy ze snímaného obrazu. Můžeme zde pozorovat čtyři ocásky s různými vlastnostmi. Vlevo nahoře je výsledek detekce popsané níže. Obrázek vpravo dole ukazuje MSER oblast a poslední obrázek znázorňuje 3D pohled na zkoumanou stopu.}
 	\label{fig:mark_tail}
 	\end{figure}
 
 
-Jednotlivé kroky algoritmu: 
+\paragraph{Jednotlivé kroky algoritmu}
+
 	\begin{itemize}
 	\item Vybereme stopu, u které chceme identifikovat ocásky a ze snímku vybereme oblast (obr.\ref{fig:mark_tail}), která náleží zkoumané stopě. 
 	
-	\item Po odečtení okolního šumu $z_{noise}$ prahujeme intenzitu pixelů stopy $2$krát střední hodnota intenzity $z_{mean}$. Pixely s intenzitou vyšší než zvolený práh nastavíme intenzitu odpovídající prahové hodnotě a posuneme $z_{noise}$ na hodnotu $z_{mean}$ tak, že ke všem pixelům přičteme intenzitu $z_{mean}$. Důvodem tohoto kroku je snaha odstranit nežádoucí vlastnosti velkého šumu v hodnotách intenzity v blízkém okolí "těžiště" stopy a také to, že se chceme zvětšit relativní příspěvek pixelů s nižší intenzitou do součtového kritéria \ref{eq:Isuma}.   
+	\item U vybrané oblasti odečteme intenzitu okolí $I_o$ a vypočítáme střední hodnotu intenzity $I_m$. Intenzitu pixelů omezíme maximálně na intenzitu o velikosti $2\cdot I_m$ a potom ke všem pixelům přičteme intenzitu $I_m$. Důvodem tohoto kroku je snaha odstranit nežádoucí vlastnosti velkého šumu v hodnotách intenzity v blízkém okolí těžiště stopy a také to, že se chceme zvětšit relativní příspěvek pixelů s nižší intenzitou do součtového kritéria \ref{eq:Isuma}.   
 	
-	\item Stopu s velikostí okolního šumu $z_{mean}$ převedeme do polárních souřadnic ($\rho$, $\phi$). Intenzitu $I_{pol}$ v polárním grafu $I_{pol} = f(\phi,\rho)$ určujeme pomocí bipolární interpolace, která pro větší efektivitu vynechává oblasti mimo oblast stopy, kde $I_{pol} = 0$. Důležitým parametrem při interpolaci je velikost vzorkování $f_{\phi}$ úhlu $\phi$ resp. vzorkování $f_{\rho}$ vzdálenosti $\rho$ . Experimentálně jsme zvolili $f_{\phi} = \SI{3}{\degree}$ a $f_{\rho} = \SI{1}{\px}$. Interpolaci počítáme v intervalech  $\phi \in \left\langle 0,2\pi \right\rangle$ a $\rho \in \left\langle 1,\rho_{max} \right\rangle$, kde $\phi_{max}$ je maximální vzdálenost všech pixelů v oblasti stopy od její pozice.  
+	\item Oblast převedeme do polárních souřadnic ($\rho$, $\phi$). Intenzitu $I_{pol}$ v polárním grafu $I_{pol} = f(\phi,\rho)$ určujeme pomocí bipolární interpolace, která pro větší efektivitu vynechává oblasti mimo oblast stopy, kde $I_{pol} = 0$. Důležitým parametrem při interpolaci je velikost vzorkování $f_{\phi}$ úhlu $\phi$ resp. vzorkování $f_{\rho}$ vzdálenosti $\rho$ . Experimentálně jsme zvolili $f_{\phi} = \SI{3}{\degree}$ a $f_{\rho} = \SI{1}{\px}$. Interpolaci počítáme v intervalech  $\phi \in \left\langle 0,2\pi \right\rangle$ a $\rho \in \left\langle 1,\rho_{max} \right\rangle$, kde $\phi_{max}$ je maximální vzdálenost všech pixelů v oblasti stopy od její pozice.  
 	
-	\begin{figure}[htbp]
+	\begin{figure}[htps]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
         \centering\includegraphics[width=.98\textwidth]{tailex03.pdf}
@@ -352,7 +354,7 @@ Jednotlivé kroky algoritmu:
 	\end{equation}
 	Následně na $I_{\phi}$ aplikujeme kubickou interpolaci sousedních hodnot s $5$krát citlivějším vzorkováním $f_{\phi_2} = \frac{f_{\phi}}{5}$ a rozšíříme rozsah $\phi$ na $\phi \in \left\langle -\frac{\pi}{2},\frac{5}{2}\pi \right\rangle$. 
 	
-	\item Graf závislosti $I_\phi = f(\phi)$ filtrujeme konvolucí s gausiánem $g(x)$ se směrodatnou odchylkou $\sigma = 3$ a získáme referenční závislost $I_{filt}$.
+	\item Graf závislosti $I_\phi = f(\phi)$ filtrujeme konvolucí s Gaussovou funkcí $g(x)$ se směrodatnou odchylkou $\sigma = \SI{3}{\px}$ a získáme referenční závislost $I_{filt}$.
 	
 	\begin{equation}
 		g(x) = \frac{1}{\sqrt{2\pi} \cdot \sigma}e^{-\frac{x^2}{2\sigma^2}}\,.
@@ -364,7 +366,7 @@ Jednotlivé kroky algoritmu:
     \label{fig:tailSumGraph}
 	\end{figure}
 	
-	\item Na graf $I_{filt}$ následně opakovaně aplikujeme konvoluci, tentokrát s gausiánem $g(x)$ s vyšší směrodatnou odchylkou $\sigma = 8$, abychom získali základnu $I_{base}$, kterou budeme porovnávat se signálem $I_{filt}$.
+	\item Na graf $I_{filt}$ následně opakovaně aplikujeme konvoluci, tentokrát s Gaussovou funkcí $g(x)$ s vyšší směrodatnou odchylkou $\sigma = \SI{8}{\px}$, abychom získali základnu $I_{base}$, kterou budeme porovnávat se signálem $I_{filt}$.
 	
 	\item Nalezneme souvislé oblasti $\mathcal{R}_1, \dots , \mathcal{R}_n$, kde graf $I_{filt}$ má větší hodnotu než $I_{base}$ a sečteme rozdíly $I_{filt}$ a $I_{base}$ v jednotlivých vzorcích. Velikost součtu $S_1, \dots , S_n$ závisí na vzorkovací frekvenci $f_{\phi_2}$.
 	
@@ -392,40 +394,37 @@ Jednotlivé kroky algoritmu:
         \caption[Detektor ocásků - příklad detekce.]{Ukázka funkce detektoru ocásků na vybraném vzorku z obrazu. }
         \label{Detekce}
 \end{figure}
-
-
-	
 	
 \end{itemize}	   
 	
 	
 
-\section{MSER detector configuration parameter list}	
-	Here is a list of the configuration parameters used for beam detection setting. All of them can be used with their default values. This description of the parameters can be usefull for understanding the algorithm or debugging.
-	
-\begin{center}
+%\section{MSER detector configuration parameter list}	
+%	Here is a list of the configuration parameters used for beam detection setting. All of them can be used with their default values. This description of the parameters can be usefull for understanding the algorithm or debugging.
+%	
+%\begin{center}
+%
+%
+%\begin{tabular}{l|l|p{8cm}}
+%    \textbf{Name} 		& \textbf{Default} & \textbf{Description} \\ \hline \hline 
+%    \textit{BackgroundFilt}	    	& $201$ 	& Size of Gaussian filter mask used for background estimation. \textit{Sigma} of mask is equal to \textit{BackgroundFilt} \\ \hline
+%    \textit{BackgroundKMean}    	& $0.15$	& $BackgroundKMean \times mean(image)$ is added to background estimation. \\ \hline
+%    \textit{ComputeAllLayers}   	& $1$		& $1$ - Divide all layers in marks variable calculation. $0$ - Calculate only with upper layers. \\ \hline
+%    \textit{ComputeTails}   		& $ 1 $		& $1$ - Tails of marks are computed. It takes some time. $0$ - No tails. Faster.\\ \hline    
+%    \textit{CleanerAxisRatio}   	& $ 10 $	& MSER regions with upper axis ratio are deleted. \\ \hline
+%    \textit{CleanerFilterSigma}  	& $ 5 $		& \textit{Sigma} of filter mask in image blurring. \\ \hline
+%    \textit{CleanerFilterSize}   	& $ 31 $	& Size of filter mask in image blurring.\\ \hline
+%	\textit{CleanerMean}    		& $ 0.035 $ & Regions with peak where difference of mean of surrounding
+%intensity is lower than $CleanerMean \times mean(image)$ are deleted. \\ \hline
+%    \textit{CleanerSumWide} 		& $ 5 $		& Size of surrounding in cleaning process.  \\ \hline
+%    \textit{FilterSigma}    		& $ 0.7 $	& \textit{Sigma} of niose reducing filter mask. \\ \hline
+%    \textit{FilterSize} 			& $ 3 $		& \textit{Size} of niose reducing filter mask.\\ \hline 
+%    \textit{MSERMaxAreaVar} 		& $ 0.9 $	& This value specifies the step size between intensity threshold levels used in selecting extremal regions while testing for their stability. Decrease this value to return more regions.\\ \hline
+%    \textit{MSERRegion} 			&$[2\,,\, 14000]$& Two-element vector, [minArea maxArea], which specifies the size of the regions in pixels. This value allows the selection of regions containing pixels between minArea and maxArea, inclusive.\\ \hline
+%    \textit{MSERThresh} 			& $ 1.2 $	& Increase this value to return a greater number of regions at the cost of their stability. Stable regions are very similar in size over varying intensity thresholds.\\ \hline
+%    \textit{SurroundThres}   		& $ 0.8 $	& Multiple of $mean(image)$ where surrounding intensity is moved.   \\ 
+%\end{tabular}
+%
+%\end{center}
 
-
-\begin{tabular}{l|l|p{8cm}}
-    \textbf{Name} 		& \textbf{Default} & \textbf{Description} \\ \hline \hline 
-    \textit{BackgroundFilt}	    	& $201$ 	& Size of Gaussian filter mask used for background estimation. \textit{Sigma} of mask is equal to \textit{BackgroundFilt} \\ \hline
-    \textit{BackgroundKMean}    	& $0.15$	& $BackgroundKMean \times mean(image)$ is added to background estimation. \\ \hline
-    \textit{ComputeAllLayers}   	& $1$		& $1$ - Divide all layers in marks variable calculation. $0$ - Calculate only with upper layers. \\ \hline
-    \textit{ComputeTails}   		& $ 1 $		& $1$ - Tails of marks are computed. It takes some time. $0$ - No tails. Faster.\\ \hline    
-    \textit{CleanerAxisRatio}   	& $ 10 $	& MSER regions with upper axis ratio are deleted. \\ \hline
-    \textit{CleanerFilterSigma}  	& $ 5 $		& \textit{Sigma} of filter mask in image blurring. \\ \hline
-    \textit{CleanerFilterSize}   	& $ 31 $	& Size of filter mask in image blurring.\\ \hline
-	\textit{CleanerMean}    		& $ 0.035 $ & Regions with peak where difference of mean of surrounding
-intensity is lower than $CleanerMean \times mean(image)$ are deleted. \\ \hline
-    \textit{CleanerSumWide} 		& $ 5 $		& Size of surrounding in cleaning process.  \\ \hline
-    \textit{FilterSigma}    		& $ 0.7 $	& \textit{Sigma} of niose reducing filter mask. \\ \hline
-    \textit{FilterSize} 			& $ 3 $		& \textit{Size} of niose reducing filter mask.\\ \hline 
-    \textit{MSERMaxAreaVar} 		& $ 0.9 $	& This value specifies the step size between intensity threshold levels used in selecting extremal regions while testing for their stability. Decrease this value to return more regions.\\ \hline
-    \textit{MSERRegion} 			&$[2\,,\, 14000]$& Two-element vector, [minArea maxArea], which specifies the size of the regions in pixels. This value allows the selection of regions containing pixels between minArea and maxArea, inclusive.\\ \hline
-    \textit{MSERThresh} 			& $ 1.2 $	& Increase this value to return a greater number of regions at the cost of their stability. Stable regions are very similar in size over varying intensity thresholds.\\ \hline
-    \textit{SurroundThres}   		& $ 0.8 $	& Multiple of $mean(image)$ where surrounding intensity is moved.   \\ 
-\end{tabular}
-
-\end{center}
-
-%\clearpage
+\clearpage

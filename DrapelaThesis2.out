@@ -1,0 +1,70 @@
+\BOOKMARK [0][-]{part.1}{1 \332vod a motivace}{}% 1
+\BOOKMARK [0][-]{part.2}{2 Fyzik\341ln\355 model}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Model kamene}{part.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Model svazku}{part.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Model st\355n\355tka}{part.2}% 5
+\BOOKMARK [2][-]{subsection.2.3.1}{Oc\341sky v obraze}{section.2.3}% 6
+\BOOKMARK [1][-]{section.2.4}{Model obrazu}{part.2}% 7
+\BOOKMARK [1][-]{section.2.5}{Model kamery}{part.2}% 8
+\BOOKMARK [0][-]{part.3}{3 Detekce sveteln\375ch stop v obraze}{}% 9
+\BOOKMARK [1][-]{section.3.1}{Predchoz\355 pr\341ce}{part.3}% 10
+\BOOKMARK [1][-]{section.3.2}{MSER \(maximal stable extremal region\) detektor}{part.3}% 11
+\BOOKMARK [1][-]{section.3.3}{Implementace}{part.3}% 12
+\BOOKMARK [2][-]{subsection.3.3.1}{Filtrace}{section.3.3}% 13
+\BOOKMARK [2][-]{subsection.3.3.2}{Detekce}{section.3.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.3}{Okol\355 st\355n\355tka}{section.3.3}% 15
+\BOOKMARK [2][-]{subsection.3.3.4}{Pozad\355 sn\355mku}{section.3.3}% 16
+\BOOKMARK [2][-]{subsection.3.3.5}{Odstranen\355 ne\236\341douc\355ch detekc\355}{section.3.3}% 17
+\BOOKMARK [1][-]{section.3.4}{Urcen\355 parametru svazku}{part.3}% 18
+\BOOKMARK [2][-]{subsection.3.4.1}{Z\341kladn\355 parametry}{section.3.4}% 19
+\BOOKMARK [1][-]{section.3.5}{Detektor oc\341sku}{part.3}% 20
+\BOOKMARK [0][-]{part.4}{4 Parametry kamene viva12}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Klasifikace svazku do tr\355d}{part.4}% 22
+\BOOKMARK [0][-]{part.5}{5 Nov\375 pozorovateln\375 pr\355znak svazku}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Popis probl\351mu}{part.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Modelov\341n\355 pohybu sveteln\375ch svazku v programu LADOKU}{part.5}% 25
+\BOOKMARK [0][-]{part.6}{6 Terminologie}{}% 26
+\BOOKMARK [1][-]{section.6.1}{Simulovan\351 svazky}{part.6}% 27
+\BOOKMARK [1][-]{section.6.2}{Meren\351 svazky}{part.6}% 28
+\BOOKMARK [0][-]{part.7}{7 Optimalizace orientace faset}{}% 29
+\BOOKMARK [1][-]{section.7.1}{Sch\351ma optimalizacn\355ho procesu}{part.7}% 30
+\BOOKMARK [1][-]{section.7.2}{Optimalizovan\351 krit\351rium}{part.7}% 31
+\BOOKMARK [1][-]{section.7.3}{Pln\341 vs. zjednodu\235en\341 simulace}{part.7}% 32
+\BOOKMARK [2][-]{subsection.7.3.1}{Pln\341 simulace}{section.7.3}% 33
+\BOOKMARK [3][-]{subsubsection.7.3.1.1}{Casov\341 n\341rocnost simulace v LADOKu}{subsection.7.3.1}% 34
+\BOOKMARK [2][-]{subsection.7.3.2}{Zjednodu\235en\341 simulace}{section.7.3}% 35
+\BOOKMARK [1][-]{section.7.4}{Podm\355nenost}{part.7}% 36
+\BOOKMARK [2][-]{subsection.7.4.1}{Tr\355da svazku 1A a 1B}{section.7.4}% 37
+\BOOKMARK [2][-]{subsection.7.4.2}{Tr\355da 3A}{section.7.4}% 38
+\BOOKMARK [1][-]{section.7.5}{Pozorov\341n\355}{part.7}% 39
+\BOOKMARK [2][-]{subsection.7.5.1}{Vz\341jemn\341 poloha svazku}{section.7.5}% 40
+\BOOKMARK [2][-]{subsection.7.5.2}{Orientace kamene}{section.7.5}% 41
+\BOOKMARK [2][-]{subsection.7.5.3}{Zakriven\355 faset}{section.7.5}% 42
+\BOOKMARK [2][-]{subsection.7.5.4}{Svazky s vysokou citlivost\355}{section.7.5}% 43
+\BOOKMARK [0][-]{part.8}{8 Korespondence svazku}{}% 44
+\BOOKMARK [1][-]{section.8.1}{Slo\236itost \372lohy}{part.8}% 45
+\BOOKMARK [0][-]{part.9}{9 Klasifikace pr\355znaku}{}% 46
+\BOOKMARK [1][-]{section.9.1}{Ground truth}{part.9}% 47
+\BOOKMARK [1][-]{section.9.2}{Zmena z\341riv\351ho toku se zmenou parametru kamene}{part.9}% 48
+\BOOKMARK [1][-]{section.9.3}{Z\341vislost z\341riv\351ho toku}{part.9}% 49
+\BOOKMARK [1][-]{section.9.4}{Z\341vislost parametru oc\341sku}{part.9}% 50
+\BOOKMARK [2][-]{subsection.9.4.1}{Smerov\375 \372hel}{section.9.4}% 51
+\BOOKMARK [2][-]{subsection.9.4.2}{Velikost}{section.9.4}% 52
+\BOOKMARK [0][-]{part.10}{10 Automatick\341 optimalizace - algoritmy}{}% 53
+\BOOKMARK [1][-]{section.10.1}{Pou\236it\351 algoritmy}{part.10}% 54
+\BOOKMARK [2][-]{subsection.10.1.1}{Korespondence svazku tr\355dy 1A}{section.10.1}% 55
+\BOOKMARK [2][-]{subsection.10.1.2}{Korespondence svazku tr\355dy 3A}{section.10.1}% 56
+\BOOKMARK [2][-]{subsection.10.1.3}{Korespondence svazku tr\355dy 5D}{section.10.1}% 57
+\BOOKMARK [2][-]{subsection.10.1.4}{Korespondence svazku podle polohy v obraze a z\341riv\351ho toku}{section.10.1}% 58
+\BOOKMARK [2][-]{subsection.10.1.5}{Korespondence svazku podle oc\341sku}{section.10.1}% 59
+\BOOKMARK [1][-]{section.10.2}{Automatick\341 optimalizace}{part.10}% 60
+\BOOKMARK [0][-]{part.11}{11 Overen\355 spr\341vnosti korespondenc\355}{}% 61
+\BOOKMARK [1][-]{section.11.1}{Mno\236iny korespondenc\355}{part.11}% 62
+\BOOKMARK [1][-]{section.11.2}{Rozhodovac\355 algoritmus}{part.11}% 63
+\BOOKMARK [1][-]{section.11.3}{Simulace dat}{part.11}% 64
+\BOOKMARK [1][-]{section.11.4}{Oddelitelnost}{part.11}% 65
+\BOOKMARK [1][-]{section.11.5}{Rozdelen\355 svazku do mno\236in}{part.11}% 66
+\BOOKMARK [1][-]{section.11.6}{Vhodn\351 zvolen\355 optimalizacn\355 a kriteri\341ln\355 mno\236iny}{part.11}% 67
+\BOOKMARK [1][-]{section.11.7}{V\375ber kriteri\341ln\355 mno\236iny}{part.11}% 68
+\BOOKMARK [2][-]{subsection.11.7.1}{V\375ber mno\236iny kandid\341tu }{section.11.7}% 69
+\BOOKMARK [0][-]{part.12}{12 V\375sledky}{}% 70

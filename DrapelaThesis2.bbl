@@ -1,0 +1,255 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{SExtractorManual}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bertin}{B.}%
+     {E.}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Institud d'Astrophysique \& Observatorie de Paris}%
+  }
+  \keyw{photometry, sextractor, software}
+  \strng{namehash}{BE1}
+  \strng{fullhash}{BE1}
+  \field{sortinit}{B}
+  \field{title}{{SE}xtractor v2.5 User's Manual}
+  \verb{url}
+  \verb http://terapix.iap.fr/IMG/pdf/sextractor.pdf
+  \endverb
+\endentry
+
+\entry{SEXarticle}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {{Bertin}}{B.}%
+     {E.}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Arnouts}}{A.}%
+     {S.}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{METHODS: DATA ANALYSIS, TECHNIQUES: IMAGE PROCESSING, GALAXIES:
+  PHOTOMETRY}
+  \strng{namehash}{BEAS1}
+  \strng{fullhash}{BEAS1}
+  \field{sortinit}{B}
+  \field{pages}{393\bibrangedash 404}
+  \field{title}{{SExtractor: Software for source extraction.}}
+  \field{volume}{117}
+  \field{month}{06}
+  \field{year}{1996}
+\endentry
+
+\entry{Bodlak2005}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bodlák}{B.}%
+     {Igor}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BI1}
+  \strng{fullhash}{BI1}
+  \field{sortinit}{B}
+  \field{title}{Modelování a analýza broušeného kamene}
+  \list{location}{1}{%
+    {Czech Republic}%
+  }
+  \list{institution}{1}{%
+    {Czech Technical university in Prague}%
+  }
+  \field{type}{phdthesis}
+  \field{year}{2005}
+\endentry
+
+\entry{bodlakLADOK}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bodlák}{B.}%
+     {Igor}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Czech Technical University in Prague}%
+  }
+  \strng{namehash}{BI1}
+  \strng{fullhash}{BI1}
+  \field{sortinit}{B}
+  \field{title}{Rozšíření toolboxu LADOK, Semester project}
+  \field{year}{2004}
+\endentry
+
+\entry{Drapela}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Drápela}{D.}%
+     {Jakub}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DJ1}
+  \strng{fullhash}{DJ1}
+  \field{sortinit}{D}
+  \field{title}{Měření barevných broušených kamenů}
+  \list{location}{1}{%
+    {Czech Republic}%
+  }
+  \list{institution}{1}{%
+    {Czech Technical university in Prague}%
+  }
+  \field{type}{phdthesis}
+  \field{year}{2015}
+\endentry
+
+\entry{Matas}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Matas}{M.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chum}{C.}%
+     {O.}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Urban}{U.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pajdla}{P.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MJ+1}
+  \strng{fullhash}{MJCOUMPT1}
+  \field{sortinit}{M}
+  \field{booktitle}{Proc. BMVC}
+  \field{isbn}{1-901725-19-7}
+  \field{pages}{36.1\bibrangedash 36.10}
+  \field{title}{Robust Wide Baseline Stereo from Maximally Stable Extremal
+  Regions}
+  \field{year}{2002}
+\endentry
+
+\entry{Comparison}{article}{}
+  \name{author}{8}{}{%
+    {{}%
+     {Mikolajczyk}{M.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tuytelaars}{T.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schmid}{S.}%
+     {C.}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zisserman}{Z.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Matas}{M.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schaffalitzky}{S.}%
+     {F.}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kadir}{K.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gool}{G.}%
+     {L.~Van}{L.~V.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MK+1}
+  \strng{fullhash}{MKTTSCZAMJSFKTGLV1}
+  \field{sortinit}{M}
+  \field{title}{A comparison of affine region detectors}
+  \field{journaltitle}{International Journal of Computer Vision}
+  \field{year}{2005}
+\endentry
+
+\entry{Pohl2002}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Pohl}{P.}%
+     {Petr}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PP1}
+  \strng{fullhash}{PP1}
+  \field{sortinit}{P}
+  \field{title}{Simulace průletu paprsků transparentním objektem}
+  \list{location}{1}{%
+    {Czech Republic}%
+  }
+  \list{institution}{1}{%
+    {Czech Technical university in Prague}%
+  }
+  \field{type}{phdthesis}
+  \field{year}{2002}
+\endentry
+
+\entry{strakaLADOK}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Straka}{S.}%
+     {Matěj}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Czech Technical University in Prague}%
+  }
+  \strng{namehash}{SM1}
+  \strng{fullhash}{SM1}
+  \field{sortinit}{S}
+  \field{title}{Tails of beam simulation in LADOK, Semester project}
+  \field{year}{2013}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

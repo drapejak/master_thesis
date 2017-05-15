@@ -1,0 +1,200 @@
+\documentclass[a4paper,11pt,titlepage,twoside]{article}
+\usepackage[utf8]{inputenc}
+
+\newcommand{\Language}{CZ}
+%varianty {EN} english
+%         {CZ} czech
+\newcommand{\Thesis}{M}
+%varianty {B} bakalářská práce
+%         {M} diplomová práce
+%         {D} dizertační práce
+\newcommand{\Faculty}{Fakulta elektrotechnická}
+\newcommand{\Department}{Kybernetika a robotika}
+\newcommand{\Author}{Jakub Drápela}
+\newcommand{\Title}{Automatické odhadování plošek broušeného kamene}
+\newcommand{\Date}{Květen 2017}
+\newcommand{\Supervisor}{Ing. Vladimír Smutný, Ph.D.}
+
+%% definice pouziteho vzoru %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{src/doc_head}
+
+\usepackage{filecontents}  % create "citations.bib" on-the-fly
+\begin{filecontents*}{thesis.bib}
+@inproceedings{Matas,
+   title = {Robust Wide Baseline Stereo from Maximally Stable Extremal Regions},
+   author = {Matas, J. and Chum, O. and Urban, M. and Pajdla, T.},
+   year = {2002},
+   pages = {36.1-36.10},
+   booktitle = {Proc. BMVC},
+   isbn = {1-901725-19-7},
+}
+@ARTICLE{Comparison,
+    author = {K. Mikolajczyk and T. Tuytelaars and C. Schmid and A. Zisserman and J. Matas and F. Schaffalitzky and T. Kadir and L. Van Gool},
+    title = {A comparison of affine region detectors},
+    journal = {International Journal of Computer Vision},
+    year = {2005}
+}
+@thesis{Pohl2002,
+  author       = {Petr Pohl},
+  title        = {Simulace průletu paprsků transparentním objektem},
+  type         = {phdthesis},
+  institution  = {Czech Technical university in Prague},
+  date         = 2002,
+  location     = {Czech Republic},
+  supervisor   = {Ing. Vladimír Smutný, Ph.D.},
+}
+@Book{bodlakLADOK,
+  author =       {Bodlák, Igor},
+  title =        {Rozšíření toolboxu LADOK, Semester project},
+  publisher =    {Czech Technical University in Prague},
+  year =         {2004},
+}
+@Book{strakaLADOK,
+  author =       {Straka, Matěj},
+  title =        {Tails of beam simulation in LADOK, Semester project},
+  publisher =    {Czech Technical University in Prague},
+  year =         {2013},
+}
+@thesis{Bodlak2005,
+  author       = {Igor Bodlák},
+  title        = {Modelování a analýza broušeného kamene},
+  type         = {phdthesis},
+  institution  = {Czech Technical university in Prague},
+  date         = 2005,
+  location     = {Czech Republic},
+  supervisor   = {Ing. Vladimír Smutný, Ph.D.},
+}
+@thesis{Drapela,
+  author       = {Jakub Drápela},
+  title        = {Měření barevných broušených kamenů},
+  type         = {phdthesis},
+  institution  = {Czech Technical university in Prague},
+  date         = 2015,
+  location     = {Czech Republic},
+  supervisor   = {Ing. Vladimír Smutný, Ph.D.},
+}
+@ARTICLE{SEXarticle,
+   author = {{Bertin}, E. and {Arnouts}, S.},
+    title = "{SExtractor: Software for source extraction.}",
+ keywords = {METHODS: DATA ANALYSIS, TECHNIQUES: IMAGE PROCESSING, GALAXIES: PHOTOMETRY},
+     year = 1996,
+    month = jun,
+   volume = 117,
+    pages = {393-404},
+   adsurl = {http://adsabs.harvard.edu/abs/1996A%26AS..117..393B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+@manual{SExtractorManual,
+    author = {Bertin, E.},
+    citeulike-article-id = {159020},
+    citeulike-linkout-0 = {http://terapix.iap.fr/IMG/pdf/sextractor.pdf},
+    keywords = {photometry, sextractor, software},
+    organization = {Institud d'Astrophysique \& Observatorie de Paris},
+    posted-at = {2017-03-14},
+    priority = {0},
+    title = {{SE}xtractor v2.5 User's Manual},
+    url = {http://terapix.iap.fr/IMG/pdf/sextractor.pdf}
+}
+\end{filecontents*}
+\bibliography{thesis}
+\addbibresource{thesis.bib}
+
+
+
+
+
+
+\graphicspath{{./figures/}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\shorthandoff{-}
+%%% uvodni stranka %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\TitlePage
+
+%%% stranka s naskenovanym zadanim prace %%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+%\begin{textblock*}{\paperwidth}(0mm,0mm)
+% % \noindent\includegraphics[width=\paperwidth,height=\paperheight]{zadani.pdf}
+%\end{textblock*}
+%\mbox{}
+%\newpage
+%\thispagestyle{empty}
+%\begin{textblock*}{\paperwidth}(0mm,0mm)
+%  \noindent\includegraphics[width=\paperwidth,height=\paperheight]{zadani.pdf}
+%\end{textblock*}
+%\mbox{}
+%\newpage
+%\thispagestyle{empty}
+%\begin{textblock*}{\paperwidth}(0mm,0mm)
+% % \noindent\includegraphics[width=\paperwidth,height=\paperheight]{zadani.pdf}
+%\end{textblock*}
+%\mbox{}
+%\newpage
+
+
+%\pagestyle{pagestyle_blue_rule}
+%\newgeometry{ left=4.7cm,right=3.0cm,top=3cm,bottom=4cm, twoside=false}
+%
+%\pagenumbering{roman}
+%%% prohlaseni,podekovani,abstrakt %%%%%%%%%%%%%%%%%%%%%%%
+%	\newpage
+%	\input{src/prohlaseni}
+%	\newpage
+%	\input{src/podekovani}
+%	\newpage
+%	\input{src/abstrakt}
+%	\newpage
+%%% obsah %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\tableofcontents
+%	\newpage
+%%% seznam obrazku a tabulek %%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%	\listoffigures
+%	\newpage
+%	\listoftables
+%%	\newpage
+%%	\listoflistings
+%\restoregeometry
+%\clearpage
+%
+%%% stranka s naskenovanym zadanim prace %%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+%\mbox{}
+%\newpage
+
+\pagestyle{pagestyle_text}
+\pagenumbering{arabic}
+%% VLASTNI PRACE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{src/Introduction}
+\input{src/Physical_model}
+\input{src/Detection}
+\input{src/GroupOfRays}
+\input{src/ShiftOfRays}
+\input{src/Teminologie}
+\input{src/Optimization_intro}
+\input{src/Korespondence}
+\input{src/Param_experinents}
+\input{src/AutoAlg}
+\input{src/Separability}
+\input{src/Results}
+
+
+\appendix
+%% literatura %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\nocite{*}
+\printbibliography 
+%\bibliography{mt}
+%% obsah CD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\thispagestyle{empty}
+\addcontentsline{toc}{part}{Obsah přiloženého DVD}
+
+%\renewcommand{\sectionname}{\sffamily Kapitola}
+%\include{src/obsah_CD}
+
+
+\end{document}

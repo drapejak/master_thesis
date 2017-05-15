@@ -1,0 +1,83 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {czech}
+\contentsline {part}{\sffamily 1\hspace {1em}\IeC {\'U}vod a motivace}{1}{part.1}
+\contentsline {part}{\sffamily 2\hspace {1em}Fyzik\IeC {\'a}ln\IeC {\'\i } model}{3}{part.2}
+\contentsline {section}{\numberline {\sffamily 2.\sffamily 1}Model kamene}{3}{section.2.1}
+\contentsline {section}{\numberline {\sffamily 2.\sffamily 2}Model svazku}{3}{section.2.2}
+\contentsline {section}{\numberline {\sffamily 2.\sffamily 3}Model st\IeC {\'\i }n\IeC {\'\i }tka}{4}{section.2.3}
+\contentsline {subsection}{\numberline {\sffamily 2.\sffamily 3.\sffamily 1}Oc\IeC {\'a}sky v obraze}{4}{subsection.2.3.1}
+\contentsline {section}{\numberline {\sffamily 2.\sffamily 4}Model obrazu}{6}{section.2.4}
+\contentsline {section}{\numberline {\sffamily 2.\sffamily 5}Model Kamery}{6}{section.2.5}
+\contentsline {part}{\sffamily 3\hspace {1em}Detekce sv\IeC {\v e}teln\IeC {\'y}ch stop v obraze}{7}{part.3}
+\contentsline {section}{\numberline {\sffamily 3.\sffamily 1}P\IeC {\v r}edchoz\IeC {\'\i } pr\IeC {\'a}ce}{9}{section.3.1}
+\contentsline {section}{\numberline {\sffamily 3.\sffamily 2}MSER (maximal stable extremal region) detektor}{9}{section.3.2}
+\contentsline {section}{\numberline {\sffamily 3.\sffamily 3}Implementace}{9}{section.3.3}
+\contentsline {subsection}{\numberline {\sffamily 3.\sffamily 3.\sffamily 1}Filtrace}{9}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {\sffamily 3.\sffamily 3.\sffamily 2}Detekce}{9}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {\sffamily 3.\sffamily 3.\sffamily 3}Okol\IeC {\'\i } st\IeC {\'\i }n\IeC {\'\i }tka}{10}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {\sffamily 3.\sffamily 3.\sffamily 4}Pozad\IeC {\'\i } sn\IeC {\'\i }mku}{11}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {\sffamily 3.\sffamily 3.\sffamily 5}Odstran\IeC {\v e}n\IeC {\'\i } ne\IeC {\v z}\IeC {\'a}douc\IeC {\'\i }ch detekc\IeC {\'\i }}{11}{subsection.3.3.5}
+\contentsline {section}{\numberline {\sffamily 3.\sffamily 4}Ur\IeC {\v c}en\IeC {\'\i } parametr\IeC {\r u} svazku}{12}{section.3.4}
+\contentsline {subsection}{\numberline {\sffamily 3.\sffamily 4.\sffamily 1}Z\IeC {\'a}kladn\IeC {\'\i } parametry}{12}{subsection.3.4.1}
+\contentsline {section}{\numberline {\sffamily 3.\sffamily 5}Detektor oc\IeC {\'a}sk\IeC {\r u}}{14}{section.3.5}
+\contentsline {paragraph}{Jednotliv\IeC {\'e} kroky algoritmu}{14}{figure.caption.22}
+\contentsline {part}{\sffamily 4\hspace {1em}Parametry kamene \textit {viva12}}{18}{part.4}
+\contentsline {section}{\numberline {\sffamily 4.\sffamily 1}Klasifikace svazk\IeC {\r u} do t\IeC {\v r}\IeC {\'\i }d}{18}{section.4.1}
+\contentsline {part}{\sffamily 5\hspace {1em}Optimalizace orientace faset}{29}{part.5}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 1}Postup optimalizace}{29}{section.5.1}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 2}Korespondence}{31}{section.5.2}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 2.\sffamily 1}Orientace kamene}{31}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 2.\sffamily 2}Slo\IeC {\v z}itost \IeC {\'u}lohy}{31}{subsection.5.2.2}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 3}Zak\IeC {\v r}iven\IeC {\'\i } faset}{31}{section.5.3}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 3.\sffamily 1}Svazky s vysokou citlivost\IeC {\'\i }}{35}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 3.\sffamily 2}\IeC {\v C}asov\IeC {\'a} n\IeC {\'a}ro\IeC {\v c}nost simulace v LADOKu}{35}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 3.\sffamily 3}Podm\IeC {\'\i }n\IeC {\v e}nost}{36}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 3.\sffamily 3.1}T\IeC {\v r}\IeC {\'\i }da \textbf {1A} a \textbf {1B}}{36}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 3.\sffamily 3.2}T\IeC {\v r}\IeC {\'\i }da \textbf {3A}}{36}{subsubsection.5.3.3.2}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 3.\sffamily 4}Pozorov\IeC {\'a}n\IeC {\'\i }}{36}{subsection.5.3.4}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 4}Optimalizovan\IeC {\'e} krit\IeC {\'e}rium}{38}{section.5.4}
+\contentsline {paragraph}{Parametry faset, index lomu}{39}{equation.5.4.18}
+\contentsline {paragraph}{Orientace}{39}{equation.5.4.18}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 5}Pln\IeC {\'a} vs. zjednodu\IeC {\v s}en\IeC {\'a} simulace}{40}{section.5.5}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 5.\sffamily 1}Pln\IeC {\'a} simulace}{40}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 5.\sffamily 2}Zjednodu\IeC {\v s}en\IeC {\'a} simulace}{40}{subsection.5.5.2}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 6}Klasifikace p\IeC {\v r}\IeC {\'\i }znak\IeC {\r u}}{40}{section.5.6}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 7}Implementace}{40}{section.5.7}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 1}Pou\IeC {\v z}it\IeC {\'e} algoritmy}{41}{subsection.5.7.1}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 1.1}Korespondence svazk\IeC {\r u} t\IeC {\v r}\IeC {\'\i }dy \textbf {1A}}{41}{subsubsection.5.7.1.1}
+\contentsline {paragraph}{Parametry algoritmu}{41}{subsubsection.5.7.1.1}
+\contentsline {paragraph}{Popis algoritmu}{41}{subsubsection.5.7.1.1}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 1.2}Korespondence svazk\IeC {\r u} t\IeC {\v r}\IeC {\'\i }dy \textbf {3A}}{43}{subsubsection.5.7.1.2}
+\contentsline {paragraph}{Popis algoritmu}{43}{subsubsection.5.7.1.2}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 1.3}Korespondence svazk\IeC {\r u} t\IeC {\v r}\IeC {\'\i }dy \textbf {5D}}{44}{subsubsection.5.7.1.3}
+\contentsline {paragraph}{Parametry algoritmu}{44}{subsubsection.5.7.1.3}
+\contentsline {paragraph}{Algoritmus}{44}{subsubsection.5.7.1.3}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 1.4}Korespondence svazk\IeC {\r u} podle polohy v obraze a z\IeC {\'a}\IeC {\v r}iv\IeC {\'e}ho toku}{45}{subsubsection.5.7.1.4}
+\contentsline {paragraph}{Parametry algoritmu}{45}{subsubsection.5.7.1.4}
+\contentsline {paragraph}{Algoritmus}{45}{subsubsection.5.7.1.4}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 1.5}Korespondence svazk\IeC {\r u} podle oc\IeC {\'a}sk\IeC {\r u}}{47}{subsubsection.5.7.1.5}
+\contentsline {paragraph}{Parametry algoritmu}{47}{subsubsection.5.7.1.5}
+\contentsline {paragraph}{Algoritmus}{47}{subsubsection.5.7.1.5}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 7.\sffamily 2}Automatick\IeC {\'a} optimalizace}{48}{subsection.5.7.2}
+\contentsline {paragraph}{Postup optimalizace}{48}{subsection.5.7.2}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 8}V\IeC {\'y}sledky}{49}{section.5.8}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 8.\sffamily 1}}{49}{subsection.5.8.1}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 9}Klasifikace p\IeC {\v r}\IeC {\'\i }znak\IeC {\r u}}{50}{section.5.9}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 9.\sffamily 1}Ground truth}{50}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 9.\sffamily 2}Zm\IeC {\v e}na z\IeC {\'a}\IeC {\v r}iv\IeC {\'e}ho toku se zm\IeC {\v e}nou parametr\IeC {\r u} kamene}{50}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 9.\sffamily 3}Z\IeC {\'a}vislost z\IeC {\'a}\IeC {\v r}iv\IeC {\'e}ho toku}{51}{subsection.5.9.3}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 9.\sffamily 4}Z\IeC {\'a}vislost parametr\IeC {\r u} oc\IeC {\'a}sk\IeC {\r u}}{52}{subsection.5.9.4}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 9.\sffamily 5}Sm\IeC {\v e}rov\IeC {\'y} \IeC {\'u}hel}{52}{subsection.5.9.5}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 9.\sffamily 6}Velikost}{54}{subsection.5.9.6}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 10}Popis probl\IeC {\'e}mu}{56}{section.5.10}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 11}Modelov\IeC {\'a}n\IeC {\'\i } pohybu sv\IeC {\v e}teln\IeC {\'y}ch svazk\IeC {\r u} v programu LADOKU}{59}{section.5.11}
+\contentsline {section}{\numberline {\sffamily 5.\sffamily 12}Mno\IeC {\v z}iny korespondenc\IeC {\'\i }}{62}{section.5.12}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 1}Rozhodovac\IeC {\'\i } algoritmus}{63}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 2}\IeC {\'U}\IeC {\v c}innost metody}{63}{subsection.5.12.2}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 3}Simulace dat}{63}{subsection.5.12.3}
+\contentsline {subsubsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 3.1}Odd\IeC {\v e}litelnost}{64}{subsubsection.5.12.3.1}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 4}Rozd\IeC {\v e}len\IeC {\'\i } svazk\IeC {\r u} do mno\IeC {\v z}in}{64}{subsection.5.12.4}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 5}Vhodn\IeC {\'e} zvolen\IeC {\'\i } optimaliza\IeC {\v c}n\IeC {\'\i } a kriteri\IeC {\'a}ln\IeC {\'\i } mno\IeC {\v z}iny}{64}{subsection.5.12.5}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 6}Kriteri\IeC {\'a}ln\IeC {\'\i } mno\IeC {\v z}ina}{65}{subsection.5.12.6}
+\contentsline {subsection}{\numberline {\sffamily 5.\sffamily 12.\sffamily 7}Mno\IeC {\v z}ina kandid\IeC {\'a}t\IeC {\r u} - vhodn\IeC {\'e} svazky}{65}{subsection.5.12.7}

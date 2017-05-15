@@ -10,10 +10,10 @@
   \selectfont}%
 \fi\endgroup%
 \begin{picture}(2857,2557)(2116,-2933)
-\put(3557,-1457){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{.56,0,0}Beam}%
+\put(3557,-1457){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{.56,0,0}Obraz svazku}%
 }}}}
-\put(4310,-807){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,.56,0}Tails}%
+\put(4310,-807){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,.56,0}Ocásky}%
 }}}}
-\put(2400,-2120){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,.56,0}Tails}%
+\put(2400,-2120){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{14.4}{\rmdefault}{\bfdefault}{\updefault}{\color[rgb]{0,.56,0}Ocásky}%
 }}}}
 \end{picture}%
