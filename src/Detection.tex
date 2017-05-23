@@ -1,22 +1,32 @@
 \part{Detekce světelných stop v obraze}
 \label{sec:detection}
+
+\section{Jevy v obraze}
 Pro analýzu vlastností broušeného kamene je důležité detekovat světelné stopy vzniklé dopadem laserových svazků na stínítko. Zároveň je třeba určit parametry stop, které se budou porovnávat s parametry svazků matematického modelu kamene. 
 
-Intenzitu pixelu $I$ můžeme vyjádřit jako 
+Intenzitu pixelu $I$ můžeme vyjádřit pomocí Poissonova rozdělení jako 
 \begin{equation}
-	I = I_{s}+I_{p}+I_{o}+I_{\varepsilon}\,,
+	I = \mathrm{Pois}\left(I_{s}+I_{p}+I_{o}\right)\,,
 	\label{eq:intensitu_sum}
 \end{equation}
- kde $I_{s}$ reprezentuje příspěvek světelného svazku, $I_{p}$ intenzitu pozadí, $I_{o}$ intenzitu světelných ocásků a $I_{\varepsilon}$ Poissonův šum (kapitola \ref{sec:poisson}). Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit. %Po odečtení pozadí získáme obrazy laserových svazků.   
+ kde $I_{s}$ reprezentuje příspěvek světelného svazku, $I_{p}$ intenzitu pozadí, $I_{o}$ intenzitu světelných ocásků. Jedním z úkolů detektoru je oddělit pozadí od zbývajících složek intenzit. %Po odečtení pozadí získáme obrazy laserových svazků.   
  
 Jednoduchým postupem pro určení intenzity pozadí by bylo prahování obrazu nad konstantní úrovní. V našem obraze však typicky konstantní není (kapitola \ref{sec:stinitko}). 
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width = 0.5\textwidth]{stinitkoSnimek.eps}
+\caption[Popis objektů v obraze.]{Popis objektů v obraze.}
+\label{fig: podstavec}
+\end{figure}
+
+
 Rozdílné pozadí se může také vytvořit odrazem zdrojového svazku od jiných předmětů, než broušeného kamene. Hlavním příspěvkem je v tomto případě odraz od podstavce, na který pokládáme broušený kámen (obr. \ref{fig: podstavec}).
 
-\begin{figure}[htps]
+\begin{figure}[h!]
 \centering
-\includegraphics[width = 0.7\textwidth]{podstavec.eps}
-\caption{Jasové úrovně ve vybraném řádku obrazu. Řádek protíná obraz podstavce. V případě červené charakteristiky dopadá na podstavec laserový svazek, rozptyluje se a dopadá na stínítko. Modrou charakteristiku pozorujeme, pokud je laser vypnutý.}
+\includegraphics[width = 0.6\textwidth]{podstavec.eps}
+\caption[Vliv odrazu od podstavce na pozadí snímku.]{Jasové úrovně ve vybraném řádku obrazu. Řádek protíná obraz podstavce. V případě červené charakteristiky dopadá na podstavec laserový svazek, rozptyluje se a dopadá na stínítko. Modrou charakteristiku pozorujeme, pokud je laser vypnutý.}
 \label{fig: podstavec}
 \end{figure}
 
@@ -28,7 +38,7 @@ Světelné stopy se mohou překrývat. Pro odlišení příspěvků jednotlivýc
 
 V místě, kde je vysoká koncentrace svazků mohou svazky dopadnout tak blízko sebe, že splynou v jednu stopu (obr. \ref{Splynuti}).  
 
-\begin{figure}[htbp]
+\begin{figure}[h!]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
         \centering\includegraphics[width=.5\textwidth]{pf_near.pdf}
@@ -45,7 +55,7 @@ Obraz je třeba filtrovat. Filtrováním snížíme šum v odraze, ale zároveň
 
 Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícenásobným odrazem postupně ztrácí zářivý tok. Po dopadu na stínítko mohou být nerozlišitelné od šumu a jejich detekce je prakticky nemožná. Pro stopy s nízkým jasem bude detekce často selhávat.
 
-\begin{figure}[htbp]
+\begin{figure}[h!]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
         \centering\includegraphics[width=.75\textwidth,height = 4.5 cm]{pf_punch2.pdf}
@@ -61,7 +71,7 @@ Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícen�
 \newcommand\x{4}
 \newcommand\xx{0,155}
 
-\begin{figure}[htbp]
+\begin{figure}[h!]
     \centering
     \begin{minipage}[c]{0.163\textwidth}
         \centering\includegraphics[height = \x cm,width = \textwidth ]{cut_1.pdf}
@@ -86,7 +96,6 @@ Ne všechny svazky vystupující z kamene je možné detekovat. Svazky s vícen�
         \label{fig:rezy}
 \end{figure}
 
-\newpage
 
 \section{Předchozí práce}
 
@@ -96,7 +105,7 @@ Bohatší pojetí problému se objevilo v Bodlákově práci \cite{Bodlak2005}. 
 
 Naše úloha detekce je velmi podobná detekci hvězd a galaxií v astronomických snímcích. V oblasti astronomie se hojně používá program s názvem Source Extractor \cite{SEXarticle}. Tento program má za sebou dlouholetý vývoj, je optimalizován z hlediska rychlosti a odzkoušený širokou veřejností. Tento software lze po naladění parametrů použít i pro náš případ. Nevýhodou však je, že nelze spustit v operačním systému Windows, který využíváme.  
 
-Po testu různých detektorů jsme se rozhodli pro detekci laserových stop v obraze využít relativně nový přístup uveden J.Matasem et al. \cite{Matas} v roce 2002 - MSER detektor. 
+Po testu různých detektorů jsme se rozhodli pro detekci laserových stop v obraze využít relativně nový přístup uveden J. Matasem et al. \cite{Matas} v roce 2002 - MSER detektor. 
 
 
 
@@ -121,38 +130,14 @@ Výhodou MSER detektoru je invariance vůči afinní transformaci intenzity a v�
    \begin{itemize}
    \item \textbf{Frekvecne prahování snímku.} - Určuje velikost kroku mezi prahovacími úrovněmi jasu (obr. \ref{fig:gaussIntersection}). Prahování se používá pro nalezení extremálních oblastí, na kterých se testuje stabilita.
    
-   \item \textbf{Dostatečná stabilita oblasti.} - Velkost stabilní oblasti se při změně úrovně prahu intenzity příliš nemění. 
+   \item \textbf{Dostatečná stabilita oblasti.} - Velikost stabilní oblasti se při změně úrovně prahu intenzity příliš nemění. 
    \end{itemize}
    
 \subsection{Okolí stínítka}
 \label{sec:okoliStinitka}
-	Okraj obrazu stínítka má tvar kružnice. Kružnici popisuje funkce
-	
-	\begin{equation}
-	\left(x-x_0\right)^2 + \left(y-y_0\right)^2 = r^2\,,
-	\label{eq:kruznice}
-	\end{equation}
-	kde $\left[x,y\right]$ je bod na kružnici, $\left[x_0,y_0\right]$ střed kružnice a $r$ poloměr. Je zřejmé, že k určení parametrů kružnice potřebujeme nalézt minimálně 3 body ležící na kružnici. 
+	Okraj stínítka má tvar kružnice. Kružnici popisuje funkce $\left(x-x_0\right)^2 + \left(y-y_0\right)^2 = r^2\,,$ kde $\left[x,y\right]$ je bod na kružnici, $\left[x_0,y_0\right]$ střed kružnice a $r$ poloměr. Je zřejmé, že k určení parametrů kružnice potřebujeme nalézt minimálně 3 body ležící na kružnici. 
 
-	Úpravou rovnice \ref{eq:kruznice} dostaneme
-
-	\begin{equation}
-	x^2 -2\,x\,x_0 + x_0^2 + y^2 -2\,y\,y_0 + y_0^2 = r^2\,,
-	\end{equation}
-	\begin{equation}
-	\begin{bmatrix}
-    -2x &-2y &1 
-	\end{bmatrix} \cdot 
-	\begin{bmatrix}
-    x_0 & y_0 & -r^2+x_0^2+y_0^2
-	\end{bmatrix}^T = -\left(x^2+y^2\right)\,.
-	\end{equation}
-
-
-%Polohu v obraze určujeme podle počtu pixelů v horizontálním (sloupec) a vertikálním (řádek) směru.
-  
-Body na kružnici nalezeme pomocí sečen. Sečny sestrojíme ve dvou řádcích snímku. %a nalezneme sloupce, ve kterých protínáme kružnici.  
-\begin{figure}[htbp]
+\begin{figure}[h!]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
         \centering\includegraphics[width=\textwidth]{circleFit.pdf}
@@ -167,6 +152,7 @@ Body na kružnici nalezeme pomocí sečen. Sečny sestrojíme ve dvou řádcích
         \label{fig:CircleFit}
 \end{figure}
 
+Body na kružnici nalezeme pomocí sečen. Sečny sestrojíme ve dvou řádcích snímku. %a nalezneme sloupce, ve kterých protínáme kružnici.  
 Sestrojením sečny získáme jasový řez v celé šířce snímku. Fotonový šum jasu vyfiltrujeme konvolucí s Gaussovým filtrem. Velikost filtru volíme \SI{21}{\px} a směrodatnou odchylku $\sigma = $ \SI{20}{\px}. 
 
 Vyfiltrovaný jas oddělíme prahem. Práh určuje střední hodnota jasu v daném řezu. Nalezneme sloupce, kde je jas vyšší než prahové hodnota. Sloupec s minimálním resp. maximálním počtem pixelů určuje bod na kružnici.  
@@ -193,11 +179,12 @@ Okolí stínítka poté definuje funkce
 	Samotná konvoluce s tímto filtrem by s použitím standardní funkce \textit{conv2} byla příliš časově náročná, proto konvoluci provádíme efektivnějším způsobem, který využívá rozkladu masky filtru na singulární čísla.
 	
 \begin{figure}[htbp]
-    \centering\includegraphics[width=.8\textwidth]{image_rust2.eps}
+    \centering\includegraphics[width=.9\textwidth]{image_rust2.eps}
      \caption[Filtrace pozadí.]{Filtrace pozadí v HDR snímku znázorněná v řádku obrazu protínajícím obraz podstavce na kámen.}
         \label{fig:pozadi}
 \end{figure}
-	      
+	     
+	     \newpage
 \subsection{Odstranění nežádoucích detekcí}
 
 Výstupem detektoru je soubor MSER oblastí. U výrazné světelné stopy dostaneme data ve formě pyramidy MSER oblastí podle jednotlivých úrovní intenzity. 
@@ -213,6 +200,17 @@ K odstranění nežádoucích detekcí použijeme následující postup.
 
 \item Pokud je střední hodnota jasu záporná, MSER oblast odstraníme.  
 \end{enumerate}
+
+\section{Výsledek detekce}
+Výsledky detekce světelných stop v obraze navrženého detektoru jsou srovnatelné s výstupem programu \textit{Source Extractor} \cite{SEXarticle}. Použití MSER detektoru je oproti \cite{SEXarticle} výhodné v tom, že přesně vymezuje oblast v obraze, kde se stopa nachází. Toho využíváme k určení parametrů svazků (kapitola \ref{sec:beam parameters} a \ref{sec:tails}). Ukázka detekce je na obrázku .
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width = 0.85\textwidth]{detekceVysledek.pdf}
+\caption[Ukázka detekce světelných stop v obraze.]{Ukázka detekce světelných stop v obraze. }
+\label{fig: podstavec}
+\end{figure}
+
  	      
 
 \section{Určení parametrů svazku}
@@ -232,21 +230,21 @@ Máme detekované MSER oblasti. Nalezneme průniky oblastí a sestavíme stromov
 \begin{figure}[htbp]
     \centering
 	\begin{minipage}[c]{0.78 \textwidth}
-    \includegraphics[width=\textwidth]{gaussIntersection.pdf}
+    \includegraphics[width=0.95\textwidth]{gaussIntersection.pdf}
     \end{minipage}
     \begin{minipage}[c]{0.16 \textwidth}
-    \includegraphics[width=\textwidth]{treeGauss.pdf}
+    \includegraphics[width=0.95\textwidth]{treeGauss.pdf}
     \end{minipage}
     
     
-     \caption[]{Ilustrace překrytí stop v 2D řezu. Výsledná charakteristika je součtem dvou gaussových funkcí. Červeně jsou zakresleny prahovací úrovně MSER detektoru. Vlevo vidíme stromovou strukturu MSER oblastí a-f. Kořenem stromu je vrstva \textbf{e}. Vrstva \textbf{d} je jediný vnitřní uzel stromu. Listy představují vrstvy \textbf{c} a \textbf{a}. Důležité jsou podstromy \textbf{e}$\rightarrow$\textbf{d}, \textbf{c}, \textbf{b}$\rightarrow$\textbf{a}.}
+     \caption[]{Ilustrace překrytí stop v 2D řezu. Výsledná charakteristika je součtem dvou Gaussových funkcí. Červeně jsou zakresleny prahovací úrovně MSER detektoru. Vlevo vidíme stromovou strukturu MSER oblastí a-f. Kořenem stromu je vrstva \textbf{e}. Vrstva \textbf{d} je jediný vnitřní uzel stromu. Listy představují vrstvy \textbf{c} a \textbf{a}. Důležité jsou podstromy \textbf{e}$\rightarrow$\textbf{d}, \textbf{c}, \textbf{b}$\rightarrow$\textbf{a}.}
         \label{fig:gaussIntersection}
 \end{figure}
 
 Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počítáme parametry svazků.
 
 \begin{itemize}
-	\item \textbf{Azimut a elevace} - Pozici dopadu světelné stopy určíme jako střed eliptické aproximace oblasti odpovídající listu stromu. Transformací z \cite{Drapela} získáme azimut a elevaci.
+	\item \textbf{Azimut a elevace} - Pozici dopadu světelného svazku určíme jako střed eliptické aproximace oblasti odpovídající listu stromu. Pomocí transformace z \cite{Drapela} získáme azimut a elevaci.
 	
 	\item \textbf{Zářivý tok} - 
 	Od filtrovaného snímku odečteme pozadí (obr. \ref{fig:pozadi}) a získáme snímek, ze kterého budeme odečítat intenzitu pixelů. Algoritmus výpočtu zářivého toku je následující:
@@ -255,7 +253,7 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	
 	\item Ve stromu $t_i$ nalezneme podstromy $\tau_1,\dots,\tau_n$ maximální velikosti bez vnitřních uzlů stromu $t_i$ a obsahující jeden list stromu $t_i$.  
 	
-	\item Nalezneme křeny $\xi_1,\dots,\xi_n$ podstromů $\tau_1,\dots,\tau_n$. Kořeny odpovídají oblastem s množinou pixelů $\mathbb{M}_{q+1},\dots,\mathbb{M}_{q+n}$.
+	\item Nalezneme kořeny $\xi_1,\dots,\xi_n$ podstromů $\tau_1,\dots,\tau_n$. Kořeny odpovídají oblastem s množinou pixelů $\mathbb{M}_{q+1},\dots,\mathbb{M}_{q+n}$.
 	
 	\item Pokud $i = 0$ vypočítáme zářivý tok 
 	
@@ -283,7 +281,6 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 \end{itemize}
 
 \newpage
-	
 \section{Detektor ocásků}
 \label{sec:tails}
 	Se znalostí směru a velikosti ocásků detekovaných svazků dostáváme nové informace, které nohou přispět k jejich správnému párování se svazky z matematického modelu kamene.
@@ -296,22 +293,33 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	  
 	 \begin{itemize}	 	
 	 	\item V blízkém okolí jedné stopy se může nacházet další stopa. V polárním grafu se tato blízká stopa jeví jako ocásek a dochází k falešné detekci.	
-	 	\item Stopy a ocásky jsou v obraze různě velké. Je třeba efektivně určovat vzdálenost $\rho$ do které budeme převádět okolí stopy do polárního grafu. Pokud zvolíme malé $\rho$, nepokryjeme oblast, kde se vyskytují ocásky. Příliš velké $\rho$ zvýší časovou náročnost výpočtu.   	
+	 	\item Různé stopy a ocásky mají v obraze různou velikost. Je třeba efektivně určovat vzdálenost $\rho$ do které budeme převádět okolí stopy do polárního grafu. Pokud zvolíme malé $\rho$, nepokryjeme oblast, kde se vyskytují ocásky. Příliš velké $\rho$ zvýší časovou náročnost výpočtu.   	
+	 	\item Polární graf je citlivý na určení pozice dopadu svazku. 
 	\end{itemize}
 	
-	Elegantní řešení přináší použití MSER detektoru, pomocí něhož získáme vymezení oblasti a tím i vzdálenosti $\rho$, kde se stopa i s ocásky nachází. Se znalostí oblastí náležící jednotlivým stopám jsme schopni od sebe stopy částečně oddělit a redukovat množství falešných detekcí. Na druhou stranu sousední stopa muže ležet na pozici ocásku a odstraněním sousední stopy odstraníme současně i ocásek, který prozatím nejsme schopni v případě překrytí oddělit. Vzhledem k rozmanitosti stop, co do velikosti, intenzity, množství a tvaru ocásků apod. není jednoduché stopu matematicky modelovat. Pokud by se podařilo vytvořit dostatečně přesný kompaktní model stopy, je možné uvažovat o situaci, kdy budeme schopni od sebe separovat překrývající se stopy a ocásky. 
+	Elegantní řešení přináší použití MSER detektoru, pomocí něhož získáme vymezení oblasti a tím i vzdálenosti $\rho$, kde se stopa i s ocásky nachází. Se znalostí oblastí náležící jednotlivým stopám jsme schopni od sebe stopy částečně oddělit a redukovat množství falešných detekcí. Na druhou stranu sousední stopa může ležet na pozici ocásku a odstraněním sousední stopy odstraníme současně i ocásek, který prozatím nejsme schopni v případě překrytí oddělit. Vzhledem k rozmanitosti stop, co do velikosti, intenzity, množství a tvaru ocásků apod. není jednoduché stopu matematicky modelovat. Pokud by se podařilo vytvořit dostatečně přesný kompaktní model stopy, je možné uvažovat o situaci, kdy budeme schopni od sebe separovat překrývající se stopy a ocásky. 
 	
- Pro znázornění postupu a mezivýsledků jsme si vybrali laserovou stopu (obr.\ref{fig:mark_tail}), která v obraze nekoliduje s další výraznou stopu. Zvolená stopa vznikla dopadem laserového svazku třídy \textbf{6A}. V obraze jsou patrné čtyři ocásky různě intenzity. 
+ Pro znázornění postupu a mezivýsledků jsme si vybrali laserovou stopu (obr. \ref{fig:mark_tail}, \ref{fig:mark_tail2}), která v obraze nekoliduje s další výraznou stopu. Zvolená stopa vznikla dopadem svazku třídy \textbf{6C}. V obraze jsou patrné čtyři ocásky různé intenzity. 
 	
 
-	\begin{figure}[htps]
+	\begin{figure}[h!]
 	\centering
-	\begin{minipage}[c]{0.4\textwidth}
-	\includegraphics[width=\textwidth]{figures/tail07.pdf}
+	\begin{minipage}[c]{0.35\textwidth}
+	\includegraphics[width=\textwidth]{figures/tail007.pdf}
 	\end{minipage}
-	\begin{minipage}[c]{0.4\textwidth}
-	\includegraphics[width=\textwidth]{figures/tail08.pdf}
-	\end{minipage}\\
+	\begin{minipage}[c]{0.35\textwidth}
+	\includegraphics[width=\textwidth]{figures/tail008.pdf}
+	\end{minipage}
+	
+	\caption[Detektor ocásků - stopa v obraze.]{Vybraná světelná stopa k ilustraci algoritmu k detekci ocásků. Stopa vznikla dopadem svazku třídy \textbf{6C} na stínítko. Vlevo: 70$\times$ zvětšený polygon simulovaného svazku. Polygon je ohraničen hranami kamene. Na hranách vznikají ocásky. Vpravo: ocásky detekované v obraze. Číslování ocásků odpovídá číslování hran na obrázku vlevo, tzn. na hraně 1 vzniká ocásek 1 atd.}
+	\label{fig:mark_tail}
+	\end{figure}
+	
+
+
+
+	\begin{figure}[h!]
+	\centering
 	\begin{minipage}[c]{0.4\textwidth}
 	\includegraphics[width=\textwidth]{figures/tailex01.pdf}
 	\end{minipage}
@@ -319,8 +327,8 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	\includegraphics[width=\textwidth]{figures/tailex02.pdf}
 	\end{minipage}
 	
-	\caption[Detektor ocásků - laserová stopa.]{Zvolená laserová stopa k ilustraci algoritmu detektoru ocásků. Stopa vznikla dopadem svazku třídy \textbf{6A} na stínítko.  Snímek vpravo nahoře znázorňuje výřez stopy ze snímaného obrazu. Můžeme zde pozorovat čtyři ocásky s různými vlastnostmi. Vlevo nahoře je výsledek detekce popsané níže. Obrázek vpravo dole ukazuje MSER oblast a poslední obrázek znázorňuje 3D pohled na zkoumanou stopu.}
-	\label{fig:mark_tail}
+	\caption[Detektor ocásků - detekce stopy.]{Stejná světelná stopa jako na obr. \ref{fig:mark_tail}. Vpravo: detekovaná MSER oblast. Vlevo: 3D pohled na stopu.}
+	\label{fig:mark_tail2}
 	\end{figure}
 
 
@@ -336,13 +344,13 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	\begin{figure}[htps]
     \centering
     \begin{minipage}[c]{0.48\textwidth}
-        \centering\includegraphics[width=.98\textwidth]{tailex03.pdf}
+        \centering\includegraphics[width=\textwidth]{tailex03.pdf}
     \end{minipage}
     \begin{minipage}[c]{0.48\textwidth}
-        \centering\includegraphics[width=.98\textwidth]{tailex04.pdf}
+        \centering\includegraphics[width=\textwidth]{tailex04.pdf}
     \end{minipage}
     \\
-        \caption[Detektor ocásků - polární graf.]{Dva pohledy na intenzitu okolí stopy převedené do polárního grafu $I_pol$ zobrazené pomocí vrstevnic.}
+        \caption[Detektor ocásků - polární graf.]{Dva pohledy na intenzitu okolí stopy převedené do polárního grafu $I_{pol}$ zobrazené pomocí vrstevnic.}
         \label{Detekce}
 \end{figure}
 	
@@ -354,7 +362,7 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
 	\end{equation}
 	Následně na $I_{\phi}$ aplikujeme kubickou interpolaci sousedních hodnot s $5$krát citlivějším vzorkováním $f_{\phi_2} = \frac{f_{\phi}}{5}$ a rozšíříme rozsah $\phi$ na $\phi \in \left\langle -\frac{\pi}{2},\frac{5}{2}\pi \right\rangle$. 
 	
-	\item Graf závislosti $I_\phi = f(\phi)$ filtrujeme konvolucí s Gaussovou funkcí $g(x)$ se směrodatnou odchylkou $\sigma = \SI{3}{\px}$ a získáme referenční závislost $I_{filt}$.
+	\item Graf závislosti $I_\phi = f(\phi)$ filtrujeme konvolucí s Gaussovou funkcí $g(x)$ se směrodatnou odchylkou $\sigma = \SI{1.2}{\degree}$ a získáme referenční závislost $I_{filt}$.
 	
 	\begin{equation}
 		g(x) = \frac{1}{\sqrt{2\pi} \cdot \sigma}e^{-\frac{x^2}{2\sigma^2}}\,.
@@ -366,7 +374,7 @@ Cíleně prohledáváme jednotlivé stromy a nalézáme uzly, ze kterých počí
     \label{fig:tailSumGraph}
 	\end{figure}
 	
-	\item Na graf $I_{filt}$ následně opakovaně aplikujeme konvoluci, tentokrát s Gaussovou funkcí $g(x)$ s vyšší směrodatnou odchylkou $\sigma = \SI{8}{\px}$, abychom získali základnu $I_{base}$, kterou budeme porovnávat se signálem $I_{filt}$.
+	\item Na graf $I_{filt}$ následně opakovaně aplikujeme konvoluci, tentokrát s Gaussovou funkcí $g(x)$ s vyšší směrodatnou odchylkou $\sigma = \SI{4.8}{\degree}$, abychom získali základnu $I_{base}$, kterou budeme porovnávat se signálem $I_{filt}$.
 	
 	\item Nalezneme souvislé oblasti $\mathcal{R}_1, \dots , \mathcal{R}_n$, kde graf $I_{filt}$ má větší hodnotu než $I_{base}$ a sečteme rozdíly $I_{filt}$ a $I_{base}$ v jednotlivých vzorcích. Velikost součtu $S_1, \dots , S_n$ závisí na vzorkovací frekvenci $f_{\phi_2}$.
 	

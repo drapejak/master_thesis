@@ -242,18 +242,21 @@ end
 
 if samples > 100
     figure;
+    k = 1;
     if ~fromGlass
         plot(fio,abs(S_plocha).*R,'r','Linewidth',1.5)
         set(gca,'Xlim',[min(fio) max(fio)])
         set(gca,'Xlim',[0 max(fio)])
+        k = max(fio)/21.26;
     else
         plot(fio1,abs(S_plocha).*R,'r','Linewidth',1.5)
         set(gca,'Xlim',[min(fio1) max(fio1)])
         set(gca,'Xlim',[0 max(fio1)])
+        k = max(fio1)/21.26;
     end
     set(gca,'Ylim',[0 1])
     grid on
-    ylabel('koeficient odrazu', 'Interpreter', 'latex')
+    ylabel('$\frac{I_{\beta}}{I_0}$', 'Interpreter', 'latex','Rotation', 0,'FontSize', 17,'Position',[-2.5*k 0.5 -1] )
     xlabel('$\beta \left[ ^\circ \right]$', 'Interpreter', 'latex')
 %     set(gca,'XTickMode','manual')
     set(gcf,'Position', [680 702 378 276])
@@ -283,14 +286,16 @@ if samples > 100
         plot(fio2(refrMask),abs(S_plocha(refrMask)).*T(refrMask).*hustota(refrMask),'g','Linewidth',1.5)
 %         set(gca,'Xlim',[min(fio2(refrMask)) max(fio2(refrMask))])
         set(gca,'Xlim',[0 max(fio2(refrMask))])
+        k = max(fio2(refrMask))/21.26;
     else
         plot(fio12(refrMask),abs(S_plocha(refrMask)).*T(refrMask).*hustota(refrMask),'g','Linewidth',1.5)
 %         set(gca,'Xlim',[min(fio12(refrMask)) max(fio12(refrMask))])
         set(gca,'Xlim',[0 max(fio12(refrMask))])
+        k = max(fio12(refrMask))/21.26;
     end
     set(gca,'Ylim',[0 1])
     grid on
-    ylabel('koeficient lomu', 'Interpreter', 'latex')
+    ylabel('$\frac{I_{\beta}}{I_0}$', 'Interpreter', 'latex','Rotation', 0,'FontSize', 17,'Position',[-2.5*k 0.5 -1] )
     xlabel('$\beta \left[ ^\circ \right]$', 'Interpreter', 'latex')
 %     set(gca,'XTickMode','manual')
     set(gcf,'Position', [680 702 378 276])

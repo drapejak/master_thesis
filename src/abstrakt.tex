@@ -1,13 +1,23 @@
 \section*{Abstrakt}
-Tato práce se zabývá návrhem a kalibrací soustavy pro měření šíření laserového svazku šperkařskými kameny. Zkalibrovaná soustava bude použita k porovnání naměřených výsledků z měřeného kamene s jeho matematickým modelem. Porovnáním lze zjistit tvar kamene a kvalitu brusu, čehož se využívá např. pro určení ceny kamene nebo k seřizovaní brusných kotoučů při výrobě.   
+Tato práce se zabývá automatickým odhadem orientace faset broušeného kamene s využitím informace o šíření rovnoběžného světelného svazku brusem. Důležité jsou světelné svazky vystupující z kamene. 
 
-Úkolem kalibrace navržené měřicí soustavy je nalezení správné transformace mezi pixely z pořízeného snímku a úhlem, pod kterým světelný paprsek opustil broušený šperk. Kalibrace probíhá postupně v několika krocích. Prvním krokem je nalezení projekční matice a radiálního zkreslení kamery. V dalším kroku s pomocí stereo-rekonstrukce hledáme parametry stínítka a nakonec optimalizujeme parametry laserového svazku. Pro optimalizaci použijeme nelineární metody minimalizace. 
+Metoda odhadu parametrů faset spočívá v porovnání svazků ze simulace a z měřicího experimentu. Parametry simulovaného modelu jsou upravovány gradientním optimalizačním algoritmem. Výstupem měřicího experimentu je snímek s obrazy svazků.
 
-\textbf{Klíčová slova:} kalibrace kamery, korespondence obrazů, triangulační metoda, optimalizace parametrů 
+ První část je zaměřena na detekci světelných stop v obraze a výpočet parametrů odpovídajících svazků. Detekce stop je založena na přítomnosti maximálně stabilních extrémních oblastí (MSER) v obraze. Druhá část obsahuje návrh algoritmů k nalezení korespondujících dvojic svazků.   
+
+Práce je zaměřena na broušený kámen typu šatonová růže s 12-ti bočními fasetami.
+
+\textbf{Klíčová slova:} počítačové vidění, MSER, sledování paprsků, párování světelných svazků, broušené kameny 
 
 \section*{Abstract}
-	This thesis describes the design and calibration of system for measuring the spread of the laser beam in the cut gemstone. Calibrated system will be used to compare results measured on the stone with its mathematical model. We can determine the shape and quality of the cut stone by comparing which is used e.g. to determine stone price or to adjust grinding wheel in the production.
 
-The task of calibration is to find the correct transformation between the pixels in captured image and the direction of the light beam leaves the cut jewel. Calibration is carried out in several steps. The first step is to find the projection matrix and the radial distortion of the cameras. In the next step, we use stereo-reconstruction to find parameters of shade and then we optimize the parameters of the laser beam. We use nonlinear minimization methods to optimize.
+This thesis describes the automatic estimation of cut stone facet orientation with the use of information about  the parallel light beam propagation. Light beams leaving the stone are significant for us.
 
-\textbf{Keywords:} camera calibration, image correspondence, triangulation method, parameter optimization
+The principle of stone facet estimation is a comparison of beams from the simulation and beams from the measurement experiment. Parameters of the simulated model are modified by the gradient optimization algorithm.  The image of light beams is the output of the measurement experiment. 
+
+The first part is focused on light beams detection and calculating the parameters of the corresponding beams. Light beams detection is based on the presence of the maximally stable extremal regions (MSER) in the image. The second part contains the light beam matching algorithms.
+
+The work is focused on chaton rose with the twelve side facets.
+
+
+\textbf{Keywords:} computer vision, MSER, ray-tracing, light beam matching, cut stones

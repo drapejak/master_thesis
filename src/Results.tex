@@ -1,36 +1,13 @@
   
 \part{Výsledky}
 
-Navržené algoritmy jsme použili pro automatickou optimalizaci kamenů tvaru \textit{viva12} podle algoritmu v kapitole \ref{sec: auto}. Vybrali jsme kameny se šesti odstíny. Nejčastěji je zastoupený odstín \textit{Crystal}, průhledné sklo. Soupis použitých kamenů je v tabulce \ref{tab:viva12desc}. 
- 
-\begin{table}[htps]
-\centering
-	\begin{tabular}{|C{1.2cm}|C{1.9cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|c||C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
-	\hline
-	Kámen č. & Odstín 	& $d_{BOT}$ [\SI{}{\milli\metre}] 	& $h$ [\SI{}{\milli\metre}]  & $d_{TOP}$ [\SI{}{\milli\metre}] & $n$ & $\mathrm{E}(\sigma_{\alpha})$ [\SI{}{\degree}]  & $\mathrm{E}(\sigma_{\varepsilon})$ [\SI{}{\degree}]  & $\mathrm{E}(\delta_n)$ [\SI{}{\degree}]  & $\sigma(\delta_n)$ [\SI{}{\degree}] \\ \hline \hline
-	1 & Hyacint	&	$2.90$			& $1.24$    &	$1.10$		&	3 & 0.089& 0.051 & 0.101 &0.071\\ \hline
-	2 & Violet	&	$2.82$			& $1.16$	&	$1.15$		&	3 & 0.363& 0.237 & 0.451& 0.204\\ \hline
-	3 & Citrine  &	$2.86$			& $1.14$	&	$1.20$		&	3 & 0.882& 0.598 & 1.092& 0.819\\ \hline
-	4 & Hyacint	&	$2.90$			& $1.24$	&	$1.10$		&	3 & 0.172& 0.076 & 0.175& 0.108\\ \hline
-	5 & Hyacint	&	$2.90$			& $1.28$	&	$1.10$		&	3 & 0.490& 0.356 & 0.561& 0.497\\ \hline
-	6 & Hyacint	&	$2.88$			& $1.28$	&	$1.00$		&	4 & 0.269& 0.190 & 0.298& 0.248\\ \hline
-	7 & Crystal	&	$2.88$			& $1.26$	&	$1.10$		&	3 & & & &\\ \hline
-	8 & Crystal	&	$2.88$			& $1.26$	&	$1.15$		&	3 & & & &\\ \hline
-	9 & Light Amethyst	& $2.82$    & $1.10$	&   $1.10$      &	3 & & & &\\ \hline % 21
-	10 & Crystal	&	$4.80$		& $1.90$	&	$1.86$		&	3 & & & &\\ \hline % 22
-	11 & Crystal	&	$4.78$		& $1.80$	&	$2.10$		&	3 & & & &\\ \hline % 23
-	12 & Crystal	&	$3.96$		& $1.60$	&	$1.60$		&	4 & & & &\\ \hline % 24
-	13 & Crystal	&	$4.00$		& $1.66$	&	$1.50$		&	3 & & & &\\ \hline % 25
-	14 & Amethyst	&	$2.00$		& $1.00$	&	$0.80$		&	3 & & & &\\ \hline % 26
-	15 & Crystal	&	$2.00$		& $0.94$	&	$0.80$		&	3 & & & &\\  \hline% 27
-	16 & Crystal	&	$2.00$		& $0.92$	&	$0.80$		&	3 & & & &\\  \hline% 29
-	
-	\end{tabular}
-	\caption{Popis rozměrů a barvy snímaných kamenů typu VIVA12 použitých při experimentech.}
-	\label{tab:viva12desc}
-\end{table}
-	
-	Všechny kameny jsem do měřicí soustavy umístili minimálně 3$\times$. Uložení kamene při dalším měření se lišilo v rotaci kamene kolem svislé osy.
+\section{Vybrané kameny}
+
+Navržené algoritmy jsme použili pro automatickou optimalizaci kamenů tvaru \textit{viva12} podle algoritmu v kapitole \ref{sec: auto}. Vybrali jsme 14 kamenů pěti odstínů. Nejčastěji je zastoupený odstín \textit{Crystal}, průhledné sklo. Soupis použitých kamenů je v tabulce \ref{tab:viva12desc}. 
+
+\section{Uložení broušených kamenů při měření}
+
+ 	Každý z kamenů jsme do měřicí soustavy umístili minimálně 3$\times$. Uložení kamene při dalším měření se lišilo v rotaci kamene kolem svislé osy.
 
 	Abychom mohli porovnat výsledky optimalizace parametrů faset u jednotlivých kamenů, potřebujeme znát uložení kamene. Snažili jsem se o to, aby byly kameny otočeny přibližně o \SI{120}{\degree} v případě tří vzorků a \SI{90}{\degree} pro čtyři vzorky. Přesnou rotaci kamene však neznáme.
 	
@@ -38,8 +15,56 @@ Navržené algoritmy jsme použili pro automatickou optimalizaci kamenů tvaru \
 	
 	Výsledky automatické optimalizace kamene upravíme na shodnou rotaci kamene. 
 	
-	Normály faset \textbf{UF1}-\textbf{UF12} převedeme do azimutu a elevace. Pro jednotlivé fasety vypočítáme směrodatnou odchylku azimutů a elevací. Střední hodnota směrodatných odchylek azimutů je v tabulce \ref{tab:viva12desc} značena jako $\mathrm{E}(\sigma_{\alpha})$ a pro elevaci jako $\mathrm{E}(\sigma_{\varepsilon})$. Pro fasety \textbf{TOP} a \textbf{BOT} nemá cenu určovat azimut a elevaci, protože tyto normály jsou blízko singulárního bodu azimutu. 
+\section{Přesnost počátečního odhadu}
 	
-	Pro každé dva výsledky optimalizace náklonu faset nalezneme úhel, který mezi sebou svírají normály faset. Pro $n$ měření fasety dostaneme $(n-1)!$ hodnot s velikostí úhlového rozdílu. Střední hodnota úhlových rozdílů pro všechny kombinace a pro všechny fasety je v tabulce \ref{tab:viva12desc} zapsána ve sloupci $\mathrm{E}(\delta_n)$ a směrodatná hodnota pro stejná data ve sloupci $\sigma(\delta_n)$. 
+	Na výsledek optimalizace orientace faset má vliv počáteční odhad parametrů faset. Chyba počátečního odhadu orientace faset nesmí být příliš vysoká, abychom byli schopni odhadnout základní třídy svazků (\textbf{1A}, \textbf{3A} a \textbf{5D}). Při optimalizaci sklonu faset podle základních tříd svazků poté optimalizační algoritmus nalezne zpravidla stejné lokální minimum nezávisle na počátečním odhadu orientace. 
+	
+	Na výsledek optimalizace má v dalším postupu zásadní vliv počáteční odhad vzdáleností faset. Optimalizační algoritmus vzdálenost faset nemění. Chyba odhadu vzdáleností faset se promítne nejen velikosti zářivého toku simulovaných svazků, ale také na existenci některých svazků, což může snadno vést k nesprávnému určení korespondujících svazků. Bohužel nemáme k dispozici přístroj, kterým bychom vzdálenost faset změřili, proto může být chyba počátečního odhadu vysoká. 
+	
+\newpage
+\section{Hodnotící parametry}
+
+\paragraph{Azimut a Elevace}
+\hspace{1mm}
+	
+		Normály faset \textbf{UF1}-\textbf{UF12} převedeme do azimutu a elevace. Pro jednotlivé fasety vypočítáme směrodatnou odchylku azimutů a elevací. Střední hodnota směrodatných odchylek azimutů je v tabulce \ref{tab:viva12desc} značena jako $\mathrm{E}(\sigma_{\alpha})$ a pro elevaci jako $\mathrm{E}(\sigma_{\varepsilon})$. Pro fasety \textbf{TOP} a \textbf{BOT} nemá cenu určovat azimut a elevaci, protože tyto normály jsou blízko singulárního bodu azimutu. 
+
+\paragraph{Směr normál}
+\hspace{1mm}	
+	
+	Pro každé dva výsledky optimalizace náklonu faset nalezneme úhel, který mezi sebou svírají normály faset. Pro $n$ měření fasety dostaneme $(n-1)!$ hodnot s velikostí úhlového rozdílu. Střední hodnota úhlových rozdílů pro všechny kombinace a pro všechny fasety je v tabulce \ref{tab:viva12desc} zapsána ve sloupci $\mathrm{E}(\delta_n)$. 
+	
+\paragraph{Počáteční odhad orientace faset}
+\hspace{1mm}	
+	U jednotlivých kamenů aplikujeme vektorový součet na všechny 3 resp. 4 výsledky normál fasety. Nalezneme úhel $\Delta\varphi$, který svírá vektor vzniklý vektorovým součtem s počáteční normálou fasety. Střední hodnota úhlu $\Delta\varphi$ pro všech faset kamene je v tabulce \ref{tab:viva12desc} zapsána ve sloupci $\mathrm{E}(\Delta\varphi)$.
+
+\begin{table}[htps]
+\centering
+	\begin{tabular}{|C{1.2cm}|C{1.9cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|c||C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
+	\hline
+	Kámen č. & Odstín 	& $d_{BOT}$ [\SI{}{\milli\metre}] 	& $h$ [\SI{}{\milli\metre}]  & $d_{TOP}$ [\SI{}{\milli\metre}] & $n$ & $\mathrm{E}(\sigma_{\alpha})$ [\SI{}{\degree}]  & $\mathrm{E}(\sigma_{\varepsilon})$ [\SI{}{\degree}]  & $\mathrm{E}(\delta_n)$ [\SI{}{\degree}]  & $\mathrm{E}(\Delta\varphi)$ [\SI{}{\degree}] \\ \hline \hline
+	1 & Hyacint		&	$2.90$		& $1.24$    &	$1.10$		&	3 & 0.159& 0.073 & 0.159 &1.388\\ \hline
+	2 & Violet		&	$2.82$		& $1.16$	&	$1.15$		&	3 & 0.331& 0.160 & 0.356&3.722\\ \hline
+	3 & Citrine  	&	$2.86$		& $1.14$	&	$1.20$		&	3 & 0.169& 0.119 & 0.226& 3.025\\ \hline
+	4 & Hyacint		&	$2.90$		& $1.24$	&	$1.10$		&	3 & 0.185& 0.099 & 0.202& 5.094\\ \hline
+	5 & Hyacint		&	$2.90$		& $1.28$	&	$1.10$		&	3 & 0.182& 0.142 & 0.244& 6.153\\ \hline
+	6 & Hyacint		&	$2.88$		& $1.28$	&	$1.00$		&	4 & 0.202& 0.210 & 0.324& 1.011\\ \hline
+	7 & Crystal		&	$2.88$		& $1.26$	&	$1.10$		&	3 & 0.233&0.379 &  0.483& 2.879\\ \hline
+	8 & Crystal		&	$2.88$		& $1.26$	&	$1.15$		&	3 & 0.216&0.218 &0.329 &4.360\\ \hline
+	9 & Light Amethyst	& $2.82$    & $1.10$	&   $1.10$      &	3 & 0.441& 0.310 & 0.533  & 3.529\\ \hline % 21
+	10 & Crystal	&	$4.80$		& $1.90$	&	$1.86$		&	3 &0.247 & 0.234 & 0.350 & 1.634\\ \hline % 22
+	11 & Crystal	&	$4.78$		& $1.80$	&	$2.10$		&	3 & 0.355& 0.216 & 0.391&2.614\\ \hline % 23
+	12 & Crystal	&	$3.96$		& $1.60$	&	$1.60$		&	4 & 0.387&0.321 & 0.478 & 1.482\\ \hline % 24
+	13 & Crystal	&	$2.00$		& $0.94$	&	$0.80$		&	3 & 0.242&0.462 & 0.574& 3.132\\  \hline% 27
+	14 & Crystal	&	$2.00$		& $0.92$	&	$0.80$		&	3 & 0.404 & 0.404 & 0.602 & 3.917\\  \hline% 29
+	
+	\end{tabular}
+	\caption[Výsledek automatické optimalizace orientace faset.]{Popis rozměrů a barvy kamenů typu \textit{viva12} použitých při experimentech s výsledky automatické optimalizace orientace faset.}
+	\label{tab:viva12desc}
+\end{table}
+	
+	
+	
+
 
  \clearpage
