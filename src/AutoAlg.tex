@@ -1,22 +1,22 @@
 \part{Automatická optimalizace - algoritmy}
 
 \section{Zavedení symbolů}
-	Uvedeme algoritmy využité pro hledání korespondencí pozorovaných a simulovaných svazků a popíšeme jejich aplikaci pro automatické určení náklonu faset broušených kamenů. 
+	Uvedeme algoritmy využité pro hledání korespondencí pozorovaných a simulovaných svaz\-ků a popíšeme jejich aplikaci pro automatické určení náklonu faset broušených kamenů. 
 	Předtím, než se začneme zabývat navrženými přístupy, je třeba sjednotit značení jednotlivých parametrů svazků. 
 	
 	Simulované svazky dělíme do tří disjunktních množin. 
 	
 	\begin{tabular}{l l}
-	$\mathcal{R}_c$ & - uspořádaná $r_c$-tice svazků, pro které byl nalezen korespondující svazek,\\
-	$\mathcal{R}$   & - uspořádaná $r$-tice svazků, ke kterým můžeme přiřadit korespondující savek, \\
-	$\mathcal{R}_o$ & - uspořádaná $r_o$-tice svazků, kterým není možné přiřadit korespondující svazek.  \\
+	$\mathcal{R}_c$ & $-$ uspořádaná $r_c$-tice svazků, pro které byl nalezen korespondující svazek,\\
+	$\mathcal{R}$   & $-$ uspořádaná $r$-tice svazků, ke kterým můžeme přiřadit korespondující savek, \\
+	$\mathcal{R}_o$ & $-$ uspořádaná $r_o$-tice svazků, kterým není možné přiřadit korespondující svazek.  \\
 	\end{tabular}	
 
 Platí, že $\mathcal{R} = \left(\mathrm{R}_1 ,\,\dots,\, \mathrm{R}_r\right)$. Dále definujeme uspořádanou $r^\prime$-tici $\mathcal{R}^\prime = \mathcal{R} \cup \mathcal{R}_o$. $r^\prime = r +r_o $.
 	
 	Podobně dělíme pozorované svazky na $\mathcal{M}_c$, $\mathcal{M}$, $\mathcal{M}_o$ a $ \mathcal{M}^\prime$, kde $\mathcal{M} = \left(\mathrm{M}_1 ,\,\dots,\, \mathrm{M}_m\right)$.
 	 
-	 Algoritmy pracují s informacemi o směru, obrazu a zářivém toku $\phi_e$ svazků. Směr vyjadřujeme pomocí azimutu $\alpha$ a elevace $\varepsilon$. Polohu obrazu svazku určuje $x$-ová a $y$-ová souřadnice.
+	 Algoritmy pracují s informacemi o směru, obrazu a zářivém toku $\phi_e$ svazků. Směr vyjadřujeme pomocí azimutu $\alpha$ a elevace $\varepsilon$. Polohu obrazu svazku určuje $x$ a $y$ souřadnice.
 	
 	 Parametry simulovaných svazků označujeme $\vv{\alpha}_{r}$, $\vv{\varepsilon}_{r}$, $\vv{\phi}_{e_{r}}$, $\vv{x}_r$  a $\vv{y}_r$. Pro pozorované svazky platí označení $\vv{\alpha}_{m}$, $\vv{\varepsilon}_{m}$, $\vv{\phi}_{e_{m}}$, $\vv{x}_m$  a $\vv{y}_m$. Platí, že $\vv{\alpha}_{r} = \alpha_{r}\left(\mathcal{R}\right)$, $\vv{\alpha}_{m} = \alpha_{m}\left(\mathcal{M}\right)$ apod. 
 
@@ -30,7 +30,7 @@ Množinu korespondujících svazků značíme $\mathcal{C}$. Jednotlivá korespo
 \subsection{Korespondence svazků třídy \textbf{1A}}
 \label{sec: 1A}
 
-Víme, že svazky třídy \textbf{1A} se odráží od faset \textbf{UF1} - \textbf{UF2}. Úhlová odchylka normály simulované fasety od  skutečné normály se projeví dvojnásobnou úhlovou odchylkou simulovaného svazku od pozorovaného. Očekáváme, že rozdíl mezi simulovanými a reálnými parametry faset není příliš velký. Proto lze očekávat, že pozorované svazky třídy \textbf{1A} budou mít velmi podobný směr jako simulované. Přibližně tedy známe směr těchto svazků.
+Víme, že svazky třídy \textbf{1A} se odráží od faset \textbf{UF1} $-$ \textbf{UF2}. Úhlová odchylka normály simulované fasety od  skutečné normály se projeví dvojnásobnou úhlovou odchylkou simulovaného svazku od pozorovaného. Očekáváme, že rozdíl mezi simulovanými a reálnými parametry faset není příliš velký. Proto lze očekávat, že pozorované svazky třídy \textbf{1A} budou mít velmi podobný směr jako simulované. Přibližně tedy známe směr těchto svazků.
 
 Na stínítku se v blízkém okolí stop třídy \textbf{1A} mohou nacházet pouze stopy s řádově nižším zářivým tokem. Tato vlastnost je zajištěna geometrií kamene \textit{viva12} a provedením experimentu. Pokud známe zářivý tok stop, můžeme v obraze snadno nalézt svazek třídy \textbf{1A}. 
 
@@ -38,8 +38,10 @@ Na stínítku se v blízkém okolí stop třídy \textbf{1A} mohou nacházet pou
 \hspace{1mm}
 	 
 	 \begin{tabular}{l L{14cm}}
-	 $d_{max}$ & - maximální vzdálenost pozorovaného svazku od simulovaného,\\
-	 $n_{min}$ & - minimální počet pozorovaných svazků, v blízkém okolí simulovaného svazku, s nižším zářivým tokem než zářivý tok potenciálního korespondujícího pozorovaného svazku. \\
+	 $d_{max}$ & $-$ maximální vzdálenost pozorovaného svazku od simulovaného,\\
+	 $n_{min}$ & $-$ minimální počet pozorovaných svazků, v blízkém okolí simulovaného svazku,\\ 
+	           &s nižším zářivým tokem než zářivý tok potenciálního korespondujícího pozorovaného \\
+	           &svazku. \\
 	 \end{tabular}
 	
 \paragraph{Popis algoritmu} 
@@ -61,15 +63,15 @@ $\vv{d} = \sqrt{(\alpha_{r}(\mathrm{R}_i)\cdot\vv{\mathbf{1}}-\vv{\alpha}_{m}-\a
 
 \item Určíme minimální $l$, které splňuje alespoň jednu z podmínek $n_{\mathcal{O}}(l) > n_{min}$  a $l = k$. Do~množiny $\mathcal{C}$ přidáme korespondenci $\left(\mathrm{R}_i,\,\mathrm{N}_l \right)$.
 
-\item Pokud $i \neq r$, tak $i = i+1$ a opakujeme body 3) až 7).
+\item Pokud $i \neq r$, tak $i = i+1$ a opakujeme body 3 až 7.
 
-\item Pokud $\mathcal{C}_{l} \neq \mathcal{C}$, vypočítáme korekční parametry $\alpha_{c} = median(\alpha_{r}(\mathcal{C})-\alpha_{m}(\mathcal{C}))$, \\ $\varepsilon_{c} = median(\varepsilon_{r}(\mathcal{C})-\varepsilon_{m}(\mathcal{C}))$, položíme $\mathcal{C}_{l}$ rovno $\mathcal{C}$  a opakujeme body 2) až 8).
+\item Pokud $\mathcal{C}_{l} \neq \mathcal{C}$, vypočítáme korekční parametry $\alpha_{c} = median(\alpha_{r}(\mathcal{C})-\alpha_{m}(\mathcal{C}))$, \\ $\varepsilon_{c} = median(\varepsilon_{r}(\mathcal{C})-\varepsilon_{m}(\mathcal{C}))$, položíme $\mathcal{C}_{l}$ rovno $\mathcal{C}$  a opakujeme body 2 až 8.
 
 \item Z $\mathcal{C}$ odstraníme korespondence, ve kterých se obraz simulovaného svazku nachází mimo obraz stínítka.
 
 \item Optimalizujeme náklon kamene (kapitola \ref{sec:Optimalizace_crit}).
 
-\item Podle výsledku optimalizace upravíme model kamene a přepočítáme parametry simulovaných svazků. Opakujeme bod 1) až 10). V příští iteraci tento bod vynecháme. 
+\item Podle výsledku optimalizace upravíme model kamene a přepočítáme parametry simulovaných svazků. Opakujeme bod 1 až 10. V příští iteraci tento bod vynecháme. 
 
 \item Z $\mathcal{C}$ odstraníme prvky, ve kterých se obraz simulovaného svazku nachází mimo obraz stínítka.
 
@@ -79,7 +81,7 @@ $\vv{d} = \sqrt{(\alpha_{r}(\mathrm{R}_i)\cdot\vv{\mathbf{1}}-\vv{\alpha}_{m}-\a
 \label{sec:3A}
 	Po optimalizaci podle třídy \textbf{1A} máme dobře odhadnuté parametry faset \textbf{UF1} - \textbf{UF12}. Pomocí rotace a náklonu kamene odhadneme přibližně parametry faset \textbf{TOP} a \textbf{BOT}. Podstatné je, že svazek třídy \textbf{3A} dopadá na tabulku \textbf{TOP} pod výrazně menším úhlem, než je kritický úhel. To zajišťuje přijatelnou citlivost směru svazků na změnu parametrů dopadových faset. 
 	
-	Simulované svazky třídy \textbf{3A} mají po třídě \textbf{3B} druhý nejvyšší zářivý tok. Ostatní třídy se vyznačují řádově nižším zářivým tokem. Podle zářivého toku $\phi_{e_r}$ lze tedy snadno oddělit svazky tříd \textbf{3A} a \textbf{3B} od ostatních svazků. Simulovanýcc svazků třídy \textbf{3A} a \textbf{3B} je celkem 13. V obraze často nastává situace, že svazek třídy \textbf{3B} nedetekujeme, protože je jeho obraz zakrytý podstavcem na kámen.
+	Simulované svazky třídy \textbf{3A} mají po třídě \textbf{3B} druhý nejvyšší zářivý tok. Ostatní třídy se vyznačují řádově nižším zářivým tokem. Podle zářivého toku $\phi_{e_r}$ lze tedy snadno oddělit svazky tříd \textbf{3A} a \textbf{3B} od ostatních svazků. Simulovaných svazků třídy \textbf{3A} a \textbf{3B} je celkem 13. V obraze často nastává situace, že svazek třídy \textbf{3B} nedetekujeme, protože je jeho obraz zakrytý podstavcem na kámen.
 	
 	Další vlastnost, která dobře charakterizuje svazky třídy \textbf{3A} jsou dlouhé a intenzivní ocásky. Při hledání korespondencí můžeme využít párování svazků podle charakteru ocásků (kapitola \ref{sec: korespondence_ocasky}). Výhodou algoritmu je to, že dokáže za vhodného nastavení nalézt korespondující svazky, a to i v případě vysokých směrových odchylek svazků. Nevýhodou je necitlivost na ostatní parametry svazků. 
 
@@ -92,7 +94,7 @@ $\vv{d} = \sqrt{(\alpha_{r}(\mathrm{R}_i)\cdot\vv{\mathbf{1}}-\vv{\alpha}_{m}-\a
 	
 	\item Uvolníme pouze parametry faset \textbf{TOP} a \textbf{BOT}. V tomto kroku prohlásíme parametry těchto dvou faset za totožné a optimalizujeme parametry uvolněných faset (kapitola \ref{sec:Optimalizace_crit}). Pokud neznáme dostatečně přesně index lomu kamene optimalizujeme také index lomu. 
 	
-	\item Podle výsledku optimalizace upravíme model kamene a přepočítáme parametry simulovaných svazků. Pro finální odhad množiny korespondencí $\mathcal{C}$ použijeme algoritmus v kapitole \ref{sec: 1A} od bodu 1) do bodu 10). $\mathcal{R}$ bude uspořádaná 24-tice simulovaných svazků třídy \textbf{1A} a \textbf{3A}. $\mathcal{M}$ bude obsahovat všechny pozorované svazky.  
+	\item Podle výsledku optimalizace upravíme model kamene a přepočítáme parametry simulovaných svazků. Pro finální odhad množiny korespondencí $\mathcal{C}$ použijeme algoritmus v~kapitole \ref{sec: 1A} od bodu 1 do bodu 10. $\mathcal{R}$ bude uspořádaná 24-tice simulovaných svazků třídy \textbf{1A} a \textbf{3A}. $\mathcal{M}$ bude obsahovat všechny pozorované svazky.  
 	
 	\item K optimalizovaným parametrům přidáme parametry faset \textbf{UF1} až \textbf{UF12} a optimalizujeme. 
 		
@@ -101,7 +103,7 @@ $\vv{d} = \sqrt{(\alpha_{r}(\mathrm{R}_i)\cdot\vv{\mathbf{1}}-\vv{\alpha}_{m}-\a
 \newpage
 \subsection{Korespondence svazků třídy \textbf{5D}}
 \label{sec:5D}
-	Svazky třídy \textbf{5D} můžeme v obraze pozorovat, pokud existuje úhlová odchylka mezi fasetou \textbf{TOP} a \textbf{BOT} (kapitola \ref{sec: klin}). Předpokládáme, že pokud nějaká odchylka vznikne, bude max. \SI{1}{\degree}. Také předkládáme, že normály faset \textbf{UF1} až \textbf{UF12} nejsou vůči pravidelnému tvaru \textit{vivy12} příliš vychýleny.
+	Svazky třídy \textbf{5D} můžeme v obraze pozorovat, pokud existuje úhlová odchylka mezi fasetou \textbf{TOP} a \textbf{BOT} (kapitola \ref{sec: klin}). Předpokládáme, že pokud nějaká odchylka vznikne, bude max. \SI{1}{\degree}. Také předkládáme, že normály faset \textbf{UF1} až \textbf{UF12} nejsou vůči pravidelnému tvaru \textit{viva12} příliš vychýleny.
 	
 	Podstatné je, že známe polohu svazků třídy \textbf{3A}. Za výše uvedených okolností lze pozorovat vzor určující vzájemnou polohu dvojice svazků třídy \textbf{3A} a \textbf{5D}, které mají v seznamu stejné dopadové fasety např. dvojice (UF1-TOP-BOT, UF1-TOP-BOT-TOP-BOT). Vzájemnou polohu mezi všemi těmito páry lze popsat pomocí polárních souřadnic vzdáleností $\rho$ a úhlem $\varphi$. 
 	
@@ -111,10 +113,10 @@ $\vv{d} = \sqrt{(\alpha_{r}(\mathrm{R}_i)\cdot\vv{\mathbf{1}}-\vv{\alpha}_{m}-\a
 \hspace{1mm}
 
 	 \begin{tabular}{l L{14cm}}
-	 $\rho_{max}$ & - maximální vzdálenost obrazu korespondujících svazků třídy \textbf{3A} a \textbf{5D} v pixelech,\\
-	 $\Delta\rho$ & - maximální absolutní odchylka úhlu v obraze mezi párem svazků třídy \textbf{3A} a \textbf{5D},\\
-	 $\Delta\varphi$ & - maximální absolutní odchylka vzdálenosti v obraze mezi párem svazků třídy \textbf{3A} a \textbf{5D},\\
-	 $p_{min}$ & - minimální počet nalezených dvojic.\\
+	 $\rho_{max}$ & $-$ maximální vzdálenost obrazu korespondujících svazků třídy \textbf{3A} a \textbf{5D} v pixelech,\\
+	 $\Delta\rho$ & $-$ maximální absolutní odchylka úhlu v obraze mezi párem svazků třídy \textbf{3A} a \textbf{5D},\\
+	 $\Delta\varphi$ & $-$ maximální absolutní odchylka vzdálenosti v obraze mezi párem svazků třídy \textbf{3A}\\ &a \textbf{5D},\\
+	 $p_{min}$ & $-$ minimální počet nalezených dvojic.\\
 	 \end{tabular}
 
 \paragraph{Algoritmus}
@@ -158,7 +160,7 @@ Pro vektor $\vv{x}$ délky $n$ platí $g(\vv{x}) = \left(g(x_1),\,\dots,\,g(x_n)
 \subsection{Korespondence svazků podle ocásků}
 \label{sec: korespondence_ocasky}
 		
-	Ocásky svazků definujeme pomocí velikosti a směrového úhlu.	Počet ocásků simulovaného svazku závisí na počtu stran polygonu, kterým popisujeme tvar svazku. Intenzitu ocásku v simulaci určuje zářivý tok svazku a velikost hrany, na které ocásek vzniká. 
+	Ocásky svazků definujeme pomocí velikosti a směrového úhlu.	Počet ocásků simulovaného svazku závisí na počtu stran polygonu, kterým popisujeme tvar svazku. Intenzitu ocásku v~simulaci určuje zářivý tok svazku a velikost hrany, na které ocásek vzniká. 
 	
 	Velikost $\vv{\xi}_{r}\left(\mathrm{R_i}\right)$ a směrový úhel $\vv{\psi}_{r}\left(\mathrm{R_i}\right)$ ocásků  $i$-tého simulovaného svazku $\mathrm{R_i}$ určuje vektor o délce $n_i$. $\vv{\xi}_{r}\left(\mathrm{R_i}\right) = \left(\xi_{r_1}\left(\mathrm{R_i}\right),\,\dots,\,\xi_{r_{n_i}}\left(\mathrm{R_i}\right)\right)$, $\vv{\psi}_{r}\left(\mathrm{R_i}\right) = \left(\psi_{r_1}\left(\mathrm{R_i}\right),\,\dots,\,\psi_{r_{n_i}}\left(\mathrm{R_i}\right)\right)$, kde $n_i$ je počet ocásků $\mathrm{R_i}$. 
 	
@@ -172,10 +174,10 @@ Pro vektor $\vv{x}$ délky $n$ platí $g(\vv{x}) = \left(g(x_1),\,\dots,\,g(x_n)
 \hspace{1mm}
 	 
 	 \begin{tabular}{l L{13.5cm}}
-	 $\Delta\alpha_{max}$ & - maximální absolutní odchylka azimutu pozorovaného svazku od simulovaného,\\
-	 $\Delta\varepsilon_{max}$ & - maximální absolutní odchylka elevace pozorovaného svazku od simulovaného,\\
-	 $\sigma$ & - citlivost kriteriální funkce na úhlovou odchylku ocásků,\\
-	 $L_{min}$ &  - minimální velikost kritéria  $\mathbf{L} \in \mathbb{R}^{r\times m}$ pro přidání dvojice svazků do množiny\\ &korespondencí $\mathcal{C}$. \\
+	 $\Delta\alpha_{max}$ & $-$ maximální absolutní odchylka azimutu pozorovaného svazku od simulovaného,\\
+	 $\Delta\varepsilon_{max}$ & $-$ maximální absolutní odchylka elevace pozorovaného svazku od simulovaného,\\
+	 $\sigma$ & $-$ citlivost kriteriální funkce na úhlovou odchylku ocásků,\\
+	 $L_{min}$ &  $-$ minimální velikost kritéria  $\mathbf{L} \in \mathbb{R}^{r\times m}$ pro přidání dvojice svazků do množiny\\ &korespondencí $\mathcal{C}$. \\
 	 \end{tabular}
 	
 \paragraph{Algoritmus}
@@ -201,7 +203,7 @@ Pro vektor $\vv{x}$ délky $n$ platí $g(\vv{x}) = \left(g(x_1),\,\dots,\,g(x_n)
 jinak $\mathbf{L}(i,j) = 0$, pro $j =\lbrace 1,\,\dots,\,m \rbrace $, kde $n_l$ je počet ocásků $\mathrm{M_j}$.
   
 
-\item Pokud $i \neq r$, $i = i+1$ a opakujeme kroky 2) až 5).
+\item Pokud $i \neq r$, $i = i+1$ a opakujeme kroky 2 až 5.
 
 \item Korespondující svazky nalezneme podle vzájemně nejvyššího kritéria v $\mathbf{L}$ s minimální velikostí $L_{min}$. Korespondující dvojice $\left(\mathrm{R}_i,\,\mathrm{M}_j \right) \subseteq \mathcal{C}$, pokud  $i = \underset{{q = \lbrace1,\,\dots,\,r\rbrace}}{\argmax}\mathbf{L}(q,j)$,\\ $j = \underset{{q = \lbrace1,\,\dots,\,m\rbrace}}{\argmax}\mathbf{L}(i,g)$ a  $\mathbf{L}(i,j) > L_{min}$. 
 
@@ -216,9 +218,9 @@ jinak $\mathbf{L}(i,j) = 0$, pro $j =\lbrace 1,\,\dots,\,m \rbrace $, kde $n_l$ 
 \hspace{1mm}
 	 
 	 \begin{tabular}{l L{13.5cm}}
-	 $d_{m_{max}}$ & - maximální vzdálenost simulovaných svazků v pixelech  $d_{m_{max}} = $ \SI{80}{\px},\\
-	 $d_{r_{max}}$ & - maximální vzdálenost simulovaného svazku od pozorovaného svazku v~pixelech \\
-	 & $d_{r_{max}} = $ \SI{50}{\px},\\
+	 $d_{m_{max}}$ & $-$ maximální vzdálenost simulovaných svazků v pixelech  $d_{m_{max}} = $ \SI{80}{\px},\\
+	 $d_{r_{max}}$ & $-$ maximální vzdálenost simulovaného svazku od pozorovaného svazku  \\
+	 & v~pixelech, $d_{r_{max}} = $ \SI{50}{\px},\\
 	 $\mathbf{L}_{max}$ &  - maximální velikost kritéria  $\mathbf{L} \in \mathbb{R}^{r^\prime\times m^\prime}$ pro přidání dvojice svazků do množiny \\
 	 & korespondencí $\mathcal{C}$. \\
 	 \end{tabular}
@@ -251,7 +253,7 @@ $d_{i,j} = \sqrt{\left( x_{m}(\mathrm{M}_j^\prime) -  x_{r}(\mathrm{R}_i^\prime)
 
 \item $w_{r^\prime_j} = max\left( \phi_{e_r}(\mathcal{S}) \right)$.
 
-\item Dokud $j \neq n^\prime$, $j = j+1$ a opakujme body 2) až 6). 
+\item Dokud $j \neq n^\prime$, $j = j+1$ a opakujme body 2 až 6. 
 
 \item Nechť  $g(x)\rightarrow \begin{cases}
 x, & x > 1\\
@@ -266,7 +268,7 @@ x, & x > 1\\
 
 \item Potenciální korespondence $\mathcal{C}^\prime$ nalezneme podle vzájemně nejnižší velikosti  kritéria v $\mathbf{L}$, které nepřekročí hodnotu $L_{max}$. Korespondující dvojice $\left(\mathrm{R}^\prime_i,\,\mathrm{M}^\prime_j \right) \subseteq \mathcal{C}^\prime$, pokud\\ $i = \underset{{q = \lbrace1,\,\dots,\,r^\prime\rbrace}}{\argmin}\mathbf{L}(q,j)$, $j = \underset{{q = \lbrace1,\,\dots,\,m^\prime\rbrace}}{\argmin}\mathbf{L}(i,g)$ a  $\mathbf{L}(i,j) < L_{max}$. 
 
-\item Vybereme korespondence z $\mathcal{C}^\prime$, které můžeme přidat do množiny korespondencí $\mathcal{C}$. Korespondence musí obsahovat simulovaný svazek z $\mathcal{R}$ a zároveň pozorovaný savek z množiny $\mathcal{M}$. 
+\item Vybereme korespondence z $\mathcal{C}^\prime$, které můžeme přidat do množiny korespondencí $\mathcal{C}$. Korespondence musí obsahovat simulovaný svazek z $\mathcal{R}$ a zároveň pozorovaný svazek z~množiny $\mathcal{M}$. 
 \end{enumerate}
 
 \section{Automatická optimalizace parametrů faset}
@@ -274,7 +276,7 @@ x, & x > 1\\
 
 Před zahájením optimalizace je třeba změřit zkoumaný kámen a určit parametry kamene $d_{TOP}$, $d_{BOT}$, $h$ a $h_{RF}$ (viz kapitola \ref{sec: parametryVIVA12}). 
 
-Před popisem postupu optimalizace upozorníme skutečnosti, o kterých se nebudeme v postupu zmiňovat. Pokud neuvedeme, které fasety optimalizujeme, budou optimalizovány stejné parametry jako v předchozím kroku. Simulované svazky se přepočítávají vždy, když dojde ke změně parametrů kamene. Když nalezneme dvojici korespondujících svazků, automaticky ji přidáme do množiny korespondencí $\mathcal{C}$.  
+Před popisem postupu optimalizace upozorníme na skutečnosti, o kterých se nebudeme v postupu zmiňovat. Pokud neuvedeme, které fasety optimalizujeme, budou optimalizovány stejné parametry jako v předchozím kroku. Simulované svazky se přepočítávají vždy, když dojde ke změně parametrů kamene. Když nalezneme dvojici korespondujících svazků, automaticky ji přidáme do množiny korespondencí $\mathcal{C}$.  
 
 \paragraph{Postup optimalizace}
 \begin{enumerate}
@@ -308,11 +310,11 @@ Parametry algoritmu: $\Delta\alpha_{max}$ = \SI{2}{\degree} ,$\Delta\varepsilon_
 	\item Pro zbylé referenční svazky tříd \textbf{6A}, \textbf{6B}, \textbf{6C} a \textbf{6D} nalezneme korespondence podle ocásků (kapitola \ref{sec: korespondence_ocasky}). Nastavení parametrů algoritmu: $\Delta\alpha_{max}$ = \SI{7}{\degree} ,$\Delta\varepsilon_{max}$ \SI{5}{\degree}, $\sigma = 0.05$ a $L_{min} = 10$.
 \end{enumerate}
 
-\item Nalezneme obraz simulovaných svazků třídy \textbf{7C} a \textbf{7D}. Tyto svazky jsou v ideálním případě rovnoběžné. Pokud bude nastavení faset takové, že se tyto svazky dostatečně rozbíhají, pokusíme se k nim nalézt korespondující svazky podle bodu 7a) a 7b). 
+\item Nalezneme obraz simulovaných svazků třídy \textbf{7C} a \textbf{7D}. Tyto svazky jsou v ideálním případě rovnoběžné. Pokud bude nastavení faset takové, že se tyto svazky dostatečně rozbíhají, pokusíme se k nim nalézt korespondující svazky podle bodu 7a a 7b. 
 
-\item Pokud v bodě 7) a 8) nalezneme méně než tři korespondující svazky, vybereme volné simulované svazky s $\phi_{e_r} > $ \SI{1}{\permille} a elevací větší než \SI{15}{\degree}. Pro vybrané simulované svazky nalezneme korespondující svazky podle ocásků (kapitola \ref{sec: korespondence_ocasky}) s parametry $\Delta\alpha_{max}$ = \SI{25}{\degree} ,$\Delta\varepsilon_{max}$ \SI{10}{\degree}, $\sigma = 0.2$ a $L_{min} = 8$.
+\item Pokud v bodě 7 a 8 nalezneme méně než tři korespondující svazky, vybereme volné simulované svazky s $\phi_{e_r} > $ \SI{1}{\permille} a elevací větší než \SI{15}{\degree}. Pro vybrané simulované svazky nalezneme korespondující svazky podle ocásků (kapitola \ref{sec: korespondence_ocasky}) s parametry $\Delta\alpha_{max}$ = \SI{25}{\degree} ,$\Delta\varepsilon_{max}$ \SI{10}{\degree}, $\sigma = 0.2$ a $L_{min} = 8$.
 
-\item Optimalizujeme parametry faset a 2$\times$ opakujeme body 7) až 9), po nichž opět proběhne optimalizace faset.  
+\item Optimalizujeme parametry faset a 2$\times$ opakujeme body 7 až 9, po nichž opět proběhne optimalizace faset.  
 
 \item Hledáme korespondence v oblastech, kde je malá hustota pozorovaných svazků. Nalezneme pozorované svazky, které mají v obraze nejbližší sousední pozorovaný svazek dále než \SI{50}{\px}. Vybereme simulované svazky se zářivým tokem minimálně  \SI{0.1}{\permille} a elevací minimálně $\min(\varepsilon_r(\mathcal{C}))$. Pro nalezení korespondencí použijeme algoritmus v kapitole  \ref{sec: poloha_tok} s parametrem $\mathbf{L}_{max} = 50$ a optimalizujeme parametry faset. Opakujeme 2$\times$.
 
@@ -320,9 +322,9 @@ Parametry algoritmu: $\Delta\alpha_{max}$ = \SI{2}{\degree} ,$\Delta\varepsilon_
 
 \item Vybereme simulované svazky se zářivým tokem minimálně \SI{0.1}{\permille} a elevací minimálně \\ $\min\left( \varepsilon_r( \lbrace\mathcal{C} \cup \mathcal{C}^\prime\rbrace ) \right) - $ \SI{3}{\degree}. Svazky spárujeme pomocí algoritmu v kapitole \ref{sec: poloha_tok} s parametrem $\mathbf{L}_{max} = 20$.
 
-\item Bod 13) 2$\times$ opakujeme a poté optimalizujeme parametry faset. 
+\item Bod 13 2$\times$ opakujeme a poté optimalizujeme parametry faset. 
 
-\item Určení korespondencí a optimalizaci podle bodů 12), 13) a 14) dvakrát a dostaneme konečný výsledek orientace faset broušených kamenů.
+\item Určení korespondencí a optimalizaci podle bodů 12, 13 a 14 dvakrát a dostaneme konečný výsledek orientace faset broušených kamenů.
 
 \end{enumerate}
 

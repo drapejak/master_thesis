@@ -1,36 +1,15 @@
-\section{Vizualizace}
+\section{Nástroj pro ruční přiřazení korespondujících svazků}
+\label{sec:handOptim}
+GUI program, který umožňuje ruční přiřazení korespondujících svazků kamene spustíme příkazem \textbf{\textit{handOptimization}}.
 
-%\begin{figure}[htbp]
-%    \centering\includegraphics[width=8cm]{controlSaton.pdf}
-%     \caption[Filtrace pozadí.]{Filtrace pozadí v HDR snímku znázorněná v jednou řádku obrazu. Od původního signálu je odečteno pozadí, v grafu vyznačeno žlutě.}
-%        \label{Detekce}
-%\end{figure}
-\subsection{Ovládací menu}
-\label{sec:ovladaci menu}
-GUI program, který umožňuje ruční optimalizace kamene spustíme příkazem \textbf{\textit{handOptimization}}. V prvé řadě je zapotřebí vybrat snímek kamene optimalizovaného kamene. Pokud je snímek ve výchozím adresáři (složka \textit{samples} v kořenovém adresáři programu), lze snímek vybrat z rozbalovacího menu \textit{Source image}. V opačném případě je možnost vybrat snímek ručně přes ikonu \includegraphics[width = .35cm]{icons/open-file-icon.png}. Po výběru snímku se zobrazí zdrojový snímek \ref{sec:snimek}.
+\subsection{Návod k obsluze}
+\label{sec:snimek}
 
-\begin{wrapfigure}[34]{r}{0.3\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{controlSaton.pdf}
-	
-\caption[Ruční optimalizace: ovládací menu pro šaton.]{Ovládací menu \textit{handOptimization} pro broušený kámen typu šaton.}
-\label{figure:kamera}
-\end{wrapfigure}
-
-
-Dalším postupem je nastavení optimalizovaného kamene. V současné době jsou implementovány broušené kameny tvaru \textbf{viva12}, \textbf{šaton} a \textbf{čtverec}. V první řadě vybereme tvar kamene v kolonce \textit{Shape}. Pod touto kolonkou se zobrazí parametry kamene, které je třeba před optimalizací vyplnit. V případě kamene \textbf{viva12} se jedná o výšku, průměr tabulky a průměr kamene resp. \textit{High}, \textit{DiamTab} a \textit{DiamStone}. Pro kameny \textbf{šaton} a \textbf{čtverec} nastavujeme shodně parametry: typ dolních faset, vrcholový úhel mezi horními a dolními fasetami, velikost lemu (ideálně 0), průměr kamene a průměr tabulky resp. \textit{DwFaceType}, \textit{AngleUp}, \textit{AngleDown}, \textit{Hem}, \textit{DiamTab} a \textit{DiamStone}. Pro všechny typy broušených kamenů nastavujeme navíc index lomu a \textit{z} souřadnici kamene v souřadné soustavě zkalibrované měřicí soustavy resp. \textit{RefIndex} a \textit{ZCoord}. Jednotky rozměrů a souřadnice jsou uváděny v milimetrech, úhly ve stupních. 
-
-Všechny parametry brusu lze měnit i v průběhu optimalizačního procesu. Touto metodou je tedy možné dodatečně určovat neznámé parametry kaneme, úspěch však nelze zaručit. 
-
-Položka \textit{nCntBound} určuje počet odrazů laserového svazku, které se počítají v matematickém modelu. Doporučení je začít s malým číslem a postupně jej navyšovat. %Svazky s každým lomem ztrácí svoji energii, tudíž nejzřetelnější budou svazky s nízkým    
-
-Tlačítkem \textit{Optimize} spustíme optimalizaci náklonu faset kamene, která gradientní metodou nalezne nejlepší model kamen tak, aby směry výstupních svazků modelu odpovídaly směrům přiřazených svazků z experimentálního měření. Ruční přiřazení korespondencí je popsáno v kapitole \ref{sec:snimek}. V případě potřeby se stiskem tlačítka \textit{Z} vrátíme k modelu před optimalizací.  
-
-Výběrem kolonky \textit{Optimize RefIndex} dovolíme optimalizačnímu procesu měnit index lomu kamene. V případě, že je index lomu předem určen doporučuje se index lomu neuvolňovat.
-
-Nalezených korespondence a parametry modelu lze pomocí ikony \includegraphics[width = .35cm]{icons/save-icon.png} uložit do stejného adresáře jako vzorový snímek nebo přes ikonu \includegraphics[width = .35cm]{icons/save-as-icon.png} vybrat umístění ručně. Uložené výsledky načteme volbou ikony \includegraphics[width = .35cm]{icons/load-icon.png}. V průběhu optimalizace můžeme využít užitečné ikony \includegraphics[width = .35cm]{icons/clear-icon.png}, která odstaní přiřazené korespondence, pro které v modelu kamene není přítomen odpovídající svazek.  
-
-V ovládacím menu se dále nachází sekce s nastavením hodnot pro vykreslení svazků z modelu kamene do snímku z kamery. Doba vykreslení svazků z modelu kamene závisí na počtu svazků. Pro zmenšení doby vykreslení lze vybrat určitou část svazků, které jsou v oblasti našeho zájmu. Nejen, že se zrychlí doba vykreslení, ale získáme větší přehled mezi modelovanými svazky. 
+ Na začátku je zapotřebí vybrat snímek optimalizovaného kamene. Snímek vybereme v~menu \textit{File}$-$\textit{Open}$-$\textit{Image}. Po výběru snímku proběhne detekce stop v obraze a v pracovním okně se zobrazí vybraný snímek. V pracovním okně jsou na vybraný snímek zakresleny simulované svazky. Pozice vykreslení simulovaných svazků určuje transformace z \cite{Drapela}. Množina simulovaných svazků odpovídá nastavení programu. 
+ 
+ Nastavení programu lze měnit pomocí ovládacích panelů (viz kapitola \ref{sec:panely}). V menu \textit{View} lze volit, které panely budou zobrazeny v pracovním okně.  
+ 
+Svazky lze vykreslit třemi různými styly. Výchozí styl \textit{RadFlux} vykresluje velikost svazků podle hodnoty zářivého toku. Styl \textit{Tails} přikreslí simulované ocásky. U~stylu \textit{Polygon} je na pozici dopadu světelného svazku pomocí polygonu znázorněn tvar svazku při dopadu na stínítko, který je vůči reálným rozměrům mnohonásobně zvětšen. Vykreslené svazky lze zvětšovat či zmenšovat pomocí klávesnice $+$, resp. $-$. Styl volíme v panelu \textit{Draw setting} v kolonce \textit{Style}. 
 
 \begin{figure}[h!]
    \centering
@@ -44,27 +23,19 @@ V ovládacím menu se dále nachází sekce s nastavením hodnot pro vykreslení
      \centering \includegraphics[width=4cm]{polygon.pdf}
    \end{minipage}
    \\
-   \caption{Porovnání vykreslovacích stylů. Zleva \textit{RadFlux}, \textit{Tails} a \textit{Polygon}.}
-   
+   \caption[Porovnání stylů vykreslení simulovaného svazku.]{Porovnání stylů vykreslení simulovaného svazku. Zleva \textit{RadFlux}, \textit{Tails} a \textit{Polygon}. }
+
+\label{fig: vykresleni}
 \end{figure}
 
-Pomocí kolonky \textit{MinRadFlux} se můžeme omezit pouze na svazky, které mají větší zářivý tok než je určená hranice. Hranici lze nastavovat v intervalu od $0$ do $10000$, což odpovídá odrazu celého laserového svazku od zrcadla. Hodnota \textit{nReflex} určuje výběr svazků s přesným počtem odrazů. Pokud \textit{nReflex} roven $ 0 $ vykreslení není tímto parametrem omezeno. Dále se lze u vykreslení omezit maximálním počtem odrazů svazků, což je omezeno velikostí \textit{MaxReflex}. 
+ 
+Pokud chceme ručně přiřadit korespondující svazky, je třeba mít zvolené okénko \textit{Enable hand pairing} v panelu \textit{Correspondences}.
 
-Svazky lze vykreslit třemi různými styly. Výchozí styl \textit{RadFlux} vykresluje velikost svazků podle hodnoty zářivého toku. Styl \textit{Tails} k těmto navíc přidává ocásky, které vzniknou průchodem svazku přes hranu kamene.
-Posledním vykreslovacím stylem je styl \textit{polygon}. Zde je na pozici dopadu světelného svazku pomocí polygonu znázorněn tvar svazku po jeho lomu z kamene. Vykreslené svazky kterýmkoliv stylem lze zvětšovat či zmenšovat pomocí klávesnice $+$ resp. $-$.  
+Pracovní okno je nastaveno tak, že reaguje na akce ovládacích prvků na optické myši. Stiskem levého tlačítka myši v oblasti snímku vybereme simulovaný svazek, který je nejblíže kurzoru myši. Po výběru svazku se zobrazí všechny detekované stopy a vybraný svazek. Opětovným stiskem levého tlačítka vybereme stopu, která spolu se svazkem utvoří korespondující pár. Po spárování se zobrazí opět pouze simulované svazky, kde jsou však barevně odděleny svazky tvořící korespondující pár. Opětovným výběrem simulovaného svazku, který již byl spárován, odstraníme odpovídající korespondující pár. 
 
-Kolonka \textit{Draw Model} slouží k vykreslení aktuálního modelu kamene. 
+Stiskem pravého tlačítka myši vykreslíme aktuální model kamene s vyznačenou cestou vybraného svazku.
 
-
-\subsection{Zdrojový snímek}
-\label{sec:snimek}
-Po výběru snímku v ovládacím menu \ref{sec:ovladaci menu} se pozadí nového okna zobrazí odpovídající snímek. Přes snímek jsou odpovídajícím stylem (\ref{sec:ovladaci menu}) nakresleny místa dopadů zvolených světelných svazků \ref{sec:ovladaci menu} z aktuálního matematického modelu kamene. 
-
-Okno je nastaveno tak, že reaguje na akce ovládacích prvků na optické myši. Stisknutí levého tlačítka na myši znamená výběr nejbližšího vykresleného svazku. Zobrazí se detekované stopy a vybraný svazek. Opětovným stiskem tlačítka vybereme nejbližší stopu, která spolu se svazkem utvoří korespondující pár. Po spárování se zobrazí opět pouze svazky, kde jsou však barevně odděleny svazky tvořící korespondující pár. Opětovným výběrem svazku, který již byl spárován, odstraníme odpovídající korespondující pár. 
-
-Stiskem pravého tlačítka myši vykreslíme aktuální modle kamene s vyznačenou cestou vybraného svazku.
-
-Změnou polohy kolečka optické myši lze snímek přiblížit či oddálit, což umožňuje snadné zaměření na detaily snímku. 
+Změnou polohy kolečka optické myši lze snímek přiblížit či oddálit, což umožňuje snadné zaměření na detaily snímku. Návrat do původního zobrazení umožňuje menu \textit{Action}$-$\textit{Reset axis}.
 
 \begin{figure}[h!]
    \centering
@@ -78,25 +49,203 @@ Změnou polohy kolečka optické myši lze snímek přiblížit či oddálit, co
      \centering \includegraphics[width=4cm]{pair.pdf}
    \end{minipage}
    \\
-   \caption{Ilustrace přiřazení svazku ke stopě. Vlevo volný svazek, uprostřed vybraný svazek a zobrazené stopy a vpravo vytvořený pár svazek/stopa. Vykresleno stylem \textit{Tails}}.
+   \caption[Ilustrace přiřazení simulovaného svazku ke stopě.]{Ilustrace přiřazení simulovaného svazku ke stopě. Vlevo: volný svazek. Uprostřed: vybraný svazek a zobrazené stopy. Vpravo: vytvořený pár svazek/stopa. Vykresleno stylem \textit{Tails}.}
    
 \end{figure}
 
+
+Soubor s množinou korespondujících svazků lze uložit v menu \textit{File}$-$\textit{Save}$-$\textit{Correspondences}. Menu \textit{File}$-$\textit{Save}$-$\textit{GUI} umožňuje uložit celé uživatelské rozhraní. 
+
+Množinu korespondujících svazků přepíšeme, pokud načteme uložené korespondence pomocí menu \textit{File}$-$\textit{Open}$-$\textit{Correspondences}. Menu \textit{File}$-$\textit{Open}$-$\textit{Ground truth} slouží k načtení množiny správných korespondencí. Správné korespondence se porovnají s aktuální množinou korespondencí a dochází ke změně barvy, kterou jsou vykresleny simulované svazky. Zelenou barvou jsou značeny správné korespondence. Modrou barvou jsou značeny volné svazky a korespondence, u kterých nelze ověřit správnost. Červená barva náleží nesprávným korespondencím.  
+
+V menu \textit{Action}$-$\textit{Optimize rotation} spustíme optimalizaci rotace a náklonu kamene podle korespondencí svazků třídy \textbf{1A}. Optimalizaci orientace faset spustíme v menu \textit{Action}$-$\textit{Optimize params.}. Po optimalizaci dojde k překreslení simulovaných svazků.   
+
+
+
+
+%%Ovladaci panely 
+%%Ovladaci panely 
+%%Ovladaci panely 
+%%Ovladaci panely 
+\subsection{Ovládací panely}
+\label{sec:panely}
+
+\begin{wrapfigure}[14]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{StoneParameters.pdf}
+	
+\caption[Panel s nastavením parametrů kamene.]{Panel s nastavením parametrů kamene.}
+\label{figure:stoneParameters}
+\end{wrapfigure}
+
+
+\paragraph{Parametry kamene}
+\hspace{1mm}
+\vspace{2mm}
+
+
+Změřené parametry kamene (viz kapitola \ref{sec: parametryVIVA12}) lze nastavit v~panelu \textit{Stone parameters} na obrázku \ref{figure:stoneParameters}. Parametr \textit{BoundCnt} lze měnit v půběhu optimalizace. Ostatní parametry je třeba nastavit před zahájením optimalizace. Jednotky rozměrů a souřadnice jsou uváděny v milimetrech, úhly ve stupních.
+
+\begin{itemize}
+\item \textit{Shape} $-$ definuje tvar kamene. Pro tuto verzi je dostupná pouze \textit{viva12}.
+
+\item \textit{BoundCnt} $-$ určuje maximální počet dopadových faset simulovaných svazků v programu LADOK.
+
+\item \textit{RefIndex} $-$ index lomu kamene. Pokud je optimalizován index lomu kamene, odpovídá tato hodnota výsledku optimalizace.
+
+\item \textit{Hem} $-$ velikost lemu kamene. 
+
+\item \textit{TabDiam} $-$ průměr tabulky kamene. 
+
+\item \textit{StoneDiam} $-$ průměr spodku kamene. 
+
+\item \textit{High}	$-$ výška kamene. 
+\end{itemize}
+
+\begin{wrapfigure}[14]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{DrawSetting.pdf}
+	
+\caption{Panel pro výběr množiny simulovaných svazků.}
+\label{figure:DrawSetting}
+\end{wrapfigure}
+
+\paragraph{Zobrazení simulovaných svazků}
+\hspace{1mm}
+\vspace{2mm}
+
+Panel \textit{Draw setting} na obr. \ref{figure:DrawSetting} slouží k redukci vykreslovaných simulovaných svazků. Redukce vykreslených svazků zrychlí běh programu a může pomoci v orientaci mezi jednotlivými svazky. 
+
+\begin{itemize}
+	\item  \textit{RadFlux} $-$ určuje minimální zářivý tok svazků. Vykresleny jsou simulované svazky se zářivým tokem $\phi_r$ vyšším než $\frac{\mathit{RadFlux}}{10000}$. 
+	
+	\item \textit{nBound} $-$ určuje počet dopadových faset vykreslených svazků. Pokud je \textit{nBound} rovno nule, jsou vykresleny všechny svazky.
+	
+	\item \textit{MaxReflex} $-$ omezuje vykreslení svazků na maximální počet dopadových faset \textit{MaxReflex}. 
+	
+	\item \textit{Style} $-$ definuje styl vykreslení simulovaných svazků. Přehled stylů je na obr. \ref{fig: vykresleni}.
+	
+	\item \textit{Draw LADOK model} - slouží k vykreslení aktuálního modelu kamene v programu LADOK. 
+\end{itemize}
+
+
+\begin{wrapfigure}[8]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{OptimParameters.pdf}
+	
+\caption{Panel pro volbu optimalizovaných parametrů.}
+\label{figure:OptimParameters}
+\end{wrapfigure}
+
+\paragraph{Optimalizované parametry}
+\hspace{1mm}
+\vspace{2mm}
+
+V panelu \textit{Optim. parameters} na obr. \ref{figure:OptimParameters} můžeme volit optimalizované parametry. Mezi tyto parametry patří parametry faset a index lomu kamene. Lze vybírat jednotlivě optimalizované fasety UF1$-$UF12, TOP a BOT. Pokud zvolíme TOP$=$BOT budou parametry faset TOP a BOT během optimalizace považovány za totožné. Kolonku \textit{Refractive index} zaškrtneme, pokud chceme optimalizovat index lomu kamene. 
+
+\newpage
+
+
+
+\begin{wrapfigure}[16]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{Correspondences.pdf}
+	
+\caption{Panel pro kontrolu korespondencí svazků.}
+\label{figure:Correspondences}
+\end{wrapfigure}
+
+\paragraph{Korespondence svazků}
+\hspace{1mm}
+\vspace{2mm}
+
+V panelu \textit{Correspondences} na obr. \ref{figure:Correspondences} můžeme upravovat korespondence svazků. Korespondence může být přiřazena ke svazku, který odpovídá výběru v panelu \textit{Draw setting} na obr. \ref{figure:DrawSetting}.
+
+\begin{itemize}
+	\item \textit{Auto methods} $-$ obsahuje automatické metody pro určení korespondujících svazků. \textit{Main pairs} nalezne korespondence tříd \textbf{1A}, \textbf{3A} a \textbf{5D}. \textit{Tails} nalezne korespondence svazků podle algoritmu \ref{sec: korespondence_ocasky}. \textit{RadFlux} určí korespondující svazky na základě algoritmu \ref{sec: poloha_tok}.  
+	
+	\item \textit{Cleaner} $-$ slouží k odstranění korespondencí, které jsou z vysoké pravděpodobnosti nesprávné. Po vyplnění pole \textit{MaxFlux} jsou odstraněny všechny korespondence, kde simulovaný svazek má zářivý tok nižší než $\frac{\mathit{MaxFlux}}{10000}$. \textit{Clear invisible} odstraní korespondence, pro které simulovaný svazek v aktuálním modelu neexistuje. 
+	
+	\item \textit{Enable hand pairing} $-$ povolí ruční korespondenci simulovaných a pozorovaných svazků.
+\end{itemize}
+
+
+\begin{wrapfigure}[5]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{Optimization.pdf}
+	
+\caption{Panel pro výběr optimalizační úlohy. }
+\label{figure:Optimization}
+\end{wrapfigure}
+
+
+\paragraph{Optimalizace}
+\hspace{1mm}
+\vspace{2mm}
+
+Panel \textit{Optimization} na obr. \ref{figure:Optimization} slouží k volbě optimalizační úlohy.
+ 
+\begin{itemize}
+	\item \textit{Parameters} $-$ optimalizují se parametry faset podle výběru v panelu \textit{Optim. parameters} na obr. \ref{figure:OptimParameters}.
+	
+	\item \textit{Rotation} $-$ optimalizuje se rotace a sklon kamene. 
+\end{itemize}
+
+
+\begin{wrapfigure}[5]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{CalibrationResults.pdf}
+	
+\caption{Panel pro volbu výsledků kalibrace. }
+\label{figure:CalibrationResults}
+\end{wrapfigure}
+
+\paragraph{Výsledky kalibrace}
+\hspace{1mm}
+\vspace{2mm}
+
+Panel \textit{Calibration results} na obr. \ref{figure:CalibrationResults} slouží k načtení výsledků kalibrace. 
+ 
+\begin{itemize}
+	\item \textit{Data} $-$ výsledek kalibrace podle data. Soubory s výsledky kalibrace jsou v určeném adresáři. 
+	
+	\item \textit{ZCoord} $-$ upraví $z$ souřadnici kamene. 
+\end{itemize}
+
+
+\newpage
+
+\begin{wrapfigure}[6]{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{FacetRotation.pdf}
+	
+\caption{Panel pro změnu sklonu normál faset. }
+\label{figure:FacetRotation}
+\end{wrapfigure}
+
+\paragraph{Rotace faset}
+\hspace{1mm}
+\vspace{2mm}
+
+Panel \textit{Facet rotation} na obr. \ref{figure:FacetRotation} slouží k rotaci vybrané fasety. Fasetu vybereme v nabídce \textit{Facet}, zadáme úhel rotace \textit{$R_x$} v ose $x$ a \textit{$R_y$} v ose $y$. Stiskem \textit{Rotation} natočíme vybranou fasetu o~zvolený úhel. Po rotaci kamene se přepočítají simulované svazky.  
+ 
+ \vspace{3cm}
+
+\paragraph{Parametry faset}
+\hspace{1mm}
+\vspace{2mm}
+
+Panel \textit{Facet parameters} na obr. \ref{figure:FacetParameters} slouží ke zobrazení výsledků optimalizace. Parametr $\alpha_{ref}$ označuje azimut počátečního dohadu normály fasety. Parametr $\Delta\alpha$ ukazuje změnu azimutu optimalizovaného modelu vůči původnímu odhadu. Podobně pro elevaci  $\varepsilon$. Uvedené výsledky jsou v úhlových stupních. 
+ 
 \begin{figure}[h!]
-     \centering \includegraphics[width=8cm, height = 7.6cm]{initialDistance.pdf} 
-   \caption{Vzdálenosti stop od svazků u počátečního modelu. Určit všechny korespondující páry v jednom kroku je prakticky nemožné.}
-   \label{fig:initDistance}
-   
+\centering
+\includegraphics[width=\textwidth]{FacetParameters.pdf}
+	
+\caption{Panel pro zobrazení výsledků optimalizace.}
+\label{figure:FacetParameters}
 \end{figure}
-
-
-\begin{figure}[h!]
-     \centering \includegraphics[width=8cm, height = 7.6cm]{distance24_4.pdf} 
-   \caption{Vzdálenosti stop po prvním kroku optimalizace. Situace se od obrázku \ref{fig:initDistance} změnila, ovšem stále lze spolehlivě přiřadit pouze některé páry.}
-   
-\end{figure}
-
+ 
 
 
   
-%\clearpage
+\clearpage

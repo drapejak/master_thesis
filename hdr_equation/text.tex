@@ -1,0 +1,54 @@
+\subsection{Předchozí verze z bakalářské práce}
+\label{sec:hdr_image}
+\indent	Použitím HDR (High Dynamic Range) snímku zajistíme pokrytí velkého dynamického rozsahu. Jedním z možností rekonstrukce HDR obrázku je složení obrázku ze snímků s různými expozicemi. U pořizování snímku volíme takové expozice, abychom jednotlivými snímky pokryli celý dynamický rozsah jasu. Dobu expozice postupně snižujeme dokud nejsou hodnoty jasu všech pixelů bez saturace.   \\
+\indent	Laserový svazek si představujeme jako tok fotonů o určité vlnové délce. Při rekonstrukci HDR obrázku počítáme počet fotonů dopadených na snímací čip za jednotku času (intenzita $ I $). Ze snímku vybereme nesaturované pixely a jejich intenzitu vydělíme časem expozice. Celkovou intenzitu pixelu určíme jako vážený průměr všech expozic bez saturace. Vyjádřeno vztahem:  
+\begin{eqnarray}
+		I = \frac{\sum\limits_{i = i_{nesat}}^nj_i}{\sum\limits_{i =i_{nesat}}^nt_i}\,.
+		\quad\quad\quad
+		\begin{array}{ccc}
+   		i_{nesat}&-&\mbox{první nesaturovaná expozice} \\
+   		j&-&\mbox{jas pixelu} \\
+   		t&-&\mbox{čas expozice} 
+ 		\end{array}
+		\label{eq:HDR1}
+\end{eqnarray}
+
+\subsection{Změna v nové verzi}
+
+Algoritmus pro skládání obrázku byl změněn a nyní má následující tvar:
+
+\begin{eqnarray}
+		I = \frac{\sum\limits_{i = i_{nesat}}^n j_i\,\sqrt{t_i}}{\sum\limits_{i =i_{nesat}}^n t_i\,\sqrt{t_i}}\,.
+		\quad\quad\quad
+		\begin{array}{ccc}
+   		i_{nesat}&-&\mbox{první nesaturovaná expozice} \\
+   		j&-&\mbox{jas pixelu} \\
+   		t&-&\mbox{čas expozice} 
+ 		\end{array}
+		\label{eq:HDR2}
+\end{eqnarray}
+
+\subsection{Porovnání algoritmů}
+Pro porovnání algoritmů \ref{eq:HDR1} a \ref{eq:HDR2} byl proveden nestranný odhad, pří kterém se posuzovala vydatnost (eficience obou algoritmů). K posouzení vydatnosti bylo použito 10 sérií snímků totožné scény se širokou škálou expozic. Na každou sérii snímků s různými expozicemi byl aplikován algoritmus \ref{eq:HDR1} resp. \ref{eq:HDR2} a vypočten HDR snímkem. Takto tedy vzniklo od každého algoritmu 10 různých HDR snímků. 
+
+Posouzení vydatnosti spočívá v tom, že jako věrohodný odhad určí ten s menším rozptylem. Pro totožné pixely ve všech 10 snímcích byl vypočten rozptyl a rozptyl všech pixelů sečten. Výsledek je zaznamenán v tabulce \ref{tab: porovnani}.
+
+\begin{table}[h!]
+
+
+\begin{tabular}{c|c|c}
+
+Výpočetní metoda		&	Rozptyl  			&	 Směrodatná odchylka/Pixel\\
+\hline\hline
+Rovnice \ref{eq:HDR1} 	&	$3.479\times10^7$	& $2.877$\\
+\hline
+Rovnice \ref{eq:HDR2}	&	$2.899\times10^7$	& $2.627$
+
+
+\end{tabular}   
+ 
+\caption{Výsledky porovnání dvou algoritmů pro výpočet HDR snímku.}
+\label{tab: porovnani} 
+\end{table}
+
+

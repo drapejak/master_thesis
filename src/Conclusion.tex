@@ -1,14 +1,17 @@
 \part{Závěr}
-	V rámci této práce byl navrhnut postup pro automatický odhad orientace faset broušených kamenů. Funkce algoritmů byla vyzkoušena na řadě 
+	V rámci této práce byl navrhnut, implementován a experimentálně vyzkoušen postup pro automatický odhad orientace faset broušených kamenů typu \textit{viva12} o rozměrech v jednotkách milimetrů. Vstupem do optimalizačního algoritmu je snímek s~obrazy svazků na stínítku, které vystupujících z~ozářeného kamene. Princip odhadu orientace faset spočívá v porovnání geometrie naměřených svazků s geometrií simulovaných svazků.
 	
-	
-	Zpracování výsledků experimentu, který realizuje šíření laserového svazku broušeným kamenem.  
+První část práce se zabývá detekcí světelných stop v obraze. Detekce spočívala ve zpracování výsledku detekce maximálně stabilních extrémních oblastí. Úspěšnost navržené detekce stop je srovnatelná s výsledkem detekce komerčně využívaného programu pro detekci hvězd na noční obloze. U pozorovaných svazků byl určen zářivý tok, směr šíření a detekovány ocásky vznikající v okolí obrazu svazku z důvodu neostrých hran kamene.
 
-	Byly na
-	
-	Druhá část práce se zabývá
-	
-	Byl navržena metoda pro ověření správnosti korespondujících dvojic svazků. Metoda spočívá v rozdělení korespondencí do čtyř disjunktních množin. První množina určuje model kamene, druhá množina slouží v výpočtu hodnotícího kritéria. 
+Druhá část práce byla zaměřena na hledání korespondencí simulovaných a pozorovaných svazků. Bylo ukázáno, že úloha korespondence svazků je obtížná. Byl navrhnut a implementován iterativní postup pro nalezení korespondujících svazků. 
+
+Výsledky automatické optimalizace ukazují, že orientaci faset kamene lze podle navrženého postupu opakovaně odhadnout s přesností v řádech desetin úhlového stupně, zatímco pozorovaná výrobní chyby jsou v řádech stupňů.
+
+Byla navržena metoda pro ověření správnosti korespondujících dvojic svazků.  Aplikovatelnost metody byla prozkoumána pomocí simulace v programu LADOK. Bylo ukázáno, že tato metoda funguje spolehlivě pouze pro korespondence vybraných tříd svazků. %Metoda spočívá v rozdělení korespondencí do čtyř disjunktních množin. První množina určuje model kamene, druhá množina slouží v výpočtu hodnotícího kritéria, třetí množina 
+
+V této práci byl zároveň popsán nový příznak svazku definující směr a velikost úhlu rotace svazku při rotaci kamene. Znalost tohoto příznaku může zjednodušit úlohu korespondencí svazků zejména pro složitější tvary kamenů.\\
+
+Tato práce přináší návod, jak postupovat při odhadu orientace faset broušených kamenů. Využití práce pro jiné tvary kamenů vyžaduje podrobný průzkum parametrů vystupujících svazků z ozářeného kamene.
 	
 	 
 	  

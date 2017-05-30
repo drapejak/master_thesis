@@ -8,9 +8,9 @@ Pokusíme se nalézt směr či velikost rotace světelných svazků při rotaci 
 
 Rotace kamene kolem osy způsobí změnu vlastností vystupujících světelných svazků (směru, zářivého toku, intenzity, vlastnosti ocásků atd.). Za určitých okolností může světelný svazek zcela vymizet. Tato situace nastává například při lomu světelného svazku z kamene do okolí. Když vlivem rotace překročíme kritický úhel, nedochází k lomu světelného svazku, ale k totálnímu odrazu na fasetě. Světelný svazek zanikne při posunu světelného svazku mimo fasetu, a to jak při odrazu, tak při lomu. Ze stejných důvodů, proč mohou světelné svazky vymizet, mohou naopak vzniknout svazky nové.
 
-Uvažujeme zjednodušenou situaci. Světelný svazek nahradíme světelným paprskem ležícím v jeho pomyslném těžišti. 
+Uvažujeme zjednodušenou situaci, kdy světelný svazek nahradíme světelným paprskem ležícím v jeho pomyslném těžišti. 
 
-Světelný paprsek necháme dopadat na zrcadlo pod úhlem $\varphi_1$. Paprsek se od zrcadla odráží podle známého zákonu odrazu pod úhlem $\varphi_1$. Při vychýlení světelného paprsku o úhel $ \delta $ v kladném směru úhlu $\varphi_1$ je odražený úhel $\varphi_1 + \delta$. Úhel odraženého paprsek se změní o úhel $ \delta $.
+Světelný paprsek necháme dopadat na zrcadlo pod úhlem $\varphi_1$. Paprsek se od zrcadla odráží podle známého zákonu odrazu pod úhlem $\varphi_1$. Při vychýlení světelného paprsku o úhel $ \delta $ v~ kladném směru úhlu $\varphi_1$ je odražený úhel $\varphi_1 + \delta$. Úhel odraženého paprsek se změní o úhel $ \delta $.
 
 \begin{figure}[h!]
 \begin{center}
@@ -37,7 +37,7 @@ Při rotaci kamene docílíme stejné změny odraženého paprsku jako při rota
 \label{sec: zmena smeru}
 Pokud by docházelo pouze k odrazu od zrcadel v dvojrozměrné rovině, tak by naše zkoumání postrádalo smysl. Výstupní parsek by se vždy otočil o dvojnásobek úhlu rotace kamene, a to ve stejném směru. 
 
-S uvažováním materiálu kamene s konstantním indexem lomu $ n_1~>~1 $ a okolí s indexem lomu $ n_2 = 1 $ se situace dramaticky mění. Vezměme si příklad lomu světelného paprsku z kamene přes rovinnou fasetu. Úhel dopadajícího paprsku na fasetu označme $\alpha_1$ a úhel lomeného svazku $\alpha_2$, pak můžeme podle Snellova zákonu psát:
+S uvažováním materiálu kamene s konstantním indexem lomu $ n_1~>~1 $ a okolí s indexem lomu $ n_2 = 1 $ se situace dramaticky mění. Vezměme si příklad lomu světelného paprsku z kamene přes rovinnou fasetu. Úhel dopadajícího paprsku na fasetu označme $\alpha_1$ a úhel lomeného svazku $\alpha_2$, pak můžeme podle Snellova zákona psát:
 
 \begin{center}
 $n_1\,\sin(\alpha_1) = n_2\,\sin(\alpha_2) = \sin(\alpha_2)\,.$
@@ -53,16 +53,16 @@ $n_1\,\sin(\alpha_1) = n_2\,\sin(\alpha_2) = \sin(\alpha_2)\,.$
 
 Zkoumejme změnu výstupního úhlu $\alpha_2$ na změně úhlu $\alpha_1$. Nejprve si vyjádříme úhel $\alpha_2$ následně zderivujeme podle $\alpha_1$. 
 \begin{equation}
-\alpha_2 = \arcsin(n_1\,\sin\alpha_1)\,.
+\alpha_2 = \arcsin(n_1\,\sin\alpha_1)
 \label{eq:derivace uhlu1}  
 \end{equation}
-\begin{equation} \frac{\mathrm{d}\alpha_2}{\mathrm{d}\alpha_1}= \frac{n_1\,\cos\alpha_1}{\sqrt{1-n_1^2\,\sin^2\alpha_1}}\,.
+\begin{equation} \frac{\mathrm{d}\alpha_2}{\mathrm{d}\alpha_1}= \frac{n_1\,\cos\alpha_1}{\sqrt{1-n_1^2\,\sin^2\alpha_1}}
 \label{eq:derivace uhlu}  
 \end{equation}
 
 Pokud se dostáváme ke kritickému úhlu ($\alpha_1 = \alpha_k$), dochází k totálnímu odrazu. 
 \begin{equation}
- \sin\alpha_2 = 1 \implies \sin\alpha_1 = \frac{1}{n_1}\,.
+ \sin\alpha_2 = 1 \implies \sin\alpha_1 = \frac{1}{n_1}
 \end{equation}
 
 Výpočtem limity rovnice \ref{eq:derivace uhlu} v okolí kritického úhlu pro $ n_1 > 1$ dostaneme 
@@ -84,7 +84,7 @@ Velikost změny posunu světelného svazku tedy může být teoreticky libovoln�
 \begin{center}
 \includegraphics[width = 0.8\linewidth]{derivace.pdf}
 \end{center}
-\caption[Závislost změny lomeného úhlu na změně úhlu dopadu.]{Závislost změny lomeného úhlu na změně úhlu dopadu. Pro kritický úhel $\alpha_k$ roste k nekonečnu. Graf funkce popsané vzorcem \ref{eq:zmena velikosti posunu}.}
+\caption[Závislost změny lomeného úhlu na změně úhlu dopadu.]{Závislost změny lomeného úhlu na změně úhlu dopadu. Pro kritický úhel $\alpha_k$ roste k~nekonečnu. Graf funkce popsané vzorcem \ref{eq:zmena velikosti posunu}.}
 \label{fig:derivace uhlu}
 \end{figure}
 
@@ -114,7 +114,7 @@ Z praktického hlediska nás mohou zajímat pouze svazky, které vytvoří po do
 
 Pro lepší představu o změně směru jednotlivých svazků nám může být užitečný kruhový histogram znázorňující směr jejich pohybu (obr. \ref{fig:relativni pohyb graf}). Podstatná většina svazků se posouvá ve směru rotace kamene, což není příliš nápomocné při jejich identifikaci.
 
-Existují však svazky, které jsou svým pohybem charakteristické a lze je tedy oddělit od ostatních. Kritérium pro rozpoznání svazků nemusí být pouze směr pohybu, ale jak vidíme na obr. \ref{fig:relativni pohyb graf} i velikost rotace. V neposlední řadě přichází v úvahu i změna zářivého toku svazků, změna velikosti ocásků a další. 
+Existují však svazky, které jsou svým pohybem charakteristické a lze je tedy oddělit od ostatních. Kritérium pro rozpoznání svazků nemusí být pouze směr pohybu, ale jak vidíme na obr. \ref{fig:relativni pohyb graf} i velikost úhlu rotace. V neposlední řadě přichází v úvahu i změna zářivého toku svazků, změna velikosti ocásků a další. 
 
 \begin{figure}[h!]
  \begin{center}
@@ -125,13 +125,13 @@ Existují však svazky, které jsou svým pohybem charakteristické a lze je ted
      \centering \includegraphics[width =\linewidth]{relative_index1.eps} 
    \end{minipage}
  \end{center}
-\caption[Histogram velikosti rotace vystupujících svazků.]{Vlevo histogram velikosti rotace vystupujících svazků z kamene \textit{viva12} z obrázku \ref{fig:relativni pohyb graf}. Vlivem lomu je relativní rotace v mnoha případech větší než 2. V okolí kritického úhlu roste k nekonečnu. Pokud ztotožníme indexy lomu kamene a okolí, tak relativní rotace nebude větší než 2. To lze vidět na histogramu vpravo.}
+\caption[Histogram velikosti rotace vystupujících svazků.]{Vlevo: histogram velikosti úhlu rotace vystupujících svazků z kamene \textit{viva12} z obrázku \ref{fig:relativni pohyb graf}. Vlivem lomu je relativní rotace v mnoha případech větší než 2. V okolí kritického úhlu roste k~nekonečnu. Pokud ztotožníme indexy lomu kamene a okolí, tak relativní rotace nebude větší než 2. To lze vidět na histogramu vpravo.}
 
 \label{fig:histogram relativni pohyb }
 
 \end{figure}
 
-Vykresleme si histogram (obr. \ref{fig:histogram relativni pohyb } vlevo) relativní velikosti rotace vystupujících svazků. Z něj je patrné, že řada svazků rotuje o více než dvojnásobek úhlu rotace kamene $\alpha$, což potvrzuje teorii o relativní změně směru svazků z rovnice \ref{eq:zmena velikosti posunu}. 
+Vykresleme si histogram (obr. \ref{fig:histogram relativni pohyb } vlevo) relativní velikosti úhlu rotace vystupujících svazků. Z něj je patrné, že řada svazků rotuje o více než dvojnásobek úhlu rotace kamene $\alpha$, což potvrzuje teorii o relativní změně směru svazků z rovnice \ref{eq:zmena velikosti posunu}. 
 
 
 
@@ -143,7 +143,7 @@ Vykresleme si histogram (obr. \ref{fig:histogram relativni pohyb } vlevo) relati
 \label{fig:kruhovy histogram}
 \end{figure}
 
-Pokud vezmeme teoreticky kámen o stejném indexu lomu, jako je okolí, nedochází k lomu. Potom by se nemělo docházet k rotaci výstupního svazku o úhel větší než $2\alpha$, způsobená právě rozdílným indexem lomu. Pro potvrzení této teorie jsme provedli stejnou simulaci jako v předchozím případě. Indexy lomu kamene a jeho okolí jsme ztotožnili a výsledek simulace ukázal, že rotace výstupních svazků úhel větší než $2\alpha$ se již nevyskytují. To nám dokládá zhotovený histogram (obr. \ref{fig:histogram relativni pohyb } vpravo).
+Pokud vezmeme kámen o stejném indexu lomu, jako je okolí, nedochází k lomu. Potom by se nemělo docházet k rotaci výstupního svazku o úhel větší než $2\alpha$, způsobená právě rozdílným indexem lomu. Pro potvrzení této teorie jsme provedli stejnou simulaci jako v~předchozím případě. Indexy lomu kamene a jeho okolí jsme ztotožnili a výsledek simulace ukázal, že rotace výstupních svazků úhel větší než $2\alpha$ se již nevyskytují. To nám dokládá zhotovený histogram (obr. \ref{fig:histogram relativni pohyb } vpravo).
 
 
 Téměř konstantní směrovost rotace svazků u kamene \textit{viva12} zmenšuje význam příspěvku této vlastnosti k lepšímu rozpoznání světelných stop. Pokud ovšem provedeme stejný experiment na broušeném kameni jiného tvaru, dostaneme rozdílný výsledek. Například u šatonu, svým tvarem složitějším než \textit{viva12}, je směr rotace svazků rozmanitější. Velká část z nich samozřejmě rotuje ve směru rotace kamene. Jak ale vidíme z kruhového histogramu (obr. \ref{fig:kruhovy histogram saton}), lze rozlišovat i velké množství stop pohybujících se např. pod úhlem $45^\circ$. U šatonu tedy může znalost směru pohybu svazků při rotaci kamene nemalou měrou pomoci v jejich rozpoznání. 
